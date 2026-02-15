@@ -1,0 +1,32 @@
+﻿name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-and-mutate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+
+      - name: Run unit tests
+        run: mvn -B test
+
+      - name: Run mutation testing (PITest)
+        run: mvn -B org.pitest:pitest-maven:mutationCoverage
+
+      - name: Upload PITest report
+        uses: actions/upload-artifact@v4
+        with:
+          name: pitest-report
+          path: target/pit-reports
+          if-no-files-found: warn
