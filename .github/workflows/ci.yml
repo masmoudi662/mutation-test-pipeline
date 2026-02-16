@@ -24,9 +24,19 @@ jobs:
       - name: Run mutation testing (PITest)
         run: mvn -B org.pitest:pitest-maven:mutationCoverage
 
+      - name: Extract mutation summary JSON
+        run: python3 tools/pitest_extract.py
+
       - name: Upload PITest report
         uses: actions/upload-artifact@v4
         with:
           name: pitest-report
           path: target/pit-reports
           if-no-files-found: warn
+
+      - name: Upload mutation summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: mutation-summary
+          path: artifacts/mutation_summary.json
+          if-no-files-found: error
