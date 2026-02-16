@@ -1,0 +1,9 @@
+﻿{
+  "repo_url": "",
+  "commit_hash": "",
+  "class_path": "",
+  "test_class_path": "",
+  "build_tool": "maven",
+  "java_version": "17",
+  "test_framework": "JUnit5"
+}
