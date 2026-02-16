@@ -18,25 +18,45 @@ jobs:
           java-version: "17"
           cache: maven
 
-      - name: Run unit tests
-        run: mvn -B test
+      - name: Read target from mini manifest
+        run: |
+          echo "Reading first row from targets/classes2test-mini.csv"
+          LINE=$(tail -n +2 targets/classes2test-mini.csv | head -n 1)
+          echo "ROW=$LINE" >> $GITHUB_ENV
 
-      - name: Run mutation testing (PITest)
-        run: mvn -B org.pitest:pitest-maven:mutationCoverage
+      - name: Parse manifest row
+        run: |
+          IFS=',' read -r id repo_url commit_hash build_tool java_version test_framework class_path test_class_path <<< "${ROW}"
+          echo "REPO_URL=$repo_url" >> $GITHUB_ENV
+          echo "COMMIT_HASH=$commit_hash" >> $GITHUB_ENV
+          echo "BUILD_TOOL=$build_tool" >> $GITHUB_ENV
+
+      - name: Clone target repository
+        run: |
+          git clone "$REPO_URL" target-repo
+          cd target-repo
+          if [ "$COMMIT_HASH" != "HEAD" ]; then
+            git checkout "$COMMIT_HASH"
+          fi
+
+      - name: Run unit tests in target
+        run: |
+          cd target-repo
+          mvn -B test
+
+      - name: Run mutation testing in target
+        run: |
+          cd target-repo
+          mvn -B org.pitest:pitest-maven:mutationCoverage
 
       - name: Extract mutation summary JSON
-        run: python3 tools/pitest_extract.py
-
-      - name: Upload PITest report
-        uses: actions/upload-artifact@v4
-        with:
-          name: pitest-report
-          path: target/pit-reports
-          if-no-files-found: warn
+        run: |
+          cd target-repo
+          python3 ../tools/pitest_extract.py
 
       - name: Upload mutation summary
         uses: actions/upload-artifact@v4
         with:
           name: mutation-summary
-          path: artifacts/mutation_summary.json
+          path: target-repo/artifacts/mutation_summary.json
           if-no-files-found: error
