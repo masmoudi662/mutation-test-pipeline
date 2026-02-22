@@ -12,8 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 1) Java 8 for compiling/running this old repo (source=6)
-      - name: Set up Java 8
+      # Use Java 8 for "mvn test" for this particular adbcj case (old source level)
+      - name: Set up Java 8 (for tests/build)
         uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -24,22 +24,22 @@ jobs:
         run: |
           echo "Reading first row from targets/c2st-1.csv"
           LINE=$(tail -n +2 targets/c2st-1.csv | head -n 1)
-          echo "LINE=$LINE"
           echo "ROW=$LINE" >> $GITHUB_ENV
-
-      - name: Debug ROW
-        run: |
-          echo "ROW='${ROW}'"
+          echo "LINE=$LINE"
 
       - name: Parse manifest row
         run: |
           IFS=',' read -r id repo_url commit_hash build_tool java_version test_framework class_path test_class_path focal_method <<< "${ROW}"
-          echo "id=$id"
-          echo "repo_url=$repo_url"
-          echo "commit_hash=$commit_hash"
+
           echo "TARGET_ID=$id" >> $GITHUB_ENV
           echo "REPO_URL=$repo_url" >> $GITHUB_ENV
           echo "COMMIT_HASH=$commit_hash" >> $GITHUB_ENV
+          echo "TEST_FRAMEWORK=$test_framework" >> $GITHUB_ENV
+
+          echo "id=$id"
+          echo "repo_url=$repo_url"
+          echo "commit_hash=$commit_hash"
+          echo "test_framework=$test_framework"
 
       - name: Clone target repository
         run: |
@@ -47,22 +47,15 @@ jobs:
           cd target-repo
           git checkout "$COMMIT_HASH"
 
-      - name: Run unit tests (Java 8)
+      - name: Run unit tests
         id: unit_tests
         continue-on-error: true
         run: |
           cd target-repo
           mvn -B test
 
-      # 2) Still Java 8 here: install only needed modules so mysql/codec can resolve adbcj-api
-      - name: Install deps for mysql/codec (Java 8)
-        if: steps.unit_tests.outcome == 'success'
-        run: |
-          cd target-repo
-          mvn -B -pl api,mysql/codec -am -DskipTests install
-
-      # 3) Switch to Java 17 ONLY for PIT (PIT plugin requires newer Java)
-      - name: Switch to Java 17 for PIT
+      # PIT needs newer Java runtime than 8
+      - name: Set up Java 17 (for PIT)
         if: steps.unit_tests.outcome == 'success'
         uses: actions/setup-java@v4
         with:
@@ -70,13 +63,59 @@ jobs:
           java-version: "17"
           cache: maven
 
-      # 4) Run PIT only in mysql/codec module
-      - name: Run PIT (mysql/codec only)
+      - name: Decide PIT eligibility
         if: steps.unit_tests.outcome == 'success'
+        run: |
+          TF="$(echo "${TEST_FRAMEWORK}" | tr '[:upper:]' '[:lower:]')"
+          if echo "$TF" | grep -Eq 'junit'; then
+            echo "PIT_ELIGIBLE=true" >> $GITHUB_ENV
+          else
+            echo "PIT_ELIGIBLE=false" >> $GITHUB_ENV
+          fi
+          echo "PIT_ELIGIBLE=$PIT_ELIGIBLE (framework=$TF)"
+
+      - name: Run PIT (JUnit only)
+        if: steps.unit_tests.outcome == 'success' && env.PIT_ELIGIBLE == 'true'
         id: pitest
         continue-on-error: true
         run: |
-          cd target-repo/mysql/codec
-          mvn -B test
-          mvn -B org.pitest:pitest-maven:mutationCoverage \
-            -Dplugins=org.pitest:pitest-testng-plugin
+          cd target-repo
+          mvn -B org.pitest:pitest-maven:mutationCoverage
+
+      - name: Collect run status
+        run: |
+          mkdir -p artifacts
+
+          if [ "${{ steps.unit_tests.outcome }}" != "success" ]; then
+            echo "{\"targetId\":\"$TARGET_ID\",\"repoUrl\":\"$REPO_URL\",\"commitHash\":\"$COMMIT_HASH\",\"compileAndTests\":\"FAIL\",\"pitest\":\"SKIPPED_TESTS_FAILED\"}" > artifacts/run_status.json
+            exit 0
+          fi
+
+          # tests passed
+          if [ "$PIT_ELIGIBLE" != "true" ]; then
+            echo "{\"targetId\":\"$TARGET_ID\",\"repoUrl\":\"$REPO_URL\",\"commitHash\":\"$COMMIT_HASH\",\"compileAndTests\":\"PASS\",\"pitest\":\"SKIPPED_UNSUPPORTED_TEST_FRAMEWORK\",\"testFramework\":\"$TEST_FRAMEWORK\"}" > artifacts/run_status.json
+            exit 0
+          fi
+
+          # pit eligible (JUnit), see if it succeeded
+          if [ "${{ steps.pitest.outcome }}" = "success" ]; then
+            echo "{\"targetId\":\"$TARGET_ID\",\"repoUrl\":\"$REPO_URL\",\"commitHash\":\"$COMMIT_HASH\",\"compileAndTests\":\"PASS\",\"pitest\":\"DONE\"}" > artifacts/run_status.json
+          else
+            echo "{\"targetId\":\"$TARGET_ID\",\"repoUrl\":\"$REPO_URL\",\"commitHash\":\"$COMMIT_HASH\",\"compileAndTests\":\"PASS\",\"pitest\":\"FAIL\"}" > artifacts/run_status.json
+          fi
+
+      - name: Upload run status
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-status
+          path: artifacts/run_status.json
+          if-no-files-found: error
+
+      - name: Upload PIT reports (if any)
+        if: steps.unit_tests.outcome == 'success' && env.PIT_ELIGIBLE == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: pit-reports
+          path: |
+            target-repo/**/target/pit-reports/**
+          if-no-files-found: warn
