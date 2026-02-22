@@ -66,4 +66,4 @@ jobs:
         continue-on-error: true
         run: |
           cd target-repo
-          mvn -B -pl mysql/codec org.pitest:pitest-maven:mutationCoverage
+          mvn -B -pl mysql/codec -am org.pitest:pitest-maven:mutationCoverage
