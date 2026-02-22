@@ -78,4 +78,5 @@ jobs:
         run: |
           cd target-repo/mysql/codec
           mvn -B test
-          mvn -B org.pitest:pitest-maven:mutationCoverage
+          mvn -B org.pitest:pitest-maven:mutationCoverage \
+            -Dplugins=org.pitest:pitest-testng-plugin
