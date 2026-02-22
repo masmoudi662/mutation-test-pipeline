@@ -1,0 +1,2 @@
+id,repo_url,commit_hash,build_tool,java_version,test_framework,class_path,test_class_path,focal_method
+13899_8,https://github.com/mheath/adbcj,669b302c106551287cf2352101f3e131bb858015,maven,17,junit,mysql/codec/src/main/java/org/adbcj/mysql/codec/IoUtils.java,mysql/codec/src/test/java/org/adbcj/mysql/codec/IoUtilsTest.java,IoUtils.safeRead(InputStream)
