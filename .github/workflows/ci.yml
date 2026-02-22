@@ -76,6 +76,23 @@ jobs:
           cd target-repo
           mvn -B -f "$MODULE_POM" test
 
+      - name: Debug module vars
+        if: steps.unit_tests.outcome == 'success'
+        run: |
+          echo "MODULE_POM=$MODULE_POM"
+          echo "MODULE_DIR=$MODULE_DIR"
+          echo "TEST_DIR=$TEST_DIR"
+          ls -la target-repo || true
+          if [ -n "$MODULE_DIR" ]; then ls -la "target-repo/$MODULE_DIR" || true; fi
+          if [ -n "$TEST_DIR" ]; then ls -la "target-repo/$TEST_DIR" || true; fi
+
+      - name: Debug pit report locations (before PIT)
+        if: steps.unit_tests.outcome == 'success'
+        run: |
+          cd target-repo
+          echo "Searching for existing pit-reports dirs (should be none before PIT):"
+          find . -type d -name "pit-reports" -maxdepth 6 || true
+
       # PIT needs newer Java runtime than 8
       - name: Set up Java 17 (for PIT)
         if: steps.unit_tests.outcome == 'success'
