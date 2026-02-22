@@ -52,6 +52,7 @@ jobs:
 
       - name: Build full project (reactor install)
         id: full_build
+        continue-on-error: true
         run: |
           cd target-repo
           mvn -B -DskipTests install
@@ -70,7 +71,9 @@ jobs:
           if [ -n "$MODULE_POM" ]; then ls -la "target-repo/$MODULE_POM" || true; fi
 
       - name: Run original tests (module-scoped)
+        if: steps.full_build.outcome == 'success'
         id: unit_tests
+        continue-on-error: true
         run: |
           cd target-repo
           mvn -B -f "$MODULE_POM" test \
@@ -78,16 +81,20 @@ jobs:
             -DskipTests=false \
             -Dsurefire.skipTests=false
 
-      - name: Verify tests actually ran
+      - name: Detect whether tests exist/ran
+        if: steps.unit_tests.outcome == 'success'
         run: |
           cd target-repo
-          if ! find . -maxdepth 5 -type d -name "surefire-reports" | grep -q .; then
-            echo "No surefire-reports found. Tests were skipped or none exist."
-            exit 1
+          if find . -maxdepth 6 -type d -name "surefire-reports" | grep -q .; then
+            echo "TESTS_PRESENT=true" >> $GITHUB_ENV
+          else
+            echo "TESTS_PRESENT=false" >> $GITHUB_ENV
+            echo "No surefire-reports found. Tests likely skipped or none exist."
           fi
 
       # Switch to Java 17 for PIT
       - name: Set up Java 17 (for PIT)
+        if: steps.unit_tests.outcome == 'success' && env.TESTS_PRESENT == 'true'
         uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -95,16 +102,43 @@ jobs:
           cache: maven
 
       - name: Decide PIT eligibility
+        if: steps.unit_tests.outcome == 'success' && env.TESTS_PRESENT == 'true'
         run: |
-          TF="$(echo "${TEST_FRAMEWORK}" | tr '[:upper:]' '[:lower:]')"
-          if echo "$TF" | grep -Eq 'junit'; then
-            echo "PIT_ELIGIBLE=true" >> $GITHUB_ENV
-          else
+          cd target-repo
+
+          # Detect test framework from deps (more reliable than CSV)
+          if mvn -q -f "$MODULE_POM" -DskipTests dependency:tree | grep -qi "testng:testng"; then
             echo "PIT_ELIGIBLE=false" >> $GITHUB_ENV
+            echo "PIT_REASON=TESTNG" >> $GITHUB_ENV
+            exit 0
           fi
 
+          if mvn -q -f "$MODULE_POM" -DskipTests dependency:tree | grep -qi "org.junit.jupiter:junit-jupiter"; then
+            echo "PIT_ELIGIBLE=true" >> $GITHUB_ENV
+            echo "PIT_REASON=JUNIT5" >> $GITHUB_ENV
+            exit 0
+          fi
+
+          if mvn -q -f "$MODULE_POM" -DskipTests dependency:tree | grep -qi "junit:junit"; then
+            echo "PIT_ELIGIBLE=true" >> $GITHUB_ENV
+            echo "PIT_REASON=JUNIT4" >> $GITHUB_ENV
+            exit 0
+          fi
+
+          echo "PIT_ELIGIBLE=false" >> $GITHUB_ENV
+          echo "PIT_REASON=UNKNOWN_OR_UNSUPPORTED" >> $GITHUB_ENV
+
+      - name: Debug detected PIT reason
+        if: steps.unit_tests.outcome == 'success' && env.TESTS_PRESENT == 'true'
+        run: |
+          echo "TESTS_PRESENT=$TESTS_PRESENT"
+          echo "PIT_ELIGIBLE=$PIT_ELIGIBLE"
+          echo "PIT_REASON=$PIT_REASON"
+
       - name: Run PIT baseline
-        if: env.PIT_ELIGIBLE == 'true'
+        if: steps.unit_tests.outcome == 'success' && env.TESTS_PRESENT == 'true' && env.PIT_ELIGIBLE == 'true'
+        id: pit_baseline
+        continue-on-error: true
         run: |
           cd target-repo
           mvn -B -f "$MODULE_POM" org.pitest:pitest-maven:mutationCoverage
@@ -112,7 +146,7 @@ jobs:
           cat artifacts/pit_baseline.json
 
       - name: Upload PIT reports
-        if: env.PIT_ELIGIBLE == 'true'
+        if: steps.unit_tests.outcome == 'success' && env.TESTS_PRESENT == 'true' && env.PIT_ELIGIBLE == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: pit-reports
