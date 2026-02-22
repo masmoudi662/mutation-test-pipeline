@@ -12,6 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 1) Java 8 for compiling/running this old repo (source=6)
       - name: Set up Java 8
         uses: actions/setup-java@v4
         with:
@@ -46,12 +47,21 @@ jobs:
           cd target-repo
           git checkout "$COMMIT_HASH"
 
-      - name: Run unit tests
+      - name: Run unit tests (Java 8)
         id: unit_tests
         continue-on-error: true
         run: |
           cd target-repo
           mvn -B test
+
+      # 2) Still Java 8 here: install only needed modules so mysql/codec can resolve adbcj-api
+      - name: Install deps for mysql/codec (Java 8)
+        if: steps.unit_tests.outcome == 'success'
+        run: |
+          cd target-repo
+          mvn -B -pl api,mysql/codec -am -DskipTests install
+
+      # 3) Switch to Java 17 ONLY for PIT (PIT plugin requires newer Java)
       - name: Switch to Java 17 for PIT
         if: steps.unit_tests.outcome == 'success'
         uses: actions/setup-java@v4
@@ -60,16 +70,12 @@ jobs:
           java-version: "17"
           cache: maven
 
+      # 4) Run PIT only in mysql/codec module
       - name: Run PIT (mysql/codec only)
         if: steps.unit_tests.outcome == 'success'
         id: pitest
         continue-on-error: true
         run: |
-          # 1) install needed modules so mysql/codec can resolve org.adbcj:adbcj-api
-          cd target-repo
-          mvn -B -pl api,mysql/codec -am -DskipTests install
-
-          # 2) now run tests + PIT only in mysql/codec
-          cd mysql/codec
+          cd target-repo/mysql/codec
           mvn -B test
           mvn -B org.pitest:pitest-maven:mutationCoverage
