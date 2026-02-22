@@ -52,7 +52,14 @@ jobs:
         run: |
           cd target-repo
           mvn -B test
-
+      - name: Switch to Java 17 for PIT
+        if: steps.unit_tests.outcome == 'success'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+          
       - name: Run PIT (only if tests pass)
         if: steps.unit_tests.outcome == 'success'
         id: pitest
