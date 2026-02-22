@@ -59,11 +59,12 @@ jobs:
           distribution: temurin
           java-version: "17"
           cache: maven
-          
+
       - name: Run PIT (only if tests pass)
         if: steps.unit_tests.outcome == 'success'
         id: pitest
         continue-on-error: true
         run: |
           cd target-repo
-          mvn -B org.pitest:pitest-maven:mutationCoverage
+          mvn -B org.pitest:pitest-maven:mutationCoverage \
+            -Dfeatures=+PLUGIN:junit4
