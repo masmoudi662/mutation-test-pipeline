@@ -1,0 +1,5 @@
+{
+  "testClassName": "GeneratedSmokeTest",
+  "relativeTestPath": "generated/GeneratedSmokeTest.java",
+  "java": "package generated;\n\nimport org.junit.jupiter.api.Test;\nimport static org.junit.jupiter.api.Assertions.*;\n\npublic class GeneratedSmokeTest {\n  @Test\n  void smoke() {\n    assertTrue(true);\n  }\n}\n"
+}

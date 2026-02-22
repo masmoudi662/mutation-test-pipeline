@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Use Java 8 for "mvn test" for this particular adbcj case (old source level)
+      # Java 8 for mvn test (old repos)
       - name: Set up Java 8 (for tests/build)
         uses: actions/setup-java@v4
         with:
@@ -36,10 +36,16 @@ jobs:
           echo "COMMIT_HASH=$commit_hash" >> $GITHUB_ENV
           echo "TEST_FRAMEWORK=$test_framework" >> $GITHUB_ENV
 
+          # Needed for find_module.sh
+          echo "CLASS_PATH=$class_path" >> $GITHUB_ENV
+          echo "TEST_CLASS_PATH=$test_class_path" >> $GITHUB_ENV
+
           echo "id=$id"
           echo "repo_url=$repo_url"
           echo "commit_hash=$commit_hash"
           echo "test_framework=$test_framework"
+          echo "class_path=$class_path"
+          echo "test_class_path=$test_class_path"
 
       - name: Clone target repository
         run: |
@@ -47,12 +53,20 @@ jobs:
           cd target-repo
           git checkout "$COMMIT_HASH"
 
-      - name: Run unit tests
+      - name: Find module for focal class
+        run: |
+          cd target-repo
+          chmod +x ../scripts/find_module.sh
+          export CLASS_PATH="${CLASS_PATH}"
+          export TEST_CLASS_PATH="${TEST_CLASS_PATH}"
+          ../scripts/find_module.sh
+
+      - name: Run original tests (module-scoped)
         id: unit_tests
         continue-on-error: true
         run: |
           cd target-repo
-          mvn -B test
+          mvn -B -f "$MODULE_POM" test
 
       # PIT needs newer Java runtime than 8
       - name: Set up Java 17 (for PIT)
@@ -72,15 +86,93 @@ jobs:
           else
             echo "PIT_ELIGIBLE=false" >> $GITHUB_ENV
           fi
-          echo "PIT_ELIGIBLE=$PIT_ELIGIBLE (framework=$TF)"
+          echo "framework=$TF"
+          echo "PIT_ELIGIBLE=$(cat $GITHUB_ENV | tail -n 1)"
 
-      - name: Run PIT (JUnit only)
+      - name: Run PIT baseline (module-scoped)
         if: steps.unit_tests.outcome == 'success' && env.PIT_ELIGIBLE == 'true'
-        id: pitest
+        id: pit_baseline
         continue-on-error: true
         run: |
           cd target-repo
-          mvn -B org.pitest:pitest-maven:mutationCoverage
+          mvn -B -f "$MODULE_POM" org.pitest:pitest-maven:mutationCoverage
+          python3 ../scripts/parse_pit.py
+          cat artifacts/pit_baseline.json
+
+      # Switch back to Java 8 to run tests after injection (safer for old repos)
+      - name: Set up Java 8 (for tests after injection)
+        if: steps.pit_baseline.outcome == 'success'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "8"
+          cache: maven
+
+      - name: Inject generated test (fake)
+        if: steps.pit_baseline.outcome == 'success'
+        run: |
+          cd target-repo
+          python3 ../scripts/inject_test.py "${GITHUB_WORKSPACE}/artifacts/generated_test.json" "$TEST_DIR"
+
+      - name: Run tests after injection (module-scoped)
+        if: steps.pit_baseline.outcome == 'success'
+        id: tests_after
+        continue-on-error: true
+        run: |
+          cd target-repo
+          mvn -B -f "$MODULE_POM" test
+
+      # Switch to Java 17 again for PIT after
+      - name: Set up Java 17 (for PIT after)
+        if: steps.tests_after.outcome == 'success'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+
+      - name: Run PIT after (with injected tests)
+        if: steps.tests_after.outcome == 'success' && env.PIT_ELIGIBLE == 'true'
+        id: pit_after
+        continue-on-error: true
+        run: |
+          cd target-repo
+          # Keep baseline file safe
+          cp artifacts/pit_baseline.json artifacts/pit_baseline_saved.json
+
+          mvn -B -f "$MODULE_POM" org.pitest:pitest-maven:mutationCoverage
+          python3 ../scripts/parse_pit.py
+
+          # parse_pit writes pit_baseline.json again -> rename to after
+          mv artifacts/pit_baseline.json artifacts/pit_after.json
+          mv artifacts/pit_baseline_saved.json artifacts/pit_baseline.json
+
+          cat artifacts/pit_after.json
+
+      - name: Compute mutation delta
+        if: steps.pit_baseline.outcome == 'success'
+        run: |
+          cd target-repo
+          python3 - << 'PY'
+          import json, os
+
+          out = {"baseline": None, "after": None, "delta": None}
+
+          with open("artifacts/pit_baseline.json","r",encoding="utf-8") as f:
+            b = json.load(f)
+          out["baseline"] = float(b.get("mutation_score", 0.0))
+
+          if os.path.exists("artifacts/pit_after.json"):
+            with open("artifacts/pit_after.json","r",encoding="utf-8") as f:
+              a = json.load(f)
+            out["after"] = float(a.get("mutation_score", 0.0))
+            out["delta"] = out["after"] - out["baseline"]
+
+          with open("artifacts/mutation_delta.json","w",encoding="utf-8") as f:
+            json.dump(out, f, indent=2)
+
+          print(json.dumps(out, indent=2))
+          PY
 
       - name: Collect run status
         run: |
@@ -91,17 +183,15 @@ jobs:
             exit 0
           fi
 
-          # tests passed
           if [ "$PIT_ELIGIBLE" != "true" ]; then
             echo "{\"targetId\":\"$TARGET_ID\",\"repoUrl\":\"$REPO_URL\",\"commitHash\":\"$COMMIT_HASH\",\"compileAndTests\":\"PASS\",\"pitest\":\"SKIPPED_UNSUPPORTED_TEST_FRAMEWORK\",\"testFramework\":\"$TEST_FRAMEWORK\"}" > artifacts/run_status.json
             exit 0
           fi
 
-          # pit eligible (JUnit), see if it succeeded
-          if [ "${{ steps.pitest.outcome }}" = "success" ]; then
-            echo "{\"targetId\":\"$TARGET_ID\",\"repoUrl\":\"$REPO_URL\",\"commitHash\":\"$COMMIT_HASH\",\"compileAndTests\":\"PASS\",\"pitest\":\"DONE\"}" > artifacts/run_status.json
+          if [ "${{ steps.pit_baseline.outcome }}" = "success" ]; then
+            echo "{\"targetId\":\"$TARGET_ID\",\"repoUrl\":\"$REPO_URL\",\"commitHash\":\"$COMMIT_HASH\",\"compileAndTests\":\"PASS\",\"pitest\":\"BASELINE_DONE\"}" > artifacts/run_status.json
           else
-            echo "{\"targetId\":\"$TARGET_ID\",\"repoUrl\":\"$REPO_URL\",\"commitHash\":\"$COMMIT_HASH\",\"compileAndTests\":\"PASS\",\"pitest\":\"FAIL\"}" > artifacts/run_status.json
+            echo "{\"targetId\":\"$TARGET_ID\",\"repoUrl\":\"$REPO_URL\",\"commitHash\":\"$COMMIT_HASH\",\"compileAndTests\":\"PASS\",\"pitest\":\"BASELINE_FAIL\"}" > artifacts/run_status.json
           fi
 
       - name: Upload run status
@@ -110,6 +200,16 @@ jobs:
           name: run-status
           path: artifacts/run_status.json
           if-no-files-found: error
+
+      - name: Upload PIT scores + delta (if any)
+        uses: actions/upload-artifact@v4
+        with:
+          name: pit-scores
+          path: |
+            target-repo/artifacts/pit_baseline.json
+            target-repo/artifacts/pit_after.json
+            target-repo/artifacts/mutation_delta.json
+          if-no-files-found: warn
 
       - name: Upload PIT reports (if any)
         if: steps.unit_tests.outcome == 'success' && env.PIT_ELIGIBLE == 'true'
