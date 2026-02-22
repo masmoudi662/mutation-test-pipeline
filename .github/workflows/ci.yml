@@ -61,7 +61,15 @@ jobs:
           export TEST_CLASS_PATH="${TEST_CLASS_PATH}"
           ../scripts/find_module.sh
 
+      - name: Build full project (reactor install)
+        id: full_build
+        continue-on-error: true
+        run: |
+          cd target-repo
+          mvn -B -DskipTests install
+
       - name: Run original tests (module-scoped)
+        if: steps.full_build.outcome == 'success'
         id: unit_tests
         continue-on-error: true
         run: |
@@ -87,7 +95,6 @@ jobs:
             echo "PIT_ELIGIBLE=false" >> $GITHUB_ENV
           fi
           echo "framework=$TF"
-          echo "PIT_ELIGIBLE=$(cat $GITHUB_ENV | tail -n 1)"
 
       - name: Run PIT baseline (module-scoped)
         if: steps.unit_tests.outcome == 'success' && env.PIT_ELIGIBLE == 'true'
