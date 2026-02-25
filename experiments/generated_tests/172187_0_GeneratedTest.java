@@ -2,51 +2,64 @@ java
 package by.bsu.onewire.common.utils;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class AddressUtilsTest {
 
     @Test
-    public void testToString() {
-        assertEquals("0000000000000001", AddressUtils.toString(1));
-        assertEquals("FFFFFFFFFFFFFFFF", AddressUtils.toString(-1));
-        assertEquals("0000000000000000", AddressUtils.toString(0));
-        assertEquals("00000000000000FF", AddressUtils.toString(255));
+    public void testToLongValidAddress() {
+        String address = "28FFB0410500009E";
+        long expected = 3094850247436127390L;
+        long actual = AddressUtils.toLong(address);
+        assertEquals(expected, actual);
     }
 
-    @Test
-    public void testToLong() {
-        assertEquals(1, AddressUtils.toLong("0000000000000001"));
-        assertEquals(255, AddressUtils.toLong("00000000000000FF"));
-        assertEquals(0, AddressUtils.toLong("0000000000000000"));
-        assertEquals(0x123456789ABCDEF0L, AddressUtils.toLong("123456789ABCDEF0"));
+    @Test(expected = NullPointerException.class)
+    public void testToLongNullAddress() {
+        AddressUtils.toLong(null);
     }
 
     @Test(expected = StringIndexOutOfBoundsException.class)
-    public void testToLongInvalidLengthShort() {
-        AddressUtils.toLong("1234");
+    public void testToLongShortAddress() {
+        String address = "28FFB041050000";
+        AddressUtils.toLong(address);
     }
 
-    @Test(expected = StringIndexOutOfBoundsException.class)
-    public void testToLongInvalidLengthLong() {
-        AddressUtils.toLong("12345678901234567");
-    }
-
-    @Test
-    public void testToStringAndToLongCombination() {
-        long originalAddress = 0x1A2B3C4D5E6F7089L;
-        String addressString = AddressUtils.toString(originalAddress);
-        long convertedAddress = AddressUtils.toLong(addressString);
-        assertEquals(originalAddress, convertedAddress);
+    @Test(expected = IllegalArgumentException.class)
+    public void testToLongInvalidCharacter() {
+        String address = "28FFB0410500009G";
+        AddressUtils.toLong(address);
     }
 
     @Test
-    public void testToStringWithLargeHex() {
-        assertEquals("FFFFFFFFFFFFFFFF", AddressUtils.toString(-1L));
+    public void testToLongAllZeros() {
+        String address = "0000000000000000";
+        long expected = 0L;
+        long actual = AddressUtils.toLong(address);
+        assertEquals(expected, actual);
     }
 
     @Test
-    public void testToLongWithLeadingZeros() {
-        assertEquals(10, AddressUtils.toLong("000000000000000A"));
+    public void testToLongAllF() {
+        String address = "FFFFFFFFFFFFFFFF";
+        long expected = -1L;
+        long actual = AddressUtils.toLong(address);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testToLongMixedCase() {
+        String address = "28fFb0410500009e";
+        long expected = 3094850247436127390L;
+        long actual = AddressUtils.toLong(address);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testToLongLeadingZeros() {
+        String address = "00000028FFB04105";
+        long expected = 0x28FFB04105L;
+        long actual = AddressUtils.toLong(address);
     }
 }

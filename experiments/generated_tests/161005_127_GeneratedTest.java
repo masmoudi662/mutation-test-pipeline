@@ -6,38 +6,46 @@ import org.apache.wiki.api.core.Command;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RedirectCommandTest {
 
     private RedirectCommand command;
 
     @BeforeEach
-    public void setUp() {
-        command = (RedirectCommand) RedirectCommand.REDIRECT.targetedCommand("testTarget");
+    public void setUp() throws Exception {
+        command = new RedirectCommand( "view", "HomePage", null, "HomePage" );
     }
 
     @Test
-    public void testTargetedCommandWithValidTarget() {
-        Command targetedCommand = RedirectCommand.REDIRECT.targetedCommand( "http://example.com" );
-        assertNotNull( targetedCommand );
-        assertEquals( "http://example.com", targetedCommand.getName() );
+    public void testTargetedCommandWithStringTarget() {
+        Command targeted = command.targetedCommand( "AnotherPage" );
+        assertNotNull( targeted );
+        assertEquals( "AnotherPage", ((RedirectCommand) targeted).getTarget());
     }
 
     @Test
-    public void testTargetedCommandWithInvalidTarget() {
-        assertThrows( IllegalArgumentException.class, () -> RedirectCommand.REDIRECT.targetedCommand( Integer.valueOf( 123 ) ) );
+    public void testTargetedCommandWithNullTarget() {
+        assertThrows(IllegalArgumentException.class, () -> command.targetedCommand(null));
     }
 
     @Test
-    public void testGetName() {
-        assertEquals("testTarget", command.getName());
+    public void testTargetedCommandWithWrongTypeTarget() {
+        assertThrows(IllegalArgumentException.class, () -> command.targetedCommand(123));
     }
 
     @Test
-    public void testRequiredPermission() {
-        assertEquals(null, command.requiredPermission());
+    public void testGetTarget() {
+        assertEquals("HomePage", command.getTarget());
+    }
+
+    @Test
+    public void testGetContentTemplate() {
+        assertNull(command.getContentTemplate());
+    }
+
+    @Test
+    public void testGetRequestcontext() {
+        assertEquals("view", command.getRequestContext());
     }
 }

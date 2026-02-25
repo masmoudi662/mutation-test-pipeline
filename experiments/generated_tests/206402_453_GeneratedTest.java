@@ -1,107 +1,112 @@
 java
 package org.apache.hc.client5.http.impl.cache;
 
-import org.apache.hc.client5.http.cache.ResponseCacheControl;
-import org.apache.hc.core5.http.ClassicHttpRequest;
-import org.apache.hc.core5.http.ClassicHttpResponse;
-import org.apache.hc.core5.http.HttpHeaders;
+import org.apache.hc.client5.http.cache.HeaderConstants;
+import org.apache.hc.core5.http.Header;
+import org.apache.hc.core5.http.HttpResponse;
 import org.apache.hc.core5.http.HttpStatus;
-import org.apache.hc.core5.http.HttpVersion;
-import org.apache.hc.core5.http.Method;
-import org.apache.hc.core5.http.ProtocolVersion;
-import org.apache.hc.core5.http.message.BasicClassicHttpRequest;
-import org.apache.hc.core5.http.message.BasicClassicHttpResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import java.time.Duration;
-import java.time.Instant;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.when;
 
 public class TestResponseCachingPolicy {
 
     private ResponseCachingPolicy cachingPolicy;
-    private ClassicHttpRequest request;
-    private ClassicHttpResponse response;
-    private ResponseCacheControl cacheControl;
+    private HttpResponse response;
 
     @BeforeEach
     public void setUp() {
-        cachingPolicy = new ResponseCachingPolicy(true, false, false);
-        request = new BasicClassicHttpRequest(Method.GET, "/test");
-        response = new BasicClassicHttpResponse(HttpStatus.SC_OK, "OK");
-        cacheControl = Mockito.mock(ResponseCacheControl.class);
+        cachingPolicy = new ResponseCachingPolicy();
+        response = Mockito.mock(HttpResponse.class);
     }
 
     @Test
-    public void testIsResponseCacheable_HTTP10WithQueryString_NeverCache() {
-        cachingPolicy = new ResponseCachingPolicy(true, true, false);
-        request = new BasicClassicHttpRequest(Method.GET, "/test?param=value");
-        request.setVersion(HttpVersion.HTTP_1_0);
-        response = new BasicClassicHttpResponse(HttpStatus.SC_OK, "OK");
-        assertTrue(cachingPolicy.isResponseCacheable(cacheControl, request, response));
+    public void testNonGetOrHeadMethodsAreNotCacheable() {
+        assertFalse(cachingPolicy.isResponseCacheable("POST", response));
+        assertFalse(cachingPolicy.isResponseCacheable("PUT", response));
+        assertFalse(cachingPolicy.isResponseCacheable("DELETE", response));
     }
 
     @Test
-    public void testIsResponseCacheable_HTTP11WithQueryString_ExplicitCacheable() {
-        cachingPolicy = new ResponseCachingPolicy(true, false, true);
-        request = new BasicClassicHttpRequest(Method.GET, "/test?param=value");
-        response = new BasicClassicHttpResponse(HttpStatus.SC_OK, "OK");
-        Mockito.when(cacheControl.getMaxAge()).thenReturn(3600);
-        assertTrue(cachingPolicy.isResponseCacheable(cacheControl, request, response));
+    public void testUncacheableStatusCodesAreNotCacheable() {
+        when(response.getCode()).thenReturn(HttpStatus.SC_FORBIDDEN);
+        assertFalse(cachingPolicy.isResponseCacheable(HeaderConstants.GET_METHOD, response));
     }
 
     @Test
-    public void testIsExplicitlyNonCacheable_NoStoreDirective() {
-        Mockito.when(cacheControl.isNoStore()).thenReturn(true);
-        assertTrue(cachingPolicy.isExplicitlyNonCacheable(cacheControl));
+    public void testUnknownStatusCodesAreNotCacheable() {
+        when(response.getCode()).thenReturn(600);
+        assertFalse(cachingPolicy.isResponseCacheable(HeaderConstants.GET_METHOD, response));
+    }
+
+   @Test
+    public void testContentLengthExceedingMaxObjectSizeIsNotCacheable() {
+        cachingPolicy.maxObjectSizeBytes = 100;
+        Header contentLengthHeader = Mockito.mock(Header.class);
+        when(contentLengthHeader.getValue()).thenReturn("200");
+        when(response.getFirstHeader("Content-Length")).thenReturn(contentLengthHeader);
+        when(response.getCode()).thenReturn(HttpStatus.SC_OK);
+        assertFalse(cachingPolicy.isResponseCacheable(HeaderConstants.GET_METHOD, response));
     }
 
     @Test
-    public void testIsExplicitlyNonCacheable_PrivateDirective_SharedCache() {
-        Mockito.when(cacheControl.isCachePrivate()).thenReturn(true);
-        cachingPolicy = new ResponseCachingPolicy(true, false, false);
-        assertTrue(cachingPolicy.isExplicitlyNonCacheable(cacheControl));
+    public void testMultipleAgeHeadersIsNotCacheable() {
+        when(response.countHeaders(HeaderConstants.AGE)).thenReturn(2);
+        when(response.getCode()).thenReturn(HttpStatus.SC_OK);
+        assertFalse(cachingPolicy.isResponseCacheable(HeaderConstants.GET_METHOD, response));
     }
 
     @Test
-    public void testIsExplicitlyNonCacheable_PrivateDirective_NonSharedCache() {
-        Mockito.when(cacheControl.isCachePrivate()).thenReturn(true);
-        cachingPolicy = new ResponseCachingPolicy(false, false, false);
-        assertFalse(cachingPolicy.isExplicitlyNonCacheable(cacheControl));
+    public void testMissingDateHeaderIsNotCacheable() {
+        when(response.countHeaders("Date")).thenReturn(0);
+        when(response.getCode()).thenReturn(HttpStatus.SC_OK);
+        assertFalse(cachingPolicy.isResponseCacheable(HeaderConstants.GET_METHOD, response));
     }
 
     @Test
-    public void testIsExplicitlyCacheable_PublicDirective() {
-        Mockito.when(cacheControl.isPublic()).thenReturn(true);
-        assertTrue(cachingPolicy.isExplicitlyCacheable(cacheControl, response));
+    public void testVaryStarIsNotCacheable() {
+        Header varyHeader = Mockito.mock(Header.class);
+        when(varyHeader.getValue()).thenReturn("*");
+        when(response.getHeaders("Vary")).thenReturn(new Header[]{varyHeader});
+        when(response.getCode()).thenReturn(HttpStatus.SC_OK);
+        assertFalse(cachingPolicy.isResponseCacheable(HeaderConstants.GET_METHOD, response));
     }
 
     @Test
-    public void testIsHeuristicallyCacheable_KnownCacheableStatus_FreshnessLifetimePositive() {
-        Instant now = Instant.now();
-        Instant past = now.minusSeconds(60);
-        cachingPolicy = new ResponseCachingPolicy(true, false, false);
-        assertTrue(cachingPolicy.isHeuristicallyCacheable(cacheControl, HttpStatus.SC_OK, past, now));
+    public void testExplicitlyNonCacheableResponseIsNotCacheable() {
+        HttpResponse mockResponse = Mockito.mock(HttpResponse.class);
+        Header cacheControlHeader = Mockito.mock(Header.class);
+        when(cacheControlHeader.getValue()).thenReturn("no-store");
+        when(mockResponse.getHeaders("Cache-Control")).thenReturn(new Header[]{cacheControlHeader});
+        when(mockResponse.getCode()).thenReturn(HttpStatus.SC_OK);
+        ResponseCachingPolicy policy = new ResponseCachingPolicy();
+        assertFalse(policy.isResponseCacheable("GET", mockResponse));
     }
 
     @Test
-    public void testIsHeuristicallyCacheable_UnknownStatusCode() {
-        assertFalse(cachingPolicy.isHeuristicallyCacheable(cacheControl, 199, null, null));
+    public void testExplicitlyCacheableResponseIsCacheable() {
+        HttpResponse mockResponse = Mockito.mock(HttpResponse.class);
+        Header cacheControlHeader = Mockito.mock(Header.class);
+        when(cacheControlHeader.getValue()).thenReturn("public, max-age=3600");
+        when(mockResponse.getHeaders("Cache-Control")).thenReturn(new Header[]{cacheControlHeader});
+        when(mockResponse.getCode()).thenReturn(HttpStatus.SC_OK);
+        ResponseCachingPolicy policy = new ResponseCachingPolicy();
+        assertTrue(policy.isResponseCacheable("GET", mockResponse));
     }
 
     @Test
-    public void testResponseIsStillFresh_ValidDateAndFresh() {
-        Instant now = Instant.now();
-        Duration freshnessLifetime = Duration.ofSeconds(60);
-        Instant responseDate = now.minusSeconds(30);
-        assertTrue(cachingPolicy.responseIsStillFresh(responseDate, freshnessLifetime));
-    }
-
-    @Test
-    public void testResponseIsStillFresh_InvalidDate() {
-        assertFalse(cachingPolicy.responseIsStillFresh(null, Duration.ofSeconds(60)));
+    public void testCacheableResponseIsCacheable() {
+        when(response.getCode()).thenReturn(HttpStatus.SC_OK);
+        when(response.getFirstHeader("Date")).thenReturn(Mockito.mock(Header.class));
+        when(response.countHeaders("Date")).thenReturn(1);
+        assertTrue(cachingPolicy.isResponseCacheable(HeaderConstants.GET_METHOD, response));
     }
 }

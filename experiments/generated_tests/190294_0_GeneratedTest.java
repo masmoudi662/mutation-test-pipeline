@@ -1,82 +1,69 @@
 java
 package org.jbasics.csv;
 
-import org.junit.jupiter.api.Test;
-
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.MediaType;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import org.junit.jupiter.api.Test;
 
-public class CSVTableProviderTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class CSVTableProviderTest {
 
     @Test
-    public void testIsReadable_CSVTableClass() {
+    void isReadable_CSVTable_ReturnsTrue() {
         CSVTableProvider provider = new CSVTableProvider();
-        assertTrue(provider.isReadable(CSVTable.class, null, null, null));
+        boolean result = provider.isReadable(CSVTable.class, null, null, null);
+        assertTrue(result);
     }
 
     @Test
-    public void testIsReadable_SubclassOfCSVTable() {
+    void isReadable_SubclassOfCSVTable_ReturnsTrue() {
         CSVTableProvider provider = new CSVTableProvider();
-        assertTrue(provider.isReadable(MyCSVTable.class, null, null, null));
+        boolean result = provider.isReadable(MyCSVTable.class, null, null, null);
+        assertTrue(result);
     }
 
     @Test
-    public void testIsReadable_NotCSVTable() {
+    void isReadable_NonCSVTable_ReturnsFalse() {
         CSVTableProvider provider = new CSVTableProvider();
-        assertFalse(provider.isReadable(String.class, null, null, null));
+        boolean result = provider.isReadable(String.class, null, null, null);
+        assertFalse(result);
     }
 
     @Test
-    public void testIsWriteable_CSVTableClass() {
+    void isReadable_NullType_ReturnsFalse() {
         CSVTableProvider provider = new CSVTableProvider();
-        assertTrue(provider.isWriteable(CSVTable.class, null, null, null));
+        boolean result = provider.isReadable(null, null, null, null);
+        assertFalse(result);
     }
 
     @Test
-    public void testIsWriteable_SubclassOfCSVTable() {
+    void isReadable_WithMediaType_CSVTable_ReturnsTrue() {
         CSVTableProvider provider = new CSVTableProvider();
-        assertTrue(provider.isWriteable(MyCSVTable.class, null, null, null));
+        boolean result = provider.isReadable(CSVTable.class, null, null, MediaType.TEXT_PLAIN_TYPE);
+        assertTrue(result);
     }
 
     @Test
-    public void testIsWriteable_NotCSVTable() {
+    void isReadable_WithAnnotations_CSVTable_ReturnsTrue() {
         CSVTableProvider provider = new CSVTableProvider();
-        assertFalse(provider.isWriteable(String.class, null, null, null));
+        boolean result = provider.isReadable(CSVTable.class, null, new Annotation[0], null);
+        assertTrue(result);
     }
 
     @Test
-    public void testIsReadable_MediaTypeNull() {
+    void isReadable_WithGenericType_CSVTable_ReturnsTrue() {
         CSVTableProvider provider = new CSVTableProvider();
-        assertTrue(provider.isReadable(CSVTable.class, null, null, null));
+        boolean result = provider.isReadable(CSVTable.class, String.class, null, null);
+        assertTrue(result);
     }
-
-    @Test
-    public void testIsWriteable_MediaTypeNull() {
-        CSVTableProvider provider = new CSVTableProvider();
-        assertTrue(provider.isWriteable(CSVTable.class, null, null, null));
-    }
-
-    @Test
-    public void testIsReadable_MediaTypeSpecific() {
-        CSVTableProvider provider = new CSVTableProvider();
-        MediaType mediaType = mock(MediaType.class);
-        assertTrue(provider.isReadable(CSVTable.class, null, null, mediaType));
-    }
-
-    @Test
-    public void testIsWriteable_MediaTypeSpecific() {
-        CSVTableProvider provider = new CSVTableProvider();
-        MediaType mediaType = mock(MediaType.class);
-        assertTrue(provider.isWriteable(CSVTable.class, null, null, mediaType));
-    }
-
 
     private static class MyCSVTable extends CSVTable {
+
+        public MyCSVTable() {
+            super();
+        }
     }
 }

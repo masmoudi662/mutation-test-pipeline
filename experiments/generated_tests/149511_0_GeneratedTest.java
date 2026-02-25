@@ -2,100 +2,63 @@ java
 package fitnesse.revisioncontrol;
 
 import fitnesse.html.HtmlTag;
+import fitnesse.wiki.WikiPageAction;
+import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
+import static fitnesse.revisioncontrol.CheckinOperationHtmlBuilder.COMMIT_MESSAGE;
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class RevisionControlOperationTest {
 
-    @Test
-    public void testAddExecute() {
-        RevisionController revisionController = mock(RevisionController.class);
-        when(revisionController.add("TestPage")).thenReturn(new Results(true, "Added"));
+    private RevisionControlOperation<String> operation;
+    private RevisionController revisionController;
+    private String pagePath;
+    private Map<String, String> parameters;
 
-        Results results = RevisionControlOperation.ADD.execute(revisionController, "TestPage");
-        assertEquals("Added", results.getMessage());
+    @Before
+    public void setUp() {
+        operation = new RevisionControlOperation<String>() {
+            @Override
+            public String execute(RevisionController revisionController, String pagePath, Map<String, String> parameters) {
+                return "executed";
+            }
+        };
+        revisionController = mock(RevisionController.class);
+        pagePath = "TestPage";
+        parameters = new HashMap<>();
     }
 
     @Test
-    public void testSyncExecute() {
-        RevisionController revisionController = mock(RevisionController.class);
-        State expectedState = new State(true, true, true);
-        when(revisionController.getState("TestPage")).thenReturn(expectedState);
+    public void testExecuteWithEmptyParameters() {
+        RevisionControlOperation<String> mockOperation = Mockito.mock(RevisionControlOperation.class);
+        RevisionController mockController = Mockito.mock(RevisionController.class);
+        String pagePath = "TestPage";
+        when(mockOperation.execute(mockController, pagePath, new HashMap<>())).thenReturn("mocked");
 
-        State state = RevisionControlOperation.SYNC.execute(revisionController, "TestPage");
-        assertEquals(expectedState, state);
+        String result = mockOperation.execute(mockController, pagePath);
+
+        assertEquals("mocked", result);
     }
 
     @Test
-    public void testUpdateExecute() {
-        RevisionController revisionController = mock(RevisionController.class);
-        NewRevisionResults expectedResults = new NewRevisionResults("123", "Updated");
-        when(revisionController.update("TestPage")).thenReturn(expectedResults);
+    public void testExecuteCallsExecuteWithEmptyMap() {
+        RevisionControlOperation<String> testOperation = new RevisionControlOperation<String>() {
+            @Override
+            public String execute(RevisionController revisionController, String pagePath, Map<String, String> parameters) {
+                assertEquals(0, parameters.size());
+                return "success";
+            }
+        };
 
-        NewRevisionResults results = RevisionControlOperation.UPDATE.execute(revisionController, "TestPage");
-        assertEquals(expectedResults, results);
-    }
+        String result = testOperation.execute(revisionController, pagePath);
 
-    @Test
-    public void testCheckoutExecute() {
-        RevisionController revisionController = mock(RevisionController.class);
-        Results expectedResults = new Results(true, "Checked out");
-        when(revisionController.checkout("TestPage")).thenReturn(expectedResults);
-
-        Results results = RevisionControlOperation.CHECKOUT.execute(revisionController, "TestPage");
-        assertEquals(expectedResults.getMessage(), results.getMessage());
-    }
-
-    @Test
-    public void testCheckinExecute() {
-        RevisionController revisionController = mock(RevisionController.class);
-        NewRevisionResults expectedResults = new NewRevisionResults("456", "Checked in");
-        when(revisionController.checkin("TestPage", "Commit message")).thenReturn(expectedResults);
-
-        Map<String, String> args = new HashMap<>();
-        args.put("commitMessage", "Commit message");
-
-        NewRevisionResults results = RevisionControlOperation.CHECKIN.execute(revisionController, "TestPage", args);
-        assertEquals(expectedResults, results);
-    }
-
-    @Test
-    public void testRevertExecute() {
-        RevisionController revisionController = mock(RevisionController.class);
-        Results expectedResults = new Results(true, "Reverted");
-        when(revisionController.revert("TestPage")).thenReturn(expectedResults);
-
-        Results results = RevisionControlOperation.REVERT.execute(revisionController, "TestPage");
-        assertEquals(expectedResults.getMessage(), results.getMessage());
-    }
-
-    @Test
-    public void testStatusExecute() {
-        RevisionController revisionController = mock(RevisionController.class);
-        StatusResults expectedResults = new StatusResults("OK");
-        when(revisionController.getStatus("TestPage")).thenReturn(expectedResults);
-
-        StatusResults results = RevisionControlOperation.STATUS.execute(revisionController, "TestPage");
-        assertEquals(expectedResults.getStatus(), results.getStatus());
-    }
-
-    @Test
-    public void testMakeHtml() {
-        HtmlTag tag = RevisionControlOperation.ADD.makeHtml("resource");
-        assertEquals("<a accesskey=\"a\" href=\"resource?addToRevisionControl\"><span class=\"addToRevisionControl\">Add</span></a>", tag.html());
-    }
-
-    @Test
-    public void testExecuteWithoutArgs() {
-        RevisionController revisionController = mock(RevisionController.class);
-        when(revisionController.add("TestPage")).thenReturn(new Results(true, "Added"));
-        Results results = RevisionControlOperation.ADD.execute(revisionController, "TestPage");
-        assertEquals("Added", results.getMessage());
+        assertEquals("success", result);
     }
 }

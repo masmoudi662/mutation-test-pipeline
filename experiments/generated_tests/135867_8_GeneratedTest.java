@@ -1,61 +1,62 @@
 java
 package org.intalio.tempo.web.controller;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import junit.framework.TestCase;
-
-import org.intalio.tempo.security.token.TokenService;
-import org.intalio.tempo.web.ApplicationState;
-import org.intalio.tempo.web.Constants;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.validation.BindException;
 import org.springframework.web.servlet.ModelAndView;
 
-public class LoginControllerTest extends TestCase {
+public class LoginControllerTest {
 
     private LoginController loginController;
-    private TokenService tokenService;
     private HttpServletRequest request;
     private HttpServletResponse response;
-    private BindException errors;
     private LoginCommand loginCommand;
-    private ApplicationState applicationState;
-    private HttpSession session;
+    private BindException errors;
+    private ApplicationState state;
 
     @Before
-    public void setUp() throws Exception {
-        tokenService = mock(TokenService.class);
-        loginController = new LoginController(tokenService, "/defaultRedirect");
+    public void setUp() {
+        loginController = new LoginController();
         request = mock(HttpServletRequest.class);
         response = mock(HttpServletResponse.class);
-        errors = new BindException(new LoginCommand(), "loginCommand");
         loginCommand = new LoginCommand();
-        applicationState = new ApplicationState();
-        session = mock(HttpSession.class);
-
-        when(request.getSession()).thenReturn(session);
-        when(session.getAttribute(ApplicationState.APPLICATION_STATE)).thenReturn(applicationState);
+        errors = new BindException(loginCommand, "loginCommand");
+        state = new ApplicationState();
     }
 
     @Test
-    public void testLogOut() throws Exception {
-        applicationState.setCurrentUser(new org.intalio.tempo.web.User("testUser", new String[]{"role1"}, "token", false));
+    public void testLogOut_WithState() throws Exception {
+        when(request.getSession(false)).thenReturn(mock(javax.servlet.http.HttpSession.class));
+        when(request.getSession().getAttribute("ApplicationState")).thenReturn(state);
+
         ModelAndView modelAndView = loginController.logOut(request, response, loginCommand, errors);
 
-        assertNull(applicationState.getCurrentUser());
-        assertNull(applicationState.getPreviousAction());
-        assertEquals(Constants.LOGIN_VIEW, modelAndView.getViewName());
+        assertEquals("login", modelAndView.getViewName());
         Map model = modelAndView.getModel();
-        assertNotNull(model.get("login"));
+        assertEquals(true, model.containsKey("login"));
+    }
+
+    @Test
+    public void testLogOut_NoState() throws Exception {
+        when(request.getSession(false)).thenReturn(mock(javax.servlet.http.HttpSession.class));
+        when(request.getSession().getAttribute("ApplicationState")).thenReturn(null);
+
+        ModelAndView modelAndView = loginController.logOut(request, response, loginCommand, errors);
+
+        assertEquals("login", modelAndView.getViewName());
+        Map model = modelAndView.getModel();
+        assertEquals(true, model.containsKey("login"));
     }
 }

@@ -1,8 +1,12 @@
 import argparse
+import csv
 import json
+import os
+import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 import traceback
 import xml.etree.ElementTree as ET
@@ -171,7 +175,7 @@ def run_command(
     run_status: dict,
     run_dir: Path,
     step_name: str,
-) -> None:
+) -> subprocess.CompletedProcess:
     report.commands.append(cmd)
     start = time.time()
     proc = subprocess.run(cmd, cwd=str(cwd), text=True, capture_output=True)
@@ -198,9 +202,8 @@ def run_command(
         }
     )
     if proc.returncode != 0:
-        raise subprocess.CalledProcessError(
-            proc.returncode, cmd, output=proc.stdout, stderr=proc.stderr
-        )
+        raise subprocess.CalledProcessError(proc.returncode, cmd, output=proc.stdout, stderr=proc.stderr)
+    return proc
 
 
 def write_json(path: Path, payload: dict) -> None:
@@ -257,16 +260,451 @@ def write_mutation_summary(pit_root: Path, out_path: Path) -> None:
     )
 
 
+def append_mutation_summary_csv(
+    run_dir: Path,
+    repo_id: str,
+    module: str,
+    condition: str,
+    test_scope: str,
+    build_tool: str,
+    focal_class: str,
+    selected_tests: list[str],
+    tests_found: str,
+) -> None:
+    pit_root = run_dir / "pit-reports"
+    xml_path = find_mutations_xml(pit_root)
+    if not xml_path:
+        print(f"[pipeline] warning: mutations.xml not found under {pit_root}; skipping CSV append")
+        return
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+
+    mutations_generated = 0
+    mutations_killed = 0
+    mutations_survived = 0
+    mutations_no_coverage = 0
+    for mutation in root.findall(".//mutation"):
+        mutations_generated += 1
+        status = (mutation.get("status") or "").upper()
+        if status == "KILLED":
+            mutations_killed += 1
+        elif status == "SURVIVED":
+            mutations_survived += 1
+        elif status == "NO_COVERAGE":
+            mutations_no_coverage += 1
+
+    denom = mutations_killed + mutations_survived
+    mutation_score_pct = (mutations_killed / denom * 100.0) if denom else 0.0
+
+    csv_path = BASE_DIR / "artifacts" / "mutation_summary_all_runs.csv"
+    csv_path.parent.mkdir(parents=True, exist_ok=True)
+    write_header = not csv_path.exists()
+
+    timestamp = run_dir.name.split("_", 1)[0]
+    row = [
+        timestamp,
+        repo_id,
+        module,
+        condition,
+        test_scope,
+        build_tool,
+        focal_class,
+        ",".join(selected_tests),
+        tests_found,
+        str(mutations_generated),
+        str(mutations_killed),
+        str(mutations_survived),
+        str(mutations_no_coverage),
+        f"{mutation_score_pct:.6f}",
+        str(run_dir),
+    ]
+    header = [
+        "timestamp",
+        "repo_id",
+        "module",
+        "condition",
+        "test_scope",
+        "build_tool",
+        "focal_class",
+        "target_tests",
+        "tests_found",
+        "mutations_generated",
+        "mutations_killed",
+        "mutations_survived",
+        "mutations_no_coverage",
+        "mutation_score_pct",
+        "run_dir",
+    ]
+    with csv_path.open("a", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        if write_header:
+            writer.writerow(header)
+        writer.writerow(row)
+    print("[pipeline] appended mutation summary row to artifacts/mutation_summary_all_runs.csv")
+
+
+def detect_build_tool(module_dir: Path, build_tool: str) -> str:
+    if build_tool in ("maven", "gradle"):
+        return build_tool
+    if (module_dir / "pom.xml").exists():
+        return "maven"
+    if (module_dir / "build.gradle").exists() or (module_dir / "build.gradle.kts").exists():
+        return "gradle"
+    raise RuntimeError(f"Could not auto-detect build tool for module {module_dir}")
+
+
+def gradle_executable(repo_root: Path, user_gradle_cmd: str | None) -> str:
+    if user_gradle_cmd:
+        return user_gradle_cmd
+    bat = repo_root / "gradlew.bat"
+    sh = repo_root / "gradlew"
+    if bat.exists():
+        return str(bat)
+    if sh.exists():
+        return str(sh)
+    return "gradle"
+
+
+def gradle_project_path(repo_root: Path, module_dir: Path) -> str:
+    rel = module_dir.relative_to(repo_root).as_posix()
+    if rel == ".":
+        return ":"
+    return ":" + rel.replace("/", ":")
+
+
+def run_compile_and_tests(
+    build_tool: str,
+    args: argparse.Namespace,
+    settings_path: Path,
+    repo_root: Path,
+    module_dir: Path,
+    selected_tests: list[str],
+    report: PatchReport,
+    run_status: dict,
+    run_dir: Path,
+) -> None:
+    if build_tool == "maven":
+        run_command(
+            [args.mvn_cmd, "-s", str(settings_path), "-DskipTests", "compile"],
+            module_dir,
+            report,
+            run_status,
+            run_dir,
+            "compile",
+        )
+        test_cmd = [args.mvn_cmd, "-s", str(settings_path)]
+        if args.test_scope == "focal":
+            test_cmd.append(f"-Dtest={','.join(selected_tests)}")
+        test_cmd.append("test")
+        run_command(test_cmd, module_dir, report, run_status, run_dir, "test")
+        return
+
+    gradle_cmd = gradle_executable(repo_root, args.gradle_cmd)
+    gradle_path = gradle_project_path(repo_root, module_dir)
+    run_command(
+        [gradle_cmd, f"{gradle_path}:classes"],
+        repo_root,
+        report,
+        run_status,
+        run_dir,
+        "compile",
+    )
+    test_cmd = [gradle_cmd, f"{gradle_path}:test"]
+    if args.test_scope == "focal":
+        for test_class in selected_tests:
+            test_cmd.extend(["--tests", test_class])
+    run_command(test_cmd, repo_root, report, run_status, run_dir, "test")
+
+
+def _read_classpath_file(cp_file: Path) -> list[str]:
+    if not cp_file.exists():
+        return []
+    text = cp_file.read_text(encoding="utf-8").strip()
+    if not text:
+        return []
+    return [entry for entry in text.split(os.pathsep) if entry]
+
+
+def collect_maven_test_classpath(
+    args: argparse.Namespace,
+    settings_path: Path,
+    module_dir: Path,
+    report: PatchReport,
+    run_status: dict,
+    run_dir: Path,
+) -> list[str]:
+    cp_file = run_dir / "maven_test_classpath.txt"
+    module_classes = str(module_dir / "target" / "classes")
+    test_classes = str(module_dir / "target" / "test-classes")
+    junit_4132 = str(Path.home() / ".m2" / "repository" / "junit" / "junit" / "4.13.2" / "junit-4.13.2.jar")
+    hamcrest_13 = (
+        str(Path.home() / ".m2" / "repository" / "org" / "hamcrest" / "hamcrest-core" / "1.3" / "hamcrest-core-1.3.jar")
+    )
+    cmd = [
+        args.mvn_cmd,
+        "-s",
+        str(settings_path),
+        "-DincludeScope=test",
+        "-Dmdep.addOutputDirectory=true",
+        "-Dmdep.addTestOutputDirectory=true",
+        f"-Dmdep.outputFile={cp_file}",
+        "dependency:build-classpath",
+    ]
+    run_command(cmd, module_dir, report, run_status, run_dir, "collect_test_classpath")
+    cp_text = cp_file.read_text(encoding="utf-8").strip() if cp_file.exists() else ""
+    cp_entries = [entry for entry in cp_text.split(os.pathsep) if entry]
+    had_legacy_junit = any(entry.replace("/", "\\").endswith("\\junit\\junit\\4.5\\junit-4.5.jar") for entry in cp_entries)
+    if had_legacy_junit:
+        if not Path(junit_4132).exists() or not Path(hamcrest_13).exists():
+            run_command(
+                [args.mvn_cmd, "-s", str(settings_path), "-q", "dependency:get", "-Dartifact=junit:junit:4.13.2"],
+                module_dir,
+                report,
+                run_status,
+                run_dir,
+                "fetch_junit_4132",
+            )
+            run_command(
+                [args.mvn_cmd, "-s", str(settings_path), "-q", "dependency:get", "-Dartifact=org.hamcrest:hamcrest-core:1.3"],
+                module_dir,
+                report,
+                run_status,
+                run_dir,
+                "fetch_hamcrest_13",
+            )
+        if Path(junit_4132).exists() and Path(hamcrest_13).exists():
+            cp_entries = [
+                entry
+                for entry in cp_entries
+                if not entry.replace("/", "\\").endswith("\\junit\\junit\\4.5\\junit-4.5.jar")
+            ]
+            if junit_4132 not in cp_entries:
+                cp_entries.append(junit_4132)
+            if hamcrest_13 not in cp_entries:
+                cp_entries.append(hamcrest_13)
+            cp_file.write_text(os.pathsep.join(cp_entries), encoding="utf-8")
+            print("[classpath] replaced junit-4.5 with junit-4.13.2 + hamcrest-core-1.3")
+        else:
+            print("[classpath] warning: junit-4.13.2.jar and/or hamcrest-core-1.3.jar missing; skipping junit rewrite")
+    if module_classes not in cp_entries or test_classes not in cp_entries:
+        if module_classes not in cp_entries:
+            cp_entries.append(module_classes)
+        if test_classes not in cp_entries:
+            cp_entries.append(test_classes)
+        cp_file.write_text(os.pathsep.join(cp_entries), encoding="utf-8")
+        print("[classpath] ensured target/classes + target/test-classes are present")
+    entries = _read_classpath_file(cp_file)
+    entries.extend(
+        [
+            module_classes,
+            test_classes,
+        ]
+    )
+    return sorted(dict.fromkeys(entries))
+
+
+def collect_gradle_test_classpath(
+    args: argparse.Namespace,
+    repo_root: Path,
+    module_dir: Path,
+    report: PatchReport,
+    run_status: dict,
+    run_dir: Path,
+) -> list[str]:
+    gradle_cmd = gradle_executable(repo_root, args.gradle_cmd)
+    module_path = gradle_project_path(repo_root, module_dir)
+    init_script = run_dir / "collect_test_cp.init.gradle"
+    init_script.write_text(
+        f"""
+gradle.afterProject {{ p ->
+  if (p.path == "{module_path}") {{
+    p.tasks.register("printTestRuntimeClasspath") {{
+      doLast {{
+        def t = p.tasks.findByName("test")
+        if (t != null && t.hasProperty("classpath")) {{
+          t.classpath.files.each {{ f -> println("CLASSPATH_ENTRY::" + f.absolutePath) }}
+        }}
+      }}
+    }}
+  }}
+}}
+""".strip(),
+        encoding="utf-8",
+    )
+    proc = run_command(
+        [gradle_cmd, "-I", str(init_script), f"{module_path}:printTestRuntimeClasspath", "-q"],
+        repo_root,
+        report,
+        run_status,
+        run_dir,
+        "collect_test_classpath",
+    )
+    entries = []
+    for line in proc.stdout.splitlines():
+        if line.startswith("CLASSPATH_ENTRY::"):
+            entries.append(line.split("::", 1)[1].strip())
+    entries.extend(
+        [
+            str(module_dir / "build" / "classes" / "java" / "main"),
+            str(module_dir / "build" / "classes" / "java" / "test"),
+            str(module_dir / "build" / "resources" / "main"),
+            str(module_dir / "build" / "resources" / "test"),
+        ]
+    )
+    return sorted(dict.fromkeys([e for e in entries if e]))
+
+
+def collect_pit_cli_classpath(
+    args: argparse.Namespace,
+    settings_path: Path,
+    report: PatchReport,
+    run_status: dict,
+    run_dir: Path,
+) -> list[str]:
+    temp_dir = Path(tempfile.mkdtemp(prefix="pit_cli_", dir=str(run_dir)))
+    pom_path = temp_dir / "pom.xml"
+    cp_file = temp_dir / "pit_cli_cp.txt"
+    pom_path.write_text(
+        f"""
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tmp</groupId>
+  <artifactId>pit-cli-cp</artifactId>
+  <version>1.0.0</version>
+  <dependencies>
+    <dependency>
+      <groupId>org.pitest</groupId>
+      <artifactId>pitest-command-line</artifactId>
+      <version>{args.pit_version}</version>
+    </dependency>
+  </dependencies>
+</project>
+""".strip(),
+        encoding="utf-8",
+    )
+    run_command(
+        [
+            args.mvn_cmd,
+            "-s",
+            str(settings_path),
+            "-f",
+            str(pom_path),
+            f"-Dmdep.outputFile={cp_file}",
+            "dependency:build-classpath",
+        ],
+        BASE_DIR,
+        report,
+        run_status,
+        run_dir,
+        "collect_pit_cli_classpath",
+    )
+    return _read_classpath_file(cp_file)
+
+
+def run_pit_cli(
+    repo_id: str,
+    module: str,
+    condition: str,
+    test_scope: str,
+    build_tool: str,
+    args: argparse.Namespace,
+    settings_path: Path,
+    repo_root: Path,
+    module_dir: Path,
+    focal_class: str,
+    selected_tests: list[str],
+    report: PatchReport,
+    run_status: dict,
+    run_dir: Path,
+) -> Path:
+    focal_targets = [value.strip() for value in focal_class.split(",") if value.strip()]
+    target_classes_arg = ",".join(
+        [value if ("*" in value or "?" in value) else f"{value}*" for value in focal_targets]
+    )
+    expected_class = None
+    if focal_targets:
+        expected_class = module_dir / "target" / "classes" / Path(*focal_targets[0].split("."))
+        expected_class = expected_class.with_suffix(".class")
+
+    if build_tool == "maven":
+        sut_classpath = collect_maven_test_classpath(args, settings_path, module_dir, report, run_status, run_dir)
+        source_dir = module_dir / "src" / "main" / "java"
+    else:
+        sut_classpath = collect_gradle_test_classpath(args, repo_root, module_dir, report, run_status, run_dir)
+        source_dir = module_dir / "src" / "main" / "java"
+
+    pit_cli_classpath = collect_pit_cli_classpath(args, settings_path, report, run_status, run_dir)
+    classpath_entries = pit_cli_classpath + sut_classpath
+    classpath_entries = [entry for entry in classpath_entries if entry]
+    classpath_joined = os.pathsep.join(classpath_entries)
+    pit_classpath_joined = os.pathsep.join(sut_classpath)
+    pit_classpath_entries = [entry for entry in pit_classpath_joined.split(os.pathsep) if entry]
+    pit_classpath_file = run_dir / "pit_classpath.txt"
+    pit_classpath_file.write_text("\n".join(pit_classpath_entries), encoding="utf-8")
+
+    pit_reports_dir = run_dir / "pit-reports"
+    if pit_reports_dir.exists():
+        shutil.rmtree(pit_reports_dir)
+
+    pit_cmd = [
+        "java",
+        "-cp",
+        classpath_joined,
+        "org.pitest.mutationtest.commandline.MutationCoverageReport",
+        "--reportDir",
+        str(pit_reports_dir),
+        "--targetClasses",
+        target_classes_arg,
+        "--targetTests",
+        ",".join(selected_tests),
+        "--sourceDirs",
+        str(source_dir),
+        "--mutableCodePaths",
+        str(module_dir / "target" / "classes"),
+        "--classPathFile",
+        str(pit_classpath_file),
+        "--includeLaunchClasspath",
+        "false",
+        "--outputFormats",
+        "XML,HTML",
+    ]
+    print(
+        f"[pit] targetClasses={target_classes_arg} targetTests={','.join(selected_tests)} "
+        f"classExists={expected_class.exists() if expected_class else False}"
+    )
+    print(f"[pit] classPathFile={pit_classpath_file} entries={len(pit_classpath_entries)}")
+    if "org.red5.server.service.ConversionUtils" in [value.strip() for value in focal_class.split(",")]:
+        required_class = (
+            module_dir / "target" / "classes" / "org" / "red5" / "server" / "service" / "ConversionUtils.class"
+        )
+        if not required_class.exists():
+            raise RuntimeError(f"Required compiled class missing before PIT: {required_class}")
+    pit_proc = run_command(pit_cmd, module_dir, report, run_status, run_dir, "pit")
+    tests_found = ""
+    tests_found_match = re.search(r"Found\s+(\d+)\s+tests", f"{pit_proc.stdout}\n{pit_proc.stderr}")
+    if tests_found_match:
+        tests_found = tests_found_match.group(1)
+    append_mutation_summary_csv(
+        run_dir=run_dir,
+        repo_id=repo_id,
+        module=module,
+        condition=condition,
+        test_scope=test_scope,
+        build_tool=build_tool,
+        focal_class=focal_class,
+        selected_tests=selected_tests,
+        tests_found=tests_found,
+    )
+    return pit_reports_dir
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Run Maven test/PIT with deterministic buildability patches."
+        description="Run deterministic test + PIT pipeline across Maven/Gradle."
     )
     parser.add_argument("--repo-id", required=True, help="Target repository id, e.g. 103035")
-    parser.add_argument(
-        "--module",
-        required=True,
-        help="Module directory inside target-repos/<repo-id>.",
-    )
+    parser.add_argument("--module", required=True, help="Module directory inside target-repos/<repo-id>.")
     parser.add_argument(
         "--condition",
         default="HUMAN",
@@ -284,21 +722,16 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Path to mapping JSON (defaults to first classes2test/assertion_dataset/<repo_id>_*.json).",
     )
+    parser.add_argument("--run-pit", action="store_true", help="Also run PIT after tests.")
     parser.add_argument(
-        "--run-pit",
-        action="store_true",
-        help="Also run PIT after tests.",
+        "--build-tool",
+        default="auto",
+        choices=["auto", "maven", "gradle"],
+        help="Build tool selection.",
     )
-    parser.add_argument(
-        "--pit-goal",
-        default="org.pitest:pitest-maven:1.6.9:mutationCoverage",
-        help="PIT goal to execute.",
-    )
-    parser.add_argument(
-        "--mvn-cmd",
-        default="mvn.cmd",
-        help="Maven executable name/path.",
-    )
+    parser.add_argument("--mvn-cmd", default="mvn.cmd", help="Maven executable name/path.")
+    parser.add_argument("--gradle-cmd", default=None, help="Gradle executable name/path.")
+    parser.add_argument("--pit-version", default="1.6.9", help="PIT CLI version for pitest-command-line.")
     return parser.parse_args()
 
 
@@ -309,7 +742,11 @@ def main() -> int:
     if not module_dir.exists():
         raise SystemExit(f"Module directory does not exist: {module_dir}")
 
-    run_id = f"{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}_{args.repo_id}_{args.module}_{args.condition}_{args.test_scope}"
+    build_tool = detect_build_tool(module_dir, args.build_tool)
+    run_id = (
+        f"{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}_"
+        f"{args.repo_id}_{args.module}_{args.condition}_{args.test_scope}_{build_tool}"
+    )
     run_dir = BASE_DIR / "artifacts" / "runs" / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
 
@@ -319,6 +756,7 @@ def main() -> int:
         "module": args.module,
         "condition": args.condition,
         "test_scope": args.test_scope,
+        "build_tool": build_tool,
         "run_pit": args.run_pit,
         "started_at_utc": utc_now(),
         "ended_at_utc": None,
@@ -338,14 +776,14 @@ def main() -> int:
     )
     report.settings_path = str(settings_path)
     report.changes.append("Ensured Maven settings.xml with HTTPS mirrors")
+    report.changes.append(f"Using build tool: {build_tool}")
 
     report_path = BASE_DIR / "artifacts" / "build_patches" / f"{args.repo_id}_{args.module}.json"
 
     mapping = None
     selected_tests: list[str] = []
     focal_class = None
-    pit_reports_dir = module_dir / "target" / "pit-reports"
-    copied_pit_dir = run_dir / "pit-reports"
+    pit_reports_dir = run_dir / "pit-reports"
 
     try:
         if args.test_scope == "focal" or args.run_pit:
@@ -359,31 +797,28 @@ def main() -> int:
         else:
             if mapping is None:
                 raise RuntimeError("Focal test scope requires a mapping JSON.")
-            selected_tests, focal_class = resolve_focal_selection(
-                module_dir, args.module, mapping, args.condition
-            )
+            selected_tests, focal_class = resolve_focal_selection(module_dir, args.module, mapping, args.condition)
             keep_fqcns = set(selected_tests)
             _disable_unselected_tests(module_dir, keep_fqcns, report)
             report.changes.append(f"Applied focal test scope with selected tests: {selected_tests}")
 
         run_status["selected_test_classes"] = selected_tests
 
-        install_missing_jars(BASE_DIR, settings_path, report, mvn_cmd=args.mvn_cmd)
+        # Existing reproducibility patches apply to Maven repos; keep for compatibility.
+        if build_tool == "maven":
+            install_missing_jars(BASE_DIR, settings_path, report, mvn_cmd=args.mvn_cmd)
 
-        run_command(
-            [args.mvn_cmd, "-s", str(settings_path), "-DskipTests", "compile"],
+        run_compile_and_tests(
+            build_tool,
+            args,
+            settings_path,
+            repo_root,
             module_dir,
+            selected_tests,
             report,
             run_status,
             run_dir,
-            "compile",
         )
-
-        test_cmd = [args.mvn_cmd, "-s", str(settings_path)]
-        if args.test_scope == "focal":
-            test_cmd.append(f"-Dtest={','.join(selected_tests)}")
-        test_cmd.append("test")
-        run_command(test_cmd, module_dir, report, run_status, run_dir, "test")
 
         if args.run_pit:
             if mapping is None:
@@ -391,19 +826,22 @@ def main() -> int:
             if not focal_class:
                 focal_class = java_file_to_fqcn(mapping["focal_class"]["file"])
             run_status["target_classes"] = [focal_class]
-
-            shutil.rmtree(pit_reports_dir, ignore_errors=True)
-
-            pit_cmd = [
-                args.mvn_cmd,
-                "-s",
-                str(settings_path),
-                args.pit_goal,
-                f"-DtargetClasses={focal_class}",
-                f"-DtargetTests={','.join(selected_tests)}",
-                "-DoutputFormats=XML,HTML",
-            ]
-            run_command(pit_cmd, module_dir, report, run_status, run_dir, "pit")
+            pit_reports_dir = run_pit_cli(
+                args.repo_id,
+                args.module,
+                args.condition,
+                args.test_scope,
+                build_tool,
+                args,
+                settings_path,
+                repo_root,
+                module_dir,
+                focal_class,
+                selected_tests,
+                report,
+                run_status,
+                run_dir,
+            )
 
         run_status["success"] = True
         report.changes.append(f"Run artifacts written to {run_dir}")
@@ -415,9 +853,7 @@ def main() -> int:
     finally:
         run_status["ended_at_utc"] = utc_now()
         if args.run_pit:
-            if pit_reports_dir.exists():
-                shutil.copytree(pit_reports_dir, copied_pit_dir, dirs_exist_ok=True)
-            write_mutation_summary(copied_pit_dir, run_dir / "mutation_summary.json")
+            write_mutation_summary(pit_reports_dir, run_dir / "mutation_summary.json")
         _restore_disabled_tests(module_dir, report)
         write_json(run_dir / "run_status.json", run_status)
         write_patch_report(report, report_path)

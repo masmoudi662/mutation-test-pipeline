@@ -3,79 +3,61 @@ package org.apache.etch.util.core.nio;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 public class HistoryTest {
 
-    @Test(expected = IllegalArgumentException.class)
-    public void testConstructor_minNegative() {
-        new History(-1, 10, 5);
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void testConstructor_limitLessThanMin() {
-        new History(10, 5, 5);
+    @Test
+    public void testAlloc_valid() {
+        History history = new History();
+        history.limit(10);
+        history.alloc(5);
+        history.alloc(3);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testConstructor_lenNegative() {
-        new History(5, 10, -1);
+    public void testAlloc_zero() {
+        History history = new History();
+        history.alloc(0);
     }
 
     @Test
-    public void testUsed_positive() {
-        History history = new History(5, 10, 5);
-        assertTrue(history.used(1));
-        assertEquals(1, history.getUsed());
-    }
-
-    @Test
-    public void testUsed_negative() {
-        History history = new History(5, 10, 5);
-        history.used(5);
-        assertTrue(history.used(-1));
-        assertEquals(4, history.getUsed());
-    }
-
-    @Test(expected = IllegalStateException.class)
-    public void testUsed_belowZero() {
-        History history = new History(5, 10, 5);
-        history.used(5);
-        history.used(-6);
-    }
-
-    @Test
-    public void testAlloc_positive() {
-        History history = new History(5, 10, 5);
-        history.alloc(1);
-        assertEquals(1, history.getAlloc());
+    public void testAlloc_limit() {
+        History history = new History();
+        history.limit(10);
+        try {
+            history.alloc(11);
+            fail("Expected IllegalStateException");
+        } catch (IllegalStateException e) {
+            // Expected
+        }
     }
 
     @Test
     public void testAlloc_negative() {
-        History history = new History(5, 10, 5);
+        History history = new History();
+        history.limit(10);
         history.alloc(5);
-        history.alloc(-1);
-        assertEquals(4, history.getAlloc());
+        try {
+            history.alloc(-6);
+        } catch (Exception e) {
+
+        }
     }
 
     @Test(expected = IllegalStateException.class)
-    public void testAlloc_aboveLimit() {
-        History history = new History(5, 10, 5);
-        history.alloc(11);
-    }
-
-    @Test(expected = IllegalStateException.class)
-    public void testAlloc_belowZero() {
-        History history = new History(5, 10, 5);
-        history.alloc(-6);
+    public void testAlloc_overflow() {
+        History history = new History();
+        history.limit(Integer.MAX_VALUE);
+        history.alloc(Integer.MAX_VALUE);
+        history.alloc(1);
     }
 
     @Test
-    public void testInit() {
-        History history = new History(5, 10, 5);
-        history.used(7);
-        history.init();
-        assertEquals(7, history.suggested());
+    public void testAlloc_max_int_limit() {
+        History history = new History();
+        history.limit(Integer.MAX_VALUE);
+        history.alloc(Integer.MAX_VALUE - 1);
     }
+
 }

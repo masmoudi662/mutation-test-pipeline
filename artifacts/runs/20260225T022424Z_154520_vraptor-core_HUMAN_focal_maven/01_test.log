@@ -1,0 +1,51 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -Dtest=br.com.caelum.vraptor.converter.LongConverterTest test
+
+STDOUT:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< br.com.caelum:vraptor >------------------------
+[INFO] Building vraptor 3.5.6-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ vraptor ---
+[INFO] 
+[INFO] --- antrun:1.7:run (process-sources) @ vraptor ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ vraptor ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:2.3.1:compile (default-compile) @ vraptor ---
+[INFO] Compiling 1 source file to D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\154520\vraptor-core\target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ vraptor ---
+[INFO] Copying 3 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:2.3.1:testCompile (default-testCompile) @ vraptor ---
+[INFO] Compiling 1 source file to D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\154520\vraptor-core\target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ vraptor ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running br.com.caelum.vraptor.converter.LongConverterTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s -- in br.com.caelum.vraptor.converter.LongConverterTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.084 s
+[INFO] Finished at: 2026-02-24T21:24:49-05:00
+[INFO] ------------------------------------------------------------------------
+
+STDERR:

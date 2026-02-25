@@ -1,68 +1,80 @@
 java
 package org.jredis.ri.alphazero.support;
 
+import org.jredis.RedisException;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class ConvertTest {
 
     @Test
-    public void testToBytesIntSmallPositive() {
-        byte[] bytes = Convert.toBytes(123);
-        assertArrayEquals("123".getBytes(), bytes);
+    public void testToBytesPositiveSmall() {
+        byte[] result = Convert.toBytes(10);
+        assertNotNull(result);
+        assertEquals("10", new String(result));
     }
 
     @Test
-    public void testToBytesIntSmallNegative() {
-        byte[] bytes = Convert.toBytes(-123);
-        assertArrayEquals("-123".getBytes(), bytes);
+    public void testToBytesNegativeSmall() {
+        byte[] result = Convert.toBytes(-10);
+        assertNotNull(result);
+        assertEquals("-10", new String(result));
     }
 
     @Test
-    public void testToBytesIntLargePositive() {
-        byte[] bytes = Convert.toBytes(Integer.MAX_VALUE);
-        assertArrayEquals(Integer.toString(Integer.MAX_VALUE).getBytes(), bytes);
+    public void testToBytesPositiveLarge() {
+        byte[] result = Convert.toBytes(70000);
+        assertNotNull(result);
+        assertEquals("70000", new String(result));
     }
 
     @Test
-    public void testToBytesIntLargeNegative() {
-        byte[] bytes = Convert.toBytes(Integer.MIN_VALUE);
-        assertArrayEquals(Integer.toString(Integer.MIN_VALUE).getBytes(), bytes);
+    public void testToBytesNegativeLarge() {
+        byte[] result = Convert.toBytes(-70000);
+        assertNotNull(result);
+        assertEquals("-70000", new String(result));
     }
 
     @Test
-    public void testToBytesLongSmallPositive() {
-        byte[] bytes = Convert.toBytes(123L);
-        assertArrayEquals("123".getBytes(), bytes);
+    public void testToBytesZero() {
+        byte[] result = Convert.toBytes(0);
+        assertNotNull(result);
+        assertEquals("0", new String(result));
     }
 
     @Test
-    public void testToBytesLongLargePositive() {
-        byte[] bytes = Convert.toBytes(Long.MAX_VALUE);
-        assertArrayEquals(Long.toString(Long.MAX_VALUE).getBytes(), bytes);
+    public void testToBytesMaxInt() {
+        byte[] result = Convert.toBytes(Integer.MAX_VALUE);
+        assertNotNull(result);
+        assertEquals(String.valueOf(Integer.MAX_VALUE), new String(result));
     }
 
     @Test
-    public void testToIntValidPositive() {
-        int result = Convert.toInt("123".getBytes());
-        assertEquals(123, result);
-    }
-    
-    @Test
-    public void testToIntValidNegative() {
-        int result = Convert.toInt("-123".getBytes());
-        assertEquals(-123, result);
+    public void testToBytesMinInt() {
+        byte[] result = Convert.toBytes(Integer.MIN_VALUE);
+        assertNotNull(result);
+        assertEquals(String.valueOf(Integer.MIN_VALUE), new String(result));
     }
 
     @Test
-    public void testToLongValidPositive() {
-        long result = Convert.toLong("1234567890123".getBytes());
-        assertEquals(1234567890123L, result);
+    public void testToBytesPositiveCache() {
+        byte[] result1 = Convert.toBytes(1000);
+        byte[] result2 = Convert.toBytes(1000);
+        assertNotNull(result1);
+        assertNotNull(result2);
+        assertEquals("1000", new String(result1));
+        assertEquals("1000", new String(result2));
     }
 
     @Test
-    public void testToDouble() {
-        double result = Convert.toDouble("123.45".getBytes());
-        assertEquals(123.45, result, 0.001);
+    public void testToBytesNegativeCache() {
+        byte[] result1 = Convert.toBytes(-1000);
+        byte[] result2 = Convert.toBytes(-1000);
+        assertNotNull(result1);
+        assertNotNull(result2);
+        assertEquals("-1000", new String(result1));
+        assertEquals("-1000", new String(result2));
     }
 }

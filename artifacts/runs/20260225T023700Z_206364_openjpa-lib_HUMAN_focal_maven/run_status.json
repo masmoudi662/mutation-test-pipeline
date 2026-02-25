@@ -1,0 +1,34 @@
+{
+  "run_id": "20260225T023700Z_206364_openjpa-lib_HUMAN_focal_maven",
+  "repo_id": "206364",
+  "module": "openjpa-lib",
+  "condition": "HUMAN",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": true,
+  "started_at_utc": "2026-02-25T02:37:00.333929+00:00",
+  "ended_at_utc": "2026-02-25T02:37:05.208204+00:00",
+  "success": false,
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib",
+      "returncode": 1,
+      "duration_seconds": 2.448,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023700Z_206364_openjpa-lib_HUMAN_focal_maven\\00_compile.log"
+    }
+  ],
+  "selected_test_classes": [
+    "org.apache.openjpa.lib.util.StringUtilTest"
+  ],
+  "target_classes": [],
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\206364_16.json",
+  "error": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1."
+}

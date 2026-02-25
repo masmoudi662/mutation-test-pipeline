@@ -13,7 +13,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.orm.jpa.JpaSystemException;
 import org.springframework.security.authentication.encoding.PasswordEncoder;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
 public class UserManagerImplTest {
@@ -30,6 +30,7 @@ public class UserManagerImplTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        userManager.setDao(userDao);
     }
 
     @Test
@@ -40,59 +41,86 @@ public class UserManagerImplTest {
         user.setEmail("test@example.com");
 
         when(userDao.saveUser(user)).thenReturn(user);
-        when(passwordEncoder.encodePassword("password", null)).thenReturn("encodedPassword");
+        when(passwordEncoder.encodePassword(user.getPassword(), null)).thenReturn("encodedPassword");
 
         User savedUser = userManager.saveUser(user);
 
         assertEquals("testuser", savedUser.getUsername());
-        assertEquals("encodedPassword", savedUser.getPassword());
-        verify(userDao).saveUser(user);
         verify(passwordEncoder).encodePassword("password", null);
+        verify(userDao).saveUser(user);
+    }
+
+    @Test
+    public void testSaveUserExistingUserPasswordChanged() throws UserExistsException {
+        User user = new User();
+        user.setUsername("testuser");
+        user.setPassword("newpassword");
+        user.setEmail("test@example.com");
+        user.setVersion(1L);
+
+        when(userDao.getUserPassword("testuser")).thenReturn("oldpassword");
+        when(userDao.saveUser(user)).thenReturn(user);
+        when(passwordEncoder.encodePassword(user.getPassword(), null)).thenReturn("encodedPassword");
+
+        User savedUser = userManager.saveUser(user);
+
+        assertEquals("testuser", savedUser.getUsername());
+        verify(passwordEncoder).encodePassword("newpassword", null);
+        verify(userDao).saveUser(user);
+    }
+
+    @Test
+    public void testSaveUserExistingUserPasswordNotChanged() throws UserExistsException {
+        User user = new User();
+        user.setUsername("testuser");
+        user.setPassword("password");
+        user.setEmail("test@example.com");
+        user.setVersion(1L);
+
+        when(userDao.getUserPassword("testuser")).thenReturn("password");
+        when(userDao.saveUser(user)).thenReturn(user);
+
+        User savedUser = userManager.saveUser(user);
+
+        assertEquals("testuser", savedUser.getUsername());
+        verify(passwordEncoder, never()).encodePassword(anyString(), any());
+        verify(userDao).saveUser(user);
     }
 
     @Test(expected = UserExistsException.class)
-    public void testSaveUserExistingUserException() throws UserExistsException {
+    public void testSaveUserUserExistsExceptionDataIntegrityViolation() throws UserExistsException {
         User user = new User();
-        user.setUsername("existinguser");
+        user.setUsername("testuser");
+        user.setPassword("password");
 
-        when(userDao.saveUser(user)).thenThrow(new DataIntegrityViolationException("Duplicate entry"));
+        when(userDao.saveUser(user)).thenThrow(new DataIntegrityViolationException("duplicate"));
+
+        userManager.saveUser(user);
+    }
+
+    @Test(expected = UserExistsException.class)
+    public void testSaveUserUserExistsExceptionJpaSystemException() throws UserExistsException {
+        User user = new User();
+        user.setUsername("testuser");
+        user.setPassword("password");
+
+        when(userDao.saveUser(user)).thenThrow(new JpaSystemException(new DataIntegrityViolationException("duplicate")));
 
         userManager.saveUser(user);
     }
 
     @Test
-    public void testGetUser() {
+    public void testSaveUserUsernameLowercase() throws UserExistsException {
         User user = new User();
-        user.setId(1L);
-        user.setUsername("testuser");
-
-        when(userDao.get(1L)).thenReturn(user);
-
-        User retrievedUser = userManager.getUser("1");
-
-        assertEquals("testuser", retrievedUser.getUsername());
-    }
-
-    @Test
-    public void testRemoveUser() {
-        userManager.removeUser("1");
-        verify(userDao).remove(1L);
-    }
-
-    @Test
-    public void testSaveUserJpaSystemException() throws UserExistsException {
-        User user = new User();
-        user.setUsername("testuser");
+        user.setUsername("TestUser");
         user.setPassword("password");
-        user.setEmail("test@example.com");
 
-        when(userDao.saveUser(user)).thenThrow(new JpaSystemException(new DataIntegrityViolationException("")));
+        when(userDao.saveUser(user)).thenReturn(user);
+        when(passwordEncoder.encodePassword(user.getPassword(), null)).thenReturn("encodedPassword");
 
-        try {
-            userManager.saveUser(user);
-            fail("Expected UserExistsException");
-        } catch (UserExistsException e) {
-            assertEquals("User 'testuser' already exists!", e.getMessage());
-        }
+        User savedUser = userManager.saveUser(user);
+
+        assertEquals("testuser", savedUser.getUsername());
+        verify(userDao).saveUser(user);
     }
 }

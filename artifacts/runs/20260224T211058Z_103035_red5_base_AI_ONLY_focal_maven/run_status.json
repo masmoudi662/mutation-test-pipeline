@@ -1,0 +1,48 @@
+{
+  "run_id": "20260224T211058Z_103035_red5_base_AI_ONLY_focal_maven",
+  "repo_id": "103035",
+  "module": "red5_base",
+  "condition": "AI_ONLY",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": false,
+  "started_at_utc": "2026-02-24T21:10:58.939160+00:00",
+  "ended_at_utc": "2026-02-24T21:11:05.824831+00:00",
+  "success": true,
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base",
+      "returncode": 0,
+      "duration_seconds": 1.728,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260224T211058Z_103035_red5_base_AI_ONLY_focal_maven\\00_compile.log"
+    },
+    {
+      "step": "test",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-Dtest=org.red5.server.service.ConversionUtilsAiTest",
+        "test"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base",
+      "returncode": 0,
+      "duration_seconds": 3.132,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260224T211058Z_103035_red5_base_AI_ONLY_focal_maven\\01_test.log"
+    }
+  ],
+  "selected_test_classes": [
+    "org.red5.server.service.ConversionUtilsAiTest"
+  ],
+  "target_classes": [],
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\103035_22.json",
+  "error": null
+}

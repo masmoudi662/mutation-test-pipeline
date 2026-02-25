@@ -2,102 +2,103 @@ java
 package cascading.management.annotation;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.net.URI;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+
+import static org.junit.Assert.*;
 
 public class URISanitizerTest
   {
 
+  private static final Logger LOG = LoggerFactory.getLogger( URISanitizerTest.class );
+
   @Test
-  public void testNullValue()
+  public void testApplyNullValue()
     {
     URISanitizer sanitizer = new URISanitizer();
     assertNull( sanitizer.apply( Visibility.PUBLIC, null ) );
     }
 
   @Test
-  public void testHierarchicalURI_Public()
+  public void testApplyURIValuePublic()
     {
     URISanitizer sanitizer = new URISanitizer();
-    URI uri = URI.create( "jdbc://user:password@host:port/path?param1=value1&param2=value2" );
-    String result = sanitizer.apply( Visibility.PUBLIC, uri );
-    assertEquals( "/path", result );
+    URI uri = URI.create( "http://user:password@example.com/path?query=value#fragment" );
+    assertEquals( "/path", sanitizer.apply( Visibility.PUBLIC, uri ) );
     }
 
   @Test
-  public void testHierarchicalURI_Protected()
+  public void testApplyURIValueProtected()
     {
     URISanitizer sanitizer = new URISanitizer();
-    URI uri = URI.create( "jdbc://user:password@host:port/path?param1=value1&param2=value2" );
-    String result = sanitizer.apply( Visibility.PROTECTED, uri );
-    assertEquals( "/path?param1=value1&param2=value2&", result );
+    URI uri = URI.create( "http://user:password@example.com/path?query=value#fragment" );
+    assertEquals( "/path?query=xxxxx", sanitizer.apply( Visibility.PROTECTED, uri ) );
     }
 
   @Test
-  public void testHierarchicalURI_Private()
+  public void testApplyURIValuePrivate()
     {
     URISanitizer sanitizer = new URISanitizer();
-    URI uri = URI.create( "jdbc://user:password@host:port/path?param1=value1&param2=value2" );
-    String result = sanitizer.apply( Visibility.PRIVATE, uri );
-    assertEquals( "jdbc://user:password@host:port/path?param1=value1&param2=value2&", result );
+    URI uri = URI.create( "http://user:password@example.com/path?query=value#fragment" );
+    assertEquals( "http://user:password@example.com/path?query=xxxxx", sanitizer.apply( Visibility.PRIVATE, uri ) );
     }
 
   @Test
-  public void testOpaqueURI_Public()
+  public void testApplyStringValuePublic()
     {
     URISanitizer sanitizer = new URISanitizer();
-    URI uri = URI.create( "mailto:someone@email.com" );
-    String result = sanitizer.apply( Visibility.PUBLIC, uri );
-    assertEquals( "mailto:", result );
+    String uriString = "http://user:password@example.com/path?query=value#fragment";
+    assertEquals( "/path", sanitizer.apply( Visibility.PUBLIC, uriString ) );
     }
 
   @Test
-  public void testOpaqueURI_Private()
+  public void testApplyStringValueProtected()
     {
     URISanitizer sanitizer = new URISanitizer();
-    URI uri = URI.create( "mailto:someone@email.com" );
-    String result = sanitizer.apply( Visibility.PRIVATE, uri );
-    assertEquals( "mailto:someone@email.com", result );
+    String uriString = "http://user:password@example.com/path?query=value#fragment";
+    assertEquals( "/path?query=xxxxx", sanitizer.apply( Visibility.PROTECTED, uriString ) );
     }
 
   @Test
-  public void testParameterFiltering()
+  public void testApplyStringValuePrivate()
     {
-    System.setProperty( URISanitizer.PARAMETER_FILTER_PROPERTY, "password, api_key" );
     URISanitizer sanitizer = new URISanitizer();
-    URI uri = URI.create( "http://host/path?user=test&password=secret&api_key=123" );
-    String result = sanitizer.apply( Visibility.PROTECTED, uri );
-    assertEquals( "/path?user=test&", result );
-    System.clearProperty( URISanitizer.PARAMETER_FILTER_PROPERTY );
+    String uriString = "http://user:password@example.com/path?query=value#fragment";
+    assertEquals( "http://user:password@example.com/path?query=xxxxx", sanitizer.apply( Visibility.PRIVATE, uriString ) );
     }
 
   @Test
-  public void testInvalidURI_PassThrough()
+  public void testApplyOpaqueURIProtected()
     {
-    System.setProperty( URISanitizer.FAILURE_MODE_PASS_THROUGH, "true" );
     URISanitizer sanitizer = new URISanitizer();
-    String invalidURI = "invalid uri";
-    String result = sanitizer.apply( Visibility.PUBLIC, invalidURI );
-    assertEquals( invalidURI, result );
-    System.clearProperty( URISanitizer.FAILURE_MODE_PASS_THROUGH );
+    URI uri = URI.create( "mailto:john.doe@example.com" );
+    assertEquals( "mailto:", sanitizer.apply( Visibility.PROTECTED, uri ) );
     }
 
   @Test
-  public void testInvalidURI_Default()
+  public void testApplyOpaqueURIPrivate()
     {
     URISanitizer sanitizer = new URISanitizer();
-    String invalidURI = "invalid uri";
-    String result = sanitizer.apply( Visibility.PUBLIC, invalidURI );
-    assertEquals( "", result );
+    URI uri = URI.create( "mailto:john.doe@example.com" );
+    assertEquals( "mailto:john.doe@example.com", sanitizer.apply( Visibility.PRIVATE, uri ) );
     }
 
   @Test
-  public void testEncoding()
+  public void testApplyMalformedURI()
     {
     URISanitizer sanitizer = new URISanitizer();
-    String uriString = "http://host/path[with]brackets{and}braces;and,commas\\\\";
-    String result = sanitizer.apply( Visibility.PUBLIC, uriString );
-    assertEquals( "/path%5Bwith%5Dbrackets%7Band%7Dbraces%3Band%2Ccommas/", result );
+    String malformedUri = "http://user:password@example.com/path?query=%{invalid}";
+    System.setProperty( "cascading.management.uri.failure.passthrough", "true" );
+    String result = sanitizer.apply( Visibility.PUBLIC, malformedUri );
+    assertEquals(malformedUri, result);
+    System.clearProperty( "cascading.management.uri.failure.passthrough" );
+
+    System.setProperty( "cascading.management.uri.failure.passthrough", "false" );
+    result = sanitizer.apply( Visibility.PUBLIC, malformedUri );
+    assertEquals("", result);
+    System.clearProperty( "cascading.management.uri.failure.passthrough" );
+
     }
   }

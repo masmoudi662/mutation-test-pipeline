@@ -6,88 +6,106 @@ import static org.mockito.Mockito.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
+import org.apache.juli.logging.Log;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 public class NodeIdServiceTest {
 
-    private NodeAvailabilityCache<String> nodeAvailabilityCache;
-    private NodeIdList nodeIdList;
-    private List<String> failoverNodeIds;
     private NodeIdService nodeIdService;
+    private List<String> nodeIds;
+    private List<String> failoverNodeIds;
+
+    @Mock
+    private Log log;
 
     @Before
     public void setUp() {
-        nodeAvailabilityCache = mock(NodeAvailabilityCache.class);
-        nodeIdList = mock(NodeIdList.class);
+        MockitoAnnotations.initMocks(this);
+        nodeIds = new ArrayList<>();
         failoverNodeIds = new ArrayList<>();
-        nodeIdService = new NodeIdService(nodeAvailabilityCache, nodeIdList, failoverNodeIds);
+        nodeIdService = new NodeIdService(nodeIds, failoverNodeIds, log);
     }
 
     @Test
-    public void testGetAvailableNodeId_RegularNodes() {
-        List<String> nodes = Arrays.asList("node1", "node2", "node3");
-        NodeIdService service = new NodeIdService(nodes, null);
-
-        when(nodeAvailabilityCache.isNodeAvailable("node2")).thenReturn(true);
-
-        String availableNodeId = service.getAvailableNodeId("node1");
-        assertEquals("node2", availableNodeId);
+    public void testGetAvailableNodeId_RegularNodes_Empty() {
+        assertNull(nodeIdService.getAvailableNodeId("node1"));
     }
 
     @Test
-    public void testGetAvailableNodeId_FailoverNodes() {
-        List<String> nodes = Arrays.asList("node1", "node2");
-        List<String> failoverNodes = Arrays.asList("failover1", "failover2");
-        NodeIdService service = new NodeIdService(nodes, failoverNodes);
-
-        when(nodeAvailabilityCache.isNodeAvailable("failover1")).thenReturn(true);
-
-        String availableNodeId = service.getAvailableNodeId("node1");
-        assertEquals("failover1", availableNodeId);
+    public void testGetAvailableNodeId_RegularNodes_Single() {
+        nodeIds.add("node2");
+        nodeIdService = new NodeIdService(nodeIds, failoverNodeIds, log);
+        assertEquals("node2", nodeIdService.getAvailableNodeId("node1"));
     }
 
     @Test
-    public void testGetAvailableNodeId_NoAvailableNodes() {
-        List<String> nodes = Arrays.asList("node1", "node2");
-        List<String> failoverNodes = Arrays.asList("failover1", "failover2");
-        NodeIdService service = new NodeIdService(nodes, failoverNodes);
-
-        when(nodeAvailabilityCache.isNodeAvailable(anyString())).thenReturn(false);
-
-        String availableNodeId = service.getAvailableNodeId("node1");
-        assertNull(availableNodeId);
+    public void testGetAvailableNodeId_RegularNodes_Multiple() {
+        nodeIds.addAll(Arrays.asList("node2", "node3"));
+        nodeIdService = new NodeIdService(nodeIds, failoverNodeIds, log);
+        String result = nodeIdService.getAvailableNodeId("node1");
+        assertTrue(result.equals("node2") || result.equals("node3"));
     }
 
     @Test
-    public void testGetNextNodeId() {
-        List<String> nodes = Arrays.asList("node1", "node2", "node3");
-        NodeIdService service = new NodeIdService(nodes, null);
-        when(nodeIdList.getNextNodeId("node1")).thenReturn("node2");
-        String nextNodeId = service.getNextNodeId("node1");
-        assertEquals("node2", nextNodeId);
+    public void testGetAvailableNodeId_FailoverNodes_Empty() {
+        nodeIds.add("node1");
+        failoverNodeIds.clear();
+        nodeIdService = new NodeIdService(nodeIds, failoverNodeIds, log);
+
+        assertEquals("node1", nodeIdService.getAvailableNodeId("node0"));
+
+        nodeIds.clear();
+        failoverNodeIds.clear();
+        nodeIdService = new NodeIdService(nodeIds, failoverNodeIds, log);
+
+        assertNull(nodeIdService.getAvailableNodeId("node0"));
+
+        failoverNodeIds.add("node2");
+        nodeIdService = new NodeIdService(nodeIds, failoverNodeIds, log);
+
+        assertEquals("node2", nodeIdService.getAvailableNodeId("node0"));
+
     }
 
     @Test
-    public void testIsNodeAvailable() {
-        when(nodeAvailabilityCache.isNodeAvailable("node1")).thenReturn(true);
-        assertTrue(nodeIdService.isNodeAvailable("node1"));
+    public void testGetAvailableNodeId_FailoverNodes_Single() {
+        failoverNodeIds.add("node2");
+        nodeIdService = new NodeIdService(nodeIds, failoverNodeIds, log);
+        assertEquals("node2", nodeIdService.getAvailableNodeId("node1"));
     }
 
     @Test
-    public void testSetNodeAvailable() {
-        nodeIdService.setNodeAvailable("node1", true);
-        verify(nodeAvailabilityCache).setNodeAvailable("node1", true);
+    public void testGetAvailableNodeId_FailoverNodes_Multiple() {
+        failoverNodeIds.addAll(Arrays.asList("node2", "node3"));
+        nodeIdService = new NodeIdService(nodeIds, failoverNodeIds, log);
+        String result = nodeIdService.getAvailableNodeId("node1");
+        assertTrue(result.equals("node2") || result.equals("node3"));
     }
 
     @Test
-    public void testGetMemcachedNodeId() {
-    	List<String> nodes = Arrays.asList("node1", "node2");
-        NodeIdService service = new NodeIdService(nodes, null);
-        when(nodeAvailabilityCache.isNodeAvailable(anyString())).thenReturn(true);
-    	assertNotNull(service.getMemcachedNodeId());
+    public void testGetAvailableNodeId_RegularAndFailover() {
+        nodeIds.add("node1");
+        failoverNodeIds.add("node2");
+        nodeIdService = new NodeIdService(nodeIds, failoverNodeIds, log);
+        assertEquals("node1", nodeIdService.getAvailableNodeId("node0"));
+
+        nodeIds.clear();
+        nodeIdService = new NodeIdService(nodeIds, failoverNodeIds, log);
+        assertEquals("node2", nodeIdService.getAvailableNodeId("node0"));
+    }
+
+    @Test
+    public void testGetAvailableNodeId_NoNodes() {
+        nodeIdService = new NodeIdService(nodeIds, failoverNodeIds, log);
+        assertNull(nodeIdService.getAvailableNodeId("node1"));
     }
 }

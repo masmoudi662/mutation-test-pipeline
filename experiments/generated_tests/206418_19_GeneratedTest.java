@@ -2,71 +2,72 @@ java
 package org.apache.continuum.scm;
 
 import org.apache.maven.scm.ScmException;
-import org.apache.maven.scm.ScmFileSet;
-import org.apache.maven.scm.ScmVersion;
 import org.apache.maven.scm.command.changelog.ChangeLogScmResult;
-import org.apache.maven.scm.manager.NoSuchScmProviderException;
-import org.apache.maven.scm.manager.ScmManager;
-import org.apache.maven.scm.repository.ScmRepository;
-import org.apache.maven.scm.repository.ScmRepositoryException;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
+import org.apache.maven.scm.manager.ScmManager;
+import org.apache.maven.scm.repository.ScmRepository;
+import org.apache.maven.scm.ScmFileSet;
+import org.apache.maven.scm.ScmVersion;
 
 import java.io.File;
 import java.util.Date;
 
-import static org.junit.Assert.assertNotNull;
-import static org.mockito.Matchers.any;
-import static org.mockito.Mockito.when;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
-public class DefaultContinuumScmTest
-{
+public class DefaultContinuumScmTest {
+
     private DefaultContinuumScm continuumScm;
-
     private ScmManager scmManager;
+    private ContinuumScmConfiguration configuration;
 
     @Before
-    public void setUp()
-    {
+    public void setUp() throws Exception {
         continuumScm = new DefaultContinuumScm();
-        scmManager = Mockito.mock( ScmManager.class );
-        continuumScm.setScmManager( scmManager );
+        scmManager = Mockito.mock(ScmManager.class);
+        continuumScm.setScmManager(scmManager);
+        configuration = Mockito.mock(ContinuumScmConfiguration.class);
     }
 
     @Test
-    public void testChangeLogWithScmVersion()
-        throws ScmException, ScmRepositoryException, NoSuchScmProviderException
-    {
-        ContinuumScmConfiguration configuration = Mockito.mock( ContinuumScmConfiguration.class );
-        when( configuration.getWorkingDirectory() ).thenReturn( new File( "target/test/checkout" ) );
-        when( configuration.getUrl() ).thenReturn( "scm:svn:http://svn.example.com/repo" );
-        when( scmManager.makeScmRepository( "scm:svn:http://svn.example.com/repo" ) ).thenReturn(
-            Mockito.mock( ScmRepository.class ) );
-        when( scmManager.changeLog( any( ScmRepository.class ), any( ScmFileSet.class ), any( ScmVersion.class ),
-                                    any( ScmVersion.class ) ) ).thenReturn(
-            Mockito.mock( ChangeLogScmResult.class ) );
+    public void testChangeLogWithScmVersion() throws ScmException {
+        ScmVersion scmVersion = Mockito.mock(ScmVersion.class);
+        File workingDirectory = new File("test");
+        ScmRepository repository = Mockito.mock(ScmRepository.class);
+        ChangeLogScmResult expectedResult = Mockito.mock(ChangeLogScmResult.class);
 
-        ChangeLogScmResult result = continuumScm.changeLog( configuration );
-        assertNotNull( result );
+        when(configuration.getWorkingDirectory()).thenReturn(workingDirectory);
+        when(continuumScm.getScmVersion(configuration)).thenReturn(scmVersion);
+        when(continuumScm.getScmRepository(configuration)).thenReturn(repository);
+        when(scmVersion.getName()).thenReturn("1.0");
+
+        when(scmManager.changeLog(eq(repository), any(ScmFileSet.class), eq(scmVersion), eq(scmVersion))).thenReturn(expectedResult);
+
+        ChangeLogScmResult actualResult = continuumScm.changeLog(configuration);
+
+        assertEquals(expectedResult, actualResult);
+        verify(scmManager, times(1)).changeLog(eq(repository), any(ScmFileSet.class), eq(scmVersion), eq(scmVersion));
     }
 
     @Test
-    public void testChangeLogWithStartDate()
-        throws ScmException, ScmRepositoryException, NoSuchScmProviderException
-    {
-        ContinuumScmConfiguration configuration = Mockito.mock( ContinuumScmConfiguration.class );
-        when( configuration.getWorkingDirectory() ).thenReturn( new File( "target/test/checkout" ) );
-        when( configuration.getUrl() ).thenReturn( "scm:svn:http://svn.example.com/repo" );
-        when( scmManager.makeScmRepository( "scm:svn:http://svn.example.com/repo" ) ).thenReturn(
-            Mockito.mock( ScmRepository.class ) );
-        when( configuration.getLatestUpdateDate() ).thenReturn( new Date() );
-        when( scmManager.changeLog( any( ScmRepository.class ), any( ScmFileSet.class ), any( Date.class ),
-                                    Mockito.isNull( Date.class ), Mockito.anyInt(), Mockito.isNull( String.class ),
-                                    Mockito.isNull( String.class ) ) ).thenReturn(
-            Mockito.mock( ChangeLogScmResult.class ) );
+    public void testChangeLogWithStartDate() throws ScmException {
+        Date startDate = new Date();
+        File workingDirectory = new File("test");
+        ScmRepository repository = Mockito.mock(ScmRepository.class);
+        ChangeLogScmResult expectedResult = Mockito.mock(ChangeLogScmResult.class);
 
-        ChangeLogScmResult result = continuumScm.changeLog( configuration );
-        assertNotNull( result );
+        when(configuration.getWorkingDirectory()).thenReturn(workingDirectory);
+        when(continuumScm.getScmVersion(configuration)).thenReturn(null);
+        when(continuumScm.getScmRepository(configuration)).thenReturn(repository);
+        when(continuumScm.getScmStartDate(configuration)).thenReturn(startDate);
+
+        when(scmManager.changeLog(eq(repository), any(ScmFileSet.class), eq(startDate), eq(null), eq(0), eq(null), eq(null))).thenReturn(expectedResult);
+
+        ChangeLogScmResult actualResult = continuumScm.changeLog(configuration);
+
+        assertEquals(expectedResult, actualResult);
+        verify(scmManager, times(1)).changeLog(eq(repository), any(ScmFileSet.class), eq(startDate), eq(null), eq(0), eq(null), eq(null));
     }
 }

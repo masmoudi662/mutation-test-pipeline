@@ -1,44 +1,50 @@
 java
 package com.tddinaction.swing.plotmap.view;
 
-import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.awt.Point;
-import java.awt.event.MouseEvent;
-import java.util.EventListener;
+import java.util.List;
 
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class PlotMapCanvasImplTest {
 
-    @Test
-    public void testPlot() {
-        PlotMapCanvasImpl canvas = new PlotMapCanvasImpl();
-        Point p = new Point(10, 20);
-        canvas.plot(p);
+    private PlotMapCanvasImpl canvas;
+
+    @Before
+    public void setUp() {
+        canvas = new PlotMapCanvasImpl();
     }
 
     @Test
-    public void testAddRemoveListener() {
-        PlotMapCanvasImpl canvas = new PlotMapCanvasImpl();
-        PointEventListener listener = mock(PointEventListener.class);
-        canvas.addRemoveListener(listener);
+    public void testPlotPoint() {
+        Point point = new Point(10, 20);
+        canvas.plot(point);
+        List<Point> plots = canvas.getPlots();
+        assertEquals(1, plots.size());
+        assertEquals(point, plots.get(0));
     }
 
     @Test
-    public void testMouseClicked() {
-        PlotMapCanvasImpl canvas = new PlotMapCanvasImpl();
-        PointEventListener listener = mock(PointEventListener.class);
-        canvas.addRemoveListener(listener);
+    public void testPlotMultiplePoints() {
+        Point point1 = new Point(10, 20);
+        Point point2 = new Point(30, 40);
+        canvas.plot(point1);
+        canvas.plot(point2);
+        List<Point> plots = canvas.getPlots();
+        assertEquals(2, plots.size());
+        assertEquals(point1, plots.get(0));
+        assertEquals(point2, plots.get(1));
+    }
 
-        Point p = new Point(10, 20);
-        canvas.plot(p);
-
-        MouseEvent e = new MouseEvent(canvas, MouseEvent.MOUSE_CLICKED, System.currentTimeMillis(), 0, 10, 20, 1, false);
-        canvas.dispatchEvent(e);
-
-        verify(listener).onPointEvent(p);
+    @Test
+    public void testGetPlotsReturnsCopy() {
+        Point point = new Point(10, 20);
+        canvas.plot(point);
+        List<Point> plots = canvas.getPlots();
+        plots.clear();
+        assertEquals(1, canvas.getPlots().size());
     }
 }

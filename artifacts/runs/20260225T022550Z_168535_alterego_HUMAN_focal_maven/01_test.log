@@ -1,0 +1,266 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -Dtest=de.linsin.alterego.BotTest test
+
+STDOUT:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< de.linsin:alterego >-------------------------
+[INFO] Building alterego 0.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo1.maven.org/maven2/org/easymock/easymock/2.4/easymock-2.4.jar
+Downloading from central: https://repo1.maven.org/maven2/junit/junit/4.6/junit-4.6.jar
+Downloading from central: https://repo1.maven.org/maven2/org/easymock/easymockclassextension/2.4/easymockclassextension-2.4.jar
+Progress (1): 0.9/218 kB
+Progress (1): 2.3/218 kB
+Progress (1): 3.7/218 kB
+Progress (1): 5.0/218 kB
+Progress (1): 6.4/218 kB
+Progress (1): 7.8/218 kB
+Progress (1): 9.1/218 kB
+Progress (1): 11/218 kB 
+Progress (1): 12/218 kB
+Progress (1): 13/218 kB
+Progress (1): 15/218 kB
+Progress (1): 16/218 kB
+Progress (1): 17/218 kB
+Progress (1): 19/218 kB
+Progress (2): 19/218 kB | 0.9/81 kB
+Progress (2): 20/218 kB | 0.9/81 kB
+Progress (2): 20/218 kB | 2.3/81 kB
+Progress (2): 21/218 kB | 2.3/81 kB
+Progress (2): 21/218 kB | 3.7/81 kB
+Progress (2): 23/218 kB | 3.7/81 kB
+Progress (2): 24/218 kB | 3.7/81 kB
+Progress (2): 24/218 kB | 5.0/81 kB
+Progress (2): 25/218 kB | 5.0/81 kB
+Progress (2): 25/218 kB | 6.4/81 kB
+Progress (2): 26/218 kB | 6.4/81 kB
+Progress (2): 26/218 kB | 7.8/81 kB
+Progress (2): 27/218 kB | 7.8/81 kB
+Progress (2): 27/218 kB | 9.1/81 kB
+Progress (2): 27/218 kB | 11/81 kB 
+Progress (2): 27/218 kB | 12/81 kB
+Progress (2): 29/218 kB | 12/81 kB
+Progress (2): 29/218 kB | 13/81 kB
+Progress (2): 30/218 kB | 13/81 kB
+Progress (2): 30/218 kB | 15/81 kB
+Progress (2): 31/218 kB | 15/81 kB
+Progress (2): 31/218 kB | 16/81 kB
+Progress (2): 33/218 kB | 16/81 kB
+Progress (2): 33/218 kB | 17/81 kB
+Progress (2): 34/218 kB | 17/81 kB
+Progress (2): 36/218 kB | 17/81 kB
+Progress (2): 36/218 kB | 19/81 kB
+Progress (2): 36/218 kB | 20/81 kB
+Progress (2): 37/218 kB | 20/81 kB
+Progress (2): 38/218 kB | 20/81 kB
+Progress (2): 38/218 kB | 21/81 kB
+Progress (2): 40/218 kB | 21/81 kB
+Progress (2): 40/218 kB | 23/81 kB
+Progress (2): 41/218 kB | 23/81 kB
+Progress (2): 41/218 kB | 24/81 kB
+Progress (2): 42/218 kB | 24/81 kB
+Progress (2): 42/218 kB | 26/81 kB
+Progress (2): 44/218 kB | 26/81 kB
+Progress (2): 44/218 kB | 27/81 kB
+Progress (2): 44/218 kB | 28/81 kB
+Progress (2): 45/218 kB | 28/81 kB
+Progress (2): 45/218 kB | 30/81 kB
+Progress (2): 46/218 kB | 30/81 kB
+Progress (2): 46/218 kB | 31/81 kB
+Progress (3): 46/218 kB | 31/81 kB | 0.9/64 kB
+Progress (3): 48/218 kB | 31/81 kB | 0.9/64 kB
+Progress (3): 48/218 kB | 31/81 kB | 2.3/64 kB
+Progress (3): 48/218 kB | 32/81 kB | 2.3/64 kB
+Progress (3): 49/218 kB | 32/81 kB | 2.3/64 kB
+Progress (3): 49/218 kB | 32/81 kB | 3.7/64 kB
+Progress (3): 51/218 kB | 32/81 kB | 3.7/64 kB
+Progress (3): 51/218 kB | 34/81 kB | 3.7/64 kB
+Progress (3): 51/218 kB | 34/81 kB | 5.0/64 kB
+Progress (3): 52/218 kB | 34/81 kB | 5.0/64 kB
+Progress (3): 52/218 kB | 35/81 kB | 5.0/64 kB
+Progress (3): 52/218 kB | 35/81 kB | 6.4/64 kB
+Progress (3): 53/218 kB | 35/81 kB | 6.4/64 kB
+Progress (3): 53/218 kB | 37/81 kB | 6.4/64 kB
+Progress (3): 53/218 kB | 37/81 kB | 7.8/64 kB
+Progress (3): 53/218 kB | 37/81 kB | 9.1/64 kB
+Progress (3): 53/218 kB | 38/81 kB | 9.1/64 kB
+Progress (3): 55/218 kB | 38/81 kB | 9.1/64 kB
+Progress (3): 55/218 kB | 39/81 kB | 9.1/64 kB
+Progress (3): 55/218 kB | 39/81 kB | 11/64 kB 
+Progress (3): 55/218 kB | 39/81 kB | 12/64 kB
+Progress (3): 55/218 kB | 41/81 kB | 12/64 kB
+Progress (3): 59/218 kB | 41/81 kB | 12/64 kB
+Progress (3): 59/218 kB | 42/81 kB | 12/64 kB
+Progress (3): 59/218 kB | 42/81 kB | 13/64 kB
+Progress (3): 59/218 kB | 43/81 kB | 13/64 kB
+Progress (3): 59/218 kB | 43/81 kB | 15/64 kB
+Progress (3): 59/218 kB | 45/81 kB | 15/64 kB
+Progress (3): 63/218 kB | 45/81 kB | 15/64 kB
+Progress (3): 63/218 kB | 45/81 kB | 16/64 kB
+Progress (3): 63/218 kB | 46/81 kB | 16/64 kB
+Progress (3): 63/218 kB | 47/81 kB | 16/64 kB
+Progress (3): 63/218 kB | 47/81 kB | 17/64 kB
+Progress (3): 67/218 kB | 47/81 kB | 17/64 kB
+Progress (3): 67/218 kB | 47/81 kB | 19/64 kB
+Progress (3): 67/218 kB | 49/81 kB | 19/64 kB
+Progress (3): 67/218 kB | 49/81 kB | 20/64 kB
+Progress (3): 67/218 kB | 50/81 kB | 20/64 kB
+Progress (3): 67/218 kB | 52/81 kB | 20/64 kB
+Progress (3): 67/218 kB | 52/81 kB | 21/64 kB
+Progress (3): 67/218 kB | 53/81 kB | 21/64 kB
+Progress (3): 72/218 kB | 53/81 kB | 21/64 kB
+Progress (3): 72/218 kB | 53/81 kB | 23/64 kB
+Progress (3): 72/218 kB | 54/81 kB | 23/64 kB
+Progress (3): 72/218 kB | 54/81 kB | 24/64 kB
+Progress (3): 72/218 kB | 56/81 kB | 24/64 kB
+Progress (3): 76/218 kB | 56/81 kB | 24/64 kB
+Progress (3): 76/218 kB | 56/81 kB | 26/64 kB
+Progress (3): 76/218 kB | 60/81 kB | 26/64 kB
+Progress (3): 76/218 kB | 60/81 kB | 27/64 kB
+Progress (3): 76/218 kB | 60/81 kB | 28/64 kB
+Progress (3): 80/218 kB | 60/81 kB | 28/64 kB
+Progress (3): 80/218 kB | 60/81 kB | 30/64 kB
+Progress (3): 84/218 kB | 60/81 kB | 30/64 kB
+Progress (3): 84/218 kB | 60/81 kB | 31/64 kB
+Progress (3): 89/218 kB | 60/81 kB | 31/64 kB
+Progress (3): 89/218 kB | 60/81 kB | 32/64 kB
+Progress (3): 93/218 kB | 60/81 kB | 32/64 kB
+Progress (3): 93/218 kB | 60/81 kB | 34/64 kB
+Progress (3): 97/218 kB | 60/81 kB | 34/64 kB
+Progress (3): 97/218 kB | 60/81 kB | 35/64 kB
+Progress (3): 101/218 kB | 60/81 kB | 35/64 kB
+Progress (3): 101/218 kB | 60/81 kB | 37/64 kB
+Progress (3): 105/218 kB | 60/81 kB | 37/64 kB
+Progress (3): 105/218 kB | 60/81 kB | 38/64 kB
+Progress (3): 110/218 kB | 60/81 kB | 38/64 kB
+Progress (3): 110/218 kB | 60/81 kB | 39/64 kB
+Progress (3): 110/218 kB | 60/81 kB | 41/64 kB
+Progress (3): 114/218 kB | 60/81 kB | 41/64 kB
+Progress (3): 114/218 kB | 60/81 kB | 42/64 kB
+Progress (3): 115/218 kB | 60/81 kB | 42/64 kB
+Progress (3): 119/218 kB | 60/81 kB | 42/64 kB
+Progress (3): 119/218 kB | 60/81 kB | 43/64 kB
+Progress (3): 123/218 kB | 60/81 kB | 43/64 kB
+Progress (3): 123/218 kB | 60/81 kB | 45/64 kB
+Progress (3): 127/218 kB | 60/81 kB | 45/64 kB
+Progress (3): 127/218 kB | 60/81 kB | 46/64 kB
+Progress (3): 127/218 kB | 60/81 kB | 47/64 kB
+Progress (3): 132/218 kB | 60/81 kB | 47/64 kB
+Progress (3): 132/218 kB | 60/81 kB | 49/64 kB
+Progress (3): 136/218 kB | 60/81 kB | 49/64 kB
+Progress (3): 136/218 kB | 60/81 kB | 50/64 kB
+Progress (3): 136/218 kB | 60/81 kB | 52/64 kB
+Progress (3): 140/218 kB | 60/81 kB | 52/64 kB
+Progress (3): 140/218 kB | 60/81 kB | 53/64 kB
+Progress (3): 144/218 kB | 60/81 kB | 53/64 kB
+Progress (3): 144/218 kB | 60/81 kB | 54/64 kB
+Progress (3): 149/218 kB | 60/81 kB | 54/64 kB
+Progress (3): 149/218 kB | 60/81 kB | 56/64 kB
+Progress (3): 153/218 kB | 60/81 kB | 56/64 kB
+Progress (3): 153/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 157/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 161/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 165/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 170/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 174/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 178/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 180/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 184/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 189/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 193/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 197/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 201/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 206/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 210/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 214/218 kB | 60/81 kB | 60/64 kB
+Progress (3): 218 kB | 60/81 kB | 60/64 kB    
+Progress (3): 218 kB | 64/81 kB | 60/64 kB
+Progress (3): 218 kB | 65/81 kB | 60/64 kB
+Progress (3): 218 kB | 69/81 kB | 60/64 kB
+Progress (3): 218 kB | 73/81 kB | 60/64 kB
+Progress (3): 218 kB | 78/81 kB | 60/64 kB
+Progress (3): 218 kB | 81 kB | 60/64 kB   
+Progress (3): 218 kB | 81 kB | 64 kB   
+                                    
+Downloaded from central: https://repo1.maven.org/maven2/junit/junit/4.6/junit-4.6.jar (218 kB at 725 kB/s)
+Downloaded from central: https://repo1.maven.org/maven2/org/easymock/easymockclassextension/2.4/easymockclassextension-2.4.jar (64 kB at 212 kB/s)
+Downloaded from central: https://repo1.maven.org/maven2/org/easymock/easymock/2.4/easymock-2.4.jar (81 kB at 270 kB/s)
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ alterego ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\168535\alterego\src\main\resources
+[INFO] 
+[INFO] --- compiler:2.0.2:compile (default-compile) @ alterego ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ alterego ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\168535\alterego\src\test\resources
+[INFO] 
+[INFO] --- compiler:2.0.2:testCompile (default-testCompile) @ alterego ---
+[INFO] Compiling 1 source file to D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\168535\alterego\target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ alterego ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running de.linsin.alterego.BotTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.101 s -- in de.linsin.alterego.BotTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.496 s
+[INFO] Finished at: 2026-02-24T21:25:59-05:00
+[INFO] ------------------------------------------------------------------------
+
+STDERR:
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]
+Feb 24, 2026 9:25:59 PM de.linsin.alterego.Bot debug
+INFO: [onMessage: , argChannel = , argSender = , argLogin = , argHostname = , argMessage = test]

@@ -1,0 +1,26 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -DskipTests compile
+
+STDOUT:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< org.red5:red5-base >-------------------------
+[INFO] Building red5-base 0.8rc2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for opensymphony:quartz-all:jar:1.6.0 is missing, no dependency information available
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ red5-base ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 19 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:2.0.2:compile (default-compile) @ red5-base ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.552 s
+[INFO] Finished at: 2026-02-24T16:10:36-05:00
+[INFO] ------------------------------------------------------------------------
+
+STDERR:

@@ -7,10 +7,10 @@
   "backup_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\pom.xml.bak",
   "changes": [
     "Ensured Maven settings.xml with HTTPS mirrors",
+    "Using build tool: maven",
     "Disabled 47 non-selected test files",
-    "Applied focal test scope with selected tests: ['org.red5.server.service.ConversionUtilsTest']",
-    "Pipeline failed: Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', 'org.pitest:pitest-maven:1.6.9:mutationCoverage', '-DtargetClasses=org.red5.server.service.ConversionUtils', '-DtargetTests=org.red5.server.service.ConversionUtilsTest', '-DoutputFormats=XML,HTML']' returned non-zero exit status 1.",
-    "Traceback (most recent call last):\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\run_mutation_pipeline.py\", line 406, in main\n    run_command(pit_cmd, module_dir, report, run_status, run_dir, \"pit\")\n    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\run_mutation_pipeline.py\", line 201, in run_command\n    raise subprocess.CalledProcessError(\n        proc.returncode, cmd, output=proc.stdout, stderr=proc.stderr\n    )\nsubprocess.CalledProcessError: Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', 'org.pitest:pitest-maven:1.6.9:mutationCoverage', '-DtargetClasses=org.red5.server.service.ConversionUtils', '-DtargetTests=org.red5.server.service.ConversionUtilsTest', '-DoutputFormats=XML,HTML']' returned non-zero exit status 1.\n",
+    "Applied focal test scope with selected tests: ['org.red5.server.service.ConversionUtilsAiTest']",
+    "Run artifacts written to D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023409Z_103035_red5_base_AI_ONLY_focal_maven",
     "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\io\\mock\\Input.java",
     "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\io\\mock\\Mock.java",
     "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\io\\mock\\Output.java",
@@ -45,7 +45,7 @@
     "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\server\\rtmp\\RTMPTestCase.java",
     "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\server\\rtmp\\RTMPUtilsTest.java",
     "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\server\\ScopeTest.java",
-    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\server\\service\\ConversionUtilsAiTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\server\\service\\ConversionUtilsTest.java",
     "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\server\\service\\EchoService.java",
     "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\server\\service\\EchoServiceTest.java",
     "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\server\\service\\IEchoService.java",
@@ -92,17 +92,49 @@
       "mvn.cmd",
       "-s",
       "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
-      "-Dtest=org.red5.server.service.ConversionUtilsTest",
+      "-Dtest=org.red5.server.service.ConversionUtilsAiTest",
       "test"
     ],
     [
       "mvn.cmd",
       "-s",
       "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
-      "org.pitest:pitest-maven:1.6.9:mutationCoverage",
-      "-DtargetClasses=org.red5.server.service.ConversionUtils",
-      "-DtargetTests=org.red5.server.service.ConversionUtilsTest",
-      "-DoutputFormats=XML,HTML"
+      "-DincludeScope=test",
+      "-Dmdep.addOutputDirectory=true",
+      "-Dmdep.addTestOutputDirectory=true",
+      "-Dmdep.outputFile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023409Z_103035_red5_base_AI_ONLY_focal_maven\\maven_test_classpath.txt",
+      "dependency:build-classpath"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-f",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023409Z_103035_red5_base_AI_ONLY_focal_maven\\pit_cli_bp57vf_v\\pom.xml",
+      "-Dmdep.outputFile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023409Z_103035_red5_base_AI_ONLY_focal_maven\\pit_cli_bp57vf_v\\pit_cli_cp.txt",
+      "dependency:build-classpath"
+    ],
+    [
+      "java",
+      "-cp",
+      "C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest-command-line\\1.6.9\\pitest-command-line-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest-entry\\1.6.9\\pitest-entry-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest\\1.6.9\\pitest-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\aopalliance\\aopalliance\\1.0\\aopalliance-1.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\bouncycastle\\bcprov-jdk16\\140\\bcprov-jdk16-140.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\cglib\\cglib-nodep\\2.1_3\\cglib-nodep-2.1_3.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\ch\\qos\\logback\\logback-classic\\0.9.14\\logback-classic-0.9.14.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\ch\\qos\\logback\\logback-core\\0.9.14\\logback-core-0.9.14.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-beanutils\\commons-beanutils\\1.8.0\\commons-beanutils-1.8.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-codec\\commons-codec\\1.3\\commons-codec-1.3.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-collections\\commons-collections\\3.2.1\\commons-collections-3.2.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-httpclient\\commons-httpclient\\3.1\\commons-httpclient-3.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-lang\\commons-lang\\2.4\\commons-lang-2.4.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-logging\\commons-logging\\1.1.1\\commons-logging-1.1.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-pool\\commons-pool\\1.4\\commons-pool-1.4.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\jacksum\\jacksum\\1.7.0\\jacksum-1.7.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\javax\\activation\\activation\\1.1\\activation-1.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\javax\\servlet\\servlet-api\\2.5\\servlet-api-2.5.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\javax\\transaction\\jta\\1.1\\jta-1.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\junit\\junit\\4.13.2\\junit-4.13.2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\net\\sf\\ehcache\\ehcache\\1.6.0-beta2\\ehcache-1.6.0-beta2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\net\\sf\\jsr107cache\\jsr107cache\\1.0\\jsr107cache-1.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\net\\sourceforge\\groboutils\\groboutils-core\\5\\groboutils-core-5.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\opensymphony\\quartz-all\\1.6.0\\quartz-all-1.6.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\mina\\mina-core\\1.1.7\\mina-core-1.1.7.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\mina\\mina-filter-ssl\\1.1.7\\mina-filter-ssl-1.1.7.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\mina\\mina-integration-jmx\\1.1.7\\mina-integration-jmx-1.1.7.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\mina\\mina-integration-spring\\1.1.7\\mina-integration-spring-1.1.7.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\jaudiotagger\\jaudiotagger\\1.0.8\\jaudiotagger-1.0.8.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\slf4j\\jcl-over-slf4j\\1.5.6\\jcl-over-slf4j-1.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\slf4j\\jul-to-slf4j\\1.5.6\\jul-to-slf4j-1.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\slf4j\\log4j-over-slf4j\\1.5.6\\log4j-over-slf4j-1.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.5.6\\slf4j-api-1.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\springframework\\spring-aop\\2.5.6\\spring-aop-2.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\springframework\\spring-beans\\2.5.6\\spring-beans-2.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\springframework\\spring-context\\2.5.6\\spring-context-2.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\springframework\\spring-core\\2.5.6\\spring-core-2.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\springframework\\spring-orm\\2.5.6\\spring-orm-2.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\springframework\\spring-test\\2.5.6\\spring-test-2.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\springframework\\spring-tx\\2.5.6\\spring-tx-2.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\springframework\\spring-web\\2.5.6\\spring-web-2.5.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\xerces\\xercesImpl\\2.9.1\\xercesImpl-2.9.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\xml-apis\\xml-apis\\1.0.b2\\xml-apis-1.0.b2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\xmlrpc\\xmlrpc\\2.0.1\\xmlrpc-2.0.1.jar;D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\target\\classes;D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\target\\test-classes",
+      "org.pitest.mutationtest.commandline.MutationCoverageReport",
+      "--reportDir",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023409Z_103035_red5_base_AI_ONLY_focal_maven\\pit-reports",
+      "--targetClasses",
+      "org.red5.server.service.ConversionUtils*",
+      "--targetTests",
+      "org.red5.server.service.ConversionUtilsAiTest",
+      "--sourceDirs",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\main\\java",
+      "--mutableCodePaths",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\target\\classes",
+      "--classPathFile",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023409Z_103035_red5_base_AI_ONLY_focal_maven\\pit_classpath.txt",
+      "--includeLaunchClasspath",
+      "false",
+      "--outputFormats",
+      "XML,HTML"
     ]
   ],
   "checksums": {
@@ -119,5 +151,5 @@
       "size_bytes": 199398
     }
   },
-  "generated_at_utc": "2026-02-24T03:57:36.712293+00:00"
+  "generated_at_utc": "2026-02-25T02:34:09.156445+00:00"
 }

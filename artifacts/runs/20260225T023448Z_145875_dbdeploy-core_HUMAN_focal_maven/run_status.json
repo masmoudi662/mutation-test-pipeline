@@ -1,0 +1,112 @@
+{
+  "run_id": "20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven",
+  "repo_id": "145875",
+  "module": "dbdeploy-core",
+  "condition": "HUMAN",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": true,
+  "started_at_utc": "2026-02-25T02:34:48.962701+00:00",
+  "ended_at_utc": "2026-02-25T02:35:02.168509+00:00",
+  "success": false,
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\145875\\dbdeploy-core",
+      "returncode": 0,
+      "duration_seconds": 2.082,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\00_compile.log"
+    },
+    {
+      "step": "test",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-Dtest=com.dbdeploy.database.QueryStatementSplitterTest",
+        "test"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\145875\\dbdeploy-core",
+      "returncode": 0,
+      "duration_seconds": 3.208,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\01_test.log"
+    },
+    {
+      "step": "collect_test_classpath",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DincludeScope=test",
+        "-Dmdep.addOutputDirectory=true",
+        "-Dmdep.addTestOutputDirectory=true",
+        "-Dmdep.outputFile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\maven_test_classpath.txt",
+        "dependency:build-classpath"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\145875\\dbdeploy-core",
+      "returncode": 0,
+      "duration_seconds": 2.254,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\02_collect_test_classpath.log"
+    },
+    {
+      "step": "collect_pit_cli_classpath",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-f",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\pit_cli_20_qh53z\\pom.xml",
+        "-Dmdep.outputFile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\pit_cli_20_qh53z\\pit_cli_cp.txt",
+        "dependency:build-classpath"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline",
+      "returncode": 0,
+      "duration_seconds": 2.272,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\03_collect_pit_cli_classpath.log"
+    },
+    {
+      "step": "pit",
+      "cmd": [
+        "java",
+        "-cp",
+        "C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest-command-line\\1.6.9\\pitest-command-line-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest-entry\\1.6.9\\pitest-entry-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest\\1.6.9\\pitest-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-io\\commons-io\\1.4\\commons-io-1.4.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-lang\\commons-lang\\2.4\\commons-lang-2.4.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\hsqldb\\hsqldb\\1.8.0.7\\hsqldb-1.8.0.7.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\junit\\junit\\4.4\\junit-4.4.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\freemarker\\freemarker\\2.3.15\\freemarker-2.3.15.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\hamcrest\\hamcrest-all\\1.1\\hamcrest-all-1.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\mockito\\mockito-all\\1.7\\mockito-all-1.7.jar;D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\145875\\dbdeploy-core\\target\\classes;D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\145875\\dbdeploy-core\\target\\test-classes",
+        "org.pitest.mutationtest.commandline.MutationCoverageReport",
+        "--reportDir",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\pit-reports",
+        "--targetClasses",
+        "com.dbdeploy.database.QueryStatementSplitter*",
+        "--targetTests",
+        "com.dbdeploy.database.QueryStatementSplitterTest",
+        "--sourceDirs",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\145875\\dbdeploy-core\\src\\main\\java",
+        "--mutableCodePaths",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\145875\\dbdeploy-core\\target\\classes",
+        "--classPathFile",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\pit_classpath.txt",
+        "--includeLaunchClasspath",
+        "false",
+        "--outputFormats",
+        "XML,HTML"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\145875\\dbdeploy-core",
+      "returncode": 1,
+      "duration_seconds": 1.233,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\04_pit.log"
+    }
+  ],
+  "selected_test_classes": [
+    "com.dbdeploy.database.QueryStatementSplitterTest"
+  ],
+  "target_classes": [
+    "com.dbdeploy.database.QueryStatementSplitter"
+  ],
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\145875_13.json",
+  "error": "Command '['java', '-cp', 'C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest-command-line\\\\1.6.9\\\\pitest-command-line-1.6.9.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest-entry\\\\1.6.9\\\\pitest-entry-1.6.9.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest\\\\1.6.9\\\\pitest-1.6.9.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\commons-io\\\\commons-io\\\\1.4\\\\commons-io-1.4.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\commons-lang\\\\commons-lang\\\\2.4\\\\commons-lang-2.4.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\hsqldb\\\\hsqldb\\\\1.8.0.7\\\\hsqldb-1.8.0.7.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\junit\\\\junit\\\\4.4\\\\junit-4.4.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\freemarker\\\\freemarker\\\\2.3.15\\\\freemarker-2.3.15.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\hamcrest\\\\hamcrest-all\\\\1.1\\\\hamcrest-all-1.1.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\mockito\\\\mockito-all\\\\1.7\\\\mockito-all-1.7.jar;D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\145875\\\\dbdeploy-core\\\\target\\\\classes;D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\145875\\\\dbdeploy-core\\\\target\\\\test-classes', 'org.pitest.mutationtest.commandline.MutationCoverageReport', '--reportDir', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\artifacts\\\\runs\\\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\\\pit-reports', '--targetClasses', 'com.dbdeploy.database.QueryStatementSplitter*', '--targetTests', 'com.dbdeploy.database.QueryStatementSplitterTest', '--sourceDirs', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\145875\\\\dbdeploy-core\\\\src\\\\main\\\\java', '--mutableCodePaths', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\145875\\\\dbdeploy-core\\\\target\\\\classes', '--classPathFile', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\artifacts\\\\runs\\\\20260225T023448Z_145875_dbdeploy-core_HUMAN_focal_maven\\\\pit_classpath.txt', '--includeLaunchClasspath', 'false', '--outputFormats', 'XML,HTML']' returned non-zero exit status 1."
+}

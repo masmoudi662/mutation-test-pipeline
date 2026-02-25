@@ -1,0 +1,48 @@
+{
+  "run_id": "20260225T023735Z_206437_xdbm-partition_HUMAN_focal_maven",
+  "repo_id": "206437",
+  "module": "xdbm-partition",
+  "condition": "HUMAN",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": true,
+  "started_at_utc": "2026-02-25T02:37:35.414946+00:00",
+  "ended_at_utc": "2026-02-25T02:37:44.256352+00:00",
+  "success": false,
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition",
+      "returncode": 0,
+      "duration_seconds": 2.973,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023735Z_206437_xdbm-partition_HUMAN_focal_maven\\00_compile.log"
+    },
+    {
+      "step": "test",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-Dtest=org.apache.directory.server.xdbm.EmptyIndexCursorTest",
+        "test"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition",
+      "returncode": 1,
+      "duration_seconds": 3.78,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023735Z_206437_xdbm-partition_HUMAN_focal_maven\\01_test.log"
+    }
+  ],
+  "selected_test_classes": [
+    "org.apache.directory.server.xdbm.EmptyIndexCursorTest"
+  ],
+  "target_classes": [],
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\206437_23.json",
+  "error": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.directory.server.xdbm.EmptyIndexCursorTest', 'test']' returned non-zero exit status 1."
+}

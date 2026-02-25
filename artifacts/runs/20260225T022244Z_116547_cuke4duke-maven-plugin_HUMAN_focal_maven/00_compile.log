@@ -1,0 +1,344 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -DskipTests compile
+
+STDOUT:
+[INFO] Scanning for projects...
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-ssh/1.0-beta-6/wagon-ssh-1.0-beta-6.pom
+Progress (1): 818 B
+Progress (1): 2.3 kB
+Progress (1): 2.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-ssh/1.0-beta-6/wagon-ssh-1.0-beta-6.pom (2.9 kB at 4.5 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-providers/1.0-beta-6/wagon-providers-1.0-beta-6.pom
+Progress (1): 828 B
+Progress (1): 2.1 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-providers/1.0-beta-6/wagon-providers-1.0-beta-6.pom (2.1 kB at 33 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon/1.0-beta-6/wagon-1.0-beta-6.pom
+Progress (1): 763 B
+Progress (1): 1.8 kB
+Progress (1): 4.9 kB
+Progress (1): 8.1 kB
+Progress (1): 9.8 kB
+Progress (1): 12 kB 
+Progress (1): 12 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon/1.0-beta-6/wagon-1.0-beta-6.pom (12 kB at 238 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.38/jsch-0.1.38.pom
+Progress (1): 967 B
+                   
+Downloaded from central: https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.38/jsch-0.1.38.pom (967 B at 11 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-utils/1.4.2/plexus-utils-1.4.2.pom
+Progress (1): 1.2 kB
+Progress (1): 2.0 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-utils/1.4.2/plexus-utils-1.4.2.pom (2.0 kB at 36 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-6/wagon-ssh-common-1.0-beta-6.pom
+Progress (1): 831 B
+Progress (1): 1.8 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-6/wagon-ssh-common-1.0-beta-6.pom (1.8 kB at 23 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-6/plexus-interactivity-api-1.0-alpha-6.pom
+Progress (1): 726 B
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-6/plexus-interactivity-api-1.0-alpha-6.pom (726 B at 17 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-interactivity/1.0-alpha-6/plexus-interactivity-1.0-alpha-6.pom
+Progress (1): 1.1 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-interactivity/1.0-alpha-6/plexus-interactivity-1.0-alpha-6.pom (1.1 kB at 23 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-components/1.1.9/plexus-components-1.1.9.pom
+Progress (1): 2.0 kB
+Progress (1): 2.4 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-components/1.1.9/plexus-components-1.1.9.pom (2.4 kB at 48 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6.pom
+Progress (1): 831 B
+Progress (1): 1.8 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6.pom (1.8 kB at 36 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-ssh/1.0-beta-6/wagon-ssh-1.0-beta-6.jar
+Downloading from central: https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.38/jsch-0.1.38.jar
+Downloading from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-utils/1.4.2/plexus-utils-1.4.2.jar
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-6/wagon-ssh-common-1.0-beta-6.jar
+Downloading from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-6/plexus-interactivity-api-1.0-alpha-6.jar
+Progress (1): 0.9/178 kB
+Progress (1): 2.3/178 kB
+Progress (1): 3.7/178 kB
+Progress (1): 5.0/178 kB
+Progress (1): 6.4/178 kB
+Progress (1): 7.8/178 kB
+Progress (1): 8.2/178 kB
+Progress (1): 9.6/178 kB
+Progress (1): 11/178 kB 
+Progress (1): 12/178 kB
+Progress (1): 14/178 kB
+Progress (1): 15/178 kB
+Progress (1): 16/178 kB
+Progress (1): 18/178 kB
+Progress (1): 19/178 kB
+Progress (1): 21/178 kB
+Progress (1): 22/178 kB
+Progress (1): 23/178 kB
+Progress (1): 25/178 kB
+Progress (1): 29/178 kB
+Progress (1): 33/178 kB
+Progress (1): 37/178 kB
+Progress (1): 42/178 kB
+Progress (1): 46/178 kB
+Progress (1): 50/178 kB
+Progress (1): 54/178 kB
+Progress (1): 58/178 kB
+Progress (1): 63/178 kB
+Progress (1): 67/178 kB
+Progress (1): 71/178 kB
+Progress (1): 75/178 kB
+Progress (1): 80/178 kB
+Progress (1): 84/178 kB
+Progress (1): 88/178 kB
+Progress (1): 92/178 kB
+Progress (1): 97/178 kB
+Progress (1): 101/178 kB
+Progress (1): 105/178 kB
+Progress (1): 109/178 kB
+Progress (1): 113/178 kB
+Progress (1): 118/178 kB
+Progress (1): 122/178 kB
+Progress (1): 126/178 kB
+Progress (1): 130/178 kB
+Progress (1): 131/178 kB
+Progress (1): 135/178 kB
+Progress (1): 140/178 kB
+Progress (1): 144/178 kB
+Progress (1): 148/178 kB
+Progress (1): 152/178 kB
+Progress (1): 156/178 kB
+Progress (1): 161/178 kB
+Progress (1): 165/178 kB
+Progress (1): 169/178 kB
+Progress (1): 173/178 kB
+Progress (1): 178/178 kB
+Progress (1): 178 kB    
+                    
+Downloaded from central: https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.38/jsch-0.1.38.jar (178 kB at 2.6 MB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6.jar
+Progress (1): 0.9/27 kB
+Progress (2): 0.9/27 kB | 0.9/190 kB
+Progress (3): 0.9/27 kB | 0.9/190 kB | 0.9/12 kB
+Progress (3): 0.9/27 kB | 0.9/190 kB | 2.3/12 kB
+Progress (3): 0.9/27 kB | 0.9/190 kB | 3.7/12 kB
+Progress (3): 0.9/27 kB | 0.9/190 kB | 5.0/12 kB
+Progress (3): 0.9/27 kB | 0.9/190 kB | 6.4/12 kB
+Progress (3): 0.9/27 kB | 0.9/190 kB | 7.8/12 kB
+Progress (3): 0.9/27 kB | 0.9/190 kB | 8.2/12 kB
+Progress (3): 0.9/27 kB | 0.9/190 kB | 9.6/12 kB
+Progress (3): 2.3/27 kB | 0.9/190 kB | 9.6/12 kB
+Progress (3): 2.3/27 kB | 0.9/190 kB | 11/12 kB 
+Progress (3): 2.3/27 kB | 2.3/190 kB | 11/12 kB
+Progress (3): 2.3/27 kB | 2.3/190 kB | 12 kB   
+Progress (3): 3.7/27 kB | 2.3/190 kB | 12 kB
+Progress (4): 3.7/27 kB | 2.3/190 kB | 12 kB | 3.8/53 kB
+Progress (4): 5.0/27 kB | 2.3/190 kB | 12 kB | 3.8/53 kB
+Progress (4): 5.0/27 kB | 3.7/190 kB | 12 kB | 3.8/53 kB
+Progress (4): 6.4/27 kB | 3.7/190 kB | 12 kB | 3.8/53 kB
+Progress (4): 7.8/27 kB | 3.7/190 kB | 12 kB | 3.8/53 kB
+Progress (4): 9.1/27 kB | 3.7/190 kB | 12 kB | 3.8/53 kB
+Progress (4): 11/27 kB | 3.7/190 kB | 12 kB | 3.8/53 kB 
+Progress (4): 12/27 kB | 3.7/190 kB | 12 kB | 3.8/53 kB
+Progress (4): 12/27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB
+Progress (4): 13/27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB
+Progress (4): 15/27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB
+Progress (4): 16/27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB
+Progress (4): 17/27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB
+Progress (4): 19/27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB
+Progress (4): 20/27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB
+Progress (4): 21/27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB
+Progress (4): 23/27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB
+Progress (4): 24/27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB
+Progress (4): 26/27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB
+Progress (4): 27 kB | 3.7/190 kB | 12 kB | 8.0/53 kB   
+Progress (4): 27 kB | 3.7/190 kB | 12 kB | 12/53 kB 
+Progress (4): 27 kB | 3.7/190 kB | 12 kB | 28/53 kB
+Progress (4): 27 kB | 3.7/190 kB | 12 kB | 44/53 kB
+Progress (4): 27 kB | 3.7/190 kB | 12 kB | 53 kB   
+Progress (4): 27 kB | 5.0/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 6.4/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 7.8/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 8.2/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 9.6/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 11/190 kB | 12 kB | 53 kB 
+Progress (4): 27 kB | 12/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 14/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 15/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 16/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 18/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 19/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 21/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 22/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 23/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 25/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 26/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 27/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 29/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 30/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 31/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 33/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 34/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 36/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 37/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 38/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 40/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 41/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 42/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 44/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 45/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 46/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 48/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 49/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 51/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 52/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 53/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 55/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 59/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 63/190 kB | 12 kB | 53 kB
+Progress (4): 27 kB | 67/190 kB | 12 kB | 53 kB
+Progress (5): 27 kB | 67/190 kB | 12 kB | 53 kB | 0.9/28 kB
+Progress (5): 27 kB | 72/190 kB | 12 kB | 53 kB | 0.9/28 kB
+Progress (5): 27 kB | 76/190 kB | 12 kB | 53 kB | 0.9/28 kB
+Progress (5): 27 kB | 80/190 kB | 12 kB | 53 kB | 0.9/28 kB
+Progress (5): 27 kB | 84/190 kB | 12 kB | 53 kB | 0.9/28 kB
+Progress (5): 27 kB | 89/190 kB | 12 kB | 53 kB | 0.9/28 kB
+Progress (5): 27 kB | 93/190 kB | 12 kB | 53 kB | 0.9/28 kB
+Progress (5): 27 kB | 93/190 kB | 12 kB | 53 kB | 2.3/28 kB
+Progress (5): 27 kB | 97/190 kB | 12 kB | 53 kB | 2.3/28 kB
+Progress (5): 27 kB | 101/190 kB | 12 kB | 53 kB | 2.3/28 kB
+Progress (5): 27 kB | 105/190 kB | 12 kB | 53 kB | 2.3/28 kB
+Progress (5): 27 kB | 110/190 kB | 12 kB | 53 kB | 2.3/28 kB
+Progress (5): 27 kB | 114/190 kB | 12 kB | 53 kB | 2.3/28 kB
+Progress (5): 27 kB | 118/190 kB | 12 kB | 53 kB | 2.3/28 kB
+Progress (5): 27 kB | 122/190 kB | 12 kB | 53 kB | 2.3/28 kB
+Progress (5): 27 kB | 127/190 kB | 12 kB | 53 kB | 2.3/28 kB
+Progress (5): 27 kB | 127/190 kB | 12 kB | 53 kB | 3.7/28 kB
+Progress (5): 27 kB | 131/190 kB | 12 kB | 53 kB | 3.7/28 kB
+Progress (5): 27 kB | 135/190 kB | 12 kB | 53 kB | 3.7/28 kB
+Progress (5): 27 kB | 135/190 kB | 12 kB | 53 kB | 5.0/28 kB
+Progress (5): 27 kB | 135/190 kB | 12 kB | 53 kB | 6.4/28 kB
+Progress (5): 27 kB | 139/190 kB | 12 kB | 53 kB | 6.4/28 kB
+Progress (5): 27 kB | 139/190 kB | 12 kB | 53 kB | 7.8/28 kB
+Progress (5): 27 kB | 144/190 kB | 12 kB | 53 kB | 7.8/28 kB
+Progress (5): 27 kB | 144/190 kB | 12 kB | 53 kB | 9.1/28 kB
+Progress (5): 27 kB | 148/190 kB | 12 kB | 53 kB | 9.1/28 kB
+Progress (5): 27 kB | 148/190 kB | 12 kB | 53 kB | 11/28 kB 
+Progress (5): 27 kB | 152/190 kB | 12 kB | 53 kB | 11/28 kB
+Progress (5): 27 kB | 152/190 kB | 12 kB | 53 kB | 12/28 kB
+Progress (5): 27 kB | 156/190 kB | 12 kB | 53 kB | 12/28 kB
+Progress (5): 27 kB | 156/190 kB | 12 kB | 53 kB | 13/28 kB
+Progress (5): 27 kB | 160/190 kB | 12 kB | 53 kB | 13/28 kB
+Progress (5): 27 kB | 160/190 kB | 12 kB | 53 kB | 15/28 kB
+Progress (5): 27 kB | 164/190 kB | 12 kB | 53 kB | 15/28 kB
+Progress (5): 27 kB | 164/190 kB | 12 kB | 53 kB | 16/28 kB
+Progress (5): 27 kB | 168/190 kB | 12 kB | 53 kB | 16/28 kB
+Progress (5): 27 kB | 168/190 kB | 12 kB | 53 kB | 17/28 kB
+Progress (5): 27 kB | 173/190 kB | 12 kB | 53 kB | 17/28 kB
+Progress (5): 27 kB | 173/190 kB | 12 kB | 53 kB | 19/28 kB
+Progress (5): 27 kB | 173/190 kB | 12 kB | 53 kB | 20/28 kB
+Progress (5): 27 kB | 177/190 kB | 12 kB | 53 kB | 20/28 kB
+Progress (5): 27 kB | 177/190 kB | 12 kB | 53 kB | 21/28 kB
+                                                           
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-6/wagon-ssh-common-1.0-beta-6.jar (27 kB at 206 kB/s)
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6.jar (53 kB at 416 kB/s)
+Progress (3): 177/190 kB | 12 kB | 23/28 kB
+Progress (3): 181/190 kB | 12 kB | 23/28 kB
+                                           
+Downloaded from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-6/plexus-interactivity-api-1.0-alpha-6.jar (12 kB at 92 kB/s)
+Progress (2): 181/190 kB | 24/28 kB
+Progress (2): 185/190 kB | 24/28 kB
+Progress (2): 185/190 kB | 26/28 kB
+Progress (2): 189/190 kB | 26/28 kB
+Progress (2): 189/190 kB | 27/28 kB
+Progress (2): 190 kB | 27/28 kB    
+Progress (2): 190 kB | 28/28 kB
+Progress (2): 190 kB | 28 kB   
+                            
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-ssh/1.0-beta-6/wagon-ssh-1.0-beta-6.jar (28 kB at 199 kB/s)
+Downloaded from central: https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-utils/1.4.2/plexus-utils-1.4.2.jar (190 kB at 1.3 MB/s)
+[INFO] 
+[INFO] ------------------< cuke4duke:cuke4duke-maven-plugin >------------------
+[INFO] Building Cuke4Duke: Maven Plugin 0.4.4
+[INFO]   from pom.xml
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.1.2/maven-source-plugin-2.1.2.pom
+Progress (1): 785 B
+Progress (1): 2.0 kB
+Progress (1): 5.0 kB
+Progress (1): 5.2 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.1.2/maven-source-plugin-2.1.2.pom (5.2 kB at 97 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-plugins/18/maven-plugins-18.pom
+Progress (1): 757 B
+Progress (1): 1.8 kB
+Progress (1): 5.9 kB
+Progress (1): 8.8 kB
+Progress (1): 10 kB 
+Progress (1): 13 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-plugins/18/maven-plugins-18.pom (13 kB at 236 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.1.2/maven-source-plugin-2.1.2.jar
+Progress (1): 0.9/24 kB
+Progress (1): 2.3/24 kB
+Progress (1): 3.7/24 kB
+Progress (1): 5.0/24 kB
+Progress (1): 6.4/24 kB
+Progress (1): 7.8/24 kB
+Progress (1): 9.1/24 kB
+Progress (1): 11/24 kB 
+Progress (1): 12/24 kB
+Progress (1): 13/24 kB
+Progress (1): 15/24 kB
+Progress (1): 16/24 kB
+Progress (1): 20/24 kB
+Progress (1): 24 kB   
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.1.2/maven-source-plugin-2.1.2.jar (24 kB at 382 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/junit/junit/4.8.2/junit-4.8.2.pom
+Progress (1): 1.1 kB
+Progress (1): 1.5 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/junit/junit/4.8.2/junit-4.8.2.pom (1.5 kB at 27 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/cuke4duke/cuke4duke/0.4.4/cuke4duke-0.4.4.pom
+Downloading from central: https://repo1.maven.org/maven2/org/apache/ant/ant/1.8.2/ant-1.8.2.pom
+Progress (1): 789 B
+Progress (1): 2.3 kB
+Progress (1): 6.5 kB
+Progress (1): 9.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/ant/ant/1.8.2/ant-1.8.2.pom (9.9 kB at 173 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/ant/ant-parent/1.8.2/ant-parent-1.8.2.pom
+Progress (1): 805 B
+Progress (1): 2.2 kB
+Progress (1): 4.6 kB
+Progress (1): 4.7 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/ant/ant-parent/1.8.2/ant-parent-1.8.2.pom (4.7 kB at 72 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.8.2/ant-launcher-1.8.2.pom
+Progress (1): 848 B
+Progress (1): 2.4 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/ant/ant-launcher/1.8.2/ant-launcher-1.8.2.pom (2.4 kB at 47 kB/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.055 s
+[INFO] Finished at: 2026-02-24T21:22:51-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project cuke4duke-maven-plugin: Could not collect dependencies for project cuke4duke:cuke4duke-maven-plugin:maven-plugin:0.4.4
+[ERROR] Failed to read artifact descriptor for cuke4duke:cuke4duke:jar:0.4.4
+[ERROR] 	Caused by: The following artifacts could not be resolved: cuke4duke:cuke4duke:pom:0.4.4 (absent): Could not transfer artifact cuke4duke:cuke4duke:pom:0.4.4 from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [codehaus (http://repository.codehaus.org, default, releases+snapshots), cukes (http://cukes.info/maven, default, releases+snapshots)]
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+
+STDERR:

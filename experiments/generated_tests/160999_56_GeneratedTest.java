@@ -1,47 +1,32 @@
-java
 package org.apache.zookeeper.common;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FileKeyStoreLoaderBuilderProviderTest {
 
     @Test
-    public void testGetBuilderForKeyStoreFileType_JKS() {
-        FileKeyStoreLoader.Builder<? extends FileKeyStoreLoader> builder =
-                FileKeyStoreLoaderBuilderProvider.getBuilderForKeyStoreFileType(KeyStoreFileType.JKS);
-        assertNotNull(builder);
-        assertTrue(builder instanceof JKSFileLoader.Builder);
+    void getBuilderForKeyStoreFileType_JKS() {
+        assertTrue(FileKeyStoreLoaderBuilderProvider.getBuilderForKeyStoreFileType(KeyStoreFileType.JKS) instanceof JKSFileLoader.Builder);
     }
 
     @Test
-    public void testGetBuilderForKeyStoreFileType_PEM() {
-        FileKeyStoreLoader.Builder<? extends FileKeyStoreLoader> builder =
-                FileKeyStoreLoaderBuilderProvider.getBuilderForKeyStoreFileType(KeyStoreFileType.PEM);
-        assertNotNull(builder);
-        assertTrue(builder instanceof PEMFileLoader.Builder);
+    void getBuilderForKeyStoreFileType_PEM() {
+        assertTrue(FileKeyStoreLoaderBuilderProvider.getBuilderForKeyStoreFileType(KeyStoreFileType.PEM) instanceof PEMFileLoader.Builder);
     }
 
     @Test
-    public void testGetBuilderForKeyStoreFileType_PKCS12() {
-        FileKeyStoreLoader.Builder<? extends FileKeyStoreLoader> builder =
-                FileKeyStoreLoaderBuilderProvider.getBuilderForKeyStoreFileType(KeyStoreFileType.PKCS12);
-        assertNotNull(builder);
-        assertTrue(builder instanceof PKCS12FileLoader.Builder);
+    void getBuilderForKeyStoreFileType_PKCS12() {
+        assertTrue(FileKeyStoreLoaderBuilderProvider.getBuilderForKeyStoreFileType(KeyStoreFileType.PKCS12) instanceof PKCS12FileLoader.Builder);
     }
 
     @Test
-    public void testGetBuilderForKeyStoreFileType_BCFKS() {
-        FileKeyStoreLoader.Builder<? extends FileKeyStoreLoader> builder =
-                FileKeyStoreLoaderBuilderProvider.getBuilderForKeyStoreFileType(KeyStoreFileType.BCFKS);
-        assertNotNull(builder);
-        assertTrue(builder instanceof BCFKSFileLoader.Builder);
+    void getBuilderForKeyStoreFileType_BCFKS() {
+        assertTrue(FileKeyStoreLoaderBuilderProvider.getBuilderForKeyStoreFileType(KeyStoreFileType.BCFKS) instanceof BCFKSFileLoader.Builder);
     }
 
     @Test
-    public void testGetBuilderForKeyStoreFileType_NullType() {
-        assertThrows(NullPointerException.class, () ->
-                FileKeyStoreLoaderBuilderProvider.getBuilderForKeyStoreFileType(null));
+    void getBuilderForKeyStoreFileType_null() {
+        assertThrows(NullPointerException.class, () -> FileKeyStoreLoaderBuilderProvider.getBuilderForKeyStoreFileType(null));
     }
 }

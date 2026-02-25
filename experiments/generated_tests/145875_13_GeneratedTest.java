@@ -5,59 +5,81 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.empty;
-import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 public class QueryStatementSplitterTest {
+
     @Test
-    public void shouldReturnEmptyListWhenNoStatements() {
+    public void should_return_empty_list_if_no_statements() {
         QueryStatementSplitter splitter = new QueryStatementSplitter();
+        splitter.setDelimiterType(DelimiterType.SUFFIX);
+        splitter.setDelimiter(";");
+        splitter.setLineEnding("\n");
+
         List<String> statements = splitter.split("");
-        assertThat(statements, is(empty()));
+
+        assertThat(statements, empty());
     }
 
     @Test
-    public void shouldReturnASingleStatementWhenNoDelimiterIsFound() {
+    public void should_split_on_semicolon() {
         QueryStatementSplitter splitter = new QueryStatementSplitter();
-        List<String> statements = splitter.split("select * from my_table");
-        assertThat(statements, contains("select * from my_table"));
+        splitter.setDelimiterType(DelimiterType.SUFFIX);
+        splitter.setDelimiter(";");
+        splitter.setLineEnding("\n");
+
+        List<String> statements = splitter.split("select * from table1;\nselect * from table2;");
+
+        assertThat(statements, contains("select * from table1", "select * from table2"));
     }
 
     @Test
-    public void shouldReturnASingleStatementWhenADelimiterIsFound() {
+    public void should_split_on_semicolon_with_windows_line_endings() {
         QueryStatementSplitter splitter = new QueryStatementSplitter();
-        List<String> statements = splitter.split("select * from my_table;");
-        assertThat(statements, contains("select * from my_table"));
+        splitter.setDelimiterType(DelimiterType.SUFFIX);
+        splitter.setDelimiter(";");
+        splitter.setLineEnding("\n");
+
+        List<String> statements = splitter.split("select * from table1;\r\nselect * from table2;");
+
+        assertThat(statements, contains("select * from table1", "select * from table2"));
     }
 
     @Test
-    public void shouldReturnTwoStatementsWhenTwoStatementsAreFound() {
+    public void should_split_on_go() {
         QueryStatementSplitter splitter = new QueryStatementSplitter();
-        List<String> statements = splitter.split("select * from my_table; select * from your_table;");
-        assertThat(statements, contains("select * from my_table", "select * from your_table"));
-    }
-
-    @Test
-    public void shouldReturnTwoStatementsWhenTwoStatementsAreFoundOnSeparateLines() {
-        QueryStatementSplitter splitter = new QueryStatementSplitter();
-        List<String> statements = splitter.split("select * from my_table;\nselect * from your_table;");
-        assertThat(statements, contains("select * from my_table", "select * from your_table"));
-    }
-
-    @Test
-    public void shouldReturnTwoStatementsWhenTwoStatementsAreFoundOnSeparateLinesWithDifferentLineEndings() {
-        QueryStatementSplitter splitter = new QueryStatementSplitter();
-        List<String> statements = splitter.split("select * from my_table;\r\nselect * from your_table;");
-        assertThat(statements, contains("select * from my_table", "select * from your_table"));
-    }
-
-    @Test
-    public void shouldHandleDifferentDelimiters() {
-        QueryStatementSplitter splitter = new QueryStatementSplitter();
+        splitter.setDelimiterType(DelimiterType.SUFFIX);
         splitter.setDelimiter("GO");
-        List<String> statements = splitter.split("select * from my_tableGO\nselect * from your_tableGO");
-        assertThat(statements, contains("select * from my_table", "select * from your_table"));
+        splitter.setLineEnding("\n");
+
+        List<String> statements = splitter.split("select * from table1\nGO\nselect * from table2\nGO");
+
+        assertThat(statements, contains("select * from table1", "select * from table2"));
+    }
+
+    @Test
+    public void should_split_on_go_with_windows_line_endings() {
+        QueryStatementSplitter splitter = new QueryStatementSplitter();
+        splitter.setDelimiterType(DelimiterType.SUFFIX);
+        splitter.setDelimiter("GO");
+        splitter.setLineEnding("\n");
+
+        List<String> statements = splitter.split("select * from table1\r\nGO\r\nselect * from table2\r\nGO");
+
+        assertThat(statements, contains("select * from table1", "select * from table2"));
+    }
+
+    @Test
+    public void should_split_on_slash() {
+        QueryStatementSplitter splitter = new QueryStatementSplitter();
+        splitter.setDelimiterType(DelimiterType.SUFFIX);
+        splitter.setDelimiter("/");
+        splitter.setLineEnding("\n");
+
+        List<String> statements = splitter.split("select * from table1\n/\nselect * from table2\n/");
+
+        assertThat(statements, contains("select * from table1", "select * from table2"));
     }
 }
