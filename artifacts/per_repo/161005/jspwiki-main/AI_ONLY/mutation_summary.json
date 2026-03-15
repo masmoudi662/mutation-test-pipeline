@@ -1,0 +1,31 @@
+{
+  "repo_id": "161005",
+  "module": "jspwiki-main",
+  "condition": "AI_ONLY",
+  "commit_hash": "f3bc20f62c32f7b0b36dfb7000f1d766798212ee",
+  "focal_class": "org.apache.wiki.ui.RedirectCommand",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.apache.jspwiki:jspwiki-main >------------------- [INFO] Building Apache JSPWiki Main Jar 3.0.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]-----",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002634Z_161005_jspwiki-main_AI_ONLY_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002634Z_161005_jspwiki-main_AI_ONLY_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": [
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002634Z_161005_jspwiki-main_AI_ONLY_focal_maven\\00_compile.log"
+    ]
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:26:38.181962+00:00"
+}

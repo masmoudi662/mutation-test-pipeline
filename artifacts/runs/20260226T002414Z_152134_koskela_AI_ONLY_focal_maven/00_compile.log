@@ -1,0 +1,52 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -DskipTests compile
+
+STDOUT:
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.tddinaction:sourcecode:jar:0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: javax.annotation:jsr250-api:jar -> duplicate declaration of version 1.0 @ line 167, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 309, column 12
+[WARNING] 'repositories.repository.layout' for maven1-repository.dev.java.net uses the unsupported value 'legacy', artifact resolution might fail. @ line 29, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.tddinaction:sourcecode >---------------------
+[INFO] Building TestDrivenSourceCode 0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Artifact javax.annotation:jsr250-api:pom:1.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [maven-default-http-blocker (http://0.0.0.0/, default, releases+snapshots, blocked), central (https://repo1.maven.org/maven2, default, releases)]
+[INFO] Artifact javax.annotation:jsr250-api:pom:1.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [maven-default-http-blocker (http://0.0.0.0/, default, releases+snapshots, blocked), central (https://repo1.maven.org/maven2, default, releases)]
+Downloading from central: https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.pom
+Downloaded from central: https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.pom (0 B at 0 B/s)
+[INFO] Artifact org.apache.activemq:activemq-core:pom:4.1.1 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [maven-default-http-blocker (http://0.0.0.0/, default, releases+snapshots, blocked), central (https://repo1.maven.org/maven2, default, releases)]
+[INFO] Artifact org.apache.activemq:activemq-core:pom:4.1.1 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [maven-default-http-blocker (http://0.0.0.0/, default, releases+snapshots, blocked), central (https://repo1.maven.org/maven2, default, releases)]
+Downloading from central: https://repo1.maven.org/maven2/org/apache/activemq/activemq-core/4.1.1/activemq-core-4.1.1.pom
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/activemq/activemq-core/4.1.1/activemq-core-4.1.1.pom (0 B at 0 B/s)
+[INFO] Artifact org.apache.activemq:activemq-parent:pom:4.1.1 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [maven-default-http-blocker (http://0.0.0.0/, default, releases+snapshots, blocked), central (https://repo1.maven.org/maven2, default, releases)]
+[INFO] Artifact org.apache.activemq:activemq-parent:pom:4.1.1 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [maven-default-http-blocker (http://0.0.0.0/, default, releases+snapshots, blocked), central (https://repo1.maven.org/maven2, default, releases)]
+Downloading from central: https://repo1.maven.org/maven2/org/apache/activemq/activemq-parent/4.1.1/activemq-parent-4.1.1.pom
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/activemq/activemq-parent/4.1.1/activemq-parent-4.1.1.pom (0 B at 0 B/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.959 s
+[INFO] Finished at: 2026-02-25T19:24:18-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project sourcecode: Could not collect dependencies for project com.tddinaction:sourcecode:jar:0.1-SNAPSHOT
+[ERROR] Failed to read artifact descriptor for org.apache.activemq:activeio-core:jar:3.0.0-incubator
+[ERROR] 	Caused by: The following artifacts could not be resolved: org.apache.activemq:activeio-core:pom:3.0.0-incubator (absent): Could not transfer artifact org.apache.activemq:activeio-core:pom:3.0.0-incubator from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [jsptest.sf.net (http://jsptest.sf.net/maven2/, default, releases+snapshots), maven2-repository.dev.java.net (http://download.java.net/maven/2/, default, releases+snapshots), maven1-repository.dev.java.net (http://download.java.net/maven/1/, legacy, releases+snapshots), apache.incubating.releases (http://people.apache.org/repo/m2-incubating-repository, default, releases+snapshots), apache.snapshots (http://people.apache.org/repo/m2-snapshot-repository, default, snapshots), laughingpanda.org (http://www.laughingpanda.org/maven2/, default, releases+snapshots)]
+[ERROR] Failed to read artifact descriptor for beaninject:beaninject:jar:0.3
+[ERROR] 	Caused by: The following artifacts could not be resolved: beaninject:beaninject:pom:0.3 (absent): Could not transfer artifact beaninject:beaninject:pom:0.3 from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [jsptest.sf.net (http://jsptest.sf.net/maven2/, default, releases+snapshots), maven2-repository.dev.java.net (http://download.java.net/maven/2/, default, releases+snapshots), maven1-repository.dev.java.net (http://download.java.net/maven/1/, legacy, releases+snapshots), apache.incubating.releases (http://people.apache.org/repo/m2-incubating-repository, default, releases+snapshots), apache.snapshots (http://people.apache.org/repo/m2-snapshot-repository, default, snapshots), laughingpanda.org (http://www.laughingpanda.org/maven2/, default, releases+snapshots)]
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+
+STDERR:

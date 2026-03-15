@@ -2,18 +2,16 @@
   "repo_id": "206322",
   "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206322",
   "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206322\\maven-ejb-plugin",
-  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_path": null,
   "pom_path": null,
   "backup_path": null,
   "changes": [
-    "Ensured Maven settings.xml with HTTPS mirrors",
     "Using build tool: maven",
-    "Pipeline failed: No AI test class found for focal class EjbHelper in D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206322\\maven-ejb-plugin\\src\\test\\java",
-    "Traceback (most recent call last):\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\run_mutation_pipeline.py\", line 800, in main\n    selected_tests, focal_class = resolve_focal_selection(module_dir, args.module, mapping, args.condition)\n                                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\run_mutation_pipeline.py\", line 160, in resolve_focal_selection\n    raise FileNotFoundError(\n        f\"No AI test class found for focal class {focal_identifier} in {module_dir / 'src/test/java'}\"\n    )\nFileNotFoundError: No AI test class found for focal class EjbHelper in D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206322\\maven-ejb-plugin\\src\\test\\java\n"
+    "Pipeline bootstrap failure: Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206322\\maven-ejb-plugin\\src\\test\\java\\org\\apache\\maven\\plugins\\ejb\\EjbHelperTest.java"
   ],
   "removed_dependencies": [],
   "installed_jars": [],
   "commands": [],
   "checksums": {},
-  "generated_at_utc": "2026-02-25T02:36:50.429313+00:00"
+  "generated_at_utc": "2026-02-26T00:29:27.630010+00:00"
 }

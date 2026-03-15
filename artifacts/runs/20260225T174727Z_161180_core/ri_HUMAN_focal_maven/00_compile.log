@@ -1,0 +1,29 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -DskipTests compile
+
+STDOUT:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.jredis:jredis-core-ri >----------------------
+[INFO] Building JRedis - Core - RI a.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.jredis:jredis-core-api:jar:a.0-SNAPSHOT is missing, no dependency information available
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.240 s
+[INFO] Finished at: 2026-02-25T12:47:30-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project jredis-core-ri: Could not resolve dependencies for project org.jredis:jredis-core-ri:jar:a.0-SNAPSHOT
+[ERROR] dependency: org.jredis:jredis-core-api:jar:a.0-SNAPSHOT (compile)
+[ERROR] 	Could not find artifact org.jredis:jredis-core-api:jar:a.0-SNAPSHOT
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+
+STDERR:

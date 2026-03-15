@@ -1,0 +1,50 @@
+{
+  "run_id": "20260226T002652Z_168535_alterego_AI_ONLY_focal_maven",
+  "repo_id": "168535",
+  "module": "alterego",
+  "condition": "AI_ONLY",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": true,
+  "started_at_utc": "2026-02-26T00:26:52.469870+00:00",
+  "ended_at_utc": "2026-02-26T00:26:56.043621+00:00",
+  "success": false,
+  "status": "FAIL",
+  "phase": "compile",
+  "exit_code": 1,
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------------< de.linsin:alterego >------------------------- [INFO] Building alterego 0.1 [INFO] from pom.xml [INFO] --------------------------------[ jar ]-------------------------------",
+  "retries": 0,
+  "fixed_by": "NONE",
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\168535\\alterego",
+      "returncode": 1,
+      "duration_seconds": 1.827,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002652Z_168535_alterego_AI_ONLY_focal_maven\\00_compile.log"
+    }
+  ],
+  "selected_test_classes": [
+    "de.linsin.alterego.BotAiTest"
+  ],
+  "target_classes": [],
+  "focal_class": "de.linsin.alterego.Bot",
+  "tests_found": "",
+  "pit_target_classes": "",
+  "pit_version": "1.6.9",
+  "pit_status": "",
+  "pit_log_file": "",
+  "pit_config": {},
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002652Z_168535_alterego_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\168535_0.json",
+  "error": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects...\n[INFO] \n[INFO] -------------------------< de.linsin:alterego >-------------------------\n[INFO] Building alterego 0.1\n[INFO]   from pom.xml\n[INFO] --------------------------------[ jar ]---------------------------------\n[INFO] \n[INFO] --- resources:3.3.1:resources (default-resources) @ alterego ---\n[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!\n[INFO] skip non existing resourceDirectory D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\168535\\alterego\\src\\main\\resources\n[INFO] \n[INFO] --- compiler:2.0.2:compile (default-compile) @ alterego ---\n[INFO] Compiling 5 source files to D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\168535\\alterego\\target\\classes\n[INFO] ------------------------------------------------------------------------\n[INFO] BUILD FAILURE\n[INFO] ------------------------------------------------------------------------\n[INFO] Total time:  0.442 s\n[INFO] Finished at: 2026-02-25T19:26:55-05:00\n[INFO] ------------------------------------------------------------------------\n[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:2.0.2:compile (default-compile) on project alterego: Compilation failure: Compilation failure: \n[ERROR] error: Source option 5 is no longer supported. Use 7 or later.\n[ERROR] error: Target option 5 is no longer supported. Use 7 or later.\n[ERROR] -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException\n"
+}

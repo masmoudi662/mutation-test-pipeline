@@ -17,12 +17,12 @@ from build_patches import (
     PatchReport,
     ensure_maven_settings,
     install_missing_jars,
-    patch_red5_base,
     write_patch_report,
 )
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+GENERATED_TESTS_DIR = BASE_DIR / "experiments" / "generated_tests"
 
 
 def utc_now() -> str:
@@ -66,6 +66,71 @@ def load_mapping(repo_id: str, mapping_json: str | None) -> tuple[dict, Path]:
     return mapping, mapping_path
 
 
+
+def expected_ai_test_path(module_dir: Path, mapping: dict) -> Path:
+    focal_file = mapping["focal_class"]["file"]
+    focal_fqcn = java_file_to_fqcn(focal_file)
+    focal_identifier = mapping["focal_class"]["identifier"]
+    pkg = focal_fqcn.rsplit(".", 1)[0] if "." in focal_fqcn else ""
+    rel_dir = Path(*pkg.split(".")) if pkg else Path()
+    return module_dir / "src" / "test" / "java" / rel_dir / f"{focal_identifier}AiTest.java"
+
+
+def provision_ai_test_if_missing(
+    repo_id: str,
+    module: str,
+    module_dir: Path,
+    mapping: dict,
+    mapping_path: Path,
+    report: PatchReport,
+) -> tuple[bool, str]:
+    target_path = expected_ai_test_path(module_dir, mapping)
+    if target_path.exists():
+        return True, f"AI test already exists: {target_path}"
+
+    generated_source = GENERATED_TESTS_DIR / f"{mapping_path.stem}_GeneratedTest.java"
+    if not generated_source.exists():
+        return False, f"Generated AI test not found: {generated_source}"
+
+    raw = generated_source.read_text(encoding="utf-8")
+    lines = raw.splitlines()
+    if lines and lines[0].strip().lower() == "java":
+        lines = lines[1:]
+    text = "\n".join(lines)
+
+    focal_fqcn = java_file_to_fqcn(mapping["focal_class"]["file"])
+    expected_pkg = focal_fqcn.rsplit(".", 1)[0] if "." in focal_fqcn else ""
+    if expected_pkg:
+        pkg_decl = re.search(r"^\s*package\s+([a-zA-Z0-9_.]+)\s*;\s*$", text, flags=re.MULTILINE)
+        if pkg_decl:
+            text = re.sub(
+                r"^\s*package\s+[a-zA-Z0-9_.]+\s*;\s*$",
+                f"package {expected_pkg};",
+                text,
+                count=1,
+                flags=re.MULTILINE,
+            )
+        else:
+            text = f"package {expected_pkg};\n\n{text}"
+
+    class_name = f"{mapping['focal_class']['identifier']}AiTest"
+    class_match = re.search(r"\bpublic\s+class\s+([A-Za-z_][A-Za-z0-9_]*)\b", text)
+    if not class_match:
+        return False, f"Generated AI test has no public class declaration: {generated_source}"
+
+    old_class_name = class_match.group(1)
+    text = re.sub(
+        r"\bpublic\s+class\s+[A-Za-z_][A-Za-z0-9_]*\b",
+        f"public class {class_name}",
+        text,
+        count=1,
+    )
+    text = re.sub(rf"\bnew\s+{re.escape(old_class_name)}\s*\(", f"new {class_name}(", text)
+
+    target_path.parent.mkdir(parents=True, exist_ok=True)
+    target_path.write_text(text, encoding="utf-8")
+    report.changes.append(f"Injected AI test for {repo_id}/{module}: {generated_source} -> {target_path}")
+    return True, f"Injected AI test to {target_path}"
 def _is_ai_test_file(path: Path) -> bool:
     name = path.name
     return name.endswith("AiTest.java") or name.endswith("_GeneratedTest.java") or "GeneratedTest" in name
@@ -260,29 +325,98 @@ def write_mutation_summary(pit_root: Path, out_path: Path) -> None:
     )
 
 
-def append_mutation_summary_csv(
-    run_dir: Path,
-    repo_id: str,
-    module: str,
-    condition: str,
-    test_scope: str,
-    build_tool: str,
-    focal_class: str,
-    selected_tests: list[str],
-    tests_found: str,
-) -> None:
+def flatten_message(text: str, max_len: int = 400) -> str:
+    single = " ".join((text or "").split())
+    return single[:max_len]
+
+
+def classify_error(exc: BaseException) -> str:
+    message = str(exc)
+    haystack = f"{type(exc).__name__}\n{message}".lower()
+    if isinstance(exc, subprocess.CalledProcessError):
+        haystack = f"{haystack}\n{(exc.stderr or '').lower()}\n{(exc.output or '').lower()}"
+
+    if "no ai test class found" in haystack:
+        return "FILE_NOT_FOUND"
+    if "module directory does not exist" in haystack:
+        return "MODULE_MISSING"
+    if (
+        "timed out" in haystack
+        or "timeoutexpired" in haystack
+        or isinstance(exc, subprocess.TimeoutExpired)
+    ):
+        return "TIMEOUT"
+    if (
+        "maven-default-http-blocker" in haystack
+        or "blocked mirror for repositories" in haystack
+        or "blocked mirror" in haystack
+    ):
+        return "HTTP_BLOCKER"
+    if (
+        "was not found in" in haystack
+        or "failure to find" in haystack
+        or "cached in the local repository" in haystack
+    ):
+        return "SNAPSHOT_MISSING"
+    if (
+        "dependencyresolutionexception" in haystack
+        or "could not resolve dependencies" in haystack
+        or "could not find artifact" in haystack
+    ):
+        return "DEP_RESOLUTION"
+    if (
+        "compilation failure" in haystack
+        or "compilation error" in haystack
+        or "failed to execute goal org.apache.maven.plugins:maven-compiler-plugin" in haystack
+    ):
+        return "COMPILATION"
+    if (
+        "surefirebooterforkexception" in haystack
+        or "there are test failures" in haystack
+        or "failed tests:" in haystack
+        or "tests run:" in haystack
+    ):
+        return "TEST_FAILURE"
+    if (
+        "org.pitest" in haystack
+        or "mutationcoveragereport" in haystack
+        or "pitest" in haystack
+    ):
+        return "PIT_ERROR"
+    if isinstance(exc, FileNotFoundError):
+        return "FILE_NOT_FOUND"
+    return "OTHER"
+
+
+def maven_prefix(args: argparse.Namespace, settings_path: Path) -> list[str]:
+    cmd = [args.mvn_cmd]
+    if args.mvn_force_update:
+        cmd.append("-U")
+    cmd.extend(["-s", str(settings_path)])
+    return cmd
+
+
+def extract_mutation_metrics(run_dir: Path) -> dict[str, str]:
     pit_root = run_dir / "pit-reports"
     xml_path = find_mutations_xml(pit_root)
     if not xml_path:
-        print(f"[pipeline] warning: mutations.xml not found under {pit_root}; skipping CSV append")
-        return
+        return {
+            "tests_found": "",
+            "mutations_generated": "",
+            "mutations_killed": "",
+            "mutations_survived": "",
+            "mutations_no_coverage": "",
+            "mutation_score_pct": "",
+        }
+
     tree = ET.parse(xml_path)
     root = tree.getroot()
-
     mutations_generated = 0
     mutations_killed = 0
     mutations_survived = 0
     mutations_no_coverage = 0
+    tests_found = ""
+
     for mutation in root.findall(".//mutation"):
         mutations_generated += 1
         status = (mutation.get("status") or "").upper()
@@ -295,29 +429,142 @@ def append_mutation_summary_csv(
 
     denom = mutations_killed + mutations_survived
     mutation_score_pct = (mutations_killed / denom * 100.0) if denom else 0.0
+    return {
+        "tests_found": tests_found,
+        "mutations_generated": str(mutations_generated),
+        "mutations_killed": str(mutations_killed),
+        "mutations_survived": str(mutations_survived),
+        "mutations_no_coverage": str(mutations_no_coverage),
+        "mutation_score_pct": f"{mutation_score_pct:.6f}",
+    }
 
+
+def write_final_comparison_latest(csv_path: Path) -> None:
+    if not csv_path.exists():
+        return
+    with csv_path.open(newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    if not rows:
+        return
+
+    latest_success_by_key: dict[tuple[str, str, str, str, str], dict[str, str]] = {}
+    for row in rows:
+        condition = row.get("condition", "")
+        status = row.get("status", "")
+        if condition not in ("HUMAN", "AI_ONLY"):
+            continue
+        if status != "OK":
+            continue
+        key = (
+            row.get("repo_id", ""),
+            row.get("module", ""),
+            row.get("test_scope", ""),
+            row.get("build_tool", ""),
+            condition,
+        )
+        prev = latest_success_by_key.get(key)
+        if not prev or row.get("timestamp", "") >= prev.get("timestamp", ""):
+            latest_success_by_key[key] = row
+
+    grouped: dict[tuple[str, str, str, str], dict[str, dict[str, str]]] = {}
+    for (repo_id, module, test_scope, build_tool, condition), row in latest_success_by_key.items():
+        pair_key = (repo_id, module, test_scope, build_tool)
+        grouped.setdefault(pair_key, {})[condition] = row
+
+    out_path = BASE_DIR / "artifacts" / "final_comparison_latest.csv"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    header = [
+        "repo_id",
+        "module",
+        "test_scope",
+        "build_tool",
+        "human_score_pct",
+        "ai_score_pct",
+        "delta",
+        "human_timestamp",
+        "ai_only_timestamp",
+        "human_run_dir",
+        "ai_only_run_dir",
+        "human_mutations_generated",
+        "ai_only_mutations_generated",
+        "human_mutations_killed",
+        "ai_only_mutations_killed",
+        "human_mutations_survived",
+        "ai_only_mutations_survived",
+        "human_error_type",
+        "ai_only_error_type",
+    ]
+    with out_path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(header)
+        for pair_key in sorted(grouped.keys()):
+            pair = grouped[pair_key]
+            if "HUMAN" not in pair or "AI_ONLY" not in pair:
+                continue
+            human = pair["HUMAN"]
+            ai = pair["AI_ONLY"]
+            human_score = float(human.get("mutation_score_pct") or "0")
+            ai_score = float(ai.get("mutation_score_pct") or "0")
+            writer.writerow(
+                [
+                    pair_key[0],
+                    pair_key[1],
+                    pair_key[2],
+                    pair_key[3],
+                    human.get("mutation_score_pct", ""),
+                    ai.get("mutation_score_pct", ""),
+                    f"{(ai_score - human_score):.6f}",
+                    human.get("timestamp", ""),
+                    ai.get("timestamp", ""),
+                    human.get("run_dir", ""),
+                    ai.get("run_dir", ""),
+                    human.get("mutations_generated", ""),
+                    ai.get("mutations_generated", ""),
+                    human.get("mutations_killed", ""),
+                    ai.get("mutations_killed", ""),
+                    human.get("mutations_survived", ""),
+                    ai.get("mutations_survived", ""),
+                    human.get("error_type", ""),
+                    ai.get("error_type", ""),
+                ]
+            )
+
+
+def upgrade_mutation_summary_csv_schema(csv_path: Path, header: list[str]) -> None:
+    if not csv_path.exists():
+        return
+    with csv_path.open(newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        fieldnames = reader.fieldnames or []
+        if fieldnames == header:
+            return
+        existing_rows = list(reader)
+
+    with csv_path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=header)
+        writer.writeheader()
+        for old_row in existing_rows:
+            normalized = {column: old_row.get(column, "") for column in header}
+            if "status" not in fieldnames:
+                normalized["status"] = "OK" if (old_row.get("mutation_score_pct") or "").strip() else ""
+                normalized["phase"] = "summarize" if normalized["status"] == "OK" else ""
+                normalized["exit_code"] = "0" if normalized["status"] == "OK" else ""
+                normalized["error_type"] = ""
+                normalized["error_message"] = ""
+            if "retries" not in fieldnames:
+                normalized["retries"] = "0"
+            if "fixed_by" not in fieldnames:
+                normalized["fixed_by"] = "NONE"
+            writer.writerow(normalized)
+
+
+def append_mutation_summary_csv(
+    run_status: dict,
+    run_dir: Path,
+) -> None:
+    metrics = extract_mutation_metrics(run_dir)
     csv_path = BASE_DIR / "artifacts" / "mutation_summary_all_runs.csv"
     csv_path.parent.mkdir(parents=True, exist_ok=True)
-    write_header = not csv_path.exists()
-
-    timestamp = run_dir.name.split("_", 1)[0]
-    row = [
-        timestamp,
-        repo_id,
-        module,
-        condition,
-        test_scope,
-        build_tool,
-        focal_class,
-        ",".join(selected_tests),
-        tests_found,
-        str(mutations_generated),
-        str(mutations_killed),
-        str(mutations_survived),
-        str(mutations_no_coverage),
-        f"{mutation_score_pct:.6f}",
-        str(run_dir),
-    ]
     header = [
         "timestamp",
         "repo_id",
@@ -333,13 +580,56 @@ def append_mutation_summary_csv(
         "mutations_survived",
         "mutations_no_coverage",
         "mutation_score_pct",
+        "status",
+        "phase",
+        "exit_code",
+        "error_type",
+        "error_message",
+        "retries",
+        "fixed_by",
+        "pit_target_classes",
+        "pit_version",
+        "pit_status",
+        "pit_log_file",
         "run_dir",
+    ]
+    upgrade_mutation_summary_csv_schema(csv_path, header)
+
+    timestamp = run_dir.name.split("_", 1)[0]
+    row = [
+        timestamp,
+        run_status.get("repo_id", ""),
+        run_status.get("module", ""),
+        run_status.get("condition", ""),
+        run_status.get("test_scope", ""),
+        run_status.get("build_tool", ""),
+        run_status.get("focal_class", ""),
+        ",".join(run_status.get("selected_test_classes", [])),
+        run_status.get("tests_found", "") or metrics["tests_found"],
+        metrics["mutations_generated"],
+        metrics["mutations_killed"],
+        metrics["mutations_survived"],
+        metrics["mutations_no_coverage"],
+        metrics["mutation_score_pct"],
+        run_status.get("status", ""),
+        run_status.get("phase", ""),
+        str(run_status.get("exit_code", "")),
+        run_status.get("error_type", ""),
+        run_status.get("error_message", ""),
+        str(run_status.get("retries", 0)),
+        run_status.get("fixed_by", "NONE"),
+        run_status.get("pit_target_classes", ""),
+        run_status.get("pit_version", ""),
+        run_status.get("pit_status", ""),
+        run_status.get("pit_log_file", ""),
+        str(run_dir),
     ]
     with csv_path.open("a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        if write_header:
+        if csv_path.stat().st_size == 0:
             writer.writerow(header)
         writer.writerow(row)
+    write_final_comparison_latest(csv_path)
     print("[pipeline] appended mutation summary row to artifacts/mutation_summary_all_runs.csv")
 
 
@@ -384,15 +674,17 @@ def run_compile_and_tests(
     run_dir: Path,
 ) -> None:
     if build_tool == "maven":
+        run_status["phase"] = "compile"
         run_command(
-            [args.mvn_cmd, "-s", str(settings_path), "-DskipTests", "compile"],
+            maven_prefix(args, settings_path) + ["-DskipTests", "compile"],
             module_dir,
             report,
             run_status,
             run_dir,
             "compile",
         )
-        test_cmd = [args.mvn_cmd, "-s", str(settings_path)]
+        run_status["phase"] = "test"
+        test_cmd = maven_prefix(args, settings_path)
         if args.test_scope == "focal":
             test_cmd.append(f"-Dtest={','.join(selected_tests)}")
         test_cmd.append("test")
@@ -401,6 +693,7 @@ def run_compile_and_tests(
 
     gradle_cmd = gradle_executable(repo_root, args.gradle_cmd)
     gradle_path = gradle_project_path(repo_root, module_dir)
+    run_status["phase"] = "compile"
     run_command(
         [gradle_cmd, f"{gradle_path}:classes"],
         repo_root,
@@ -409,6 +702,7 @@ def run_compile_and_tests(
         run_dir,
         "compile",
     )
+    run_status["phase"] = "test"
     test_cmd = [gradle_cmd, f"{gradle_path}:test"]
     if args.test_scope == "focal":
         for test_class in selected_tests:
@@ -441,9 +735,7 @@ def collect_maven_test_classpath(
         str(Path.home() / ".m2" / "repository" / "org" / "hamcrest" / "hamcrest-core" / "1.3" / "hamcrest-core-1.3.jar")
     )
     cmd = [
-        args.mvn_cmd,
-        "-s",
-        str(settings_path),
+        *maven_prefix(args, settings_path),
         "-DincludeScope=test",
         "-Dmdep.addOutputDirectory=true",
         "-Dmdep.addTestOutputDirectory=true",
@@ -457,7 +749,7 @@ def collect_maven_test_classpath(
     if had_legacy_junit:
         if not Path(junit_4132).exists() or not Path(hamcrest_13).exists():
             run_command(
-                [args.mvn_cmd, "-s", str(settings_path), "-q", "dependency:get", "-Dartifact=junit:junit:4.13.2"],
+                maven_prefix(args, settings_path) + ["-q", "dependency:get", "-Dartifact=junit:junit:4.13.2"],
                 module_dir,
                 report,
                 run_status,
@@ -465,7 +757,7 @@ def collect_maven_test_classpath(
                 "fetch_junit_4132",
             )
             run_command(
-                [args.mvn_cmd, "-s", str(settings_path), "-q", "dependency:get", "-Dartifact=org.hamcrest:hamcrest-core:1.3"],
+                maven_prefix(args, settings_path) + ["-q", "dependency:get", "-Dartifact=org.hamcrest:hamcrest-core:1.3"],
                 module_dir,
                 report,
                 run_status,
@@ -585,9 +877,7 @@ def collect_pit_cli_classpath(
     )
     run_command(
         [
-            args.mvn_cmd,
-            "-s",
-            str(settings_path),
+            *maven_prefix(args, settings_path),
             "-f",
             str(pom_path),
             f"-Dmdep.outputFile={cp_file}",
@@ -669,6 +959,16 @@ def run_pit_cli(
         "--outputFormats",
         "XML,HTML",
     ]
+    run_status["pit_target_classes"] = target_classes_arg
+    run_status["pit_version"] = args.pit_version
+    run_status["pit_config"] = {
+        "pit_version": args.pit_version,
+        "target_classes": target_classes_arg,
+        "target_tests": ",".join(selected_tests),
+        "source_dir": str(source_dir),
+        "mutable_code_paths": str(module_dir / "target" / "classes"),
+        "class_path_file": str(pit_classpath_file),
+    }
     print(
         f"[pit] targetClasses={target_classes_arg} targetTests={','.join(selected_tests)} "
         f"classExists={expected_class.exists() if expected_class else False}"
@@ -685,20 +985,167 @@ def run_pit_cli(
     tests_found_match = re.search(r"Found\s+(\d+)\s+tests", f"{pit_proc.stdout}\n{pit_proc.stderr}")
     if tests_found_match:
         tests_found = tests_found_match.group(1)
-    append_mutation_summary_csv(
-        run_dir=run_dir,
-        repo_id=repo_id,
-        module=module,
-        condition=condition,
-        test_scope=test_scope,
-        build_tool=build_tool,
-        focal_class=focal_class,
-        selected_tests=selected_tests,
-        tests_found=tests_found,
-    )
+    run_status["tests_found"] = tests_found
+    run_status["pit_status"] = "OK"
+    if run_status.get("commands"):
+        run_status["pit_log_file"] = run_status["commands"][-1].get("log_file", "")
     return pit_reports_dir
 
 
+
+def ensure_repo_settings_https(repo_id: str) -> Path:
+    repo_root = BASE_DIR / "target-repos" / repo_id
+    mvn_dir = repo_root / ".mvn"
+    mvn_dir.mkdir(parents=True, exist_ok=True)
+    settings_path = mvn_dir / "settings.xml"
+    settings_path.write_text(
+        """<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <mirrors>
+    <mirror>
+      <id>central-https</id>
+      <name>Maven Central HTTPS</name>
+      <url>https://repo1.maven.org/maven2</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+    <mirror>
+      <id>oss-sonatype-https</id>
+      <mirrorOf>appfuse-snapshots</mirrorOf>
+      <name>Force HTTPS for oss.sonatype snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/appfuse-snapshots</url>
+    </mirror>
+  </mirrors>
+  <profiles>
+    <profile>
+      <id>allow-https-repos</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+        <repository>
+          <id>apache-snapshots</id>
+          <url>https://repository.apache.org/snapshots</url>
+          <releases><enabled>false</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+        <repository>
+          <id>sonatype-snapshots</id>
+          <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+          <releases><enabled>false</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>apache-snapshots</id>
+          <url>https://repository.apache.org/snapshots</url>
+          <releases><enabled>false</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>sonatype-snapshots</id>
+          <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+          <releases><enabled>false</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>allow-https-repos</activeProfile>
+  </activeProfiles>
+</settings>
+""",
+        encoding="utf-8",
+    )
+    return settings_path
+
+
+def clear_http_blocker_cache(error_message: str) -> int:
+    m2_repo = Path.home() / ".m2" / "repository"
+    if not m2_repo.exists():
+        return 0
+
+    groups: set[str] = set()
+    for group_id, _artifact_id in re.findall(r"([A-Za-z0-9_.-]+):([A-Za-z0-9_.-]+):", error_message or ""):
+        if "." in group_id:
+            groups.add(group_id)
+    if "org.appfuse:" in (error_message or ""):
+        groups.add("org.appfuse")
+
+    removed = 0
+    for group_id in sorted(groups):
+        target = m2_repo / Path(*group_id.split("."))
+        if not target.exists():
+            continue
+        try:
+            shutil.rmtree(target)
+            removed += 1
+        except OSError as exc:
+            print(f"[warn] failed deleting cache path {target}: {exc}")
+    return removed
+
+
+def determine_retry_strategy(error_type: str, error_message: str) -> str:
+    hay = f"{error_type}\n{error_message}".lower()
+    if (
+        "http_blocker" in hay
+        or "maven-default-http-blocker" in hay
+        or "blocked mirror" in hay
+        or "appfuse-snapshots" in hay
+        or "oss.sonatype.org" in hay
+    ):
+        return "HTTP_SETTINGS_FIX"
+    return "NONE"
+
+
+def write_per_repo_condition_summary(run_status: dict, run_dir: Path) -> None:
+    repo_id = run_status.get("repo_id", "")
+    module = run_status.get("module", "")
+    condition = run_status.get("condition", "")
+    if not repo_id or not module or not condition:
+        return
+    module_path = Path(*[part for part in module.replace("\\", "/").split("/") if part])
+    out_path = BASE_DIR / "artifacts" / "per_repo" / repo_id / module_path / condition / "mutation_summary.json"
+    metrics = extract_mutation_metrics(run_dir)
+    payload = {
+        "repo_id": repo_id,
+        "module": module,
+        "condition": condition,
+        "status": run_status.get("status", "FAIL"),
+        "error_type": run_status.get("error_type", ""),
+        "error_message": run_status.get("error_message", ""),
+        "metrics": {
+            "mutation_score_pct": metrics.get("mutation_score_pct", ""),
+            "mutants_total": metrics.get("mutations_generated", ""),
+            "killed": metrics.get("mutations_killed", ""),
+            "survived": metrics.get("mutations_survived", ""),
+        },
+        "pit_config": run_status.get("pit_config", {}),
+        "fixed_by": run_status.get("fixed_by", "NONE"),
+        "settings_path": run_status.get("settings_path", ""),
+        "settings_copy": run_status.get("settings_copy", ""),
+        "run_dir": str(run_dir),
+    }
+    write_json(out_path, payload)
+
+
+def copy_settings_for_attempt(settings_path: Path, run_dir: Path, attempt: int) -> str:
+    if not settings_path.exists():
+        return ""
+    out = run_dir / f"settings_used_attempt{attempt}.xml"
+    shutil.copy2(settings_path, out)
+    return str(out)
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Run deterministic test + PIT pipeline across Maven/Gradle."
@@ -730,8 +1177,16 @@ def parse_args() -> argparse.Namespace:
         help="Build tool selection.",
     )
     parser.add_argument("--mvn-cmd", default="mvn.cmd", help="Maven executable name/path.")
+    parser.add_argument("--mvn-force-update", action="store_true", help="Pass -U to Maven commands.")
+    parser.add_argument(
+        "--settings-override",
+        default=None,
+        help="Optional path to Maven settings.xml to use instead of the default generated settings.",
+    )
     parser.add_argument("--gradle-cmd", default=None, help="Gradle executable name/path.")
     parser.add_argument("--pit-version", default="1.6.9", help="PIT CLI version for pitest-command-line.")
+    parser.add_argument("--retries", type=int, default=0, help="Retry count metadata for this run.")
+    parser.add_argument("--fixed-by", default="NONE", help="Applied fix label metadata for this run.")
     return parser.parse_args()
 
 
@@ -739,10 +1194,7 @@ def main() -> int:
     args = parse_args()
     repo_root = BASE_DIR / "target-repos" / args.repo_id
     module_dir = repo_root / args.module
-    if not module_dir.exists():
-        raise SystemExit(f"Module directory does not exist: {module_dir}")
-
-    build_tool = detect_build_tool(module_dir, args.build_tool)
+    build_tool = args.build_tool if args.build_tool != "auto" else "auto"
     run_id = (
         f"{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}_"
         f"{args.repo_id}_{args.module}_{args.condition}_{args.test_scope}_{build_tool}"
@@ -761,99 +1213,210 @@ def main() -> int:
         "started_at_utc": utc_now(),
         "ended_at_utc": None,
         "success": False,
+        "status": "FAIL",
+        "phase": "clone",
+        "exit_code": 1,
+        "error_type": "",
+        "error_message": "",
+        "retries": 0,
+        "fixed_by": args.fixed_by,
         "commands": [],
         "selected_test_classes": [],
         "target_classes": [],
+        "focal_class": "",
+        "tests_found": "",
+        "pit_target_classes": "",
+        "pit_version": args.pit_version,
+        "pit_status": "",
+        "pit_log_file": "",
+        "pit_config": {},
+        "settings_path": "",
+        "settings_copy": "",
         "mapping_json": None,
         "error": None,
     }
 
-    settings_path = ensure_maven_settings(BASE_DIR)
-    report = patch_red5_base(repo_root) if args.repo_id == "103035" else PatchReport(
+    base_settings = Path(args.settings_override) if args.settings_override else ensure_maven_settings(BASE_DIR)
+    current_settings = base_settings
+    current_fixed_by = args.fixed_by
+
+    report = PatchReport(
         repo_id=args.repo_id,
         repo_root=str(repo_root),
         module_dir=str(module_dir),
     )
-    report.settings_path = str(settings_path)
-    report.changes.append("Ensured Maven settings.xml with HTTPS mirrors")
-    report.changes.append(f"Using build tool: {build_tool}")
-
     report_path = BASE_DIR / "artifacts" / "build_patches" / f"{args.repo_id}_{args.module}.json"
 
     mapping = None
+    mapping_path: Path | None = None
     selected_tests: list[str] = []
     focal_class = None
     pit_reports_dir = run_dir / "pit-reports"
 
     try:
+        run_status["phase"] = "clone"
+        if not module_dir.exists():
+            raise FileNotFoundError(f"Module directory does not exist: {module_dir}")
+        build_tool = detect_build_tool(module_dir, args.build_tool)
+        run_status["build_tool"] = build_tool
+        report.changes.append(f"Using build tool: {build_tool}")
+
         if args.test_scope == "focal" or args.run_pit:
             mapping, mapping_path = load_mapping(args.repo_id, args.mapping_json)
             run_status["mapping_json"] = str(mapping_path)
+            run_status["focal_class"] = java_file_to_fqcn(mapping["focal_class"]["file"])
+
+        if args.condition == "AI_ONLY" and mapping is not None and mapping_path is not None:
+            ok, msg = provision_ai_test_if_missing(args.repo_id, args.module, module_dir, mapping, mapping_path, report)
+            if ok:
+                print(f"[ai-test] {msg}")
+            else:
+                raise FileNotFoundError(msg)
 
         _restore_disabled_tests(module_dir, report)
         if args.test_scope == "full":
             selected_tests = apply_condition_full(module_dir, args.condition, report)
-            keep_fqcns = set(selected_tests)
         else:
             if mapping is None:
                 raise RuntimeError("Focal test scope requires a mapping JSON.")
             selected_tests, focal_class = resolve_focal_selection(module_dir, args.module, mapping, args.condition)
-            keep_fqcns = set(selected_tests)
-            _disable_unselected_tests(module_dir, keep_fqcns, report)
+            _disable_unselected_tests(module_dir, set(selected_tests), report)
             report.changes.append(f"Applied focal test scope with selected tests: {selected_tests}")
+            run_status["focal_class"] = focal_class or run_status["focal_class"]
 
         run_status["selected_test_classes"] = selected_tests
 
-        # Existing reproducibility patches apply to Maven repos; keep for compatibility.
         if build_tool == "maven":
-            install_missing_jars(BASE_DIR, settings_path, report, mvn_cmd=args.mvn_cmd)
+            install_missing_jars(BASE_DIR, current_settings, report, mvn_cmd=args.mvn_cmd)
 
-        run_compile_and_tests(
-            build_tool,
-            args,
-            settings_path,
-            repo_root,
-            module_dir,
-            selected_tests,
-            report,
-            run_status,
-            run_dir,
-        )
+        max_retries = max(0, int(args.retries))
+        attempt = 0
+        while True:
+            run_status["retries"] = attempt
+            run_status["fixed_by"] = current_fixed_by
+            run_status["settings_path"] = str(current_settings)
+            report.settings_path = str(current_settings)
+            try:
+                run_status["settings_copy"] = copy_settings_for_attempt(current_settings, run_dir, attempt + 1)
+                if run_status["settings_copy"]:
+                    print(f"[attempt {attempt + 1}] settings={run_status['settings_copy']} fixed_by={current_fixed_by}")
+                    report.changes.append(
+                        f"Attempt {attempt + 1}: settings={run_status['settings_copy']} fixed_by={current_fixed_by}"
+                    )
+            except OSError as exc:
+                print(f"[warn] could not copy settings for attempt {attempt + 1}: {exc}")
 
-        if args.run_pit:
-            if mapping is None:
-                raise RuntimeError("PIT execution requires mapping JSON for focal target classes/tests.")
-            if not focal_class:
-                focal_class = java_file_to_fqcn(mapping["focal_class"]["file"])
-            run_status["target_classes"] = [focal_class]
-            pit_reports_dir = run_pit_cli(
-                args.repo_id,
-                args.module,
-                args.condition,
-                args.test_scope,
-                build_tool,
-                args,
-                settings_path,
-                repo_root,
-                module_dir,
-                focal_class,
-                selected_tests,
-                report,
-                run_status,
-                run_dir,
-            )
+            args.mvn_force_update = bool(args.mvn_force_update or current_fixed_by == "HTTP_SETTINGS_FIX")
 
-        run_status["success"] = True
-        report.changes.append(f"Run artifacts written to {run_dir}")
+            try:
+                run_compile_and_tests(
+                    build_tool,
+                    args,
+                    current_settings,
+                    repo_root,
+                    module_dir,
+                    selected_tests,
+                    report,
+                    run_status,
+                    run_dir,
+                )
+
+                if args.run_pit:
+                    if mapping is None:
+                        raise RuntimeError("PIT execution requires mapping JSON for focal target classes/tests.")
+                    if not focal_class:
+                        focal_class = java_file_to_fqcn(mapping["focal_class"]["file"])
+                    run_status["target_classes"] = [focal_class]
+                    run_status["focal_class"] = focal_class
+                    run_status["phase"] = "pit"
+                    pit_reports_dir = run_pit_cli(
+                        args.repo_id,
+                        args.module,
+                        args.condition,
+                        args.test_scope,
+                        build_tool,
+                        args,
+                        current_settings,
+                        repo_root,
+                        module_dir,
+                        focal_class,
+                        selected_tests,
+                        report,
+                        run_status,
+                        run_dir,
+                    )
+
+                run_status["success"] = True
+                run_status["status"] = "OK"
+                run_status["exit_code"] = 0
+                run_status["error"] = None
+                run_status["error_type"] = ""
+                run_status["error_message"] = ""
+                report.changes.append(f"Run artifacts written to {run_dir}")
+                break
+            except subprocess.CalledProcessError as exc:
+                detailed_message = str(exc)
+                detail = exc.stderr or exc.output or ""
+                if detail:
+                    detailed_message = f"{detailed_message}: {detail}"
+                run_status["error"] = detailed_message
+                run_status["status"] = "FAIL"
+                run_status["exit_code"] = int(exc.returncode or 1)
+                run_status["error_type"] = classify_error(exc)
+                run_status["error_message"] = flatten_message(detailed_message)
+                if run_status.get("phase") == "pit":
+                    run_status["pit_status"] = "FAIL"
+                    if run_status.get("commands"):
+                        run_status["pit_log_file"] = run_status["commands"][-1].get("log_file", "")
+
+                strategy = determine_retry_strategy(run_status["error_type"], detailed_message)
+                can_retry = attempt < max_retries and strategy == "HTTP_SETTINGS_FIX"
+                if can_retry:
+                    removed = clear_http_blocker_cache(detailed_message)
+                    if removed:
+                        print(f"[retry] cleared {removed} HTTP-blocked cache group paths")
+                    current_settings = ensure_repo_settings_https(args.repo_id)
+                    current_fixed_by = "HTTP_SETTINGS_FIX"
+                    args.mvn_force_update = True
+                    attempt += 1
+                    print(
+                        f"[retry] attempt={attempt + 1} fixed_by=HTTP_SETTINGS_FIX "
+                        f"settings={current_settings} mvn_force_update=True"
+                    )
+                    report.changes.append(
+                        f"Retrying with HTTP_SETTINGS_FIX; settings={current_settings}; mvn_force_update=True"
+                    )
+                    continue
+
+                report.changes.append(
+                    f"Pipeline attempt failed (no further retry): phase={run_status.get('phase')} "
+                    f"error_type={run_status.get('error_type')}"
+                )
+                break
+            except Exception as exc:  # noqa: BLE001
+                detailed_message = str(exc)
+                run_status["error"] = detailed_message
+                run_status["status"] = "FAIL"
+                run_status["exit_code"] = 1
+                run_status["error_type"] = classify_error(exc)
+                run_status["error_message"] = flatten_message(detailed_message)
+                report.changes.append(f"Pipeline failed without retry: {exc}")
+                break
     except Exception as exc:  # noqa: BLE001
         run_status["error"] = str(exc)
-        report.changes.append(f"Pipeline failed: {exc}")
-        report.changes.append(traceback.format_exc())
-        raise
+        run_status["status"] = "FAIL"
+        run_status["exit_code"] = 1
+        run_status["error_type"] = classify_error(exc)
+        run_status["error_message"] = flatten_message(str(exc))
+        report.changes.append(f"Pipeline bootstrap failure: {exc}")
     finally:
+        if run_status["status"] == "OK":
+            run_status["phase"] = "summarize"
         run_status["ended_at_utc"] = utc_now()
         if args.run_pit:
             write_mutation_summary(pit_reports_dir, run_dir / "mutation_summary.json")
+        append_mutation_summary_csv(run_status=run_status, run_dir=run_dir)
+        write_per_repo_condition_summary(run_status, run_dir)
         _restore_disabled_tests(module_dir, report)
         write_json(run_dir / "run_status.json", run_status)
         write_patch_report(report, report_path)
@@ -862,6 +1425,11 @@ def main() -> int:
     print(f"Wrote run artifacts: {run_dir}")
     return 0
 
-
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+{
+  "repo_id": "160999",
+  "module": "zookeeper-server",
+  "condition": "HUMAN",
+  "commit_hash": "2f0d22bcebf33fba9a45b15454e89f116197f918",
+  "focal_class": "org.apache.zookeeper.common.FileKeyStoreLoaderBuilderProvider",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] Artifact org.sonatype.oss:oss-parent:pom:7 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [apach",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002559Z_160999_zookeeper-server_HUMAN_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002559Z_160999_zookeeper-server_HUMAN_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": [
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002559Z_160999_zookeeper-server_HUMAN_focal_maven\\00_compile.log"
+    ]
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:26:11.674445+00:00"
+}

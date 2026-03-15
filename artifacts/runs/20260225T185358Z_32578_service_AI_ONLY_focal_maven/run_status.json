@@ -1,0 +1,43 @@
+{
+  "run_id": "20260225T185358Z_32578_service_AI_ONLY_focal_maven",
+  "repo_id": "32578",
+  "module": "service",
+  "condition": "AI_ONLY",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": true,
+  "started_at_utc": "2026-02-25T18:53:58.691199+00:00",
+  "ended_at_utc": "2026-02-25T18:54:02.694250+00:00",
+  "success": false,
+  "status": "FAIL",
+  "phase": "compile",
+  "exit_code": 1,
+  "error_type": "HTTP_BLOCKER",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\32578\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for org.appfuse:appfuse-service:jar:2.1.0-M2-SNAPSHOT [WARNING] The expression ${pom.groupId} is deprecate",
+  "retries": 1,
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\32578\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\32578\\service",
+      "returncode": 1,
+      "duration_seconds": 2.083,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T185358Z_32578_service_AI_ONLY_focal_maven\\00_compile.log"
+    }
+  ],
+  "selected_test_classes": [
+    "org.appfuse.service.impl.UserManagerImplAiTest"
+  ],
+  "target_classes": [],
+  "focal_class": "org.appfuse.service.impl.UserManagerImpl",
+  "tests_found": "",
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\32578_3.json",
+  "error": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\32578\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects...\n[WARNING] \n[WARNING] Some problems were encountered while building the effective model for org.appfuse:appfuse-service:jar:2.1.0-M2-SNAPSHOT\n[WARNING] The expression ${pom.groupId} is deprecated. Please use ${project.groupId} instead.\n[WARNING] The expression ${pom.version} is deprecated. Please use ${project.version} instead.\n[WARNING] \n[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.\n[WARNING] \n[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.\n[WARNING] \n[INFO] \n[INFO] --------------------< org.appfuse:appfuse-service >---------------------\n[INFO] Building AppFuse Service Module 2.1.0-M2-SNAPSHOT\n[INFO]   from pom.xml\n[INFO] --------------------------------[ jar ]---------------------------------\n[WARNING] Could not transfer metadata org.appfuse:appfuse-hibernate:2.1.0-M2-SNAPSHOT/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [appfuse-snapshots (http://oss.sonatype.org/content/repositories/appfuse-snapshots, default, snapshots)]\n[WARNING] org.appfuse:appfuse-hibernate:2.1.0-M2-SNAPSHOT/maven-metadata.xml failed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.appfuse:appfuse-hibernate:2.1.0-M2-SNAPSHOT/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [appfuse-snapshots (http://oss.sonatype.org/content/repositories/appfuse-snapshots, default, snapshots)]\n[INFO] ------------------------------------------------------------------------\n[INFO] BUILD FAILURE\n[INFO] ------------------------------------------------------------------------\n[INFO] Total time:  0.537 s\n[INFO] Finished at: 2026-02-25T13:54:02-05:00\n[INFO] ------------------------------------------------------------------------\n[ERROR] Failed to execute goal on project appfuse-service: Could not collect dependencies for project org.appfuse:appfuse-service:jar:2.1.0-M2-SNAPSHOT\n[ERROR] Failed to read artifact descriptor for org.appfuse:appfuse-hibernate:jar:2.1.0-M2-SNAPSHOT\n[ERROR] \tCaused by: The following artifacts could not be resolved: org.appfuse:appfuse-hibernate:pom:2.1.0-M2-SNAPSHOT (absent): Could not transfer artifact org.appfuse:appfuse-hibernate:pom:2.1.0-M2-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [appfuse-snapshots (http://oss.sonatype.org/content/repositories/appfuse-snapshots, default, snapshots)]\n[ERROR] \n[ERROR] -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException\n"
+}

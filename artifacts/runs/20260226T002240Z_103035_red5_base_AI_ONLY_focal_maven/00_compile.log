@@ -1,0 +1,49 @@
+COMMAND: mvn.cmd -U -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -DskipTests compile
+
+STDOUT:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< org.red5:red5-base >-------------------------
+[INFO] Building red5-base 0.8rc2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from jboss-https: https://repository.jboss.org/nexus/content/groups/public/opensymphony/quartz-all/1.6.0/quartz-all-1.6.0.pom
+Downloading from geotools-https: https://repo.osgeo.org/repository/release/opensymphony/quartz-all/1.6.0/quartz-all-1.6.0.pom
+Downloading from central: https://repo1.maven.org/maven2/opensymphony/quartz-all/1.6.0/quartz-all-1.6.0.pom
+[WARNING] The POM for opensymphony:quartz-all:jar:1.6.0 is missing, no dependency information available
+Downloading from jboss-https: https://repository.jboss.org/nexus/content/groups/public/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.pom
+Downloading from geotools-https: https://repo.osgeo.org/repository/release/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.pom
+Downloading from central: https://repo1.maven.org/maven2/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.pom
+[WARNING] The POM for javax.management:jmxremote:jar:1.0.1 is missing, no dependency information available
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+Downloading from jboss-https: https://repository.jboss.org/nexus/content/groups/public/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.jar
+Downloading from jboss-https: https://repository.jboss.org/nexus/content/groups/public/com/sun/jdmk/jmxtools/1.2.1/jmxtools-1.2.1.jar
+Downloading from geotools-https: https://repo.osgeo.org/repository/release/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.jar
+Downloading from geotools-https: https://repo.osgeo.org/repository/release/com/sun/jdmk/jmxtools/1.2.1/jmxtools-1.2.1.jar
+Downloading from central: https://repo1.maven.org/maven2/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.jar
+Downloading from central: https://repo1.maven.org/maven2/com/sun/jdmk/jmxtools/1.2.1/jmxtools-1.2.1.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.541 s
+[INFO] Finished at: 2026-02-25T19:22:47-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project red5-base: Could not resolve dependencies for project org.red5:red5-base:jar:0.8rc2-SNAPSHOT
+[ERROR] dependency: javax.management:jmxremote:jar:1.0.1 (compile)
+[ERROR] 	Could not find artifact javax.management:jmxremote:jar:1.0.1 in jboss-https (https://repository.jboss.org/nexus/content/groups/public/)
+[ERROR] 	Could not find artifact javax.management:jmxremote:jar:1.0.1 in geotools-https (https://repo.osgeo.org/repository/release/)
+[ERROR] 	Could not find artifact javax.management:jmxremote:jar:1.0.1 in central (https://repo1.maven.org/maven2)
+[ERROR] dependency: com.sun.jdmk:jmxtools:jar:1.2.1 (compile)
+[ERROR] 	Could not find artifact com.sun.jdmk:jmxtools:jar:1.2.1 in jboss-https (https://repository.jboss.org/nexus/content/groups/public/), try downloading from http://java.sun.com/products/JavaManagement/download.html
+[ERROR] 	Could not find artifact com.sun.jdmk:jmxtools:jar:1.2.1 in geotools-https (https://repo.osgeo.org/repository/release/), try downloading from http://java.sun.com/products/JavaManagement/download.html
+[ERROR] 	Could not find artifact com.sun.jdmk:jmxtools:jar:1.2.1 in central (https://repo1.maven.org/maven2), try downloading from http://java.sun.com/products/JavaManagement/download.html
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+
+STDERR:

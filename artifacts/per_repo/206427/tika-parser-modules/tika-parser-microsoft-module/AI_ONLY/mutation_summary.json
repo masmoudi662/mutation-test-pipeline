@@ -1,0 +1,29 @@
+{
+  "repo_id": "206427",
+  "module": "tika-parser-modules/tika-parser-microsoft-module",
+  "condition": "AI_ONLY",
+  "commit_hash": "2a5bb03109714bc1aacf53e3829eaee8dc14c0a1",
+  "focal_class": "org.apache.tika.parser.microsoft.chm.ChmItspHeader",
+  "ok": true,
+  "status": "OK",
+  "error_type": "",
+  "error_message": "",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {
+    "pit_version": "",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "",
+    "run_status_path": "",
+    "pit_log_file": "",
+    "command_logs": []
+  },
+  "applied_fixes": [],
+  "timestamp": ""
+}

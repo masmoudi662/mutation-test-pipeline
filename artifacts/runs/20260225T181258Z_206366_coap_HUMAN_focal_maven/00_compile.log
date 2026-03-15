@@ -1,0 +1,35 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -DskipTests compile
+
+STDOUT:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.apache.mina:mina-coap >----------------------
+[INFO] Building Apache MINA CoAP (constrained application protocol) 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'showDeprecations' is unknown for plugin 'maven-compiler-plugin:3.1:compile (default-compile)'
+[WARNING] Could not transfer metadata org.apache.mina:mina-core:3.0.0-M3-SNAPSHOT/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [apache.snapshots (http://repository.apache.org/snapshots, default, snapshots)]
+[WARNING] org.apache.mina:mina-core:3.0.0-M3-SNAPSHOT/maven-metadata.xml failed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.mina:mina-core:3.0.0-M3-SNAPSHOT/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [apache.snapshots (http://repository.apache.org/snapshots, default, snapshots)]
+[WARNING] Could not transfer metadata org.apache.mina:mina-codec:3.0.0-M3-SNAPSHOT/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [apache.snapshots (http://repository.apache.org/snapshots, default, snapshots)]
+[WARNING] org.apache.mina:mina-codec:3.0.0-M3-SNAPSHOT/maven-metadata.xml failed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.mina:mina-codec:3.0.0-M3-SNAPSHOT/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [apache.snapshots (http://repository.apache.org/snapshots, default, snapshots)]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.652 s
+[INFO] Finished at: 2026-02-25T13:13:02-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project mina-coap: Could not collect dependencies for project org.apache.mina:mina-coap:jar:3.0.0-M3-SNAPSHOT
+[ERROR] Failed to read artifact descriptor for org.apache.mina:mina-core:jar:3.0.0-M3-SNAPSHOT
+[ERROR] 	Caused by: The following artifacts could not be resolved: org.apache.mina:mina-core:pom:3.0.0-M3-SNAPSHOT (absent): Could not transfer artifact org.apache.mina:mina-core:pom:3.0.0-M3-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [apache.snapshots (http://repository.apache.org/snapshots, default, snapshots)]
+[ERROR] Failed to read artifact descriptor for org.apache.mina:mina-codec:jar:3.0.0-M3-SNAPSHOT
+[ERROR] 	Caused by: The following artifacts could not be resolved: org.apache.mina:mina-codec:pom:3.0.0-M3-SNAPSHOT (absent): Could not transfer artifact org.apache.mina:mina-codec:pom:3.0.0-M3-SNAPSHOT from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [apache.snapshots (http://repository.apache.org/snapshots, default, snapshots)]
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+
+STDERR:

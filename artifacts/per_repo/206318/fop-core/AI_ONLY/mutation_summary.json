@@ -1,0 +1,32 @@
+{
+  "repo_id": "206318",
+  "module": "fop-core",
+  "condition": "AI_ONLY",
+  "commit_hash": "4eb63043a076867a7878b08fac1c7d3ce70c8da0",
+  "focal_class": "org.apache.fop.afp.modca.AbstractNamedAFPObject",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.fop.afp.modca.AbstractNamedAFPObjectAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.apache.xmlgraphics:fop-core >------------------- [INFO] Building Apache FOP Core 2.11.0-SNAPSHOT [INFO] from pom.xml [INFO] -----",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002836Z_206318_fop-core_AI_ONLY_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002836Z_206318_fop-core_AI_ONLY_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": [
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002836Z_206318_fop-core_AI_ONLY_focal_maven\\00_compile.log",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002836Z_206318_fop-core_AI_ONLY_focal_maven\\01_test.log"
+    ]
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:29:00.597314+00:00"
+}

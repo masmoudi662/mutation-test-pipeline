@@ -1,0 +1,48 @@
+{
+  "run_id": "20260225T235503Z_103035_red5_base_AI_ONLY_focal_maven",
+  "repo_id": "103035",
+  "module": "red5_base",
+  "condition": "AI_ONLY",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": true,
+  "started_at_utc": "2026-02-25T23:55:03.810292+00:00",
+  "ended_at_utc": "2026-02-25T23:55:10.544488+00:00",
+  "success": false,
+  "status": "FAIL",
+  "phase": "compile",
+  "exit_code": 1,
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------------< org.red5:red5-base >------------------------- [INFO] Building red5-base 0.8rc2-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]------------------",
+  "retries": 0,
+  "fixed_by": "NONE",
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base",
+      "returncode": 1,
+      "duration_seconds": 4.873,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T235503Z_103035_red5_base_AI_ONLY_focal_maven\\00_compile.log"
+    }
+  ],
+  "selected_test_classes": [
+    "org.red5.server.service.ConversionUtilsAiTest"
+  ],
+  "target_classes": [],
+  "focal_class": "org.red5.server.service.ConversionUtils",
+  "tests_found": "",
+  "pit_target_classes": "",
+  "pit_version": "1.6.9",
+  "pit_status": "",
+  "pit_log_file": "",
+  "pit_config": {},
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\103035_22.json",
+  "error": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects...\n[INFO] \n[INFO] -------------------------< org.red5:red5-base >-------------------------\n[INFO] Building red5-base 0.8rc2-SNAPSHOT\n[INFO]   from pom.xml\n[INFO] --------------------------------[ jar ]---------------------------------\n[WARNING] The POM for opensymphony:quartz-all:jar:1.6.0 is missing, no dependency information available\nDownloading from jboss-https: https://repository.jboss.org/nexus/content/groups/public/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.pom\nDownloading from geotools-https: https://repo.osgeo.org/repository/release/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.pom\nDownloading from central: https://repo1.maven.org/maven2/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.pom\n[WARNING] The POM for javax.management:jmxremote:jar:1.0.1 is missing, no dependency information available\n[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2\nDownloading from jboss-https: https://repository.jboss.org/nexus/content/groups/public/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.jar\nDownloading from jboss-https: https://repository.jboss.org/nexus/content/groups/public/com/sun/jdmk/jmxtools/1.2.1/jmxtools-1.2.1.jar\nDownloading from geotools-https: https://repo.osgeo.org/repository/release/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.jar\nDownloading from geotools-https: https://repo.osgeo.org/repository/release/com/sun/jdmk/jmxtools/1.2.1/jmxtools-1.2.1.jar\nDownloading from central: https://repo1.maven.org/maven2/javax/management/jmxremote/1.0.1/jmxremote-1.0.1.jar\nDownloading from central: https://repo1.maven.org/maven2/com/sun/jdmk/jmxtools/1.2.1/jmxtools-1.2.1.jar\n[INFO] ------------------------------------------------------------------------\n[INFO] BUILD FAILURE\n[INFO] ------------------------------------------------------------------------\n[INFO] Total time:  3.450 s\n[INFO] Finished at: 2026-02-25T18:55:10-05:00\n[INFO] ------------------------------------------------------------------------\n[ERROR] Failed to execute goal on project red5-base: Could not resolve dependencies for project org.red5:red5-base:jar:0.8rc2-SNAPSHOT\n[ERROR] dependency: javax.management:jmxremote:jar:1.0.1 (compile)\n[ERROR] \tCould not find artifact javax.management:jmxremote:jar:1.0.1 in jboss-https (https://repository.jboss.org/nexus/content/groups/public/)\n[ERROR] \tCould not find artifact javax.management:jmxremote:jar:1.0.1 in geotools-https (https://repo.osgeo.org/repository/release/)\n[ERROR] \tCould not find artifact javax.management:jmxremote:jar:1.0.1 in central (https://repo1.maven.org/maven2)\n[ERROR] dependency: com.sun.jdmk:jmxtools:jar:1.2.1 (compile)\n[ERROR] \tCould not find artifact com.sun.jdmk:jmxtools:jar:1.2.1 in jboss-https (https://repository.jboss.org/nexus/content/groups/public/), try downloading from http://java.sun.com/products/JavaManagement/download.html\n[ERROR] \tCould not find artifact com.sun.jdmk:jmxtools:jar:1.2.1 in geotools-https (https://repo.osgeo.org/repository/release/), try downloading from http://java.sun.com/products/JavaManagement/download.html\n[ERROR] \tCould not find artifact com.sun.jdmk:jmxtools:jar:1.2.1 in central (https://repo1.maven.org/maven2), try downloading from http://java.sun.com/products/JavaManagement/download.html\n[ERROR] \n[ERROR] -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException\n"
+}

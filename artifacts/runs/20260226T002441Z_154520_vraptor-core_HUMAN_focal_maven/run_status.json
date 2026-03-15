@@ -1,0 +1,50 @@
+{
+  "run_id": "20260226T002441Z_154520_vraptor-core_HUMAN_focal_maven",
+  "repo_id": "154520",
+  "module": "vraptor-core",
+  "condition": "HUMAN",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": true,
+  "started_at_utc": "2026-02-26T00:24:41.063893+00:00",
+  "ended_at_utc": "2026-02-26T00:24:46.215595+00:00",
+  "success": false,
+  "status": "FAIL",
+  "phase": "compile",
+  "exit_code": 1,
+  "error_type": "HTTP_BLOCKER",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -----------------------< br.com.caelum:vraptor >------------------------ [INFO] Building vraptor 3.5.6-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]---------------------",
+  "retries": 0,
+  "fixed_by": "NONE",
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\154520\\vraptor-core",
+      "returncode": 1,
+      "duration_seconds": 3.305,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002441Z_154520_vraptor-core_HUMAN_focal_maven\\00_compile.log"
+    }
+  ],
+  "selected_test_classes": [
+    "br.com.caelum.vraptor.converter.LongConverterTest"
+  ],
+  "target_classes": [],
+  "focal_class": "br.com.caelum.vraptor.converter.LongConverter",
+  "tests_found": "",
+  "pit_target_classes": "",
+  "pit_version": "1.6.9",
+  "pit_status": "",
+  "pit_log_file": "",
+  "pit_config": {},
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002441Z_154520_vraptor-core_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\154520_549.json",
+  "error": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects...\n[INFO] \n[INFO] -----------------------< br.com.caelum:vraptor >------------------------\n[INFO] Building vraptor 3.5.6-SNAPSHOT\n[INFO]   from pom.xml\n[INFO] --------------------------------[ jar ]---------------------------------\n[INFO] Artifact javax.annotation:jsr250-api:pom:1.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [sonatype-nexus-snapshots (https://oss.sonatype.org/content/repositories/snapshots, default, snapshots), central (https://repo1.maven.org/maven2, default, releases), maven-default-http-blocker (http://0.0.0.0/, default, releases, blocked)]\n[INFO] Artifact javax.annotation:jsr250-api:pom:1.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [sonatype-nexus-snapshots (https://oss.sonatype.org/content/repositories/snapshots, default, snapshots), central (https://repo1.maven.org/maven2, default, releases), maven-default-http-blocker (http://0.0.0.0/, default, releases, blocked)]\nDownloading from central: https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.pom\nDownloaded from central: https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.pom (0 B at 0 B/s)\nDownloading from central: https://repo1.maven.org/maven2/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.pom\nProgress (1): 702 B\nProgress (1): 1.6 kB\nProgress (1): 3.1 kB\nProgress (1): 4.9 kB\nProgress (1): 6.6 kB\nProgress (1): 11 kB \nProgress (1): 13 kB\n                   \nDownloaded from central: https://repo1.maven.org/maven2/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.pom (13 kB at 228 kB/s)\nDownloading from central: https://repo1.maven.org/maven2/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar\nDownloading from central: https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar\nProgress (1): 0.9/5.8 kB\nProgress (1): 2.3/5.8 kB\nProgress (1): 3.6/5.8 kB\nProgress (1): 5.0/5.8 kB\nProgress (1): 5.8 kB    \n                    \nDownloaded from central: https://repo1.maven.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar (5.8 kB at 122 kB/s)\nProgress (1): 0.9/26 kB\nProgress (1): 2.3/26 kB\nProgress (1): 3.6/26 kB\nProgress (1): 5.0/26 kB\nProgress (1): 6.4/26 kB\nProgress (1): 7.7/26 kB\nProgress (1): 9.1/26 kB\nProgress (1): 10/26 kB \nProgress (1): 12/26 kB\nProgress (1): 13/26 kB\nProgress (1): 15/26 kB\nProgress (1): 16/26 kB\nProgress (1): 17/26 kB\nProgress (1): 18/26 kB\nProgress (1): 20/26 kB\nProgress (1): 21/26 kB\nProgress (1): 23/26 kB\nProgress (1): 24/26 kB\nProgress (1): 25/26 kB\nProgress (1): 26 kB   \n                   \nDownloaded from central: https://repo1.maven.org/maven2/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar (26 kB at 280 kB/s)\n[INFO] \n[INFO] --- enforcer:1.0:enforce (enforce-maven) @ vraptor ---\n[INFO] \n[INFO] --- antrun:1.7:run (process-sources) @ vraptor ---\n[INFO] Executing tasks\n\nmain:\n[INFO] Executed tasks\n[INFO] \n[INFO] --- resources:3.3.1:resources (default-resources) @ vraptor ---\n[INFO] Copying 2 resources from src\\main\\resources to target\\classes\n[INFO] \n[INFO] --- compiler:2.3.1:compile (default-compile) @ vraptor ---\n[INFO] Compiling 418 source files to D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\154520\\vraptor-core\\target\\classes\n[INFO] -------------------------------------------------------------\n[ERROR] COMPILATION ERROR : \n[INFO] -------------------------------------------------------------\n[ERROR] error: Source option 5 is no longer supported. Use 7 or later.\n[ERROR] error: Target option 5 is no longer supported. Use 7 or later.\n[INFO] 2 errors \n[INFO] -------------------------------------------------------------\n[INFO] ------------------------------------------------------------------------\n[INFO] BUILD FAILURE\n[INFO] ------------------------------------------------------------------------\n[INFO] Total time:  1.944 s\n[INFO] Finished at: 2026-02-25T19:24:46-05:00\n[INFO] ------------------------------------------------------------------------\n[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:2.3.1:compile (default-compile) on project vraptor: Compilation failure: Compilation failure: \n[ERROR] error: Source option 5 is no longer supported. Use 7 or later.\n[ERROR] error: Target option 5 is no longer supported. Use 7 or later.\n[ERROR] -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException\n"
+}

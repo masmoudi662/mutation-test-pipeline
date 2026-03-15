@@ -1,0 +1,54 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -DskipTests compile
+
+STDOUT:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.xmlgraphics:fop-core >-------------------
+[INFO] Building Apache FOP Core 2.11.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- xml:1.0.1:transform (generate-base14-fonts) @ fop-core ---
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\Courier.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\CourierBold.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\CourierBoldOblique.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\CourierOblique.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\Helvetica.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\HelveticaBold.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\HelveticaBoldOblique.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\HelveticaOblique.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\TimesBold.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\TimesBoldItalic.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\TimesItalic.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\TimesRoman.xml
+[INFO] Transformed 12 file(s).
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\Symbol.xml
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\ZapfDingbats.xml
+[INFO] Transformed 2 file(s).
+[INFO] 
+[INFO] --- xml:1.0.1:transform (codegen-fonts-encodings) @ fop-core ---
+[INFO] Transforming file: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\src\main\codegen\fonts\encodings.xml
+[INFO] Transformed 1 file(s).
+[INFO] 
+[INFO] --- build-helper:1.9.1:add-source (add-generated-sources) @ fop-core ---
+[INFO] Source directory: D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\206318\fop-core\target\generated-sources\main\java added.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ fop-core ---
+[INFO] Copying 59 resources from src\main\resources to target\classes
+[INFO] Copying 2 resources from .. to target\classes\META-INF
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ fop-core ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 1581 source files with javac [debug release 8] to target\classes
+[INFO] /D:/Khedma/Mr wiem/mutation-test-pipeline/target-repos/206318/fop-core/src/main/java/org/apache/fop/fonts/autodetect/FontFileFinder.java: Some input files use or override a deprecated API.
+[INFO] /D:/Khedma/Mr wiem/mutation-test-pipeline/target-repos/206318/fop-core/src/main/java/org/apache/fop/fonts/autodetect/FontFileFinder.java: Recompile with -Xlint:deprecation for details.
+[INFO] /D:/Khedma/Mr wiem/mutation-test-pipeline/target-repos/206318/fop-core/src/main/java/org/apache/fop/fo/FObj.java: Some input files use unchecked or unsafe operations.
+[INFO] /D:/Khedma/Mr wiem/mutation-test-pipeline/target-repos/206318/fop-core/src/main/java/org/apache/fop/fo/FObj.java: Recompile with -Xlint:unchecked for details.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.520 s
+[INFO] Finished at: 2026-02-25T19:28:55-05:00
+[INFO] ------------------------------------------------------------------------
+
+STDERR:

@@ -6,14 +6,67 @@
   "pom_path": null,
   "backup_path": null,
   "changes": [
-    "Ensured Maven settings.xml with HTTPS mirrors",
     "Using build tool: maven",
-    "Pipeline failed: No AI test class found for focal class ConnectionOptions in D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java",
-    "Traceback (most recent call last):\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\run_mutation_pipeline.py\", line 800, in main\n    selected_tests, focal_class = resolve_focal_selection(module_dir, args.module, mapping, args.condition)\n                                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\run_mutation_pipeline.py\", line 160, in resolve_focal_selection\n    raise FileNotFoundError(\n        f\"No AI test class found for focal class {focal_identifier} in {module_dir / 'src/test/java'}\"\n    )\nFileNotFoundError: No AI test class found for focal class ConnectionOptions in D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\n"
+    "Disabled 20 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.apache.jackrabbit.spi2dav.ConnectionOptionsAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003346Z_206403_jackrabbit-spi2dav_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=DEP_RESOLUTION",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2dav\\ConnectionOptionsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2dav\\ConnectionTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2dav\\DavPropertyTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2dav\\IdURICacheTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2dav\\RepositoryServiceImplIT.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2dav\\RepositoryServiceImplTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2dav\\RepositoryStubImpl.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2dav\\ServiceStubImpl.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2dav\\TestAll.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2davex\\BatchTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2davex\\CloneTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2davex\\ConnectionTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2davex\\CopyTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2davex\\CreateFileTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2davex\\ExtensionTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2davex\\ReadTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2davex\\RepositoryStubImpl.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2davex\\ServiceStubImpl.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\spi2davex\\TestAll.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206403\\jackrabbit-spi2dav\\src\\test\\java\\org\\apache\\jackrabbit\\test\\TestAll.java"
   ],
   "removed_dependencies": [],
-  "installed_jars": [],
-  "commands": [],
-  "checksums": {},
-  "generated_at_utc": "2026-02-25T02:37:30.774987+00:00"
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-02-26T00:33:46.394293+00:00"
 }

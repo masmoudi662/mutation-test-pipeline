@@ -1,0 +1,981 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -DskipTests compile
+
+STDOUT:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.constretto:constretto-core >-------------------
+[INFO] Building Constretto :: Core implementation - 3.0.0-SNAPSHOT 3.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.3/maven-source-plugin-2.3.pom
+Progress (1): 774 B
+Progress (1): 1.7 kB
+Progress (1): 4.8 kB
+Progress (1): 6.6 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.3/maven-source-plugin-2.3.pom (6.6 kB at 20 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.3/maven-source-plugin-2.3.jar
+Progress (1): 0.9/31 kB
+Progress (1): 2.3/31 kB
+Progress (1): 3.6/31 kB
+Progress (1): 5.0/31 kB
+Progress (1): 6.4/31 kB
+Progress (1): 7.7/31 kB
+Progress (1): 8.2/31 kB
+Progress (1): 9.6/31 kB
+Progress (1): 11/31 kB 
+Progress (1): 12/31 kB
+Progress (1): 14/31 kB
+Progress (1): 15/31 kB
+Progress (1): 16/31 kB
+Progress (1): 18/31 kB
+Progress (1): 19/31 kB
+Progress (1): 21/31 kB
+Progress (1): 22/31 kB
+Progress (1): 23/31 kB
+Progress (1): 25/31 kB
+Progress (1): 26/31 kB
+Progress (1): 27/31 kB
+Progress (1): 29/31 kB
+Progress (1): 30/31 kB
+Progress (1): 31 kB   
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-source-plugin/2.3/maven-source-plugin-2.3.jar (31 kB at 461 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.4.1/maven-javadoc-plugin-3.4.1.pom
+Progress (1): 742 B
+Progress (1): 1.7 kB
+Progress (1): 3.3 kB
+Progress (1): 7.5 kB
+Progress (1): 11 kB 
+Progress (1): 14 kB
+Progress (1): 17 kB
+Progress (1): 18 kB
+Progress (1): 21 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.4.1/maven-javadoc-plugin-3.4.1.pom (21 kB at 339 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-plugins/34/maven-plugins-34.pom
+Progress (1): 757 B
+Progress (1): 1.7 kB
+Progress (1): 3.7 kB
+Progress (1): 6.9 kB
+Progress (1): 8.5 kB
+Progress (1): 11 kB 
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-plugins/34/maven-plugins-34.pom (11 kB at 164 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom
+Progress (1): 727 B
+Progress (1): 1.6 kB
+Progress (1): 4.4 kB
+Progress (1): 8.5 kB
+Progress (1): 11 kB 
+Progress (1): 16 kB
+Progress (1): 20 kB
+Progress (1): 24 kB
+Progress (1): 26 kB
+Progress (1): 28 kB
+Progress (1): 29 kB
+Progress (1): 33 kB
+Progress (1): 36 kB
+Progress (1): 38 kB
+Progress (1): 43 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom (43 kB at 649 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.4.1/maven-javadoc-plugin-3.4.1.jar
+Progress (1): 0.9/523 kB
+Progress (1): 5.1/523 kB
+Progress (1): 9.3/523 kB
+Progress (1): 14/523 kB 
+Progress (1): 18/523 kB
+Progress (1): 22/523 kB
+Progress (1): 25/523 kB
+Progress (1): 29/523 kB
+Progress (1): 33/523 kB
+Progress (1): 37/523 kB
+Progress (1): 41/523 kB
+Progress (1): 46/523 kB
+Progress (1): 50/523 kB
+Progress (1): 54/523 kB
+Progress (1): 58/523 kB
+Progress (1): 63/523 kB
+Progress (1): 67/523 kB
+Progress (1): 71/523 kB
+Progress (1): 75/523 kB
+Progress (1): 80/523 kB
+Progress (1): 84/523 kB
+Progress (1): 88/523 kB
+Progress (1): 92/523 kB
+Progress (1): 96/523 kB
+Progress (1): 101/523 kB
+Progress (1): 105/523 kB
+Progress (1): 109/523 kB
+Progress (1): 113/523 kB
+Progress (1): 118/523 kB
+Progress (1): 122/523 kB
+Progress (1): 126/523 kB
+Progress (1): 130/523 kB
+Progress (1): 135/523 kB
+Progress (1): 139/523 kB
+Progress (1): 143/523 kB
+Progress (1): 147/523 kB
+Progress (1): 151/523 kB
+Progress (1): 156/523 kB
+Progress (1): 160/523 kB
+Progress (1): 164/523 kB
+Progress (1): 168/523 kB
+Progress (1): 185/523 kB
+Progress (1): 201/523 kB
+Progress (1): 217/523 kB
+Progress (1): 234/523 kB
+Progress (1): 250/523 kB
+Progress (1): 267/523 kB
+Progress (1): 283/523 kB
+Progress (1): 287/523 kB
+Progress (1): 303/523 kB
+Progress (1): 319/523 kB
+Progress (1): 336/523 kB
+Progress (1): 352/523 kB
+Progress (1): 369/523 kB
+Progress (1): 385/523 kB
+Progress (1): 401/523 kB
+Progress (1): 418/523 kB
+Progress (1): 434/523 kB
+Progress (1): 451/523 kB
+Progress (1): 467/523 kB
+Progress (1): 483/523 kB
+Progress (1): 500/523 kB
+Progress (1): 516/523 kB
+Progress (1): 523 kB    
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.4.1/maven-javadoc-plugin-3.4.1.jar (523 kB at 5.8 MB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.1.0/maven-enforcer-plugin-3.1.0.pom
+Progress (1): 819 B
+Progress (1): 3.2 kB
+Progress (1): 5.1 kB
+Progress (1): 7.2 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.1.0/maven-enforcer-plugin-3.1.0.pom (7.2 kB at 85 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/enforcer/enforcer/3.1.0/enforcer-3.1.0.pom
+Progress (1): 807 B
+Progress (1): 2.3 kB
+Progress (1): 6.0 kB
+Progress (1): 8.3 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/enforcer/enforcer/3.1.0/enforcer-3.1.0.pom (8.3 kB at 149 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/maven-parent/36/maven-parent-36.pom
+Progress (1): 725 B
+Progress (1): 1.9 kB
+Progress (1): 5.4 kB
+Progress (1): 9.7 kB
+Progress (1): 14 kB 
+Progress (1): 19 kB
+Progress (1): 23 kB
+Progress (1): 26 kB
+Progress (1): 28 kB
+Progress (1): 30 kB
+Progress (1): 34 kB
+Progress (1): 37 kB
+Progress (1): 40 kB
+Progress (1): 45 kB
+Progress (1): 45 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/maven-parent/36/maven-parent-36.pom (45 kB at 874 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/apache/26/apache-26.pom
+Progress (1): 744 B
+Progress (1): 2.1 kB
+Progress (1): 3.9 kB
+Progress (1): 7.3 kB
+Progress (1): 12 kB 
+Progress (1): 16 kB
+Progress (1): 19 kB
+Progress (1): 21 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/apache/26/apache-26.pom (21 kB at 395 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.1.0/maven-enforcer-plugin-3.1.0.jar
+Progress (1): 7.7/26 kB
+Progress (1): 8.2/26 kB
+Progress (1): 25/26 kB 
+Progress (1): 26 kB   
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.1.0/maven-enforcer-plugin-3.1.0.jar (26 kB at 529 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.0/maven-resources-plugin-3.3.0.pom
+Progress (1): 773 B
+Progress (1): 2.2 kB
+Progress (1): 5.0 kB
+Progress (1): 7.8 kB
+Progress (1): 8.5 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.0/maven-resources-plugin-3.3.0.pom (8.5 kB at 139 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-plugins/36/maven-plugins-36.pom
+Progress (1): 753 B
+Progress (1): 2.2 kB
+Progress (1): 4.5 kB
+Progress (1): 7.3 kB
+Progress (1): 9.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-plugins/36/maven-plugins-36.pom (9.9 kB at 174 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.0/maven-resources-plugin-3.3.0.jar
+Progress (1): 7.7/32 kB
+Progress (1): 16/32 kB 
+Progress (1): 32 kB   
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.0/maven-resources-plugin-3.3.0.jar (32 kB at 662 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.10.1/maven-compiler-plugin-3.10.1.pom
+Progress (1): 756 B
+Progress (1): 2.2 kB
+Progress (1): 3.8 kB
+Progress (1): 8.2 kB
+Progress (1): 11 kB 
+Progress (1): 13 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.10.1/maven-compiler-plugin-3.10.1.pom (13 kB at 200 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.10.1/maven-compiler-plugin-3.10.1.jar
+Progress (1): 7.7/62 kB
+Progress (1): 16/62 kB 
+Progress (1): 16/62 kB
+Progress (1): 33/62 kB
+Progress (1): 49/62 kB
+Progress (1): 62 kB   
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.10.1/maven-compiler-plugin-3.10.1.jar (62 kB at 1.1 MB/s)
+[WARNING] The POM for org.constretto:constretto-api:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+Downloading from central: https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.pom
+Progress (1): 1.6 kB
+Progress (1): 4.3 kB
+Progress (1): 5.3 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.pom (5.3 kB at 84 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer-parent/2.8/paranamer-parent-2.8.pom
+Progress (1): 1.2 kB
+Progress (1): 4.5 kB
+Progress (1): 9.6 kB
+Progress (1): 12 kB 
+                   
+Downloaded from central: https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer-parent/2.8/paranamer-parent-2.8.pom (12 kB at 231 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.36/jcl-over-slf4j-1.7.36.pom
+Progress (1): 1.2 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.36/jcl-over-slf4j-1.7.36.pom (1.2 kB at 21 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/commons/commons-parent/47/commons-parent-47.pom
+Progress (1): 704 B
+Progress (1): 1.9 kB
+Progress (1): 3.3 kB
+Progress (1): 5.0 kB
+Progress (1): 6.7 kB
+Progress (1): 8.3 kB
+Progress (1): 9.8 kB
+Progress (1): 12 kB 
+Progress (1): 15 kB
+Progress (1): 18 kB
+Progress (1): 22 kB
+Progress (1): 26 kB
+Progress (1): 29 kB
+Progress (1): 32 kB
+Progress (1): 34 kB
+Progress (1): 34 kB
+Progress (1): 37 kB
+Progress (1): 41 kB
+Progress (1): 44 kB
+Progress (1): 46 kB
+Progress (1): 50 kB
+Progress (1): 55 kB
+Progress (1): 60 kB
+Progress (1): 64 kB
+Progress (1): 67 kB
+Progress (1): 69 kB
+Progress (1): 71 kB
+Progress (1): 73 kB
+Progress (1): 75 kB
+Progress (1): 77 kB
+Progress (1): 78 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/commons/commons-parent/47/commons-parent-47.pom (78 kB at 1.1 MB/s)
+Downloading from central: https://repo1.maven.org/maven2/com/google/code/gson/gson/2.10/gson-2.10.pom
+Progress (1): 1.1 kB
+Progress (1): 3.4 kB
+Progress (1): 6.7 kB
+Progress (1): 8.7 kB
+Progress (1): 9.4 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/com/google/code/gson/gson/2.10/gson-2.10.pom (9.4 kB at 167 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/com/google/code/gson/gson-parent/2.10/gson-parent-2.10.pom
+Progress (1): 1.1 kB
+Progress (1): 2.7 kB
+Progress (1): 4.3 kB
+Progress (1): 6.6 kB
+Progress (1): 8.5 kB
+Progress (1): 11 kB 
+Progress (1): 12 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/com/google/code/gson/gson-parent/2.10/gson-parent-2.10.pom (12 kB at 231 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.pom
+Progress (1): 1.0 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.pom (1.0 kB at 21 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-test-framework/2.0.0.AM26/apacheds-test-framework-2.0.0.AM26.pom
+Progress (1): 796 B
+Progress (1): 3.1 kB
+Progress (1): 6.7 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-test-framework/2.0.0.AM26/apacheds-test-framework-2.0.0.AM26.pom (6.7 kB at 129 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-parent/2.0.0.AM26/apacheds-parent-2.0.0.AM26.pom
+Progress (1): 718 B
+Progress (1): 1.8 kB
+Progress (1): 3.7 kB
+Progress (1): 5.7 kB
+Progress (1): 8.4 kB
+Progress (1): 12 kB 
+Progress (1): 14 kB
+Progress (1): 17 kB
+Progress (1): 23 kB
+Progress (1): 36 kB
+Progress (1): 42 kB
+Progress (1): 45 kB
+Progress (1): 45 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-parent/2.0.0.AM26/apacheds-parent-2.0.0.AM26.pom (45 kB at 397 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/project/project/44/project-44.pom
+Progress (1): 761 B
+Progress (1): 2.0 kB
+Progress (1): 5.2 kB
+Progress (1): 11 kB 
+Progress (1): 18 kB
+Progress (1): 23 kB
+Progress (1): 26 kB
+Progress (1): 32 kB
+Progress (1): 35 kB
+Progress (1): 38 kB
+Progress (1): 38 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/project/project/44/project-44.pom (38 kB at 541 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core-annotations/2.0.0.AM26/apacheds-core-annotations-2.0.0.AM26.pom
+Progress (1): 799 B
+Progress (1): 3.7 kB
+Progress (1): 7.8 kB
+Progress (1): 8.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core-annotations/2.0.0.AM26/apacheds-core-annotations-2.0.0.AM26.pom (8.9 kB at 64 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core/2.0.0.AM26/apacheds-core-2.0.0.AM26.pom
+Progress (1): 792 B
+Progress (1): 3.9 kB
+Progress (1): 6.7 kB
+Progress (1): 11 kB 
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core/2.0.0.AM26/apacheds-core-2.0.0.AM26.pom (11 kB at 220 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-i18n/2.0.0.AM26/apacheds-i18n-2.0.0.AM26.pom
+Progress (1): 831 B
+Progress (1): 2.4 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-i18n/2.0.0.AM26/apacheds-i18n-2.0.0.AM26.pom (2.4 kB at 48 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core-shared/2.0.0.AM26/apacheds-core-shared-2.0.0.AM26.pom
+Progress (1): 799 B
+Progress (1): 3.1 kB
+Progress (1): 6.6 kB
+Progress (1): 7.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core-shared/2.0.0.AM26/apacheds-core-shared-2.0.0.AM26.pom (7.9 kB at 146 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core-api/2.0.0.AM26/apacheds-core-api-2.0.0.AM26.pom
+Progress (1): 796 B
+Progress (1): 3.6 kB
+Progress (1): 6.9 kB
+Progress (1): 9.5 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core-api/2.0.0.AM26/apacheds-core-api-2.0.0.AM26.pom (9.5 kB at 106 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core-constants/2.0.0.AM26/apacheds-core-constants-2.0.0.AM26.pom
+Progress (1): 835 B
+Progress (1): 2.4 kB
+Progress (1): 2.5 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core-constants/2.0.0.AM26/apacheds-core-constants-2.0.0.AM26.pom (2.5 kB at 44 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-i18n/2.0.0/api-i18n-2.0.0.pom
+Progress (1): 834 B
+Progress (1): 2.5 kB
+Progress (1): 2.6 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-i18n/2.0.0/api-i18n-2.0.0.pom (2.6 kB at 40 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-parent/2.0.0/api-parent-2.0.0.pom
+Progress (1): 746 B
+Progress (1): 2.0 kB
+Progress (1): 3.9 kB
+Progress (1): 6.2 kB
+Progress (1): 9.0 kB
+Progress (1): 13 kB 
+Progress (1): 19 kB
+Progress (1): 23 kB
+Progress (1): 26 kB
+Progress (1): 27 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-parent/2.0.0/api-parent-2.0.0.pom (27 kB at 307 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-asn1-api/2.0.0/api-asn1-api-2.0.0.pom
+Progress (1): 810 B
+Progress (1): 2.7 kB
+Progress (1): 3.3 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-asn1-api/2.0.0/api-asn1-api-2.0.0.pom (3.3 kB at 37 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-asn1-parent/2.0.0/api-asn1-parent-2.0.0.pom
+Progress (1): 861 B
+Progress (1): 1.5 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-asn1-parent/2.0.0/api-asn1-parent-2.0.0.pom (1.5 kB at 25 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-client-api/2.0.0/api-ldap-client-api-2.0.0.pom
+Progress (1): 792 B
+Progress (1): 3.1 kB
+Progress (1): 6.0 kB
+Progress (1): 8.6 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-client-api/2.0.0/api-ldap-client-api-2.0.0.pom (8.6 kB at 145 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-client-parent/2.0.0/api-ldap-client-parent-2.0.0.pom
+Progress (1): 862 B
+Progress (1): 1.5 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-client-parent/2.0.0/api-ldap-client-parent-2.0.0.pom (1.5 kB at 16 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-parent/2.0.0/api-ldap-parent-2.0.0.pom
+Progress (1): 860 B
+Progress (1): 1.6 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-parent/2.0.0/api-ldap-parent-2.0.0.pom (1.6 kB at 30 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-schema-data/2.0.0/api-ldap-schema-data-2.0.0.pom
+Progress (1): 791 B
+Progress (1): 2.4 kB
+Progress (1): 4.4 kB
+Progress (1): 7.8 kB
+Progress (1): 8.1 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-schema-data/2.0.0/api-ldap-schema-data-2.0.0.pom (8.1 kB at 82 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-schema-parent/2.0.0/api-ldap-schema-parent-2.0.0.pom
+Progress (1): 862 B
+Progress (1): 1.5 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-schema-parent/2.0.0/api-ldap-schema-parent-2.0.0.pom (1.5 kB at 27 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-model/2.0.0/api-ldap-model-2.0.0.pom
+Progress (1): 795 B
+Progress (1): 2.6 kB
+Progress (1): 5.1 kB
+Progress (1): 9.1 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-model/2.0.0/api-ldap-model-2.0.0.pom (9.1 kB at 157 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-util/2.0.0/api-util-2.0.0.pom
+Progress (1): 806 B
+Progress (1): 2.5 kB
+Progress (1): 4.2 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-util/2.0.0/api-util-2.0.0.pom (4.2 kB at 80 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-asn1-ber/2.0.0/api-asn1-ber-2.0.0.pom
+Progress (1): 810 B
+Progress (1): 2.6 kB
+Progress (1): 3.8 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-asn1-ber/2.0.0/api-asn1-ber-2.0.0.pom (3.8 kB at 58 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/mina/mina-core/2.1.3/mina-core-2.1.3.pom
+Progress (1): 805 B
+Progress (1): 3.3 kB
+Progress (1): 6.3 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/mina/mina-core/2.1.3/mina-core-2.1.3.pom (6.3 kB at 92 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/mina/mina-parent/2.1.3/mina-parent-2.1.3.pom
+Progress (1): 729 B
+Progress (1): 2.1 kB
+Progress (1): 3.5 kB
+Progress (1): 6.0 kB
+Progress (1): 9.6 kB
+Progress (1): 14 kB 
+Progress (1): 18 kB
+Progress (1): 23 kB
+Progress (1): 27 kB
+Progress (1): 29 kB
+Progress (1): 30 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/mina/mina-parent/2.1.3/mina-parent-2.1.3.pom (30 kB at 563 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/servicemix/bundles/org.apache.servicemix.bundles.antlr/2.7.7_5/org.apache.servicemix.bundles.antlr-2.7.7_5.pom
+Progress (1): 1.3 kB
+Progress (1): 2.7 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/servicemix/bundles/org.apache.servicemix.bundles.antlr/2.7.7_5/org.apache.servicemix.bundles.antlr-2.7.7_5.pom (2.7 kB at 44 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/servicemix/bundles/bundles-pom/6/bundles-pom-6.pom
+Progress (1): 891 B
+Progress (1): 2.5 kB
+Progress (1): 5.1 kB
+Progress (1): 8.6 kB
+Progress (1): 9.7 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/servicemix/bundles/bundles-pom/6/bundles-pom-6.pom (9.7 kB at 164 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/servicemix/servicemix-pom/5/servicemix-pom-5.pom
+Progress (1): 862 B
+Progress (1): 2.2 kB
+Progress (1): 6.0 kB
+Progress (1): 8.6 kB
+Progress (1): 9.5 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/servicemix/servicemix-pom/5/servicemix-pom-5.pom (9.5 kB at 150 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.pom
+Progress (1): 739 B
+Progress (1): 2.1 kB
+Progress (1): 5.4 kB
+Progress (1): 8.8 kB
+Progress (1): 12 kB 
+Progress (1): 15 kB
+Progress (1): 16 kB
+Progress (1): 18 kB
+Progress (1): 21 kB
+Progress (1): 25 kB
+Progress (1): 27 kB
+Progress (1): 28 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.pom (28 kB at 430 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-codec-core/2.0.0/api-ldap-codec-core-2.0.0.pom
+Progress (1): 795 B
+Progress (1): 3.0 kB
+Progress (1): 6.6 kB
+Progress (1): 6.8 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-codec-core/2.0.0/api-ldap-codec-core-2.0.0.pom (6.8 kB at 119 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-codec-parent/2.0.0/api-ldap-codec-parent-2.0.0.pom
+Progress (1): 861 B
+Progress (1): 1.5 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-codec-parent/2.0.0/api-ldap-codec-parent-2.0.0.pom (1.5 kB at 28 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-aci/2.0.0/api-ldap-extras-aci-2.0.0.pom
+Progress (1): 810 B
+Progress (1): 2.3 kB
+Progress (1): 4.8 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-aci/2.0.0/api-ldap-extras-aci-2.0.0.pom (4.8 kB at 62 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-parent/2.0.0/api-ldap-extras-parent-2.0.0.pom
+Progress (1): 861 B
+Progress (1): 1.6 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-parent/2.0.0/api-ldap-extras-parent-2.0.0.pom (1.6 kB at 32 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-codec/2.0.0/api-ldap-extras-codec-2.0.0.pom
+Progress (1): 791 B
+Progress (1): 2.3 kB
+Progress (1): 4.4 kB
+Progress (1): 10 kB 
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-codec/2.0.0/api-ldap-extras-codec-2.0.0.pom (10 kB at 184 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-codec-api/2.0.0/api-ldap-extras-codec-api-2.0.0.pom
+Progress (1): 807 B
+Progress (1): 2.3 kB
+Progress (1): 5.6 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-codec-api/2.0.0/api-ldap-extras-codec-api-2.0.0.pom (5.6 kB at 100 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.7.0/commons-pool2-2.7.0.pom
+Progress (1): 774 B
+Progress (1): 2.4 kB
+Progress (1): 5.1 kB
+Progress (1): 7.1 kB
+Progress (1): 9.3 kB
+Progress (1): 12 kB 
+Progress (1): 15 kB
+Progress (1): 15 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.7.0/commons-pool2-2.7.0.pom (15 kB at 278 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-util/2.0.0/api-ldap-extras-util-2.0.0.pom
+Progress (1): 830 B
+Progress (1): 2.5 kB
+Progress (1): 3.4 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-util/2.0.0/api-ldap-extras-util-2.0.0.pom (3.4 kB at 61 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/jdbm/apacheds-jdbm1/2.0.0-M3/apacheds-jdbm1-2.0.0-M3.pom
+Progress (1): 827 B
+Progress (1): 2.5 kB
+Progress (1): 3.0 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/jdbm/apacheds-jdbm1/2.0.0-M3/apacheds-jdbm1-2.0.0-M3.pom (3.0 kB at 24 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/jdbm/apacheds-jdbm-parent/2.0.0-M3/apacheds-jdbm-parent-2.0.0-M3.pom
+Progress (1): 771 B
+Progress (1): 2.3 kB
+Progress (1): 4.5 kB
+Progress (1): 7.5 kB
+Progress (1): 12 kB 
+Progress (1): 16 kB
+Progress (1): 18 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/jdbm/apacheds-jdbm-parent/2.0.0-M3/apacheds-jdbm-parent-2.0.0-M3.pom (18 kB at 273 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/project/project/33/project-33.pom
+Progress (1): 747 B
+Progress (1): 2.0 kB
+Progress (1): 4.4 kB
+Progress (1): 10 kB 
+Progress (1): 15 kB
+Progress (1): 20 kB
+Progress (1): 24 kB
+Progress (1): 28 kB
+Progress (1): 29 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/project/project/33/project-33.pom (29 kB at 581 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/apache/15/apache-15.pom
+Progress (1): 754 B
+Progress (1): 2.1 kB
+Progress (1): 3.9 kB
+Progress (1): 7.9 kB
+Progress (1): 11 kB 
+Progress (1): 14 kB
+Progress (1): 15 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/apache/15/apache-15.pom (15 kB at 267 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-admin/2.0.0.AM26/apacheds-interceptors-admin-2.0.0.AM26.pom
+Progress (1): 796 B
+Progress (1): 2.8 kB
+Progress (1): 5.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-admin/2.0.0.AM26/apacheds-interceptors-admin-2.0.0.AM26.pom (5.9 kB at 89 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors/2.0.0.AM26/apacheds-interceptors-2.0.0.AM26.pom
+Progress (1): 844 B
+Progress (1): 2.0 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors/2.0.0.AM26/apacheds-interceptors-2.0.0.AM26.pom (2.0 kB at 35 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-authn/2.0.0.AM26/apacheds-interceptors-authn-2.0.0.AM26.pom
+Progress (1): 796 B
+Progress (1): 3.3 kB
+Progress (1): 7.2 kB
+Progress (1): 7.6 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-authn/2.0.0.AM26/apacheds-interceptors-authn-2.0.0.AM26.pom (7.6 kB at 129 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-number/2.0.0.AM26/apacheds-interceptors-number-2.0.0.AM26.pom
+Progress (1): 801 B
+Progress (1): 2.8 kB
+Progress (1): 5.3 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-number/2.0.0.AM26/apacheds-interceptors-number-2.0.0.AM26.pom (5.3 kB at 100 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-authz/2.0.0.AM26/apacheds-interceptors-authz-2.0.0.AM26.pom
+Progress (1): 796 B
+Progress (1): 3.0 kB
+Progress (1): 6.7 kB
+Progress (1): 6.8 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-authz/2.0.0.AM26/apacheds-interceptors-authz-2.0.0.AM26.pom (6.8 kB at 131 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-changelog/2.0.0.AM26/apacheds-interceptors-changelog-2.0.0.AM26.pom
+Progress (1): 800 B
+Progress (1): 2.9 kB
+Progress (1): 6.2 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-changelog/2.0.0.AM26/apacheds-interceptors-changelog-2.0.0.AM26.pom (6.2 kB at 36 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-collective/2.0.0.AM26/apacheds-interceptors-collective-2.0.0.AM26.pom
+Progress (1): 802 B
+Progress (1): 2.6 kB
+Progress (1): 5.1 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-collective/2.0.0.AM26/apacheds-interceptors-collective-2.0.0.AM26.pom (5.1 kB at 95 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-event/2.0.0.AM26/apacheds-interceptors-event-2.0.0.AM26.pom
+Progress (1): 802 B
+Progress (1): 2.6 kB
+Progress (1): 5.2 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-event/2.0.0.AM26/apacheds-interceptors-event-2.0.0.AM26.pom (5.2 kB at 100 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-exception/2.0.0.AM26/apacheds-interceptors-exception-2.0.0.AM26.pom
+Progress (1): 802 B
+Progress (1): 2.8 kB
+Progress (1): 5.3 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-exception/2.0.0.AM26/apacheds-interceptors-exception-2.0.0.AM26.pom (5.3 kB at 57 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-journal/2.0.0.AM26/apacheds-interceptors-journal-2.0.0.AM26.pom
+Progress (1): 802 B
+Progress (1): 2.6 kB
+Progress (1): 4.6 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-journal/2.0.0.AM26/apacheds-interceptors-journal-2.0.0.AM26.pom (4.6 kB at 88 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-normalization/2.0.0.AM26/apacheds-interceptors-normalization-2.0.0.AM26.pom
+Progress (1): 801 B
+Progress (1): 2.9 kB
+Progress (1): 5.8 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-normalization/2.0.0.AM26/apacheds-interceptors-normalization-2.0.0.AM26.pom (5.8 kB at 98 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-operational/2.0.0.AM26/apacheds-interceptors-operational-2.0.0.AM26.pom
+Progress (1): 802 B
+Progress (1): 2.8 kB
+Progress (1): 5.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-operational/2.0.0.AM26/apacheds-interceptors-operational-2.0.0.AM26.pom (5.9 kB at 80 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-referral/2.0.0.AM26/apacheds-interceptors-referral-2.0.0.AM26.pom
+Progress (1): 802 B
+Progress (1): 2.8 kB
+Progress (1): 5.6 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-referral/2.0.0.AM26/apacheds-interceptors-referral-2.0.0.AM26.pom (5.6 kB at 94 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-schema/2.0.0.AM26/apacheds-interceptors-schema-2.0.0.AM26.pom
+Progress (1): 796 B
+Progress (1): 3.0 kB
+Progress (1): 7.3 kB
+Progress (1): 7.5 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-schema/2.0.0.AM26/apacheds-interceptors-schema-2.0.0.AM26.pom (7.5 kB at 51 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-subtree/2.0.0.AM26/apacheds-interceptors-subtree-2.0.0.AM26.pom
+Progress (1): 802 B
+Progress (1): 3.1 kB
+Progress (1): 6.5 kB
+Progress (1): 6.7 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-subtree/2.0.0.AM26/apacheds-interceptors-subtree-2.0.0.AM26.pom (6.7 kB at 117 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-trigger/2.0.0.AM26/apacheds-interceptors-trigger-2.0.0.AM26.pom
+Progress (1): 800 B
+Progress (1): 2.8 kB
+Progress (1): 6.2 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-interceptors-trigger/2.0.0.AM26/apacheds-interceptors-trigger-2.0.0.AM26.pom (6.2 kB at 121 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-trigger/2.0.0/api-ldap-extras-trigger-2.0.0.pom
+Progress (1): 827 B
+Progress (1): 2.4 kB
+Progress (1): 4.7 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-trigger/2.0.0/api-ldap-extras-trigger-2.0.0.pom (4.7 kB at 96 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-ldif-partition/2.0.0.AM26/apacheds-ldif-partition-2.0.0.AM26.pom
+Progress (1): 806 B
+Progress (1): 2.9 kB
+Progress (1): 5.7 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-ldif-partition/2.0.0.AM26/apacheds-ldif-partition-2.0.0.AM26.pom (5.7 kB at 109 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-xdbm-partition/2.0.0.AM26/apacheds-xdbm-partition-2.0.0.AM26.pom
+Progress (1): 803 B
+Progress (1): 3.0 kB
+Progress (1): 6.9 kB
+Progress (1): 7.0 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-xdbm-partition/2.0.0.AM26/apacheds-xdbm-partition-2.0.0.AM26.pom (7.0 kB at 130 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core-avl/2.0.0.AM26/apacheds-core-avl-2.0.0.AM26.pom
+Progress (1): 815 B
+Progress (1): 2.5 kB
+Progress (1): 3.6 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-core-avl/2.0.0.AM26/apacheds-core-avl-2.0.0.AM26.pom (3.6 kB at 69 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-jdbm-partition/2.0.0.AM26/apacheds-jdbm-partition-2.0.0.AM26.pom
+Progress (1): 799 B
+Progress (1): 3.6 kB
+Progress (1): 7.2 kB
+Progress (1): 7.3 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-jdbm-partition/2.0.0.AM26/apacheds-jdbm-partition-2.0.0.AM26.pom (7.3 kB at 143 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/mavibot/mavibot/1.0.0-M8/mavibot-1.0.0-M8.pom
+Progress (1): 810 B
+Progress (1): 2.7 kB
+Progress (1): 3.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/mavibot/mavibot/1.0.0-M8/mavibot-1.0.0-M8.pom (3.9 kB at 72 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/mavibot/mavibot-parent/1.0.0-M8/mavibot-parent-1.0.0-M8.pom
+Progress (1): 772 B
+Progress (1): 2.3 kB
+Progress (1): 4.4 kB
+Progress (1): 7.1 kB
+Progress (1): 10 kB 
+Progress (1): 14 kB
+Progress (1): 14 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/mavibot/mavibot-parent/1.0.0-M8/mavibot-parent-1.0.0-M8.pom (14 kB at 228 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/project/project/34/project-34.pom
+Progress (1): 747 B
+Progress (1): 2.0 kB
+Progress (1): 4.3 kB
+Progress (1): 10 kB 
+Progress (1): 15 kB
+Progress (1): 19 kB
+Progress (1): 24 kB
+Progress (1): 28 kB
+Progress (1): 29 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/project/project/34/project-34.pom (29 kB at 521 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/commons/commons-parent/9/commons-parent-9.pom
+Progress (1): 1.1 kB
+Progress (1): 2.7 kB
+Progress (1): 7.5 kB
+Progress (1): 10 kB 
+Progress (1): 13 kB
+Progress (1): 19 kB
+Progress (1): 22 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/commons/commons-parent/9/commons-parent-9.pom (22 kB at 422 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-mavibot-partition/2.0.0.AM26/apacheds-mavibot-partition-2.0.0.AM26.pom
+Progress (1): 830 B
+Progress (1): 3.6 kB
+Progress (1): 7.2 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-mavibot-partition/2.0.0.AM26/apacheds-mavibot-partition-2.0.0.AM26.pom (7.2 kB at 140 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-protocol-kerberos/2.0.0.AM26/apacheds-protocol-kerberos-2.0.0.AM26.pom
+Progress (1): 795 B
+Progress (1): 3.0 kB
+Progress (1): 7.3 kB
+Progress (1): 8.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-protocol-kerberos/2.0.0.AM26/apacheds-protocol-kerberos-2.0.0.AM26.pom (8.9 kB at 74 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-kerberos-codec/2.0.0.AM26/apacheds-kerberos-codec-2.0.0.AM26.pom
+Progress (1): 800 B
+Progress (1): 2.9 kB
+Progress (1): 7.0 kB
+Progress (1): 7.0 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-kerberos-codec/2.0.0.AM26/apacheds-kerberos-codec-2.0.0.AM26.pom (7.0 kB at 135 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-protocol-shared/2.0.0.AM26/apacheds-protocol-shared-2.0.0.AM26.pom
+Progress (1): 801 B
+Progress (1): 2.7 kB
+Progress (1): 5.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-protocol-shared/2.0.0.AM26/apacheds-protocol-shared-2.0.0.AM26.pom (5.9 kB at 98 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-protocol-ldap/2.0.0.AM26/apacheds-protocol-ldap-2.0.0.AM26.pom
+Progress (1): 783 B
+Progress (1): 3.8 kB
+Progress (1): 7.3 kB
+Progress (1): 14 kB 
+Progress (1): 15 kB
+                   
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-protocol-ldap/2.0.0.AM26/apacheds-protocol-ldap-2.0.0.AM26.pom (15 kB at 214 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-sp/2.0.0/api-ldap-extras-sp-2.0.0.pom
+Progress (1): 810 B
+Progress (1): 2.8 kB
+Progress (1): 3.7 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-extras-sp/2.0.0/api-ldap-extras-sp-2.0.0.pom (3.7 kB at 73 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-server-annotations/2.0.0.AM26/apacheds-server-annotations-2.0.0.AM26.pom
+Progress (1): 800 B
+Progress (1): 3.3 kB
+Progress (1): 6.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/server/apacheds-server-annotations/2.0.0.AM26/apacheds-server-annotations-2.0.0.AM26.pom (6.9 kB at 130 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-codec-standalone/2.0.0/api-ldap-codec-standalone-2.0.0.pom
+Progress (1): 806 B
+Progress (1): 1.9 kB
+Progress (1): 4.0 kB
+Progress (1): 4.9 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-codec-standalone/2.0.0/api-ldap-codec-standalone-2.0.0.pom (4.9 kB at 80 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-net-mina/2.0.0/api-ldap-net-mina-2.0.0.pom
+Progress (1): 810 B
+Progress (1): 2.4 kB
+Progress (1): 4.0 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-net-mina/2.0.0/api-ldap-net-mina-2.0.0.pom (4.0 kB at 77 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-net-parent/2.0.0/api-ldap-net-parent-2.0.0.pom
+Progress (1): 864 B
+Progress (1): 1.5 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/apache/directory/api/api-ldap-net-parent/2.0.0/api-ldap-net-parent-2.0.0.pom (1.5 kB at 27 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/org/slf4j/slf4j-jdk14/1.7.36/slf4j-jdk14-1.7.36.pom
+Progress (1): 1.0 kB
+                    
+Downloaded from central: https://repo1.maven.org/maven2/org/slf4j/slf4j-jdk14/1.7.36/slf4j-jdk14-1.7.36.pom (1.0 kB at 19 kB/s)
+Downloading from central: https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar
+Downloading from central: https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.36/jcl-over-slf4j-1.7.36.jar
+Downloading from central: https://repo1.maven.org/maven2/com/google/code/gson/gson/2.10/gson-2.10.jar
+Progress (1): 7.7/35 kB
+Progress (1): 16/35 kB 
+Progress (1): 32/35 kB
+Progress (1): 35 kB   
+                   
+Downloaded from central: https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar (35 kB at 642 kB/s)
+Progress (1): 0.9/286 kB
+Progress (1): 2.3/286 kB
+Progress (1): 3.6/286 kB
+Progress (1): 5.0/286 kB
+Progress (1): 6.4/286 kB
+Progress (1): 7.7/286 kB
+Progress (1): 9.1/286 kB
+Progress (1): 10/286 kB 
+Progress (1): 12/286 kB
+Progress (1): 13/286 kB
+Progress (2): 13/286 kB | 0.9/17 kB
+Progress (2): 15/286 kB | 0.9/17 kB
+Progress (2): 16/286 kB | 0.9/17 kB
+Progress (2): 17/286 kB | 0.9/17 kB
+Progress (2): 19/286 kB | 0.9/17 kB
+Progress (2): 20/286 kB | 0.9/17 kB
+Progress (2): 21/286 kB | 0.9/17 kB
+Progress (2): 21/286 kB | 2.3/17 kB
+Progress (2): 23/286 kB | 2.3/17 kB
+Progress (2): 24/286 kB | 2.3/17 kB
+Progress (2): 26/286 kB | 2.3/17 kB
+Progress (2): 27/286 kB | 2.3/17 kB
+Progress (2): 28/286 kB | 2.3/17 kB
+Progress (2): 30/286 kB | 2.3/17 kB
+Progress (2): 30/286 kB | 3.6/17 kB
+Progress (2): 31/286 kB | 3.6/17 kB
+Progress (2): 32/286 kB | 3.6/17 kB
+Progress (2): 32/286 kB | 5.0/17 kB
+Progress (2): 34/286 kB | 5.0/17 kB
+Progress (2): 34/286 kB | 6.4/17 kB
+Progress (2): 35/286 kB | 6.4/17 kB
+Progress (2): 35/286 kB | 7.7/17 kB
+Progress (2): 36/286 kB | 7.7/17 kB
+Progress (2): 36/286 kB | 9.1/17 kB
+Progress (2): 38/286 kB | 9.1/17 kB
+Progress (2): 38/286 kB | 10/17 kB 
+Progress (2): 39/286 kB | 10/17 kB
+Progress (2): 39/286 kB | 12/17 kB
+Progress (2): 41/286 kB | 12/17 kB
+Progress (2): 42/286 kB | 12/17 kB
+Progress (2): 42/286 kB | 13/17 kB
+Progress (2): 43/286 kB | 13/17 kB
+Progress (2): 43/286 kB | 15/17 kB
+Progress (2): 45/286 kB | 15/17 kB
+Progress (2): 45/286 kB | 16/17 kB
+Progress (2): 45/286 kB | 17 kB   
+Progress (2): 46/286 kB | 17 kB
+Progress (2): 47/286 kB | 17 kB
+Progress (2): 49/286 kB | 17 kB
+Progress (2): 50/286 kB | 17 kB
+Progress (2): 52/286 kB | 17 kB
+Progress (2): 53/286 kB | 17 kB
+Progress (2): 54/286 kB | 17 kB
+Progress (2): 56/286 kB | 17 kB
+Progress (2): 60/286 kB | 17 kB
+Progress (2): 61/286 kB | 17 kB
+                               
+Downloaded from central: https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.36/jcl-over-slf4j-1.7.36.jar (17 kB at 156 kB/s)
+Progress (1): 66/286 kB
+Progress (1): 70/286 kB
+Progress (1): 74/286 kB
+Progress (1): 78/286 kB
+Progress (1): 83/286 kB
+Progress (1): 87/286 kB
+Progress (1): 91/286 kB
+Progress (1): 95/286 kB
+Progress (1): 100/286 kB
+Progress (1): 104/286 kB
+Progress (1): 108/286 kB
+Progress (1): 112/286 kB
+Progress (1): 116/286 kB
+Progress (1): 121/286 kB
+Progress (1): 125/286 kB
+Progress (1): 129/286 kB
+Progress (1): 133/286 kB
+Progress (1): 138/286 kB
+Progress (1): 142/286 kB
+Progress (1): 146/286 kB
+Progress (1): 150/286 kB
+Progress (1): 154/286 kB
+Progress (1): 159/286 kB
+Progress (1): 163/286 kB
+Progress (1): 167/286 kB
+Progress (1): 171/286 kB
+Progress (1): 176/286 kB
+Progress (1): 180/286 kB
+Progress (1): 184/286 kB
+Progress (1): 188/286 kB
+Progress (1): 193/286 kB
+Progress (1): 197/286 kB
+Progress (1): 201/286 kB
+Progress (1): 205/286 kB
+Progress (1): 209/286 kB
+Progress (1): 214/286 kB
+Progress (1): 218/286 kB
+Progress (1): 222/286 kB
+Progress (1): 238/286 kB
+Progress (1): 255/286 kB
+Progress (1): 271/286 kB
+Progress (1): 286 kB    
+                    
+Downloaded from central: https://repo1.maven.org/maven2/com/google/code/gson/gson/2.10/gson-2.10.jar (286 kB at 1.9 MB/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.845 s
+[INFO] Finished at: 2026-02-25T19:27:26-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project constretto-core: Could not resolve dependencies for project org.constretto:constretto-core:jar:3.0.0-SNAPSHOT
+[ERROR] dependency: org.constretto:constretto-api:jar:3.0.0-SNAPSHOT (compile)
+[ERROR] 	Could not find artifact org.constretto:constretto-api:jar:3.0.0-SNAPSHOT
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+
+STDERR:

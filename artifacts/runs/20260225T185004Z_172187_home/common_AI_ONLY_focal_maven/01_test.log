@@ -1,0 +1,40 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -Dtest=by.bsu.onewire.common.utils.AddressUtilsAiTest test
+
+STDOUT:
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for by.bsu.onewire:common:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ by.bsu:onewire:1.0-SNAPSHOT, D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\172187\home\pom.xml, line 26, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ by.bsu:onewire:1.0-SNAPSHOT, D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\172187\home\pom.xml, line 41, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-resources-plugin is missing. @ by.bsu:onewire:1.0-SNAPSHOT, D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\172187\home\pom.xml, line 50, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-eclipse-plugin is missing. @ by.bsu:onewire:1.0-SNAPSHOT, D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\172187\home\pom.xml, line 34, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -----------------------< by.bsu.onewire:common >------------------------
+[INFO] Building common 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for com.dalsemi.onewire:owapi:jar:1.10 is missing, no dependency information available
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.245 s
+[INFO] Finished at: 2026-02-25T13:50:10-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project common: Could not resolve dependencies for project by.bsu.onewire:common:jar:1.0-SNAPSHOT
+[ERROR] dependency: com.dalsemi.onewire:owapi:jar:1.10 (test)
+[ERROR] 	com.dalsemi.onewire:owapi:jar:1.10 was not found in https://repo1.maven.org/maven2 during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of central has elapsed or updates are forced
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+
+STDERR:

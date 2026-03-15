@@ -1,0 +1,37 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -DskipTests compile
+
+STDOUT:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< org.red5:red5-base >-------------------------
+[INFO] Building red5-base 0.8rc2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for opensymphony:quartz-all:jar:1.6.0 is missing, no dependency information available
+[WARNING] The POM for javax.management:jmxremote:jar:1.0.1 is missing, no dependency information available
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.328 s
+[INFO] Finished at: 2026-02-25T19:22:28-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project red5-base: Could not resolve dependencies for project org.red5:red5-base:jar:0.8rc2-SNAPSHOT
+[ERROR] dependency: javax.management:jmxremote:jar:1.0.1 (compile)
+[ERROR] 	javax.management:jmxremote:jar:1.0.1 was not found in https://repository.jboss.org/nexus/content/groups/public/ during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of jboss-https has elapsed or updates are forced
+[ERROR] 	javax.management:jmxremote:jar:1.0.1 was not found in https://repo.osgeo.org/repository/release/ during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of geotools-https has elapsed or updates are forced
+[ERROR] 	javax.management:jmxremote:jar:1.0.1 was not found in https://repo1.maven.org/maven2 during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of central has elapsed or updates are forced
+[ERROR] dependency: com.sun.jdmk:jmxtools:jar:1.2.1 (compile)
+[ERROR] 	com.sun.jdmk:jmxtools:jar:1.2.1 was not found in https://repository.jboss.org/nexus/content/groups/public/ during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of jboss-https has elapsed or updates are forced
+[ERROR] 	com.sun.jdmk:jmxtools:jar:1.2.1 was not found in https://repo.osgeo.org/repository/release/ during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of geotools-https has elapsed or updates are forced
+[ERROR] 	com.sun.jdmk:jmxtools:jar:1.2.1 was not found in https://repo1.maven.org/maven2 during a previous attempt. This failure was cached in the local repository and resolution is not reattempted until the update interval of central has elapsed or updates are forced
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+
+STDERR:

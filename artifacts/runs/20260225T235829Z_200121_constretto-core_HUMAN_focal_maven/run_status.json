@@ -1,0 +1,48 @@
+{
+  "run_id": "20260225T235829Z_200121_constretto-core_HUMAN_focal_maven",
+  "repo_id": "200121",
+  "module": "constretto-core",
+  "condition": "HUMAN",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": true,
+  "started_at_utc": "2026-02-25T23:58:29.827919+00:00",
+  "ended_at_utc": "2026-02-25T23:58:33.744288+00:00",
+  "success": false,
+  "status": "FAIL",
+  "phase": "compile",
+  "exit_code": 1,
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.constretto:constretto-core >------------------- [INFO] Building Constretto :: Core implementation - 3.0.0-SNAPSHOT 3.0.0-SNAPSHOT [INFO] from pom.xml [INFO] -----------------",
+  "retries": 0,
+  "fixed_by": "NONE",
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\200121\\constretto-core",
+      "returncode": 1,
+      "duration_seconds": 2.159,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T235829Z_200121_constretto-core_HUMAN_focal_maven\\00_compile.log"
+    }
+  ],
+  "selected_test_classes": [
+    "org.constretto.internal.store.ldap.LdapConfigurationStoreTest"
+  ],
+  "target_classes": [],
+  "focal_class": "org.constretto.internal.store.ldap.LdapConfigurationStore",
+  "tests_found": "",
+  "pit_target_classes": "",
+  "pit_version": "1.6.9",
+  "pit_status": "",
+  "pit_log_file": "",
+  "pit_config": {},
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\200121_31.json",
+  "error": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects...\n[INFO] \n[INFO] -------------------< org.constretto:constretto-core >-------------------\n[INFO] Building Constretto :: Core implementation - 3.0.0-SNAPSHOT 3.0.0-SNAPSHOT\n[INFO]   from pom.xml\n[INFO] --------------------------------[ jar ]---------------------------------\n[WARNING] The POM for org.constretto:constretto-api:jar:3.0.0-SNAPSHOT is missing, no dependency information available\n[INFO] ------------------------------------------------------------------------\n[INFO] BUILD FAILURE\n[INFO] ------------------------------------------------------------------------\n[INFO] Total time:  0.563 s\n[INFO] Finished at: 2026-02-25T18:58:33-05:00\n[INFO] ------------------------------------------------------------------------\n[ERROR] Failed to execute goal on project constretto-core: Could not resolve dependencies for project org.constretto:constretto-core:jar:3.0.0-SNAPSHOT\n[ERROR] dependency: org.constretto:constretto-api:jar:3.0.0-SNAPSHOT (compile)\n[ERROR] \tCould not find artifact org.constretto:constretto-api:jar:3.0.0-SNAPSHOT\n[ERROR] \n[ERROR] -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException\n"
+}

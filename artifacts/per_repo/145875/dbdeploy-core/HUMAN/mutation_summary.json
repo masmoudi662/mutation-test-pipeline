@@ -1,0 +1,31 @@
+{
+  "repo_id": "145875",
+  "module": "dbdeploy-core",
+  "condition": "HUMAN",
+  "commit_hash": "23ab556af50b02ae46c76eac41a77813c92620b2",
+  "focal_class": "com.dbdeploy.database.QueryStatementSplitter",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------------< com.dbdeploy:dbdeploy-core >--------------------- [INFO] Building dbdeploy-core 3.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]-----------------",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002352Z_145875_dbdeploy-core_HUMAN_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002352Z_145875_dbdeploy-core_HUMAN_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": [
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002352Z_145875_dbdeploy-core_HUMAN_focal_maven\\00_compile.log"
+    ]
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:23:56.901269+00:00"
+}

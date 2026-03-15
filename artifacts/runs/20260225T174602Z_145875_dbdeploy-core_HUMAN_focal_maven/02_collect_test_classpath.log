@@ -1,0 +1,20 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -DincludeScope=test -Dmdep.addOutputDirectory=true -Dmdep.addTestOutputDirectory=true -Dmdep.outputFile=D:\Khedma\Mr wiem\mutation-test-pipeline\artifacts\runs\20260225T174602Z_145875_dbdeploy-core_HUMAN_focal_maven\maven_test_classpath.txt dependency:build-classpath
+
+STDOUT:
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.dbdeploy:dbdeploy-core >---------------------
+[INFO] Building dbdeploy-core 3.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.7.0:build-classpath (default-cli) @ dbdeploy-core ---
+[INFO] Wrote classpath file 'D:\Khedma\Mr wiem\mutation-test-pipeline\artifacts\runs\20260225T174602Z_145875_dbdeploy-core_HUMAN_focal_maven\maven_test_classpath.txt'.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.913 s
+[INFO] Finished at: 2026-02-25T12:46:13-05:00
+[INFO] ------------------------------------------------------------------------
+
+STDERR:

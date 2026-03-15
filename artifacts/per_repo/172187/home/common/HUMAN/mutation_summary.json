@@ -1,0 +1,29 @@
+{
+  "repo_id": "172187",
+  "module": "home/common",
+  "condition": "HUMAN",
+  "commit_hash": "a61f245640e4cdf7ab26acca6652ac6bc5c5d66d",
+  "focal_class": "by.bsu.onewire.common.utils.AddressUtils",
+  "ok": true,
+  "status": "OK",
+  "error_type": "",
+  "error_message": "",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {
+    "pit_version": "",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "",
+    "run_status_path": "",
+    "pit_log_file": "",
+    "command_logs": []
+  },
+  "applied_fixes": [],
+  "timestamp": ""
+}

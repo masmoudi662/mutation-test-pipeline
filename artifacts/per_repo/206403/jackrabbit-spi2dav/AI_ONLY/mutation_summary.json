@@ -1,0 +1,31 @@
+{
+  "repo_id": "206403",
+  "module": "jackrabbit-spi2dav",
+  "condition": "AI_ONLY",
+  "commit_hash": "024bca3806907cff6abcf2f922149728b1cd08c0",
+  "focal_class": "org.apache.jackrabbit.spi2dav.ConnectionOptions",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------------< org.apache.jackrabbit:jackrabbit-spi2dav >-------------- [INFO] Building Jackrabbit SPI to WebDAV 2.23.3-beta-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003346Z_206403_jackrabbit-spi2dav_AI_ONLY_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003346Z_206403_jackrabbit-spi2dav_AI_ONLY_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": [
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003346Z_206403_jackrabbit-spi2dav_AI_ONLY_focal_maven\\00_compile.log"
+    ]
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:33:50.078179+00:00"
+}

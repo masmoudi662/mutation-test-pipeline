@@ -1,0 +1,1480 @@
+{
+  "HUMAN": {
+    "CalledProcessError": [
+      {
+        "repo_id": "121672",
+        "module": "cascading-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.062 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180810Z_121672_cascading-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "123235",
+        "module": "app",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.065 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180818Z_123235_app_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "135867",
+        "module": "web-nutsNbolts",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.064 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180832Z_135867_web-nutsNbolts_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "160996",
+        "module": "util",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.061 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180957Z_160996_util_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "168535",
+        "module": "alterego",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=de.linsin.alterego.BotTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------------< de.linsin:alterego >------------------------- [INFO] Building alterego 0.1 [INFO] from pom.xml [INFO] --------------------------------[ jar ]------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181042Z_168535_alterego_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "205407",
+        "module": "plugins/openldap.acl.editor",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] Internal error: org.eclipse.tycho.core.osgitools.OsgiManifestParserException: Exception parsing OSGi MANIFEST D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\205407\\plugins\\openldap.acl.editor\\META-I",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181120Z_205407_plugins\\openldap.acl.editor_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206322",
+        "module": "maven-ejb-plugin",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.maven.plugins:maven-ejb-plugin >-------------- [INFO] Building Apache Maven EJB Plugin 3.0.1-SNAPSHOT [INFO] from pom.xml [INFO] ----------------------------[ maven-plugin ]",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181207Z_206322_maven-ejb-plugin_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206357",
+        "module": "contrib/piggybank/java",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.065 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181228Z_206357_contrib\\piggybank\\java_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206364",
+        "module": "openjpa-lib",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.apache.openjpa:openjpa-lib >------------------- [INFO] Building OpenJPA Utilities Library 4.1.2-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]---",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181236Z_206364_openjpa-lib_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206418",
+        "module": "continuum-base/continuum-scm",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] [ERROR] Some problems were encountered while processing the POMs: [FATAL] Non-resolvable parent POM for org.apache.continuum:continuum:1.5-SNAPSHOT: The following artifacts could not be resolved: org.apach",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181419Z_206418_continuum-base\\continuum-scm_HUMAN_focal_maven"
+      }
+    ],
+    "CompilationFailure": [
+      {
+        "repo_id": "145875",
+        "module": "dbdeploy-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=com.dbdeploy.database.QueryStatementSplitterTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------------< com.dbdeploy:dbdeploy-core >--------------------- [INFO] Building dbdeploy-core 3.0-SNAPSHOT [INFO] from pom.xml [INFO] ---------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180848Z_145875_dbdeploy-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "154520",
+        "module": "vraptor-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -----------------------< br.com.caelum:vraptor >------------------------ [INFO] Building vraptor 3.5.6-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]---------------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180946Z_154520_vraptor-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206318",
+        "module": "fop-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.fop.afp.modca.AbstractNamedAFPObjectTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.apache.xmlgraphics:fop-core >------------------- [INFO] Building Apache FOP Core 2.11.0-SNAPSHOT [INFO] from pom.xml [INFO] -------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181130Z_206318_fop-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206437",
+        "module": "xdbm-partition",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.directory.server.xdbm.EmptyIndexCursorTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------< org.apache.directory.server:apacheds-xdbm-partition >--------- [INFO] Building ApacheDS Generalized (X) DBM Partition 2.0.0.AM28-SNAPSHOT [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181427Z_206437_xdbm-partition_HUMAN_focal_maven"
+      }
+    ],
+    "DependencyResolutionException": [
+      {
+        "repo_id": "13899",
+        "module": "mysql/codec",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for org.adbcj:mysql-codec:jar:0.2-SNAPSHOT [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180840Z_13899_mysql\\codec_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "160999",
+        "module": "zookeeper-server",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.apache.zookeeper:zookeeper >------------------- [INFO] Building Apache ZooKeeper - Server 3.10.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ j",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181008Z_160999_zookeeper-server_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "161005",
+        "module": "jspwiki-main",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.apache.jspwiki:jspwiki-main >------------------- [INFO] Building Apache JSPWiki Main Jar 3.0.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]-----",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181025Z_161005_jspwiki-main_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "161180",
+        "module": "core/ri",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------------< org.jredis:jredis-core-ri >---------------------- [INFO] Building JRedis - Core - RI a.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181034Z_161180_core\\ri_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "172187",
+        "module": "home/common",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=by.bsu.onewire.common.utils.AddressUtilsTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for by.bsu.onewire:common:jar:1.0-SNAPSHOT [WARNING] 'build.plugins.plugin.version' for or",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181055Z_172187_home\\common_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "200121",
+        "module": "constretto-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.constretto:constretto-core >------------------- [INFO] Building Constretto :: Core implementation - 3.0.0-SNAPSHOT 3.0.0-SNAPSHOT [INFO] from pom.xml [INFO] -----------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181110Z_200121_constretto-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206320",
+        "module": "maven-scm-providers/maven-scm-provider-accurev",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ----------< org.apache.maven.scm:maven-scm-provider-accurev >----------- [INFO] Building Maven SCM AccuRev Provider 2.0.0-M1-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181157Z_206320_maven-scm-providers\\maven-scm-provider-accurev_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206346",
+        "module": "modules/transports/core/nhttp",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.synapse:synapse-nhttp-transport >------------- [INFO] Building Apache Synapse - Non-blocking HTTP/s Transport 3.0.3-SNAPSHOT [INFO] from pom.xml [INFO] ---------------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181218Z_206346_modules\\transports\\core\\nhttp_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206402",
+        "module": "httpclient5-cache",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------< org.apache.httpcomponents.client5:httpclient5-cache >--------- [INFO] Building Apache HttpClient Cache 5.7-alpha1-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181356Z_206402_httpclient5-cache_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206403",
+        "module": "jackrabbit-spi2dav",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------------< org.apache.jackrabbit:jackrabbit-spi2dav >-------------- [INFO] Building Jackrabbit SPI to WebDAV 2.23.3-beta-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181410Z_206403_jackrabbit-spi2dav_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206444",
+        "module": "hcatalog/webhcat/svr",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] This build will only read from the build cache, since the clean lifecycle is not part of the build invocation. [INFO] [INFO] ---------------< org.apache.hive.hcatalog:hive-webhcat >---------------- [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181503Z_206444_hcatalog\\webhcat\\svr_HUMAN_focal_maven"
+      }
+    ],
+    "FileNotFoundError": [
+      {
+        "repo_id": "184604",
+        "module": "twitter4j-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\184604\\twitter4j-core\\src\\test\\java\\twitter4j\\util\\CharacterUtilTest.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181109Z_184604_twitter4j-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206341",
+        "module": "enforcer-rules",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206341\\enforcer-rules\\src\\test\\java\\org\\apache\\maven\\plugins\\enforcer\\TestRequireNoRepositories.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181217Z_206341_enforcer-rules_HUMAN_focal_maven"
+      }
+    ],
+    "HTTP_BLOCKER": [
+      {
+        "repo_id": "116547",
+        "module": "cuke4duke-maven-plugin",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\116547\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< cuke4duke:cuke4duke-maven-plugin >------------------ [INFO] Building Cuke4Duke: Maven Plugin 0.4.4 [INFO] from pom.xml [INFO] ----------------------------[ m",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180758Z_116547_cuke4duke-maven-plugin_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "128294",
+        "module": "servers/media/core/server-impl",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] [ERROR] Some problems were encountered while processing the POMs: [FATAL] Non-resolvable parent POM for org.mobicents.servers.media:mms-core:2.0.0.BETA3-SNAPSHOT: The following artifacts could not be resol",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180825Z_128294_servers\\media\\core\\server-impl_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "152134",
+        "module": "koskela",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\152134\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for com.tddinaction:sourcecode:jar:0.1-SNAPSHOT [WARNING] 'dependencies.dependency.(groupId:artifactId:ty",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180906Z_152134_koskela_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206366",
+        "module": "coap",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\206366\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] Artifact org.apache:apache:pom:9 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181302Z_206366_coap_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "32578",
+        "module": "service",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\32578\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for org.appfuse:appfuse-service:jar:2.1.0-M2-SNAPSHOT [WARNING] The expression ${pom.groupId} is deprecate",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181524Z_32578_service_HUMAN_focal_maven"
+      }
+    ],
+    "ModuleMissing": [
+      {
+        "repo_id": "149511",
+        "module": "149511",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\149511\\149511",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180901Z_149511_149511_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "175376",
+        "module": "175376",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\175376\\175376",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181109Z_175376_175376_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "190294",
+        "module": "190294",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\190294\\190294",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181110Z_190294_190294_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206350",
+        "module": "cayenne-server",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206350\\cayenne-server",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181228Z_206350_cayenne-server_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206427",
+        "module": "tika-parser-modules/tika-parser-microsoft-module",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206427\\tika-parser-modules\\tika-parser-microsoft-module",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181426Z_206427_tika-parser-modules\\tika-parser-microsoft-module_HUMAN_focal_maven"
+      }
+    ],
+    "SurefireBooterForkException": [
+      {
+        "repo_id": "206398",
+        "module": "httpcore5",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.hc.core5.util.TestTimeoutValueException', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.httpcomponents.core5:httpcore5 >-------------- [INFO] Building Apache HttpComponents Core HTTP/1.1 5.5-alpha1-SNAPSHOT [INFO] from",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181337Z_206398_httpcore5_HUMAN_focal_maven"
+      }
+    ],
+    "ValueError": [
+      {
+        "repo_id": "169928",
+        "module": "DVR",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Could not derive class name from path: DVR/src/com/om/example/dvr/fixtures/ProgramGuideRowParser.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181055Z_169928_DVR_HUMAN_focal_maven"
+      }
+    ]
+  },
+  "AI_ONLY": {
+    "CalledProcessError": [
+      {
+        "repo_id": "121672",
+        "module": "cascading-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.064 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180814Z_121672_cascading-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "123235",
+        "module": "app",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.060 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180821Z_123235_app_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "135867",
+        "module": "web-nutsNbolts",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.064 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180836Z_135867_web-nutsNbolts_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "160996",
+        "module": "util",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.062 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181000Z_160996_util_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "205407",
+        "module": "plugins/openldap.acl.editor",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] Internal error: org.eclipse.tycho.core.osgitools.OsgiManifestParserException: Exception parsing OSGi MANIFEST D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\205407\\plugins\\openldap.acl.editor\\META-I",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181125Z_205407_plugins\\openldap.acl.editor_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206322",
+        "module": "maven-ejb-plugin",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.maven.plugins:maven-ejb-plugin >-------------- [INFO] Building Apache Maven EJB Plugin 3.0.1-SNAPSHOT [INFO] from pom.xml [INFO] ----------------------------[ maven-plugin ]",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181212Z_206322_maven-ejb-plugin_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206357",
+        "module": "contrib/piggybank/java",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.065 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181232Z_206357_contrib\\piggybank\\java_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206364",
+        "module": "openjpa-lib",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.apache.openjpa:openjpa-lib >------------------- [INFO] Building OpenJPA Utilities Library 4.1.2-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]---",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181249Z_206364_openjpa-lib_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206398",
+        "module": "httpcore5",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.httpcomponents.core5:httpcore5 >-------------- [INFO] Building Apache HttpComponents Core HTTP/1.1 5.5-alpha1-SNAPSHOT [INFO] from pom.xml [INFO] ---------------------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181350Z_206398_httpcore5_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206418",
+        "module": "continuum-base/continuum-scm",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] [ERROR] Some problems were encountered while processing the POMs: [FATAL] Non-resolvable parent POM for org.apache.continuum:continuum:1.5-SNAPSHOT: The following artifacts could not be resolved: org.apach",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181422Z_206418_continuum-base\\continuum-scm_AI_ONLY_focal_maven"
+      }
+    ],
+    "CompilationFailure": [
+      {
+        "repo_id": "145875",
+        "module": "dbdeploy-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=com.dbdeploy.database.QueryStatementSplitterAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------------< com.dbdeploy:dbdeploy-core >--------------------- [INFO] Building dbdeploy-core 3.0-SNAPSHOT [INFO] from pom.xml [INFO] -------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180854Z_145875_dbdeploy-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "152812",
+        "module": "core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=de.javakaffee.web.msm.NodeIdServiceAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for de.javakaffee.msm:memcached-session-manager:jar:2.3.3-SNAPSHOT [WARNING] Reporting config",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180939Z_152812_core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "154520",
+        "module": "vraptor-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -----------------------< br.com.caelum:vraptor >------------------------ [INFO] Building vraptor 3.5.6-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]---------------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180951Z_154520_vraptor-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "168535",
+        "module": "alterego",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=de.linsin.alterego.BotAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------------< de.linsin:alterego >------------------------- [INFO] Building alterego 0.1 [INFO] from pom.xml [INFO] --------------------------------[ jar ]----------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181049Z_168535_alterego_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206318",
+        "module": "fop-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.fop.afp.modca.AbstractNamedAFPObjectAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.apache.xmlgraphics:fop-core >------------------- [INFO] Building Apache FOP Core 2.11.0-SNAPSHOT [INFO] from pom.xml [INFO] -----",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181147Z_206318_fop-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206437",
+        "module": "xdbm-partition",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.directory.server.xdbm.EmptyIndexCursorAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------< org.apache.directory.server:apacheds-xdbm-partition >--------- [INFO] Building ApacheDS Generalized (X) DBM Partition 2.0.0.AM28-SNAPSHOT [IN",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181452Z_206437_xdbm-partition_AI_ONLY_focal_maven"
+      }
+    ],
+    "DependencyResolutionException": [
+      {
+        "repo_id": "13899",
+        "module": "mysql/codec",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for org.adbcj:mysql-codec:jar:0.2-SNAPSHOT [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180844Z_13899_mysql\\codec_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "160999",
+        "module": "zookeeper-server",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.apache.zookeeper:zookeeper >------------------- [INFO] Building Apache ZooKeeper - Server 3.10.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ j",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181019Z_160999_zookeeper-server_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "161005",
+        "module": "jspwiki-main",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.apache.jspwiki:jspwiki-main >------------------- [INFO] Building Apache JSPWiki Main Jar 3.0.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]-----",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181029Z_161005_jspwiki-main_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "161180",
+        "module": "core/ri",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------------< org.jredis:jredis-core-ri >---------------------- [INFO] Building JRedis - Core - RI a.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181038Z_161180_core\\ri_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "200121",
+        "module": "constretto-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.constretto:constretto-core >------------------- [INFO] Building Constretto :: Core implementation - 3.0.0-SNAPSHOT 3.0.0-SNAPSHOT [INFO] from pom.xml [INFO] -----------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181115Z_200121_constretto-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206402",
+        "module": "httpclient5-cache",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------< org.apache.httpcomponents.client5:httpclient5-cache >--------- [INFO] Building Apache HttpClient Cache 5.7-alpha1-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181405Z_206402_httpclient5-cache_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206403",
+        "module": "jackrabbit-spi2dav",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------------< org.apache.jackrabbit:jackrabbit-spi2dav >-------------- [INFO] Building Jackrabbit SPI to WebDAV 2.23.3-beta-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181415Z_206403_jackrabbit-spi2dav_AI_ONLY_focal_maven"
+      }
+    ],
+    "FileNotFoundError": [
+      {
+        "repo_id": "184604",
+        "module": "twitter4j-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\184604\\twitter4j-core\\src\\test\\java\\twitter4j\\util\\CharacterUtilTest.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181110Z_184604_twitter4j-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206341",
+        "module": "enforcer-rules",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206341\\enforcer-rules\\src\\test\\java\\org\\apache\\maven\\plugins\\enforcer\\TestRequireNoRepositories.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181217Z_206341_enforcer-rules_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206350",
+        "module": "cayenne-server",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206350\\cayenne-server\\src\\test\\java\\org\\apache\\cayenne\\util\\UtilTest.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181228Z_206350_cayenne-server_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206427",
+        "module": "tika-parser-modules/tika-parser-microsoft-module",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206427\\tika-parser-modules\\tika-parser-microsoft-module\\src\\test\\java\\org\\apache\\tika\\parser\\microsoft\\chm\\TestChmItspHeader.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181426Z_206427_tika-parser-modules\\tika-parser-microsoft-module_AI_ONLY_focal_maven"
+      }
+    ],
+    "HTTP_BLOCKER": [
+      {
+        "repo_id": "116547",
+        "module": "cuke4duke-maven-plugin",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\116547\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< cuke4duke:cuke4duke-maven-plugin >------------------ [INFO] Building Cuke4Duke: Maven Plugin 0.4.4 [INFO] from pom.xml [INFO] ----------------------------[ m",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180806Z_116547_cuke4duke-maven-plugin_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "128294",
+        "module": "servers/media/core/server-impl",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] [ERROR] Some problems were encountered while processing the POMs: [FATAL] Non-resolvable parent POM for org.mobicents.servers.media:mms-core:2.0.0.BETA3-SNAPSHOT: The following artifacts could not be resol",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180829Z_128294_servers\\media\\core\\server-impl_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "152134",
+        "module": "koskela",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\152134\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for com.tddinaction:sourcecode:jar:0.1-SNAPSHOT [WARNING] 'dependencies.dependency.(groupId:artifactId:ty",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180919Z_152134_koskela_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206366",
+        "module": "coap",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\206366\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------------< org.apache.mina:mina-coap >---------------------- [INFO] Building Apache MINA CoAP (constrained application protocol) 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT ",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181331Z_206366_coap_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "32578",
+        "module": "service",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\32578\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for org.appfuse:appfuse-service:jar:2.1.0-M2-SNAPSHOT [WARNING] The expression ${pom.groupId} is deprecate",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181538Z_32578_service_AI_ONLY_focal_maven"
+      }
+    ],
+    "ModuleMissing": [
+      {
+        "repo_id": "190294",
+        "module": "190294",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\190294\\190294",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181110Z_190294_190294_AI_ONLY_focal_maven"
+      }
+    ],
+    "SNAPSHOT_MISSING": [
+      {
+        "repo_id": "172187",
+        "module": "home/common",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=by.bsu.onewire.common.utils.AddressUtilsAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for by.bsu.onewire:common:jar:1.0-SNAPSHOT [WARNING] 'build.plugins.plugin.version' for ",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181103Z_172187_home\\common_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206320",
+        "module": "maven-scm-providers/maven-scm-provider-accurev",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ----------< org.apache.maven.scm:maven-scm-provider-accurev >----------- [INFO] Building Maven SCM AccuRev Provider 2.0.0-M1-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181203Z_206320_maven-scm-providers\\maven-scm-provider-accurev_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206346",
+        "module": "modules/transports/core/nhttp",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.synapse:synapse-nhttp-transport >------------- [INFO] Building Apache Synapse - Non-blocking HTTP/s Transport 3.0.3-SNAPSHOT [INFO] from pom.xml [INFO] ---------------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181223Z_206346_modules\\transports\\core\\nhttp_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206444",
+        "module": "hcatalog/webhcat/svr",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] This build will only read from the build cache, since the clean lifecycle is not part of the build invocation. [INFO] [INFO] ---------------< org.apache.hive.hcatalog:hive-webhcat >---------------- [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181514Z_206444_hcatalog\\webhcat\\svr_AI_ONLY_focal_maven"
+      }
+    ],
+    "ValueError": [
+      {
+        "repo_id": "149511",
+        "module": "149511",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Could not derive class name from path: src/fitnesse/revisioncontrol/RevisionControlOperation.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180901Z_149511_149511_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "169928",
+        "module": "DVR",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Could not derive class name from path: DVR/src/com/om/example/dvr/fixtures/ProgramGuideRowParser.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181055Z_169928_DVR_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "175376",
+        "module": "175376",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Could not derive class name from path: src/sma/smython/Parser.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181109Z_175376_175376_AI_ONLY_focal_maven"
+      }
+    ]
+  },
+  "ALL": {
+    "CalledProcessError": [
+      {
+        "repo_id": "121672",
+        "module": "cascading-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.062 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180810Z_121672_cascading-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "121672",
+        "module": "cascading-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.064 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180814Z_121672_cascading-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "123235",
+        "module": "app",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.065 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180818Z_123235_app_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "123235",
+        "module": "app",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.060 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180821Z_123235_app_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "135867",
+        "module": "web-nutsNbolts",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.064 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180832Z_135867_web-nutsNbolts_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "135867",
+        "module": "web-nutsNbolts",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.064 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180836Z_135867_web-nutsNbolts_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "160996",
+        "module": "util",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.061 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180957Z_160996_util_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "160996",
+        "module": "util",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.062 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181000Z_160996_util_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "168535",
+        "module": "alterego",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=de.linsin.alterego.BotTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------------< de.linsin:alterego >------------------------- [INFO] Building alterego 0.1 [INFO] from pom.xml [INFO] --------------------------------[ jar ]------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181042Z_168535_alterego_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "205407",
+        "module": "plugins/openldap.acl.editor",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] Internal error: org.eclipse.tycho.core.osgitools.OsgiManifestParserException: Exception parsing OSGi MANIFEST D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\205407\\plugins\\openldap.acl.editor\\META-I",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181120Z_205407_plugins\\openldap.acl.editor_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "205407",
+        "module": "plugins/openldap.acl.editor",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] Internal error: org.eclipse.tycho.core.osgitools.OsgiManifestParserException: Exception parsing OSGi MANIFEST D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\205407\\plugins\\openldap.acl.editor\\META-I",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181125Z_205407_plugins\\openldap.acl.editor_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206322",
+        "module": "maven-ejb-plugin",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.maven.plugins:maven-ejb-plugin >-------------- [INFO] Building Apache Maven EJB Plugin 3.0.1-SNAPSHOT [INFO] from pom.xml [INFO] ----------------------------[ maven-plugin ]",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181207Z_206322_maven-ejb-plugin_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206322",
+        "module": "maven-ejb-plugin",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.maven.plugins:maven-ejb-plugin >-------------- [INFO] Building Apache Maven EJB Plugin 3.0.1-SNAPSHOT [INFO] from pom.xml [INFO] ----------------------------[ maven-plugin ]",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181212Z_206322_maven-ejb-plugin_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206357",
+        "module": "contrib/piggybank/java",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.065 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181228Z_206357_contrib\\piggybank\\java_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206357",
+        "module": "contrib/piggybank/java",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.065 s [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181232Z_206357_contrib\\piggybank\\java_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206364",
+        "module": "openjpa-lib",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.apache.openjpa:openjpa-lib >------------------- [INFO] Building OpenJPA Utilities Library 4.1.2-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]---",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181236Z_206364_openjpa-lib_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206364",
+        "module": "openjpa-lib",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.apache.openjpa:openjpa-lib >------------------- [INFO] Building OpenJPA Utilities Library 4.1.2-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]---",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181249Z_206364_openjpa-lib_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206398",
+        "module": "httpcore5",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.httpcomponents.core5:httpcore5 >-------------- [INFO] Building Apache HttpComponents Core HTTP/1.1 5.5-alpha1-SNAPSHOT [INFO] from pom.xml [INFO] ---------------------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181350Z_206398_httpcore5_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206418",
+        "module": "continuum-base/continuum-scm",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] [ERROR] Some problems were encountered while processing the POMs: [FATAL] Non-resolvable parent POM for org.apache.continuum:continuum:1.5-SNAPSHOT: The following artifacts could not be resolved: org.apach",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181419Z_206418_continuum-base\\continuum-scm_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206418",
+        "module": "continuum-base/continuum-scm",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] [ERROR] Some problems were encountered while processing the POMs: [FATAL] Non-resolvable parent POM for org.apache.continuum:continuum:1.5-SNAPSHOT: The following artifacts could not be resolved: org.apach",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181422Z_206418_continuum-base\\continuum-scm_AI_ONLY_focal_maven"
+      }
+    ],
+    "CompilationFailure": [
+      {
+        "repo_id": "145875",
+        "module": "dbdeploy-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=com.dbdeploy.database.QueryStatementSplitterTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------------< com.dbdeploy:dbdeploy-core >--------------------- [INFO] Building dbdeploy-core 3.0-SNAPSHOT [INFO] from pom.xml [INFO] ---------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180848Z_145875_dbdeploy-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "145875",
+        "module": "dbdeploy-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=com.dbdeploy.database.QueryStatementSplitterAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------------< com.dbdeploy:dbdeploy-core >--------------------- [INFO] Building dbdeploy-core 3.0-SNAPSHOT [INFO] from pom.xml [INFO] -------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180854Z_145875_dbdeploy-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "152812",
+        "module": "core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=de.javakaffee.web.msm.NodeIdServiceAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for de.javakaffee.msm:memcached-session-manager:jar:2.3.3-SNAPSHOT [WARNING] Reporting config",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180939Z_152812_core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "154520",
+        "module": "vraptor-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -----------------------< br.com.caelum:vraptor >------------------------ [INFO] Building vraptor 3.5.6-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]---------------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180946Z_154520_vraptor-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "154520",
+        "module": "vraptor-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -----------------------< br.com.caelum:vraptor >------------------------ [INFO] Building vraptor 3.5.6-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]---------------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180951Z_154520_vraptor-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "168535",
+        "module": "alterego",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=de.linsin.alterego.BotAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------------< de.linsin:alterego >------------------------- [INFO] Building alterego 0.1 [INFO] from pom.xml [INFO] --------------------------------[ jar ]----------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181049Z_168535_alterego_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206318",
+        "module": "fop-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.fop.afp.modca.AbstractNamedAFPObjectTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.apache.xmlgraphics:fop-core >------------------- [INFO] Building Apache FOP Core 2.11.0-SNAPSHOT [INFO] from pom.xml [INFO] -------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181130Z_206318_fop-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206318",
+        "module": "fop-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.fop.afp.modca.AbstractNamedAFPObjectAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.apache.xmlgraphics:fop-core >------------------- [INFO] Building Apache FOP Core 2.11.0-SNAPSHOT [INFO] from pom.xml [INFO] -----",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181147Z_206318_fop-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206437",
+        "module": "xdbm-partition",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.directory.server.xdbm.EmptyIndexCursorTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------< org.apache.directory.server:apacheds-xdbm-partition >--------- [INFO] Building ApacheDS Generalized (X) DBM Partition 2.0.0.AM28-SNAPSHOT [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181427Z_206437_xdbm-partition_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206437",
+        "module": "xdbm-partition",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.directory.server.xdbm.EmptyIndexCursorAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------< org.apache.directory.server:apacheds-xdbm-partition >--------- [INFO] Building ApacheDS Generalized (X) DBM Partition 2.0.0.AM28-SNAPSHOT [IN",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181452Z_206437_xdbm-partition_AI_ONLY_focal_maven"
+      }
+    ],
+    "DependencyResolutionException": [
+      {
+        "repo_id": "13899",
+        "module": "mysql/codec",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for org.adbcj:mysql-codec:jar:0.2-SNAPSHOT [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180840Z_13899_mysql\\codec_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "13899",
+        "module": "mysql/codec",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for org.adbcj:mysql-codec:jar:0.2-SNAPSHOT [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180844Z_13899_mysql\\codec_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "160999",
+        "module": "zookeeper-server",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.apache.zookeeper:zookeeper >------------------- [INFO] Building Apache ZooKeeper - Server 3.10.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ j",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181008Z_160999_zookeeper-server_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "160999",
+        "module": "zookeeper-server",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.apache.zookeeper:zookeeper >------------------- [INFO] Building Apache ZooKeeper - Server 3.10.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ j",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181019Z_160999_zookeeper-server_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "161005",
+        "module": "jspwiki-main",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.apache.jspwiki:jspwiki-main >------------------- [INFO] Building Apache JSPWiki Main Jar 3.0.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]-----",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181025Z_161005_jspwiki-main_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "161005",
+        "module": "jspwiki-main",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.apache.jspwiki:jspwiki-main >------------------- [INFO] Building Apache JSPWiki Main Jar 3.0.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]-----",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181029Z_161005_jspwiki-main_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "161180",
+        "module": "core/ri",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------------< org.jredis:jredis-core-ri >---------------------- [INFO] Building JRedis - Core - RI a.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181034Z_161180_core\\ri_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "161180",
+        "module": "core/ri",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------------< org.jredis:jredis-core-ri >---------------------- [INFO] Building JRedis - Core - RI a.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181038Z_161180_core\\ri_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "172187",
+        "module": "home/common",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=by.bsu.onewire.common.utils.AddressUtilsTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for by.bsu.onewire:common:jar:1.0-SNAPSHOT [WARNING] 'build.plugins.plugin.version' for or",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181055Z_172187_home\\common_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "200121",
+        "module": "constretto-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.constretto:constretto-core >------------------- [INFO] Building Constretto :: Core implementation - 3.0.0-SNAPSHOT 3.0.0-SNAPSHOT [INFO] from pom.xml [INFO] -----------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181110Z_200121_constretto-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "200121",
+        "module": "constretto-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.constretto:constretto-core >------------------- [INFO] Building Constretto :: Core implementation - 3.0.0-SNAPSHOT 3.0.0-SNAPSHOT [INFO] from pom.xml [INFO] -----------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181115Z_200121_constretto-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206320",
+        "module": "maven-scm-providers/maven-scm-provider-accurev",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ----------< org.apache.maven.scm:maven-scm-provider-accurev >----------- [INFO] Building Maven SCM AccuRev Provider 2.0.0-M1-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181157Z_206320_maven-scm-providers\\maven-scm-provider-accurev_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206346",
+        "module": "modules/transports/core/nhttp",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.synapse:synapse-nhttp-transport >------------- [INFO] Building Apache Synapse - Non-blocking HTTP/s Transport 3.0.3-SNAPSHOT [INFO] from pom.xml [INFO] ---------------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181218Z_206346_modules\\transports\\core\\nhttp_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206402",
+        "module": "httpclient5-cache",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------< org.apache.httpcomponents.client5:httpclient5-cache >--------- [INFO] Building Apache HttpClient Cache 5.7-alpha1-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181356Z_206402_httpclient5-cache_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206402",
+        "module": "httpclient5-cache",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------< org.apache.httpcomponents.client5:httpclient5-cache >--------- [INFO] Building Apache HttpClient Cache 5.7-alpha1-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181405Z_206402_httpclient5-cache_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206403",
+        "module": "jackrabbit-spi2dav",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------------< org.apache.jackrabbit:jackrabbit-spi2dav >-------------- [INFO] Building Jackrabbit SPI to WebDAV 2.23.3-beta-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181410Z_206403_jackrabbit-spi2dav_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206403",
+        "module": "jackrabbit-spi2dav",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------------< org.apache.jackrabbit:jackrabbit-spi2dav >-------------- [INFO] Building Jackrabbit SPI to WebDAV 2.23.3-beta-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181415Z_206403_jackrabbit-spi2dav_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206444",
+        "module": "hcatalog/webhcat/svr",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] This build will only read from the build cache, since the clean lifecycle is not part of the build invocation. [INFO] [INFO] ---------------< org.apache.hive.hcatalog:hive-webhcat >---------------- [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181503Z_206444_hcatalog\\webhcat\\svr_HUMAN_focal_maven"
+      }
+    ],
+    "FileNotFoundError": [
+      {
+        "repo_id": "184604",
+        "module": "twitter4j-core",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\184604\\twitter4j-core\\src\\test\\java\\twitter4j\\util\\CharacterUtilTest.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181109Z_184604_twitter4j-core_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "184604",
+        "module": "twitter4j-core",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\184604\\twitter4j-core\\src\\test\\java\\twitter4j\\util\\CharacterUtilTest.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181110Z_184604_twitter4j-core_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206341",
+        "module": "enforcer-rules",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206341\\enforcer-rules\\src\\test\\java\\org\\apache\\maven\\plugins\\enforcer\\TestRequireNoRepositories.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181217Z_206341_enforcer-rules_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206341",
+        "module": "enforcer-rules",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206341\\enforcer-rules\\src\\test\\java\\org\\apache\\maven\\plugins\\enforcer\\TestRequireNoRepositories.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181217Z_206341_enforcer-rules_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206350",
+        "module": "cayenne-server",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206350\\cayenne-server\\src\\test\\java\\org\\apache\\cayenne\\util\\UtilTest.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181228Z_206350_cayenne-server_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206427",
+        "module": "tika-parser-modules/tika-parser-microsoft-module",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206427\\tika-parser-modules\\tika-parser-microsoft-module\\src\\test\\java\\org\\apache\\tika\\parser\\microsoft\\chm\\TestChmItspHeader.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181426Z_206427_tika-parser-modules\\tika-parser-microsoft-module_AI_ONLY_focal_maven"
+      }
+    ],
+    "HTTP_BLOCKER": [
+      {
+        "repo_id": "116547",
+        "module": "cuke4duke-maven-plugin",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\116547\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< cuke4duke:cuke4duke-maven-plugin >------------------ [INFO] Building Cuke4Duke: Maven Plugin 0.4.4 [INFO] from pom.xml [INFO] ----------------------------[ m",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180758Z_116547_cuke4duke-maven-plugin_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "116547",
+        "module": "cuke4duke-maven-plugin",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\116547\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< cuke4duke:cuke4duke-maven-plugin >------------------ [INFO] Building Cuke4Duke: Maven Plugin 0.4.4 [INFO] from pom.xml [INFO] ----------------------------[ m",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180806Z_116547_cuke4duke-maven-plugin_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "128294",
+        "module": "servers/media/core/server-impl",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] [ERROR] Some problems were encountered while processing the POMs: [FATAL] Non-resolvable parent POM for org.mobicents.servers.media:mms-core:2.0.0.BETA3-SNAPSHOT: The following artifacts could not be resol",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180825Z_128294_servers\\media\\core\\server-impl_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "128294",
+        "module": "servers/media/core/server-impl",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] [ERROR] Some problems were encountered while processing the POMs: [FATAL] Non-resolvable parent POM for org.mobicents.servers.media:mms-core:2.0.0.BETA3-SNAPSHOT: The following artifacts could not be resol",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180829Z_128294_servers\\media\\core\\server-impl_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "152134",
+        "module": "koskela",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\152134\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for com.tddinaction:sourcecode:jar:0.1-SNAPSHOT [WARNING] 'dependencies.dependency.(groupId:artifactId:ty",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180906Z_152134_koskela_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "152134",
+        "module": "koskela",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\152134\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for com.tddinaction:sourcecode:jar:0.1-SNAPSHOT [WARNING] 'dependencies.dependency.(groupId:artifactId:ty",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180919Z_152134_koskela_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206366",
+        "module": "coap",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\206366\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] Artifact org.apache:apache:pom:9 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181302Z_206366_coap_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206366",
+        "module": "coap",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\206366\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------------< org.apache.mina:mina-coap >---------------------- [INFO] Building Apache MINA CoAP (constrained application protocol) 3.0.0-M3-SNAPSHOT 3.0.0-M3-SNAPSHOT ",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181331Z_206366_coap_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "32578",
+        "module": "service",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\32578\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for org.appfuse:appfuse-service:jar:2.1.0-M2-SNAPSHOT [WARNING] The expression ${pom.groupId} is deprecate",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181524Z_32578_service_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "32578",
+        "module": "service",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\32578\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for org.appfuse:appfuse-service:jar:2.1.0-M2-SNAPSHOT [WARNING] The expression ${pom.groupId} is deprecate",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181538Z_32578_service_AI_ONLY_focal_maven"
+      }
+    ],
+    "ModuleMissing": [
+      {
+        "repo_id": "149511",
+        "module": "149511",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\149511\\149511",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180901Z_149511_149511_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "175376",
+        "module": "175376",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\175376\\175376",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181109Z_175376_175376_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "190294",
+        "module": "190294",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\190294\\190294",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181110Z_190294_190294_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "190294",
+        "module": "190294",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\190294\\190294",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181110Z_190294_190294_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206350",
+        "module": "cayenne-server",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206350\\cayenne-server",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181228Z_206350_cayenne-server_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "206427",
+        "module": "tika-parser-modules/tika-parser-microsoft-module",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206427\\tika-parser-modules\\tika-parser-microsoft-module",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181426Z_206427_tika-parser-modules\\tika-parser-microsoft-module_HUMAN_focal_maven"
+      }
+    ],
+    "SNAPSHOT_MISSING": [
+      {
+        "repo_id": "172187",
+        "module": "home/common",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=by.bsu.onewire.common.utils.AddressUtilsAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for by.bsu.onewire:common:jar:1.0-SNAPSHOT [WARNING] 'build.plugins.plugin.version' for ",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181103Z_172187_home\\common_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206320",
+        "module": "maven-scm-providers/maven-scm-provider-accurev",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ----------< org.apache.maven.scm:maven-scm-provider-accurev >----------- [INFO] Building Maven SCM AccuRev Provider 2.0.0-M1-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181203Z_206320_maven-scm-providers\\maven-scm-provider-accurev_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206346",
+        "module": "modules/transports/core/nhttp",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.synapse:synapse-nhttp-transport >------------- [INFO] Building Apache Synapse - Non-blocking HTTP/s Transport 3.0.3-SNAPSHOT [INFO] from pom.xml [INFO] ---------------------",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181223Z_206346_modules\\transports\\core\\nhttp_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "206444",
+        "module": "hcatalog/webhcat/svr",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "compile",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] This build will only read from the build cache, since the clean lifecycle is not part of the build invocation. [INFO] [INFO] ---------------< org.apache.hive.hcatalog:hive-webhcat >---------------- [INFO",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181514Z_206444_hcatalog\\webhcat\\svr_AI_ONLY_focal_maven"
+      }
+    ],
+    "SurefireBooterForkException": [
+      {
+        "repo_id": "206398",
+        "module": "httpcore5",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "test",
+        "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.hc.core5.util.TestTimeoutValueException', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.httpcomponents.core5:httpcore5 >-------------- [INFO] Building Apache HttpComponents Core HTTP/1.1 5.5-alpha1-SNAPSHOT [INFO] from",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181337Z_206398_httpcore5_HUMAN_focal_maven"
+      }
+    ],
+    "ValueError": [
+      {
+        "repo_id": "149511",
+        "module": "149511",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Could not derive class name from path: src/fitnesse/revisioncontrol/RevisionControlOperation.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180901Z_149511_149511_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "169928",
+        "module": "DVR",
+        "condition": "HUMAN",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Could not derive class name from path: DVR/src/com/om/example/dvr/fixtures/ProgramGuideRowParser.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181055Z_169928_DVR_HUMAN_focal_maven"
+      },
+      {
+        "repo_id": "169928",
+        "module": "DVR",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Could not derive class name from path: DVR/src/com/om/example/dvr/fixtures/ProgramGuideRowParser.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181055Z_169928_DVR_AI_ONLY_focal_maven"
+      },
+      {
+        "repo_id": "175376",
+        "module": "175376",
+        "condition": "AI_ONLY",
+        "status": "FAILED",
+        "phase": "clone",
+        "error_message": "Could not derive class name from path: src/sma/smython/Parser.java",
+        "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181109Z_175376_175376_AI_ONLY_focal_maven"
+      }
+    ]
+  }
+}

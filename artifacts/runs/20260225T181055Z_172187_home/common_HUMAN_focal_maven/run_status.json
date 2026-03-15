@@ -1,0 +1,57 @@
+{
+  "run_id": "20260225T181055Z_172187_home/common_HUMAN_focal_maven",
+  "repo_id": "172187",
+  "module": "home/common",
+  "condition": "HUMAN",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": true,
+  "started_at_utc": "2026-02-25T18:10:55.951845+00:00",
+  "ended_at_utc": "2026-02-25T18:11:03.080943+00:00",
+  "success": false,
+  "status": "FAILED",
+  "phase": "test",
+  "exit_code": 1,
+  "error_type": "DependencyResolutionException",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=by.bsu.onewire.common.utils.AddressUtilsTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for by.bsu.onewire:common:jar:1.0-SNAPSHOT [WARNING] 'build.plugins.plugin.version' for or",
+  "retries": 0,
+  "fixed_by": "NONE",
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\172187\\home\\common",
+      "returncode": 0,
+      "duration_seconds": 2.875,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181055Z_172187_home\\common_HUMAN_focal_maven\\00_compile.log"
+    },
+    {
+      "step": "test",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-Dtest=by.bsu.onewire.common.utils.AddressUtilsTest",
+        "test"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\172187\\home\\common",
+      "returncode": 1,
+      "duration_seconds": 2.402,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T181055Z_172187_home\\common_HUMAN_focal_maven\\01_test.log"
+    }
+  ],
+  "selected_test_classes": [
+    "by.bsu.onewire.common.utils.AddressUtilsTest"
+  ],
+  "target_classes": [],
+  "focal_class": "by.bsu.onewire.common.utils.AddressUtils",
+  "tests_found": "",
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\172187_0.json",
+  "error": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=by.bsu.onewire.common.utils.AddressUtilsTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects...\n[WARNING] \n[WARNING] Some problems were encountered while building the effective model for by.bsu.onewire:common:jar:1.0-SNAPSHOT\n[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ by.bsu:onewire:1.0-SNAPSHOT, D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\172187\\home\\pom.xml, line 26, column 15\n[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ by.bsu:onewire:1.0-SNAPSHOT, D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\172187\\home\\pom.xml, line 41, column 15\n[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-resources-plugin is missing. @ by.bsu:onewire:1.0-SNAPSHOT, D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\172187\\home\\pom.xml, line 50, column 15\n[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-eclipse-plugin is missing. @ by.bsu:onewire:1.0-SNAPSHOT, D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\172187\\home\\pom.xml, line 34, column 15\n[WARNING] \n[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.\n[WARNING] \n[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.\n[WARNING] \n[INFO] \n[INFO] -----------------------< by.bsu.onewire:common >------------------------\n[INFO] Building common 1.0-SNAPSHOT\n[INFO]   from pom.xml\n[INFO] --------------------------------[ jar ]---------------------------------\n[WARNING] The POM for com.dalsemi.onewire:owapi:jar:1.10 is missing, no dependency information available\nDownloading from central: https://repo1.maven.org/maven2/com/dalsemi/onewire/owapi/1.10/owapi-1.10.jar\n[INFO] ------------------------------------------------------------------------\n[INFO] BUILD FAILURE\n[INFO] ------------------------------------------------------------------------\n[INFO] Total time:  0.919 s\n[INFO] Finished at: 2026-02-25T13:11:03-05:00\n[INFO] ------------------------------------------------------------------------\n[ERROR] Failed to execute goal on project common: Could not resolve dependencies for project by.bsu.onewire:common:jar:1.0-SNAPSHOT\n[ERROR] dependency: com.dalsemi.onewire:owapi:jar:1.10 (test)\n[ERROR] \tCould not find artifact com.dalsemi.onewire:owapi:jar:1.10 in central (https://repo1.maven.org/maven2)\n[ERROR] \n[ERROR] -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException\n"
+}

@@ -6,14 +6,89 @@
   "pom_path": null,
   "backup_path": null,
   "changes": [
-    "Ensured Maven settings.xml with HTTPS mirrors",
     "Using build tool: maven",
-    "Pipeline failed: No AI test class found for focal class EmptyIndexCursor in D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java",
-    "Traceback (most recent call last):\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\run_mutation_pipeline.py\", line 800, in main\n    selected_tests, focal_class = resolve_focal_selection(module_dir, args.module, mapping, args.condition)\n                                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\run_mutation_pipeline.py\", line 160, in resolve_focal_selection\n    raise FileNotFoundError(\n        f\"No AI test class found for focal class {focal_identifier} in {module_dir / 'src/test/java'}\"\n    )\nFileNotFoundError: No AI test class found for focal class EmptyIndexCursor in D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\n"
+    "Disabled 28 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.apache.directory.server.xdbm.EmptyIndexCursorAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003505Z_206437_xdbm-partition_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=AI_TEST_SIMPLIFY",
+    "Pipeline attempt failed (no further retry): phase=test error_type=COMPILATION",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\AbstractIndexCursorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\EmptyIndexCursorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\impl\\avl\\AvlPartitionTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\impl\\avl\\AvlRdnIndexTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\impl\\avl\\AvlTableTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\impl\\avl\\TableData.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\IndexEntryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\IndexNotFoundExceptionTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\MockPartitionReadTxn.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\MockPartitionWriteTxn.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\ParentIdAndRdnTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\PartitionTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\AbstractCursorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\AndCursorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\BogusSyntax.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\EqualityTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\FilterNormalizingVisitor.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\GreaterEqNotIndexedTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\GreaterEqTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\LessEqTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\NestedFilterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\NotCursorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\OrCursorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\PresenceTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\search\\impl\\SubstringTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\SingletonIndexCursorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\StoreUtils.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206437\\xdbm-partition\\src\\test\\java\\org\\apache\\directory\\server\\xdbm\\TupleTest.java"
   ],
   "removed_dependencies": [],
-  "installed_jars": [],
-  "commands": [],
-  "checksums": {},
-  "generated_at_utc": "2026-02-25T02:37:44.500628+00:00"
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-Dtest=org.apache.directory.server.xdbm.EmptyIndexCursorAiTest",
+      "test"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-02-26T00:35:05.973087+00:00",
+  "ai_compatibility_patches": [
+    {
+      "kind": "AI_TEST_SIMPLIFY",
+      "condition": "AI_ONLY",
+      "timestamp_utc": "2026-02-26T00:35:20Z"
+    }
+  ]
 }

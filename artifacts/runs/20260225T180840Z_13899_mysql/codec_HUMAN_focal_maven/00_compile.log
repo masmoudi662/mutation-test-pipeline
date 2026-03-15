@@ -1,0 +1,45 @@
+COMMAND: mvn.cmd -s D:\Khedma\Mr wiem\mutation-test-pipeline\.mvn\settings.xml -DskipTests compile
+
+STDOUT:
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.adbcj:mysql-codec:jar:0.2-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ org.adbcj:adbcj:0.2-SNAPSHOT, D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\13899\pom.xml, line 75, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ org.adbcj:adbcj:0.2-SNAPSHOT, D:\Khedma\Mr wiem\mutation-test-pipeline\target-repos\13899\pom.xml, line 99, column 12
+[WARNING] The expression ${pom.version} is deprecated. Please use ${project.version} instead.
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -----------------------< org.adbcj:mysql-codec >------------------------
+[INFO] Building ADBCJ - MySQL Codec 0.2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Ignoring incompatible plugin version 4.0.0-beta-1: 
+The plugin org.apache.maven.plugins:maven-source-plugin:4.0.0-beta-1 has unmet prerequisites: 
+	Required Maven version 4.0.0-beta-3 is not met by current version 3.9.12
+[INFO] Latest version of plugin org.apache.maven.plugins:maven-source-plugin failed compatibility check
+[INFO] Looking for compatible RELEASE version of plugin org.apache.maven.plugins:maven-source-plugin
+[INFO] Selected plugin org.apache.maven.plugins:maven-source-plugin:3.4.0
+[WARNING] The POM for org.adbcj:adbcj-api:jar:0.2-SNAPSHOT is missing, no dependency information available
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.237 s
+[INFO] Finished at: 2026-02-25T13:08:43-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project mysql-codec: Could not resolve dependencies for project org.adbcj:mysql-codec:jar:0.2-SNAPSHOT
+[ERROR] dependency: org.adbcj:adbcj-api:jar:0.2-SNAPSHOT (compile)
+[ERROR] 	Could not find artifact org.adbcj:adbcj-api:jar:0.2-SNAPSHOT
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+
+STDERR:

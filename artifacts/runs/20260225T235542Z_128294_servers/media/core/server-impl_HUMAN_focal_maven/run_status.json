@@ -1,0 +1,48 @@
+{
+  "run_id": "20260225T235542Z_128294_servers/media/core/server-impl_HUMAN_focal_maven",
+  "repo_id": "128294",
+  "module": "servers/media/core/server-impl",
+  "condition": "HUMAN",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": true,
+  "started_at_utc": "2026-02-25T23:55:42.929909+00:00",
+  "ended_at_utc": "2026-02-25T23:55:46.147536+00:00",
+  "success": false,
+  "status": "FAIL",
+  "phase": "compile",
+  "exit_code": 1,
+  "error_type": "HTTP_BLOCKER",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [ERROR] [ERROR] Some problems were encountered while processing the POMs: [FATAL] Non-resolvable parent POM for org.mobicents.servers.media:mms-core:2.0.0.BETA3-SNAPSHOT: The following artifacts could not be resol",
+  "retries": 0,
+  "fixed_by": "NONE",
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\128294\\servers\\media\\core\\server-impl",
+      "returncode": 1,
+      "duration_seconds": 1.451,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T235542Z_128294_servers\\media\\core\\server-impl_HUMAN_focal_maven\\00_compile.log"
+    }
+  ],
+  "selected_test_classes": [
+    "org.mobicents.media.server.impl.naming.NumericRangeTest"
+  ],
+  "target_classes": [],
+  "focal_class": "org.mobicents.media.server.impl.naming.NumericRange",
+  "tests_found": "",
+  "pit_target_classes": "",
+  "pit_version": "1.6.9",
+  "pit_status": "",
+  "pit_log_file": "",
+  "pit_config": {},
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\128294_1.json",
+  "error": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects...\n[ERROR] [ERROR] Some problems were encountered while processing the POMs:\n[FATAL] Non-resolvable parent POM for org.mobicents.servers.media:mms-core:2.0.0.BETA3-SNAPSHOT: The following artifacts could not be resolved: org.mobicents:mobicents:pom:12 (absent): Could not transfer artifact org.mobicents:mobicents:pom:12 from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [maven (http://repo1.maven.org/maven2, default, releases), jboss (http://repository.jboss.org/maven2, default, releases), jboss-snapshots (http://snapshots.jboss.org/maven2, default, snapshots)] and 'parent.relativePath' points at wrong local POM @ org.mobicents.servers.media:mms-core:2.0.0.BETA3-SNAPSHOT, D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\128294\\servers\\media\\core\\pom.xml, line 5, column 10\n @ \n[ERROR] The build could not read 1 project -> [Help 1]\n[ERROR]   \n[ERROR]   The project org.mobicents.servers.media:mms-impl:2.0.0.BETA3-SNAPSHOT (D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\128294\\servers\\media\\core\\server-impl\\pom.xml) has 1 error\n[ERROR]     Non-resolvable parent POM for org.mobicents.servers.media:mms-core:2.0.0.BETA3-SNAPSHOT: The following artifacts could not be resolved: org.mobicents:mobicents:pom:12 (absent): Could not transfer artifact org.mobicents:mobicents:pom:12 from/to maven-default-http-blocker (http://0.0.0.0/): Blocked mirror for repositories: [maven (http://repo1.maven.org/maven2, default, releases), jboss (http://repository.jboss.org/maven2, default, releases), jboss-snapshots (http://snapshots.jboss.org/maven2, default, snapshots)] and 'parent.relativePath' points at wrong local POM @ org.mobicents.servers.media:mms-core:2.0.0.BETA3-SNAPSHOT, D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\128294\\servers\\media\\core\\pom.xml, line 5, column 10 -> [Help 2]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException\n[ERROR] [Help 2] http://cwiki.apache.org/confluence/display/MAVEN/UnresolvableModelException\n"
+}

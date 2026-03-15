@@ -1,0 +1,43 @@
+{
+  "run_id": "20260225T190632Z_161005_jspwiki-main_HUMAN_focal_maven",
+  "repo_id": "161005",
+  "module": "jspwiki-main",
+  "condition": "HUMAN",
+  "test_scope": "focal",
+  "build_tool": "maven",
+  "run_pit": true,
+  "started_at_utc": "2026-02-25T19:06:32.484521+00:00",
+  "ended_at_utc": "2026-02-25T19:06:36.247805+00:00",
+  "success": false,
+  "status": "FAIL",
+  "phase": "compile",
+  "exit_code": 1,
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.apache.jspwiki:jspwiki-main >------------------- [INFO] Building Apache JSPWiki Main Jar 3.0.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]-----",
+  "retries": 0,
+  "fixed_by": "NONE",
+  "commands": [
+    {
+      "step": "compile",
+      "cmd": [
+        "mvn.cmd",
+        "-s",
+        "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161005\\jspwiki-main",
+      "returncode": 1,
+      "duration_seconds": 1.975,
+      "log_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T190632Z_161005_jspwiki-main_HUMAN_focal_maven\\00_compile.log"
+    }
+  ],
+  "selected_test_classes": [
+    "org.apache.wiki.ui.RedirectCommandTest"
+  ],
+  "target_classes": [],
+  "focal_class": "org.apache.wiki.ui.RedirectCommand",
+  "tests_found": "",
+  "mapping_json": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\161005_127.json",
+  "error": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects...\n[INFO] \n[INFO] ------------------< org.apache.jspwiki:jspwiki-main >-------------------\n[INFO] Building Apache JSPWiki Main Jar 3.0.0-SNAPSHOT\n[INFO]   from pom.xml\n[INFO] --------------------------------[ jar ]---------------------------------\n[WARNING] The POM for org.apache.jspwiki:jspwiki-util:jar:3.0.0-SNAPSHOT is missing, no dependency information available\n[WARNING] The POM for org.apache.jspwiki:jspwiki-event:jar:3.0.0-SNAPSHOT is missing, no dependency information available\n[WARNING] The POM for org.apache.jspwiki:jspwiki-api:jar:3.0.0-SNAPSHOT is missing, no dependency information available\n[WARNING] The POM for org.apache.jspwiki:jspwiki-cache:jar:3.0.0-SNAPSHOT is missing, no dependency information available\n[WARNING] The POM for org.apache.jspwiki:jspwiki-http:jar:3.0.0-SNAPSHOT is missing, no dependency information available\n[WARNING] The POM for org.apache.jspwiki:jspwiki-wysiwyg:jar:3.0.0-SNAPSHOT is missing, no dependency information available\n[INFO] ------------------------------------------------------------------------\n[INFO] BUILD FAILURE\n[INFO] ------------------------------------------------------------------------\n[INFO] Total time:  0.561 s\n[INFO] Finished at: 2026-02-25T14:06:36-05:00\n[INFO] ------------------------------------------------------------------------\n[ERROR] Failed to execute goal on project jspwiki-main: Could not resolve dependencies for project org.apache.jspwiki:jspwiki-main:jar:3.0.0-SNAPSHOT\n[ERROR] dependency: org.apache.jspwiki:jspwiki-util:jar:3.0.0-SNAPSHOT (compile)\n[ERROR] \tCould not find artifact org.apache.jspwiki:jspwiki-util:jar:3.0.0-SNAPSHOT\n[ERROR] dependency: org.apache.jspwiki:jspwiki-event:jar:3.0.0-SNAPSHOT (compile)\n[ERROR] \tCould not find artifact org.apache.jspwiki:jspwiki-event:jar:3.0.0-SNAPSHOT\n[ERROR] dependency: org.apache.jspwiki:jspwiki-api:jar:3.0.0-SNAPSHOT (compile)\n[ERROR] \tCould not find artifact org.apache.jspwiki:jspwiki-api:jar:3.0.0-SNAPSHOT\n[ERROR] dependency: org.apache.jspwiki:jspwiki-cache:jar:3.0.0-SNAPSHOT (compile)\n[ERROR] \tCould not find artifact org.apache.jspwiki:jspwiki-cache:jar:3.0.0-SNAPSHOT\n[ERROR] dependency: org.apache.jspwiki:jspwiki-http:jar:3.0.0-SNAPSHOT (compile)\n[ERROR] \tCould not find artifact org.apache.jspwiki:jspwiki-http:jar:3.0.0-SNAPSHOT\n[ERROR] dependency: org.apache.jspwiki:jspwiki-wysiwyg:jar:3.0.0-SNAPSHOT (compile)\n[ERROR] \tCould not find artifact org.apache.jspwiki:jspwiki-wysiwyg:jar:3.0.0-SNAPSHOT\n[ERROR] \n[ERROR] -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException\n"
+}
