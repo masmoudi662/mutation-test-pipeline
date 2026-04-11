@@ -1,0 +1,8 @@
+
+classes2test/classes2test-main/dataset/
+classes2test/classes2test-main/output/
+classes2test/classes2test-main/output.zip
+classes2test/classes2test-main.zip
+target-repos/
+logs/runs/
+__pycache__/

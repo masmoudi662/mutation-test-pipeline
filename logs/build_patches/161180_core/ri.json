@@ -1,0 +1,68 @@
+{
+  "repo_id": "161180",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Disabled 16 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.jredis.ri.alphazero.support.ConvertAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002643Z_161180_core\\ri_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=DEP_RESOLUTION",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\adhoc\\AdHocTestChunkPipeline.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\adhoc\\AdHocTestInfo.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\adhoc\\AdHocTestNoConnection.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\alphazero\\ConcurrentJRedisProviderTestsBase.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\alphazero\\JRedisAsyncClientTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\alphazero\\JRedisChunkedPipelineClientTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\alphazero\\JRedisClientTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\alphazero\\JRedisFutureProviderTestsBase.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\alphazero\\JRedisPipelineServiceTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\alphazero\\JRedisPipelineTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\alphazero\\JRedisProviderTestsBase.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\alphazero\\JRedisServiceTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\alphazero\\support\\ConvertTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\alphazero\\support\\GZipTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\JRedisTestSuiteBase.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\161180\\core\\ri\\src\\test\\java\\org\\jredis\\ri\\ProviderTestBase.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-02-26T00:26:43.275278+00:00"
+}

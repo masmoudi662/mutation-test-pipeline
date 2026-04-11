@@ -1,0 +1,31 @@
+{
+  "repo_id": "206364",
+  "module": "openjpa-lib",
+  "condition": "HUMAN",
+  "commit_hash": "81942b7aa9030394e01ef6cecf22cf9913c9191c",
+  "focal_class": "org.apache.openjpa.lib.util.StringUtil",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "OTHER",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< org.apache.openjpa:openjpa-lib >------------------- [INFO] Building OpenJPA Utilities Library 4.1.2-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]---",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003022Z_206364_openjpa-lib_HUMAN_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003022Z_206364_openjpa-lib_HUMAN_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": [
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003022Z_206364_openjpa-lib_HUMAN_focal_maven\\00_compile.log"
+    ]
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:30:42.013194+00:00"
+}

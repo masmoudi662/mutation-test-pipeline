@@ -1,8 +1,0 @@
-{
-  "json_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\184604_0.json",
-  "basename": "184604_0",
-  "error_type": "FileNotFoundError",
-  "error_message": "Unable to resolve focal path twitter4j-core/src/main/java/twitter4j/util/CharacterUtil.java inside D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\184604",
-  "traceback": "Traceback (most recent call last):\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generate_tests.py\", line 319, in main\n    focal_abs_path = resolve_focal_path(repo_dir, focal_rel_path)\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generate_tests.py\", line 240, in resolve_focal_path\n    raise FileNotFoundError(f\"Unable to resolve focal path {focal_rel_path} inside {repo_dir}\")\nFileNotFoundError: Unable to resolve focal path twitter4j-core/src/main/java/twitter4j/util/CharacterUtil.java inside D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\184604\n",
-  "timestamp_utc": "2026-02-24T21:38:47.309157+00:00"
-}

@@ -1,0 +1,29 @@
+{
+  "repo_id": "175376",
+  "module": "175376",
+  "condition": "AI_ONLY",
+  "commit_hash": "8abb0fe95f7de4c5d8dea77cfdbd377d41f0b7e4",
+  "focal_class": "sma.smython.Parser",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "OTHER",
+  "error_message": "Could not derive class name from path: src/sma/smython/Parser.java",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002712Z_175376_175376_AI_ONLY_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002712Z_175376_175376_AI_ONLY_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": []
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:27:12.906773+00:00"
+}

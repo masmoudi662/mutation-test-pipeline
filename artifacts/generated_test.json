@@ -1,4 +1,0 @@
-{
-  "fileName": "SmokeGeneratedTest.java",
-  "content": "import org.junit.Test;\nimport static org.junit.Assert.*;\n\npublic class SmokeGeneratedTest {\n\n  @Test\n  public void smoke() {\n    assertTrue(true);\n  }\n}\n"
-}

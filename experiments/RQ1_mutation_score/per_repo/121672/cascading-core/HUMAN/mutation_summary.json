@@ -1,0 +1,31 @@
+{
+  "repo_id": "121672",
+  "module": "cascading-core",
+  "condition": "HUMAN",
+  "commit_hash": "e782648e4a4f75cafedf43d3316a909b7246823d",
+  "focal_class": "cascading.management.annotation.URISanitizer",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "OTHER",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.063 s [INFO",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002310Z_121672_cascading-core_HUMAN_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002310Z_121672_cascading-core_HUMAN_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": [
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002310Z_121672_cascading-core_HUMAN_focal_maven\\00_compile.log"
+    ]
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:23:13.810327+00:00"
+}

@@ -1,7 +1,0 @@
-{
-  "mutations_xml": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T180456Z_103035_red5_base_HUMAN_focal_maven\\pit-reports\\202602251305\\mutations.xml",
-  "total_mutations": 96,
-  "killed_mutations": 25,
-  "survived_mutations": 1,
-  "mutation_score": 0.2604166666666667
-}

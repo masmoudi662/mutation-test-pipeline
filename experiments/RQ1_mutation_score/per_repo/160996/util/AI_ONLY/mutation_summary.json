@@ -1,0 +1,31 @@
+{
+  "repo_id": "160996",
+  "module": "util",
+  "condition": "AI_ONLY",
+  "commit_hash": "5a875755019a7f342a07c8c368a50e3efb6ae68c",
+  "focal_class": "org.apache.etch.util.core.nio.History",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "OTHER",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] ------------------------------------------------------------------------ [INFO] BUILD FAILURE [INFO] ------------------------------------------------------------------------ [INFO] Total time: 0.062 s [INFO",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002555Z_160996_util_AI_ONLY_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002555Z_160996_util_AI_ONLY_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": [
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002555Z_160996_util_AI_ONLY_focal_maven\\00_compile.log"
+    ]
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:25:58.887937+00:00"
+}

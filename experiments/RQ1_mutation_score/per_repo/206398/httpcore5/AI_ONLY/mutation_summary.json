@@ -1,0 +1,31 @@
+{
+  "repo_id": "206398",
+  "module": "httpcore5",
+  "condition": "AI_ONLY",
+  "commit_hash": "ea32cf810fe541c885132f24b5219715b6e5ff39",
+  "focal_class": "org.apache.hc.core5.util.TimeoutValueException",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "OTHER",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------< org.apache.httpcomponents.core5:httpcore5 >-------------- [INFO] Building Apache HttpComponents Core HTTP/1.1 5.5-alpha1-SNAPSHOT [INFO] from pom.xml [INFO] ---------------------------",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003313Z_206398_httpcore5_AI_ONLY_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003313Z_206398_httpcore5_AI_ONLY_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": [
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003313Z_206398_httpcore5_AI_ONLY_focal_maven\\00_compile.log"
+    ]
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:33:23.805830+00:00"
+}

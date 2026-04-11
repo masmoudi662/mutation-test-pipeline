@@ -1,0 +1,29 @@
+{
+  "repo_id": "149511",
+  "module": "149511",
+  "condition": "HUMAN",
+  "commit_hash": "d39ea64976393fdf4b076e2208a5b5d67cefa03c",
+  "focal_class": "fitnesse.revisioncontrol.RevisionControlOperation",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "MODULE_MISSING",
+  "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\149511\\149511",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002401Z_149511_149511_HUMAN_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002401Z_149511_149511_HUMAN_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": []
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:24:01.843075+00:00"
+}

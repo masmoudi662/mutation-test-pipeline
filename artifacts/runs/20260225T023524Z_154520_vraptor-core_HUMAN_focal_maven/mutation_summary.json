@@ -1,7 +1,0 @@
-{
-  "mutations_xml": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260225T023524Z_154520_vraptor-core_HUMAN_focal_maven\\pit-reports\\202602242135\\mutations.xml",
-  "total_mutations": 3,
-  "killed_mutations": 3,
-  "survived_mutations": 0,
-  "mutation_score": 1.0
-}

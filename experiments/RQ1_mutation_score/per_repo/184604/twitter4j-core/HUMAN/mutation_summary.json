@@ -1,0 +1,29 @@
+{
+  "repo_id": "184604",
+  "module": "twitter4j-core",
+  "condition": "HUMAN",
+  "commit_hash": "7a3d72f9708a77a60d522efc1cacf4d0aaa9efc1",
+  "focal_class": "twitter4j.util.CharacterUtil",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "FILE_NOT_FOUND",
+  "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\184604\\twitter4j-core\\src\\test\\java\\twitter4j\\util\\CharacterUtilTest.java",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002713Z_184604_twitter4j-core_HUMAN_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002713Z_184604_twitter4j-core_HUMAN_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": []
+  },
+  "applied_fixes": [],
+  "timestamp": "2026-02-26T00:27:13.424168+00:00"
+}

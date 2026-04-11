@@ -1,0 +1,8 @@
+{
+  "json_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\assertion_dataset\\206320_20.json",
+  "basename": "206320_20",
+  "error_type": "FileNotFoundError",
+  "error_message": "Unable to resolve focal path maven-scm-providers/maven-scm-provider-accurev/src/main/java/org/apache/maven/scm/provider/accurev/command/login/AccuRevLoginCommand.java inside D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generate_tests.py\", line 319, in main\n    focal_abs_path = resolve_focal_path(repo_dir, focal_rel_path)\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generate_tests.py\", line 240, in resolve_focal_path\n    raise FileNotFoundError(f\"Unable to resolve focal path {focal_rel_path} inside {repo_dir}\")\nFileNotFoundError: Unable to resolve focal path maven-scm-providers/maven-scm-provider-accurev/src/main/java/org/apache/maven/scm/provider/accurev/command/login/AccuRevLoginCommand.java inside D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\n",
+  "timestamp_utc": "2026-02-24T23:45:45.427174+00:00"
+}

@@ -1,0 +1,95 @@
+{
+  "repo_id": "206364",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Disabled 43 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.apache.openjpa.lib.util.StringUtilAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003042Z_206364_openjpa-lib_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\conf\\test\\ConfigurationTestProductDerivation.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\conf\\test\\TestConfigurationImpl.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\conf\\test\\TestPluginValue.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\conf\\TestConfigurationProviderPrefixes.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\conf\\TestConfigurations.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\conf\\TestValue.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\conf\\TestXMLCaseConversions.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\graph\\TestDepthFirstAnalysis.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\graph\\TestGraph.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\identifier\\DefaultTestIdRule.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\identifier\\IdConfigurationTestImpl.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\identifier\\NewIdConfigurationTestImpl.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\identifier\\TestIdentifiers.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\log\\JULLogFactoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\rop\\ResultListTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\rop\\TestEagerResultList.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\rop\\TestLazyForwardResultList.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\rop\\TestListResultList.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\rop\\TestMergedResultObjectProvider.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\rop\\TestOrderedMergedResultObjectProvider.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\rop\\TestRandomAccessResultList.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\rop\\TestRangeResultObjectProvider.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\rop\\TestSimpleResultList.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\rop\\TestSoftRandomAccessResultList.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\rop\\TestWindowResultList.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\test\\AbstractTestCase.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\ClassUtilTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\git\\TestGitUtils.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\StringUtilTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\TestAbstractEventManager.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\testlocalizer\\LocalizerTestHelper.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\TestLocalizer.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\TestMultiClassLoader.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\TestOptions.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\TestParameterTemplate.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\TestPropertiesParser.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\TestReferenceSet.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\TestSimpleRegex.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\TestTemporaryClassLoader.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\TestTypedProperties.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\util\\TestUUIDGenerator.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\xml\\TestDocTypeReader.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206364\\openjpa-lib\\src\\test\\java\\org\\apache\\openjpa\\lib\\xml\\TestXMLWriter.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-02-26T00:30:42.589393+00:00"
+}

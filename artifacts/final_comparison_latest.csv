@@ -1,0 +1,4 @@
+repo_id,module,focal_class,commit_hash,human_ok,human_score_pct,human_total,human_killed,human_survived,human_error,ai_ok,ai_score_pct,ai_total,ai_killed,ai_survived,ai_error,delta_score_pct,run_timestamp
+100021742,spring-cloud-stream-binder-artemis,me.snowdrop.stream.binder.artemis.provisioning.ArtemisBrokerManager,HEAD,TRUE,,,,,,TRUE,,,,,,0.000000,2026-04-11T21:15:55Z
+100035986,codalab/scorer,de.tudarmstadt.ukp.argumentation.semeval2018.Scorer,HEAD,TRUE,,,,,,TRUE,,,,,,0.000000,2026-04-11T21:15:55Z
+10005385,store,org.gephi.graph.impl.EdgeTypeStore,HEAD,TRUE,,,,,,TRUE,,,,,,0.000000,2026-04-11T21:15:55Z

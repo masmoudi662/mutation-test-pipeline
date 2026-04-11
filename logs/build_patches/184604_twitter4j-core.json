@@ -1,0 +1,17 @@
+{
+  "repo_id": "184604",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\184604",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\184604\\twitter4j-core",
+  "settings_path": null,
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Pipeline bootstrap failure: Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\184604\\twitter4j-core\\src\\test\\java\\twitter4j\\util\\CharacterUtilTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [],
+  "commands": [],
+  "checksums": {},
+  "generated_at_utc": "2026-02-26T00:27:13.864525+00:00"
+}

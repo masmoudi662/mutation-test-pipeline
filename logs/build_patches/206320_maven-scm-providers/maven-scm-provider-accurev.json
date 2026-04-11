@@ -1,0 +1,98 @@
+{
+  "repo_id": "206320",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Disabled 46 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.apache.maven.scm.provider.accurev.command.login.AccuRevLoginCommandAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002909Z_206320_maven-scm-providers\\maven-scm-provider-accurev_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=SNAPSHOT_MISSING",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\ChangeFileMatcher.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\ChangeSetMatcher.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\CollectionSizeMatcher.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\AccuRevCapabilityTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\AccuRevScmProviderRepositoryMatcher.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\AccuRevScmProviderRepositoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\AccurevScmProviderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\AccuRevCommandLineTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\AccuRevJUnitUtil.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\AccuRevStatTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\AnnotateConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\AuthTokenConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\ClientVersionConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\DiffConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\FileConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\HistoryConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\InfoConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\StatBackingConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\StatConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\StreamsConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\WorkSpaceConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\cli\\XppStreamConsumerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\AbstractAccuRevCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\AccuRevTckUtil.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\add\\AccuRevAddCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\blame\\AccuRevBlameCommandTckTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\blame\\AccuRevBlameCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\changelog\\AccuRevChangeLogCommandTckTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\changelog\\AccuRevChangeLogCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\checkin\\AccuRevCheckInCommandTckTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\checkin\\AccuRevCheckInCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\checkout\\AccuRevCheckoutCommandTckTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\checkout\\AccuRevCheckOutCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\export\\AccuRevExportCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\login\\AccuRevLoginCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\remove\\AccuRevRemoveCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\status\\AccuRevStatusCommandTckTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\status\\AccuRevStatusCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\tag\\AccuRevTagCommandTckTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\tag\\AccuRevTagCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\update\\AccuRevUpdateCommandTckTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\command\\update\\AccurevUpdateCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\TransactionTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\util\\QuotedPropertyParserTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\provider\\accurev\\VersionMatcher.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\206320\\maven-scm-providers\\maven-scm-provider-accurev\\src\\test\\java\\org\\apache\\maven\\scm\\ScmFileMatcher.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-02-26T00:29:09.127661+00:00"
+}

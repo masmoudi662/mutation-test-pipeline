@@ -1,0 +1,19 @@
+{
+  "repo_id": "100035986",
+  "module": "codalab/scorer",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "FILE_NOT_FOUND",
+  "error_message": "Generated AI test not found: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100035986_1_GeneratedTest.java",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260411T211540Z_100035986_codalab\\scorer_AI_ONLY_focal_maven"
+}

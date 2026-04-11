@@ -1,0 +1,34 @@
+{
+  "repo_id": "116547",
+  "module": "cuke4duke-maven-plugin",
+  "condition": "AI_ONLY",
+  "commit_hash": "87af9daf1afb0edccae219f69278fd74139a4a66",
+  "focal_class": "cuke4duke.mojo.CucumberMojo",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "HTTP_BLOCKER",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\116547\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< cuke4duke:cuke4duke-maven-plugin >------------------ [INFO] Building Cuke4Duke: Maven Plugin 0.4.4 [INFO] from pom.xml [INFO] -------------------------",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002303Z_116547_cuke4duke-maven-plugin_AI_ONLY_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002303Z_116547_cuke4duke-maven-plugin_AI_ONLY_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": [
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002303Z_116547_cuke4duke-maven-plugin_AI_ONLY_focal_maven\\00_compile.log",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002303Z_116547_cuke4duke-maven-plugin_AI_ONLY_focal_maven\\01_compile.log"
+    ]
+  },
+  "applied_fixes": [
+    "HTTP_SETTINGS_FIX"
+  ],
+  "timestamp": "2026-02-26T00:23:09.964130+00:00"
+}

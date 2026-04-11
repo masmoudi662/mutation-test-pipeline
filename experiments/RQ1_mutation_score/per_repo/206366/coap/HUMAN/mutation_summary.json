@@ -1,0 +1,34 @@
+{
+  "repo_id": "206366",
+  "module": "coap",
+  "condition": "HUMAN",
+  "commit_hash": "cd62e266374ef7a040de7a39c711c87a00cd498c",
+  "focal_class": "org.apache.mina.coap.codec.CoapEncoder",
+  "ok": false,
+  "status": "FAIL",
+  "error_type": "HTTP_BLOCKER",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\206366\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... Downloading from central-https: https://repo1.maven.org/maven2/org/apache/apache/9/apache-9.pom Progress (1): 753 B Progress (1): 1.6 kB Progress (1): 3.1 kB Progress (1): 5.2 kB Progre",
+  "metrics": {
+    "mutation_score_pct": "0.000000",
+    "mutants_total": "0",
+    "killed": "0",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": ""
+  },
+  "logs": {
+    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003056Z_206366_coap_HUMAN_focal_maven",
+    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003056Z_206366_coap_HUMAN_focal_maven\\run_status.json",
+    "pit_log_file": "",
+    "command_logs": [
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003056Z_206366_coap_HUMAN_focal_maven\\00_compile.log",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T003056Z_206366_coap_HUMAN_focal_maven\\01_compile.log"
+    ]
+  },
+  "applied_fixes": [
+    "HTTP_SETTINGS_FIX"
+  ],
+  "timestamp": "2026-02-26T00:31:38.034876+00:00"
+}

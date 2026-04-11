@@ -1,12 +1,4 @@
 repo_id,module
-128294,servers/media/core/server-impl
-13899,mysql/codec
-161180,core/ri
-172187,home/common
-205407,plugins/openldap.acl.editor
-206320,maven-scm-providers/maven-scm-provider-accurev
-206346,modules/transports/core/nhttp
-206357,contrib/piggybank/java
-206418,continuum-base/continuum-scm
-206427,tika-parser-modules/tika-parser-microsoft-module
-206444,hcatalog/webhcat/svr
+100021742,spring-cloud-stream-binder-artemis
+100035986,codalab/scorer
+10005385,store
