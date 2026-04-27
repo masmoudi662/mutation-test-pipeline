@@ -1,0 +1,19 @@
+{
+  "repo_id": "103674706",
+  "module": "wolf-core",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=com.carl.wolf.core.foundation.module.DefaultModuleScanStrategyTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ----------------------< com.carl.wolf:wolf-core >----------------------- [INFO] Building wolf-core 1.0.0-SNAPSHOT [INFO] from pom.xml [INFO]",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T200530Z_103674706_wolf-core_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T200530Z_103674706_wolf-core_HUMAN_focal_maven"
+}

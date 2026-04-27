@@ -1,0 +1,19 @@
+{
+  "repo_id": "10325227",
+  "module": "plugin",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "OTHER",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... Downloading from central: https://repo1.maven.org/maven2/com/google/protobuf/tools/maven-protoc-plugin/0.3.2/maven-protoc-plugin-0.3.2.pom [ERROR] [ERROR] Some problems were encountered while processing the POMs: ",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194746Z_10325227_plugin_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194746Z_10325227_plugin_HUMAN_focal_maven"
+}

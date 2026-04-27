@@ -1,0 +1,19 @@
+{
+  "repo_id": "103613782",
+  "module": "zen-playground",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... Downloading from central: https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-starter-parent/1.5.4.RELEASE/spring-boot-starter-parent-1.5.4.RELEASE.pom Progress (1): 961 B Progress (1): 2.5 kB Prog",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T200055Z_103613782_zen-playground_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T200055Z_103613782_zen-playground_HUMAN_focal_maven"
+}

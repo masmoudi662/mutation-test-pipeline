@@ -1,0 +1,19 @@
+{
+  "repo_id": "10400052",
+  "module": "activejdbc",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "HTTP_BLOCKER",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\10400052\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] Artifact org.sonatype.central:central-publishing-maven-plugin:pom:0.9.0 is present in the local repository, but cached from a remote repository ID that is unavailable in curren",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10400052\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T201826Z_10400052_activejdbc_AI_ONLY_focal_maven\\settings_used_attempt2.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T201826Z_10400052_activejdbc_AI_ONLY_focal_maven"
+}

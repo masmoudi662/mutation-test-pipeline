@@ -1,0 +1,19 @@
+{
+  "repo_id": "102874374",
+  "module": "console",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\102874374\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< org.eclipse.rdf4j:rdf4j-console >------------------- [INFO] Building RDF4J: Console 3.0-SNAPSHOT [INFO] from pom.xml [INFO] ------------------------",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193106Z_102874374_console_AI_ONLY_focal_maven\\settings_used_attempt2.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193106Z_102874374_console_AI_ONLY_focal_maven"
+}

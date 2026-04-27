@@ -1,0 +1,19 @@
+{
+  "repo_id": "103286363",
+  "module": "formsfx-core",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "FILE_NOT_FOUND",
+  "error_message": "Generated AI test has no public class declaration: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\103286363_16_GeneratedTest.java",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194922Z_103286363_formsfx-core_AI_ONLY_focal_maven"
+}

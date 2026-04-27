@@ -1,0 +1,95 @@
+{
+  "repo_id": "100418846",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 100418846/universa_node: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100418846_73_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\MainAiTest.java",
+    "Disabled 42 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.icodici.universa.node2.MainAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T180955Z_100418846_universa_node_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node\\FakeItem.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node\\HashIdTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node\\ItemResultTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node\\network\\microhttpd\\MicroHTTPDServiceTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node\\PostgresLedgerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node\\RateCounterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node\\TestItem.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\BaseMainTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\BaseNetworkTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\BrokenConnectivityMainTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\ConfigTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\DemoTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\FollowerMainTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\ItemCacheTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\ItemLockTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\ItemNotificationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\JarNetworkTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\MainTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\ManagedTokenTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\NameCacheTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\network\\BasicHttpServerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\network\\DatagramAdapterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\Node2EmulatedNetworkTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\Node2LocalNetworkTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\Node2PermanetNetworkTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\Node2SingleTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\QuantiserTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\Research2Test.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\ResearchTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\ScriptEngineTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\SlotMainTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\TestEmulatedNetwork.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\TestLocalNetwork.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\TestSingleNetwork.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\TopologyTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\UBotExecutionTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\UBotSessionsProTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\UBotSessionsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\UnsMainTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\node2\\VotingTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\TestCase.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100418846\\universa_node\\src\\test\\java\\com\\icodici\\universa\\TestKeys.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T18:09:55.498420+00:00"
+}

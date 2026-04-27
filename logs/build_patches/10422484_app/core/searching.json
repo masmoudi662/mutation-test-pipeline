@@ -1,0 +1,76 @@
+{
+  "repo_id": "10422484",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 10422484/app/core/searching: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\10422484_21_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\repository\\NodeOrTransportBasedElasticSearchClientFactoryCreatorAiTest.java",
+    "Disabled 23 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.greencheek.related.searching.repository.NodeOrTransportBasedElasticSearchClientFactoryCreatorAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T202626Z_10422484_app\\core\\searching_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=DEP_RESOLUTION",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\disruptor\\requestprocessing\\DisruptorBasedSearchRequestProcessorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\disruptor\\requestprocessing\\RelatedItemSearchRequestTranslatorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\disruptor\\requestprocessing\\RoundRobinDisruptorBasedRelatedContentSearchRequestProcessorHandlerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\disruptor\\requestprocessing\\RoundRobinRelatedContentSearchRequestProcessorHandlerFactoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\disruptor\\responseprocessing\\DisruptorRelatedItemSearchResultsToResponseGatewayTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\disruptor\\responseprocessing\\ResponseContextTypeBasedResponseEventHandlerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\disruptor\\searchexecution\\DisruptorBasedRelatedItemSearchExecutorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\repository\\ElasticSearchFrequentlyRelatedItemSearchProcessorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\repository\\ElasticSearchRelatedItemSearchRepositoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\repository\\http\\ElasticSearchRelatedItemHttpGetRepositoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\repository\\http\\ElasticSearchRelatedItemHttpSearchRepositoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\repository\\http\\JsonSmartFrequentlyRelatedItemHttpResponseParserTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\repository\\NodeOrTransportBasedElasticSearchClientFactoryCreatorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\requestprocessing\\FrequentlyRelatedContentRequestParameterValidatorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\requestprocessing\\MultiMapAsyncContextLookupTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\requestprocessing\\SearchRequestParameterValidatorLocatorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\requestprocessing\\ValidationMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\responseprocessing\\HttpAsyncSearchResponseContextHandlerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\responseprocessing\\MapBasedSearchResponseContextHandlerLookupTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\responseprocessing\\resultsconverter\\ExplicitSearchResultsConverterFactoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\responseprocessing\\resultsconverter\\FrequentlyRelatedSearchResultsConverterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\responseprocessing\\resultsconverter\\JsonFrequentlyRelatedSearchResultsConverterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10422484\\app\\core\\searching\\src\\test\\java\\org\\greencheek\\related\\searching\\responseprocessing\\resultsconverter\\StringBasedJsonFrequentlyRelatedSearchResultsConverterTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T20:26:26.683262+00:00"
+}

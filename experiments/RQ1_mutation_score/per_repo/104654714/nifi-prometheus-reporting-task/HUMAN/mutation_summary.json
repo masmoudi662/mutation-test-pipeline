@@ -1,0 +1,19 @@
+{
+  "repo_id": "104654714",
+  "module": "nifi-prometheus-reporting-task",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "TEST_FAILURE",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.nifi.reporting.prometheus.metrics.TestMetricsService', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] Inspecting build with total of 1 modules... [INFO] Installing Nexus Staging features: [INFO] ... total of 1 executions of maven-deploy-plugin replaced",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T203553Z_104654714_nifi-prometheus-reporting-task_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T203553Z_104654714_nifi-prometheus-reporting-task_HUMAN_focal_maven"
+}

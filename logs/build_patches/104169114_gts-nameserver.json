@@ -1,0 +1,17 @@
+{
+  "repo_id": "104169114",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104169114",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104169114\\gts-nameserver",
+  "settings_path": null,
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Pipeline bootstrap failure: Generated AI test has no public class declaration: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\104169114_3_GeneratedTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [],
+  "commands": [],
+  "checksums": {},
+  "generated_at_utc": "2026-04-12T20:24:19.509876+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "repo_id": "102705073",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102705073",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102705073\\common-lib",
+  "settings_path": null,
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Pipeline bootstrap failure: Generated AI test has no public class declaration: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\102705073_0_GeneratedTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [],
+  "commands": [],
+  "checksums": {},
+  "generated_at_utc": "2026-04-12T19:23:26.760178+00:00"
+}

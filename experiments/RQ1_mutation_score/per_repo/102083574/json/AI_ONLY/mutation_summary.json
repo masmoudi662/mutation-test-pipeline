@@ -1,0 +1,19 @@
+{
+  "repo_id": "102083574",
+  "module": "json",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.netbeans.html.json.impl.JSONAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ----------------< org.netbeans.html:net.java.html.json >---------------- [INFO] Building JSON Model in Java 2.0-SNAPSHOT [INFO] from pom.xml [INFO] --------------------",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190353Z_102083574_json_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190353Z_102083574_json_AI_ONLY_focal_maven"
+}

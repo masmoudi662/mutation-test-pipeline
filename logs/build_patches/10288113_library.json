@@ -1,0 +1,60 @@
+{
+  "repo_id": "10288113",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10288113",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10288113\\library",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 10288113/library: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\10288113_22_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10288113\\library\\src\\test\\java\\com\\github\\jberkel\\whassup\\model\\WhatsAppMessageAiTest.java",
+    "Disabled 7 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.github.jberkel.whassup.model.WhatsAppMessageAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193151Z_10288113_library_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10288113\\library\\src\\test\\java\\com\\github\\jberkel\\whassup\\crypto\\DBDecryptorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10288113\\library\\src\\test\\java\\com\\github\\jberkel\\whassup\\helper\\Anonymizer.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10288113\\library\\src\\test\\java\\com\\github\\jberkel\\whassup\\helper\\LoremIpsum.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10288113\\library\\src\\test\\java\\com\\github\\jberkel\\whassup\\model\\Fixtures.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10288113\\library\\src\\test\\java\\com\\github\\jberkel\\whassup\\model\\MediaTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10288113\\library\\src\\test\\java\\com\\github\\jberkel\\whassup\\model\\WhatsAppMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10288113\\library\\src\\test\\java\\com\\github\\jberkel\\whassup\\WhassupTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T19:31:51.289420+00:00"
+}

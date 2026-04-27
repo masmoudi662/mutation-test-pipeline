@@ -1,0 +1,19 @@
+{
+  "repo_id": "10227537",
+  "module": "protected-method-scheduled-job/spring-sec-31",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "TEST_FAILURE",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=net.petrikainulainen.spring.trenches.scheduling.job.AuthenticationUtilTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --< net.petrikainulainen.spring.trenches:protected-method-scheduled-job-sec-31 >-- [INFO] Building Spring from the Trenches - Invoki",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T191127Z_10227537_protected-method-scheduled-job\\spring-sec-31_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T191127Z_10227537_protected-method-scheduled-job\\spring-sec-31_HUMAN_focal_maven"
+}

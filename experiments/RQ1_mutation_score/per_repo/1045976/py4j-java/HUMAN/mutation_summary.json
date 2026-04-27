@@ -1,0 +1,19 @@
+{
+  "repo_id": "1045976",
+  "module": "py4j-java",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] Artifact org.sonatype.plugins:nexus-staging-maven-plugin:pom:1.6.7 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is ",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T203519Z_1045976_py4j-java_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T203519Z_1045976_py4j-java_HUMAN_focal_maven"
+}

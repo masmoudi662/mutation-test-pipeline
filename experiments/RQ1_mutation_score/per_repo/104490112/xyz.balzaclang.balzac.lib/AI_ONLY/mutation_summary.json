@@ -1,0 +1,19 @@
+{
+  "repo_id": "104490112",
+  "module": "xyz.balzaclang.balzac.lib",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "FILE_NOT_FOUND",
+  "error_message": "Generated AI test not found: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\104490112_1_GeneratedTest.java",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T203019Z_104490112_xyz.balzaclang.balzac.lib_AI_ONLY_focal_maven"
+}

@@ -1,0 +1,26 @@
+{
+  "repo_id": "10445803",
+  "module": "stripes",
+  "condition": "HUMAN",
+  "status": "OK",
+  "error_type": "",
+  "error_message": "",
+  "metrics": {
+    "mutation_score_pct": "100.000000",
+    "mutants_total": "4",
+    "killed": "4",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": "net.sourceforge.stripes.validation.BigIntegerTypeConverter*",
+    "target_tests": "net.sourceforge.stripes.validation.BigIntegerTypeConverterTest",
+    "source_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10445803\\stripes\\src\\main\\java",
+    "mutable_code_paths": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10445803\\stripes\\target\\classes",
+    "class_path_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T202852Z_10445803_stripes_HUMAN_focal_maven\\pit_classpath.txt"
+  },
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T202852Z_10445803_stripes_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T202852Z_10445803_stripes_HUMAN_focal_maven"
+}

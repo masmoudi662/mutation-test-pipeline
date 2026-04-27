@@ -1,0 +1,19 @@
+{
+  "repo_id": "104490112",
+  "module": "xyz.balzaclang.balzac.lib",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "FILE_NOT_FOUND",
+  "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104490112\\xyz.balzaclang.balzac.lib\\src\\test\\java\\xyz\\balzaclang\\lib\\ECKeyStoreTest.java",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T203019Z_104490112_xyz.balzaclang.balzac.lib_HUMAN_focal_maven"
+}

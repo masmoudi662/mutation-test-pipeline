@@ -1,0 +1,16 @@
+{
+  "repo_id": "10262572",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10262572",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10262572\\as2-lib",
+  "settings_path": null,
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Pipeline bootstrap failure: Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10262572\\as2-lib"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [],
+  "commands": [],
+  "checksums": {},
+  "generated_at_utc": "2026-04-12T19:22:02.102849+00:00"
+}

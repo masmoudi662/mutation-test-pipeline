@@ -1,0 +1,16 @@
+{
+  "repo_id": "100077276",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100077276",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100077276\\lookup",
+  "settings_path": null,
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Pipeline bootstrap failure: Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100077276\\lookup"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [],
+  "commands": [],
+  "checksums": {},
+  "generated_at_utc": "2026-04-12T18:00:34.752541+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "repo_id": "10283615",
+  "module": "sopremo/sopremo-common",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\10283615\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------< eu.stratosphere:sopremo-common >------------------- [INFO] Building sopremo-common 0.4.3-SNAPSHOT [INFO] from pom.xml [INFO] -----------------------",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10283615\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T192809Z_10283615_sopremo\\sopremo-common_AI_ONLY_focal_maven\\settings_used_attempt2.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T192809Z_10283615_sopremo\\sopremo-common_AI_ONLY_focal_maven"
+}

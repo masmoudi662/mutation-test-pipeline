@@ -1,0 +1,19 @@
+{
+  "repo_id": "10311319",
+  "module": "lang-sandbox",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "HTTP_BLOCKER",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\10311319\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... Downloading from central-https: https://repo1.maven.org/maven2/net/openhft/java-parent-pom/1.1.13/java-parent-pom-1.1.13.pom Progress (1): 801 B Progress (1): 2.7 kB Progress (1): 6.1",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10311319\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194425Z_10311319_lang-sandbox_AI_ONLY_focal_maven\\settings_used_attempt2.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194425Z_10311319_lang-sandbox_AI_ONLY_focal_maven"
+}

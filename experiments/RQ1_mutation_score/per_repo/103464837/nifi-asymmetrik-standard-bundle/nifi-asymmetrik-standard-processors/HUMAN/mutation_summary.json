@@ -1,0 +1,19 @@
+{
+  "repo_id": "103464837",
+  "module": "nifi-asymmetrik-standard-bundle/nifi-asymmetrik-standard-processors",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... Downloading from central: https://repo1.maven.org/maven2/org/apache/nifi/nifi-nar-maven-plugin/1.2.0/nifi-nar-maven-plugin-1.2.0.pom Progress (1): 770 B Progress (1): 2.0 kB Progress (1): 4.5 kB Progress (1): 8.7 ",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T195737Z_103464837_nifi-asymmetrik-standard-bundle\\nifi-asymmetrik-standard-processors_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T195737Z_103464837_nifi-asymmetrik-standard-bundle\\nifi-asymmetrik-standard-processors_HUMAN_focal_maven"
+}

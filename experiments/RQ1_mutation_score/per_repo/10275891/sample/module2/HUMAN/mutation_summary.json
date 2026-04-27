@@ -1,0 +1,19 @@
+{
+  "repo_id": "10275891",
+  "module": "sample/module2",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... Downloading from central: https://repo1.maven.org/maven2/org/eluder/eluder-parent/9/eluder-parent-9.pom Progress (1): 1.1 kB Progress (1): 2.6 kB Progress (1): 6.9 kB Progress (1): 11 kB Progress (1): 13 kB Progre",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T192424Z_10275891_sample\\module2_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T192424Z_10275891_sample\\module2_HUMAN_focal_maven"
+}

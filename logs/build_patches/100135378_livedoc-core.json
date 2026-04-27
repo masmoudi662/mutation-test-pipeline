@@ -1,0 +1,96 @@
+{
+  "repo_id": "100135378",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 100135378/livedoc-core: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100135378_6_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\util\\DefaultsAiTest.java",
+    "Disabled 43 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.hildan.livedoc.core.util.DefaultsAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T180127Z_100135378_livedoc-core_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\ApiDocTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\issues\\issue151\\BarPojo.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\issues\\issue151\\FooController.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\issues\\issue151\\FooWrapper.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\issues\\issue151\\Issue151Test.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\LivedocReaderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\merger\\DocMergerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\merger\\MergeableObj.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\merger\\NotMergeable.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\model\\ApiOperationDocTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\readers\\annotation\\GlobalDocReaderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\readers\\annotation\\LivedocAnnotationTypeDocReaderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\readers\\javadoc\\JavadocTypeDocReaderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\properties\\FieldPropertyScannerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\properties\\JacksonPropertyScannerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\templates\\RecursiveTemplateProviderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\templates\\TemplateEnum.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\templates\\TemplateEnumEmpty.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\templates\\TemplateObject.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\templates\\TemplateSubObject.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\templates\\TemplateSubSubObject.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\types\\mappers\\ConcreteSubtypesMapperTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\types\\predicates\\TypePredicatesTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\types\\RecursivePropertyTypeScannerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\scanners\\types\\references\\TypeReferenceBuilderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\controller\\PizzaController.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\controller\\PizzaControllerImpl.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\controller\\Test1Controller.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\controller\\Test2Controller.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\controller\\Test3Controller.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\controller\\TestChildController.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\controller\\TestParentController.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\pojo\\Child.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\pojo\\Gender.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\pojo\\Grandparent.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\pojo\\HibernateValidatorPojo.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\pojo\\NoAnnotationPojo.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\pojo\\NotAnnotatedStackOverflowObjectOne.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\pojo\\NotAnnotatedStackOverflowObjectTwo.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\pojo\\Parent.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\pojo\\Pizza.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\test\\TestUtils.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100135378\\livedoc-core\\src\\test\\java\\org\\hildan\\livedoc\\core\\util\\DefaultsTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T18:01:27.529516+00:00"
+}

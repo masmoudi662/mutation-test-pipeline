@@ -1,0 +1,18 @@
+{
+  "repo_id": "10057936",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10057936",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10057936\\picasso-pollexor",
+  "settings_path": null,
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 10057936/picasso-pollexor: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\10057936_7_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10057936\\picasso-pollexor\\src\\test\\java\\com\\squareup\\picasso3\\pollexor\\PollexorRequestTransformerAiTest.java",
+    "Pipeline bootstrap failure: Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10057936\\picasso-pollexor\\src\\test\\java\\com\\squareup\\picasso3\\pollexor\\PollexorRequestTransformerTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [],
+  "commands": [],
+  "checksums": {},
+  "generated_at_utc": "2026-04-12T18:16:04.827397+00:00"
+}

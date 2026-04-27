@@ -3,8 +3,8 @@
   "module": "codalab/scorer",
   "condition": "AI_ONLY",
   "status": "FAIL",
-  "error_type": "FILE_NOT_FOUND",
-  "error_message": "Generated AI test not found: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100035986_1_GeneratedTest.java",
+  "error_type": "TEST_FAILURE",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=de.tudarmstadt.ukp.argumentation.semeval2018.ScorerAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------< de.tudarmstadt.ukp.argumentation.semeval2018:scorer >--------- [INFO] Building scorer 1.0-SNAPSHOT [INFO] from pom.xml [INFO] -------------",
   "metrics": {
     "mutation_score_pct": "",
     "mutants_total": "",
@@ -13,7 +13,7 @@
   },
   "pit_config": {},
   "fixed_by": "NONE",
-  "settings_path": "",
-  "settings_copy": "",
-  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260411T211540Z_100035986_codalab\\scorer_AI_ONLY_focal_maven"
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T180010Z_100035986_codalab\\scorer_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T180010Z_100035986_codalab\\scorer_AI_ONLY_focal_maven"
 }

@@ -1,0 +1,19 @@
+{
+  "repo_id": "10064418",
+  "module": "extensions/spring-boot-starter",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\10064418\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... Downloading from central-https: https://repo1.maven.org/maven2/org/springframework/boot/spring-boot-dependencies/1.5.7.RELEASE/spring-boot-dependencies-1.5.7.RELEASE.pom Progress (1):",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10064418\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181937Z_10064418_extensions\\spring-boot-starter_HUMAN_focal_maven\\settings_used_attempt2.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181937Z_10064418_extensions\\spring-boot-starter_HUMAN_focal_maven"
+}

@@ -1,0 +1,60 @@
+{
+  "repo_id": "100394036",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100394036",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100394036\\app",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 100394036/app: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100394036_3_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100394036\\app\\src\\test\\java\\com\\iitp\\njack\\iitp_connect\\core\\profile\\ProfileRepositoryAiTest.java",
+    "Disabled 7 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.iitp.njack.iitp_connect.core.profile.ProfileRepositoryAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T180517Z_100394036_app_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100394036\\app\\src\\test\\java\\com\\iitp\\njack\\iitp_connect\\core\\calendar\\detail\\ContestDetailRepositoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100394036\\app\\src\\test\\java\\com\\iitp\\njack\\iitp_connect\\core\\calendar\\detail\\ContestDetailViewModelTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100394036\\app\\src\\test\\java\\com\\iitp\\njack\\iitp_connect\\core\\calendar\\list\\CodingCalendarViewModelTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100394036\\app\\src\\test\\java\\com\\iitp\\njack\\iitp_connect\\core\\home\\AuthRepositoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100394036\\app\\src\\test\\java\\com\\iitp\\njack\\iitp_connect\\core\\profile\\ProfileRepositoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100394036\\app\\src\\test\\java\\com\\iitp\\njack\\iitp_connect\\utils\\ValidateUtilsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100394036\\app\\src\\test\\java\\com\\iitp\\njack\\iitp_connect\\utils\\ViewUtilsTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T18:05:17.297557+00:00"
+}

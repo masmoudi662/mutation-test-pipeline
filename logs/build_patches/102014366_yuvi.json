@@ -1,0 +1,68 @@
+{
+  "repo_id": "102014366",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 102014366/yuvi: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\102014366_0_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\bitstream\\BitStreamAiTest.java",
+    "Disabled 15 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.pinterest.yuvi.bitstream.BitStreamAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T185804Z_102014366_yuvi_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=DEP_RESOLUTION",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\bitstream\\BitStreamTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\chunk\\ChunkImplTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\chunk\\ChunkManagerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\chunk\\MetricUtils.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\chunk\\OffHeapChunkManagerTaskTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\metricandtagstore\\MetricsAndTagStoreImplTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\metricstore\\offheap\\OffHeapVarBitMetricStoreTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\metricstore\\VarBitMetricStoreTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\metricstore\\VarBitTimeSeriesTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\models\\PointsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\tagstore\\InvertedIndexTagStoreTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\tagstore\\MetricTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\tagstore\\QueryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\tagstore\\TagMatcherTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102014366\\yuvi\\src\\test\\java\\com\\pinterest\\yuvi\\tagstore\\TagTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T18:58:04.246111+00:00"
+}

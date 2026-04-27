@@ -1,0 +1,19 @@
+{
+  "repo_id": "10116915",
+  "module": "modules/base/vcs-log-impl",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "MODULE_MISSING",
+  "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10116915\\modules\\base\\vcs-log-impl",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T183836Z_10116915_modules\\base\\vcs-log-impl_HUMAN_focal_maven"
+}

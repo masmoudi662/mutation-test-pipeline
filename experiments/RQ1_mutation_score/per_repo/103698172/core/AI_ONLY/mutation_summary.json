@@ -1,0 +1,19 @@
+{
+  "repo_id": "103698172",
+  "module": "core",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ----------------< com.expedia.www:haystack-client-core >---------------- [INFO] Building haystack-client-java-core 0.4.1-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]---",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T200859Z_103698172_core_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T200859Z_103698172_core_AI_ONLY_focal_maven"
+}

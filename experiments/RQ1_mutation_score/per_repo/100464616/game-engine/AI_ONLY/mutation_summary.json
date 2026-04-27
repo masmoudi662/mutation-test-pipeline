@@ -1,0 +1,26 @@
+{
+  "repo_id": "100464616",
+  "module": "game-engine",
+  "condition": "AI_ONLY",
+  "status": "OK",
+  "error_type": "",
+  "error_message": "",
+  "metrics": {
+    "mutation_score_pct": "100.000000",
+    "mutants_total": "248",
+    "killed": "3",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": "com.jzy.game.engine.math.MathUtil*",
+    "target_tests": "com.jzy.game.engine.math.MathUtilAiTest",
+    "source_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\main\\java",
+    "mutable_code_paths": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\target\\classes",
+    "class_path_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181052Z_100464616_game-engine_AI_ONLY_focal_maven\\pit_classpath.txt"
+  },
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181052Z_100464616_game-engine_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181052Z_100464616_game-engine_AI_ONLY_focal_maven"
+}

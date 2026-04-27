@@ -1,0 +1,19 @@
+{
+  "repo_id": "10079780",
+  "module": "ui/shell",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... Downloading from central: https://repo1.maven.org/maven2/org/apache/maven/wagon/wagon-ssh/2.4/wagon-ssh-2.4.pom Progress (1): 800 B Progress (1): 2.2 kB Progress (1): 5.7 kB Downloaded from central: https://repo1.",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T182646Z_10079780_ui\\shell_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T182646Z_10079780_ui\\shell_HUMAN_focal_maven"
+}

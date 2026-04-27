@@ -1,0 +1,26 @@
+{
+  "repo_id": "101035547",
+  "module": "hamming-error-correction",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "PIT_ERROR",
+  "error_message": "Command '['java', '-cp', 'C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest-command-line\\\\1.6.9\\\\pitest-command-line-1.6.9.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest-entry\\\\1.6.9\\\\pitest-entry-1.6.9.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest\\\\1.6.9\\\\pitest-1.6.9.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\io\\\\vavr\\\\vavr-match\\\\1.0",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": "com.pivovarit.hamming.vavr.VavrHammingEncoder*",
+    "target_tests": "com.pivovarit.hamming.vavr.VavrHammingEncoderTest",
+    "source_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101035547\\hamming-error-correction\\src\\main\\java",
+    "mutable_code_paths": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101035547\\hamming-error-correction\\target\\classes",
+    "class_path_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T183444Z_101035547_hamming-error-correction_HUMAN_focal_maven\\pit_classpath.txt"
+  },
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T183444Z_101035547_hamming-error-correction_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T183444Z_101035547_hamming-error-correction_HUMAN_focal_maven"
+}

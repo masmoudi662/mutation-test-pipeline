@@ -1,0 +1,19 @@
+{
+  "repo_id": "104092353",
+  "module": "jee-agents-tomcat/jee-agents-tomcat-v6",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "MODULE_MISSING",
+  "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104092353\\jee-agents-tomcat\\jee-agents-tomcat-v6",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T202007Z_104092353_jee-agents-tomcat\\jee-agents-tomcat-v6_AI_ONLY_focal_maven"
+}

@@ -1,0 +1,19 @@
+{
+  "repo_id": "100470837",
+  "module": "tensor-playground",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "MODULE_MISSING",
+  "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100470837\\tensor-playground",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181234Z_100470837_tensor-playground_AI_ONLY_focal_maven"
+}

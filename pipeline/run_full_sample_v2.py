@@ -5,7 +5,8 @@ classes2test-main dataset. Clones repos as needed, generates AI tests, then
 runs HUMAN and AI_ONLY PIT conditions.
 
 Usage:
-    python pipeline/run_full_sample_v2.py [--limit 200] [--offset 0]
+    python pipeline/run_full_sample_v2.py --target-pairs 200
+    python pipeline/run_full_sample_v2.py --limit 200 [--offset 0]
 """
 
 import argparse
@@ -25,11 +26,11 @@ PIPELINE_SCRIPT     = BASE_DIR / "pipeline" / "run_mutation_pipeline.py"
 GENERATE_SCRIPT     = BASE_DIR / "pipeline" / "generate_tests.py"
 GENERATED_TESTS_DIR = BASE_DIR / "experiments" / "generated_tests"
 TARGET_REPOS_DIR    = BASE_DIR / "target-repos"
-ARTIFACTS_DIR       = BASE_DIR / "artifacts"
-FINAL_COMPARISON_CSV    = ARTIFACTS_DIR / "final_comparison_latest.csv"
-REPRODUCIBLE_SUBSET_CSV = ARTIFACTS_DIR / "reproducible_subset.csv"
-SUMMARY_CSV             = ARTIFACTS_DIR / "mutation_summary_all_runs.csv"
-BUILD_PATCHES_DIR       = ARTIFACTS_DIR / "build_patches"
+ARTIFACTS_DIR       = BASE_DIR / "logs"
+FINAL_COMPARISON_CSV    = BASE_DIR / "experiments" / "RQ1_mutation_score" / "results" / "final_comparison_latest.csv"
+REPRODUCIBLE_SUBSET_CSV = BASE_DIR / "experiments" / "RQ1_mutation_score" / "results" / "reproducible_subset.csv"
+SUMMARY_CSV             = BASE_DIR / "experiments" / "RQ1_mutation_score" / "results" / "mutation_summary_all_runs.csv"
+BUILD_PATCHES_DIR       = BASE_DIR / "logs" / "build_patches"
 
 TARGET_REPOS_DIR.mkdir(exist_ok=True)
 GENERATED_TESTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -81,7 +82,6 @@ def resolve_commit_hash(mapping: dict) -> str:
 
 
 def clone_repo(repo_url: str, repo_id: str, commit_hash: str) -> tuple[bool, str]:
-    """Clone repo if not already cloned. Returns (success, message)."""
     repo_dir = TARGET_REPOS_DIR / repo_id
     if repo_dir.exists():
         return True, f"already cloned: {repo_dir}"
@@ -94,27 +94,20 @@ def clone_repo(repo_url: str, repo_id: str, commit_hash: str) -> tuple[bool, str
             text=True,
             timeout=120,
         )
-        # Checkout specific commit if not HEAD
         if commit_hash and commit_hash != "HEAD":
             try:
                 subprocess.run(
                     ["git", "fetch", "--depth=1", "origin", commit_hash],
-                    cwd=str(repo_dir),
-                    check=False,
-                    capture_output=True,
-                    text=True,
-                    timeout=60,
+                    cwd=str(repo_dir), check=False, capture_output=True,
+                    text=True, timeout=60,
                 )
                 subprocess.run(
                     ["git", "checkout", commit_hash],
-                    cwd=str(repo_dir),
-                    check=False,
-                    capture_output=True,
-                    text=True,
-                    timeout=30,
+                    cwd=str(repo_dir), check=False, capture_output=True,
+                    text=True, timeout=30,
                 )
             except Exception:
-                pass  # shallow clone may not have full history; proceed with HEAD
+                pass
         return True, f"cloned to {repo_dir}"
     except subprocess.TimeoutExpired:
         if repo_dir.exists():
@@ -127,7 +120,6 @@ def clone_repo(repo_url: str, repo_id: str, commit_hash: str) -> tuple[bool, str
 
 
 def generate_ai_test(json_path: Path) -> tuple[bool, str]:
-    """Run generate_tests.py for a single mapping JSON."""
     stem = json_path.stem
     out_file = GENERATED_TESTS_DIR / f"{stem}_GeneratedTest.java"
     if out_file.exists():
@@ -143,7 +135,7 @@ def generate_ai_test(json_path: Path) -> tuple[bool, str]:
         )
         if out_file.exists():
             return True, f"generated: {out_file}"
-        return False, f"generate script exited {proc.returncode}: {proc.stderr.strip()[:200]}"
+        return False, f"generate script failed (no output file): {proc.stderr.strip()[:200]}"
     except subprocess.TimeoutExpired:
         return False, "generation timed out after 120s"
     except Exception as exc:
@@ -184,11 +176,11 @@ def _flatten(text: str, max_len: int = 400) -> str:
 
 
 def find_latest_run_status(repo_id: str, module: str, condition: str, start_time: float) -> dict | None:
-    runs_dir = ARTIFACTS_DIR / "runs"
+    runs_dir = BASE_DIR / "logs" / "runs"
     if not runs_dir.exists():
         return None
     candidates = []
-    for status_path in runs_dir.glob("*/run_status.json"):
+    for status_path in runs_dir.rglob("run_status.json"):
         try:
             if status_path.stat().st_mtime < (start_time - 5):
                 continue
@@ -340,10 +332,10 @@ def run_one_condition(
         if summary_path.exists():
             try:
                 s = json.loads(summary_path.read_text(encoding="utf-8"))
-                total   = int(s.get("total_mutations", 0) or 0)
-                killed  = int(s.get("killed_mutations", 0) or 0)
+                total    = int(s.get("total_mutations", 0) or 0)
+                killed   = int(s.get("killed_mutations", 0) or 0)
                 survived = int(s.get("survived_mutations", 0) or 0)
-                score   = float(s.get("mutation_score", 0.0) or 0.0)
+                score    = float(s.get("mutation_score", 0.0) or 0.0)
                 mutation_score_pct  = f"{(score * 100.0):.6f}"
                 mutations_generated = str(total)
                 mutations_killed    = str(killed)
@@ -438,7 +430,6 @@ def write_paired_outputs(per_repo_records: list[dict]) -> int:
 
 
 def pick_one_json_per_project() -> list[Path]:
-    """Pick one JSON file per project folder, sorted by project ID."""
     result = []
     for project_folder in sorted(DATASET_DIR.iterdir()):
         if not project_folder.is_dir():
@@ -451,8 +442,12 @@ def pick_one_json_per_project() -> list[Path]:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Scale-up pipeline: 1 JSON per project.")
-    parser.add_argument("--limit",  type=int, default=200, help="Max projects to process (default 200)")
-    parser.add_argument("--offset", type=int, default=0,   help="Skip first N projects (default 0)")
+    parser.add_argument("--target-pairs", type=int, default=None,
+                        help="Keep running until this many valid pairs are achieved")
+    parser.add_argument("--limit", type=int, default=500,
+                        help="Max repos to attempt (default 500, safety cap)")
+    parser.add_argument("--offset", type=int, default=0,
+                        help="Skip first N projects (default 0)")
     return parser.parse_args()
 
 
@@ -460,30 +455,48 @@ def main() -> int:
     args = parse_args()
 
     print(f"[config] Dataset: {DATASET_DIR}")
-    print(f"[config] Limit: {args.limit} | Offset: {args.offset}")
+    if args.target_pairs:
+        print(f"[config] Target pairs: {args.target_pairs} | Safety cap: {args.limit}")
+    else:
+        print(f"[config] Limit: {args.limit} | Offset: {args.offset}")
 
     all_jsons = pick_one_json_per_project()
     batch = all_jsons[args.offset : args.offset + args.limit]
-    total = len(batch)
-    print(f"[config] Selected {total} projects to process")
+    total_available = len(batch)
+    print(f"[config] Available projects: {total_available}")
 
     per_repo_records: list[dict] = []
-    all_results: list[dict] = []
+    repos_attempted = 0
 
     for idx, json_path in enumerate(batch, start=1):
+        # ── Check if target reached ───────────────────────────────────────
+        current_pairs = sum(
+            1 for r in per_repo_records
+            if r.get("HUMAN", {}).get("status") == "OK" and r.get("AI_ONLY", {}).get("status") == "OK"
+        )
+        if args.target_pairs and current_pairs >= args.target_pairs:
+            print(f"\n🎯 Target of {args.target_pairs} valid pairs reached! Stopping.")
+            break
+
         mapping = json.loads(json_path.read_text(encoding="utf-8"))
-        repo_info  = mapping.get("repository", {})
-        repo_id    = str(repo_info.get("repo_id", json_path.parent.name))
-        repo_url   = repo_info.get("url", "")
+        repo_info   = mapping.get("repository", {})
+        repo_id     = str(repo_info.get("repo_id", json_path.parent.name))
+        repo_url    = repo_info.get("url", "")
         commit_hash = resolve_commit_hash(mapping)
-        module     = resolve_module(repo_id, mapping)
+        module      = resolve_module(repo_id, mapping)
         focal_class = ""
         try:
             focal_class = java_file_to_fqcn(mapping["focal_class"]["file"])
         except Exception:
             pass
 
-        print(f"\n[{idx}/{total}] repo={repo_id} module={module} url={repo_url}")
+        repos_attempted += 1
+        pairs_so_far = sum(
+            1 for r in per_repo_records
+            if r.get("HUMAN", {}).get("status") == "OK" and r.get("AI_ONLY", {}).get("status") == "OK"
+        )
+        target_str = f"/{args.target_pairs}" if args.target_pairs else ""
+        print(f"\n[{idx}/{total_available}] repo={repo_id} module={module} pairs={pairs_so_far}{target_str}")
 
         record = {
             "repo_id": repo_id,
@@ -501,13 +514,11 @@ def main() -> int:
             print(f"[clone] {clone_msg}")
             if not clone_ok:
                 for condition in ("HUMAN", "AI_ONLY"):
-                    entry = {
+                    record[condition] = {
                         "status": "FAIL", "error_type": "CLONE_FAILED",
                         "error_message": clone_msg, "mutation_score_pct": "",
                         "mutations_generated": "", "mutations_killed": "", "mutations_survived": "",
                     }
-                    record[condition] = entry
-                    all_results.append({"repo_id": repo_id, "module": module, "condition": condition, **entry})
                 per_repo_records.append(record)
                 continue
         else:
@@ -527,7 +538,6 @@ def main() -> int:
             final_entry = first
             cleanup_repo_state(repo_id)
 
-            # Retry logic
             if first.get("status") != "OK":
                 strategy = determine_fix_strategy(first.get("error_type", ""), first.get("error_message", ""))
                 if strategy == "HTTP_SETTINGS_FIX":
@@ -553,7 +563,6 @@ def main() -> int:
                     cleanup_repo_state(repo_id)
 
             record[condition] = final_entry
-            all_results.append({"repo_id": repo_id, "module": module, "condition": condition, **final_entry})
 
         record["applied_fixes"] = sorted(dict.fromkeys(record["applied_fixes"]))
         per_repo_records.append(record)
@@ -565,10 +574,10 @@ def main() -> int:
             1 for r in per_repo_records
             if r.get("HUMAN", {}).get("status") == "OK" and r.get("AI_ONLY", {}).get("status") == "OK"
         )
-        print(f"[progress] {idx}/{total} | HUMAN_OK={human_ok} AI_OK={ai_ok} PAIRS={pairs}")
+        print(f"[progress] attempted={repos_attempted} | HUMAN_OK={human_ok} AI_OK={ai_ok} PAIRS={pairs}")
 
         # Save intermediate results every 10 repos
-        if idx % 10 == 0:
+        if repos_attempted % 10 == 0:
             write_paired_outputs(per_repo_records)
             print(f"[saved] Intermediate results written ({pairs} valid pairs so far)")
 
@@ -579,7 +588,7 @@ def main() -> int:
     ai_ok_count    = sum(1 for r in per_repo_records if r.get("AI_ONLY", {}).get("status") == "OK")
 
     print("\n" + "="*60)
-    print(f"TOTAL_REPOS_ATTEMPTED : {total}")
+    print(f"TOTAL_REPOS_ATTEMPTED : {repos_attempted}")
     print(f"HUMAN_OK_COUNT        : {human_ok_count}")
     print(f"AI_ONLY_OK_COUNT      : {ai_ok_count}")
     print(f"VALID_PAIRED_COUNT    : {valid_pairs}")

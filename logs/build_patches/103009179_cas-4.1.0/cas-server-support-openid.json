@@ -1,0 +1,71 @@
+{
+  "repo_id": "103009179",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\cas-4.1.0\\cas-server-support-openid",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 103009179/cas-4.1.0/cas-server-support-openid: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\103009179_5_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\cas-4.1.0\\cas-server-support-openid\\src\\test\\java\\org\\jasig\\cas\\support\\openid\\web\\mvc\\SmartOpenIdControllerAiTest.java",
+    "Disabled 7 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.jasig.cas.support.openid.web.mvc.SmartOpenIdControllerAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193942Z_103009179_cas-4.1.0\\cas-server-support-openid_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=HTTP_SETTINGS_FIX",
+    "Retrying with HTTP_SETTINGS_FIX; settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\.mvn\\settings.xml; mvn_force_update=True",
+    "Attempt 2: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193942Z_103009179_cas-4.1.0\\cas-server-support-openid_AI_ONLY_focal_maven\\settings_used_attempt2.xml fixed_by=HTTP_SETTINGS_FIX",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\cas-4.1.0\\cas-server-support-openid\\src\\test\\java\\org\\jasig\\cas\\support\\openid\\authentication\\handler\\support\\OpenIdCredentialsAuthenticationHandlerTests.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\cas-4.1.0\\cas-server-support-openid\\src\\test\\java\\org\\jasig\\cas\\support\\openid\\authentication\\principal\\OpenIdServiceTests.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\cas-4.1.0\\cas-server-support-openid\\src\\test\\java\\org\\jasig\\cas\\support\\openid\\web\\flow\\OpenIdSingleSignOnActionTests.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\cas-4.1.0\\cas-server-support-openid\\src\\test\\java\\org\\jasig\\cas\\support\\openid\\web\\mvc\\SmartOpenIdControllerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\cas-4.1.0\\cas-server-support-openid\\src\\test\\java\\org\\jasig\\cas\\support\\openid\\web\\support\\DefaultOpenIdUserNameExtractorTests.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\cas-4.1.0\\cas-server-support-openid\\src\\test\\java\\org\\jasig\\cas\\support\\openid\\web\\support\\OpenIdArgumentExtractorTests.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\cas-4.1.0\\cas-server-support-openid\\src\\test\\java\\org\\jasig\\cas\\support\\openid\\web\\support\\OpenIdPostUrlHandlerMappingTests.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-U",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ],
+    [
+      "mvn.cmd",
+      "-U",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T19:39:42.531745+00:00"
+}

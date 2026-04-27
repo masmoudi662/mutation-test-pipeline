@@ -1,0 +1,19 @@
+{
+  "repo_id": "10192655",
+  "module": "SushiImport",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "SNAPSHOT_MISSING",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for de.hpi-web.sushiimport:SushiImport:jar:SNAPSHOT [WARNING] 'version' uses an unsupported snapshot version format, shou",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "MAVEN_FORCE_UPDATE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T185521Z_10192655_SushiImport_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T185521Z_10192655_SushiImport_AI_ONLY_focal_maven"
+}

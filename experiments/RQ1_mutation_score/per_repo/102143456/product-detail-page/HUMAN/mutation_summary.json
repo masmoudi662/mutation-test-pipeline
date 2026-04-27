@@ -1,0 +1,26 @@
+{
+  "repo_id": "102143456",
+  "module": "product-detail-page",
+  "condition": "HUMAN",
+  "status": "OK",
+  "error_type": "",
+  "error_message": "",
+  "metrics": {
+    "mutation_score_pct": "100.000000",
+    "mutants_total": "1",
+    "killed": "1",
+    "survived": "0"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": "com.rewedigital.examples.msintegration.productdetailpage.product.ProductEventConsumer*",
+    "target_tests": "com.rewedigital.examples.msintegration.productdetailpage.product.ProductEventConsumerTest",
+    "source_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102143456\\product-detail-page\\src\\main\\java",
+    "mutable_code_paths": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102143456\\product-detail-page\\target\\classes",
+    "class_path_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190710Z_102143456_product-detail-page_HUMAN_focal_maven\\pit_classpath.txt"
+  },
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190710Z_102143456_product-detail-page_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190710Z_102143456_product-detail-page_HUMAN_focal_maven"
+}

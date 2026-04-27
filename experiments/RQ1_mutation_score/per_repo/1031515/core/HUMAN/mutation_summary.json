@@ -1,0 +1,19 @@
+{
+  "repo_id": "1031515",
+  "module": "core",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "HTTP_BLOCKER",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\1031515\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------------------------< eu.delving:core >--------------------------- [INFO] Building Delving Shared Core Classes 0.2.9-SNAPSHOT [INFO] from pom.xml [INFO] -----------",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1031515\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194604Z_1031515_core_HUMAN_focal_maven\\settings_used_attempt2.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194604Z_1031515_core_HUMAN_focal_maven"
+}

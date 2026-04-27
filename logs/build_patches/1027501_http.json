@@ -1,0 +1,72 @@
+{
+  "repo_id": "1027501",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\http",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 1027501/http: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\1027501_0_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\http\\src\\test\\java\\com\\ning\\metrics\\eventtracker\\HttpSenderAiTest.java",
+    "Disabled 8 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.ning.metrics.eventtracker.HttpSenderAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T192358Z_1027501_http_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=MAVEN_FORCE_UPDATE",
+    "Retrying with HTTP_SETTINGS_FIX; settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\.mvn\\settings.xml; mvn_force_update=True",
+    "Attempt 2: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T192358Z_1027501_http_AI_ONLY_focal_maven\\settings_used_attempt2.xml fixed_by=HTTP_SETTINGS_FIX",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=HTTP_BLOCKER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\http\\src\\test\\java\\com\\ning\\metrics\\eventtracker\\AsyncResponseCompletionHandler.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\http\\src\\test\\java\\com\\ning\\metrics\\eventtracker\\TestExpirationTimer.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\http\\src\\test\\java\\com\\ning\\metrics\\eventtracker\\TestHttpJob.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\http\\src\\test\\java\\com\\ning\\metrics\\eventtracker\\TestHttpSender.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\http\\src\\test\\java\\com\\ning\\metrics\\eventtracker\\TestHttpSenderWorkers.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\http\\src\\test\\java\\com\\ning\\metrics\\eventtracker\\TestLocalQueueAndWorkers.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\http\\src\\test\\java\\com\\ning\\metrics\\eventtracker\\TestThreadSafeAsyncHttpClient.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\http\\src\\test\\java\\com\\ning\\metrics\\eventtracker\\ThreadSafeWithMockedAsyncHttpClient.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-U",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ],
+    [
+      "mvn.cmd",
+      "-U",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1027501\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T19:23:58.664496+00:00"
+}

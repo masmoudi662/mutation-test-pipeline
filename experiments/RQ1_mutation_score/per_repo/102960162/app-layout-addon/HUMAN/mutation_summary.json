@@ -1,0 +1,26 @@
+{
+  "repo_id": "102960162",
+  "module": "app-layout-addon",
+  "condition": "HUMAN",
+  "status": "OK",
+  "error_type": "",
+  "error_message": "",
+  "metrics": {
+    "mutation_score_pct": "30.769231",
+    "mutants_total": "16",
+    "killed": "4",
+    "survived": "9"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": "com.github.appreciated.app.layout.navigation.RouteSimilarity*",
+    "target_tests": "com.github.appreciated.app.layout.navigation.RouteSimilarityTest",
+    "source_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102960162\\app-layout-addon\\src\\main\\java",
+    "mutable_code_paths": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102960162\\app-layout-addon\\target\\classes",
+    "class_path_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193448Z_102960162_app-layout-addon_HUMAN_focal_maven\\pit_classpath.txt"
+  },
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193448Z_102960162_app-layout-addon_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193448Z_102960162_app-layout-addon_HUMAN_focal_maven"
+}

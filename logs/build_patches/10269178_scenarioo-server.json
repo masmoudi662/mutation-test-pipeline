@@ -1,0 +1,98 @@
+{
+  "repo_id": "10269178",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 10269178/scenarioo-server: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\10269178_65_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\utils\\IdGeneratorAiTest.java",
+    "Disabled 45 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.scenarioo.utils.IdGeneratorAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T192253Z_10269178_scenarioo-server_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\DummyIdeFormattingSettingTestClass.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\aggregator\\PageNameSanitizerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\builds\\AvailableBuildsListTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\builds\\BuildByDateSorterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\builds\\BuildSorterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\diffViewer\\comparator\\ConfigurationFixture.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\diffViewer\\comparator\\ScenarioComparatorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\diffViewer\\comparator\\ScreenshotComparatorMockitoTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\diffViewer\\comparator\\ScreenshotComparatorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\diffViewer\\comparator\\StepComparatorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\diffViewer\\comparator\\UseCaseComparatorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\diffViewer\\ComparisonExecutorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\business\\lastSuccessfulScenarios\\LastSuccessfulScenariosBuildTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\dao\\basic\\FileSystemOperationsDaoTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\dao\\configuration\\ConfigurationDaoTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\dao\\diffViewer\\DiffViewerDaoTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\dao\\search\\FullTextSearchTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\dao\\search\\SearchTreeTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\dao\\sketcher\\SketcherDaoTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\model\\configuration\\ConfigurationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\model\\docu\\aggregates\\objects\\LongObjectNamesResolverTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\model\\docu\\aggregates\\scenarios\\ScenarioPageStepsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\application\\ScenariooDataPathLogicTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\base\\StepIdentifierTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\builds\\BranchBuildsResourceIntegrationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\builds\\BuildsResourceIntegrationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\diffViewer\\BuildDiffInfoResourceIntegrationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\diffViewer\\ComparisonCalculationsResourceIntegrationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\diffViewer\\ComparisonsResourceIntegrationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\diffViewer\\ScenarioDiffInfoResourceIntegrationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\diffViewer\\StepDiffInfoResourceIntegrationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\diffViewer\\UseCaseDiffInfoResourceIntegrationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\integrationtest\\AbstractIntegrationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\sketcher\\stepSketch\\SvgSanitizerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\step\\logic\\DummyAggregatedDataReader.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\step\\logic\\LabelsQueryParamParserTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\step\\logic\\ScenarioLoaderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\step\\logic\\StepIndexResolverTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\step\\logic\\StepTestData.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\rest\\step\\ScreenshotResourceTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\utils\\IdGeneratorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\utils\\NumberFormatterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\utils\\TestFileUtils.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\utils\\TestResourceFile.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10269178\\scenarioo-server\\src\\test\\java\\org\\scenarioo\\utils\\ZipFileExtractorTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T19:22:53.956934+00:00"
+}

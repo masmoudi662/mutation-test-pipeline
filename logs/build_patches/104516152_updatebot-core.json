@@ -1,0 +1,93 @@
+{
+  "repo_id": "104516152",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 104516152/updatebot-core: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\104516152_0_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\kind\\maven\\PomHelperAiTest.java",
+    "Disabled 29 non-selected test files",
+    "Applied focal test scope with selected tests: ['io.fabric8.updatebot.kind.maven.PomHelperAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T203158Z_104516152_updatebot-core_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=HTTP_SETTINGS_FIX",
+    "Retrying with HTTP_SETTINGS_FIX; settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\.mvn\\settings.xml; mvn_force_update=True",
+    "Attempt 2: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T203158Z_104516152_updatebot-core_AI_ONLY_focal_maven\\settings_used_attempt2.xml fixed_by=HTTP_SETTINGS_FIX",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=HTTP_BLOCKER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\CommandParseTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\comments\\IssuePendingChangeReadWriteTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\comments\\PullRequestCommentReadWriteTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\EnableFabric8Test.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\filter\\FilterMavenTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\filter\\FilterOrganisationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\fork\\ForkJoinReleaseTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\fork\\TestNpmDependencyTreeGenerator.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\git\\GitCloneUrlParseTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\git\\RemoteUsernamePasswordTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\github\\FindPR.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\kind\\helm\\HelmUpdaterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\kind\\maven\\PomHelperTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\kind\\npm\\DependencyCheckTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\kind\\npm\\PackageJsonUpdaterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\kind\\plugins\\PluginsUpdaterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\LoggingTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\MavenPushSourceDependenciesTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\model\\EnvironmentsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\model\\LoadGithubOrgConfigTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\NpmUpdateBotTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\PromoteTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\PushSourceDependenciesTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\PushVersionPRUpdateAndRebasePRTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\test\\CommandAssertions.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\test\\GithubAssertions.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\test\\MarkupAssertions.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\test\\NpmTests.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\updatebot-core\\src\\test\\java\\io\\fabric8\\updatebot\\test\\Tests.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-U",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ],
+    [
+      "mvn.cmd",
+      "-U",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104516152\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T20:31:58.972206+00:00"
+}

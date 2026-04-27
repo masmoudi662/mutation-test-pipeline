@@ -1,0 +1,19 @@
+{
+  "repo_id": "100955538",
+  "module": "gru",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "MODULE_MISSING",
+  "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100955538\\gru",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T183423Z_100955538_gru_HUMAN_focal_maven"
+}

@@ -1,0 +1,19 @@
+{
+  "repo_id": "101495687",
+  "module": "maven-osgi-targetplatform-lib",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "MODULE_MISSING",
+  "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101495687\\maven-osgi-targetplatform-lib",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T184848Z_101495687_maven-osgi-targetplatform-lib_HUMAN_focal_maven"
+}

@@ -1,0 +1,65 @@
+{
+  "repo_id": "101884957",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 101884957/app: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\101884957_1_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\data\\source\\QueryOverpassAiTest.java",
+    "Disabled 12 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.teester.whatsnearby.data.source.QueryOverpassAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T185405Z_101884957_app_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\data\\AnswersTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\data\\PoiListTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\data\\source\\QueryOverpassTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\ExampleUnitTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\main\\AboutPresenterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\main\\MainActivityPresenterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\questions\\intro\\IntroPresenterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\questions\\nothere\\NotHerePresenterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\questions\\osmlogin\\OsmLoginPresenterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\questions\\question\\QuestionPresenterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\questions\\QuestionsPresenterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101884957\\app\\src\\test\\java\\com\\teester\\whatsnearby\\UtilitiesTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T18:54:05.547631+00:00"
+}

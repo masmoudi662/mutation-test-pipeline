@@ -1,0 +1,82 @@
+{
+  "repo_id": "102955709",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 102955709/ibm-cos-java-sdk-s3: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\102955709_26_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaFaspManagerWrapperAiTest.java",
+    "Disabled 22 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.ibm.cloud.objectstorage.services.aspera.transfer.AsperaFaspManagerWrapperAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193416Z_102955709_ibm-cos-java-sdk-s3_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=test error_type=COMPILATION",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaConfigTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaFaspManagerWrapperTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaKeyCacheTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaLibraryLoaderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaTransactionImplTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaTransactionProgressTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaTransferManagerBuilderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaTransferManagerDownloadDirectoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaTransferManagerDownloadTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaTransferManagerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaTransferManagerUploadDirectoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaTransferManagerUploadTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\AsperaTransferManagerUtilsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\aspera\\transfer\\TransferListenerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\s3\\AmazonS3ClientTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\s3\\internal\\MD5DigestCalculatingInputStreamTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\s3\\internal\\S3XmlResponseHandlerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\s3\\model\\CreateBucketRequestTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\s3\\model\\FASPConnectionInfohandlerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\s3\\model\\HeadBucketResultHandlerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\s3\\model\\ListExtendedBucketHandlerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102955709\\ibm-cos-java-sdk-s3\\src\\test\\java\\com\\ibm\\cloud\\objectstorage\\services\\s3\\transfer\\internal\\CompleteMultipartCopyTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-Dtest=com.ibm.cloud.objectstorage.services.aspera.transfer.AsperaFaspManagerWrapperAiTest",
+      "test"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T19:34:16.773187+00:00"
+}

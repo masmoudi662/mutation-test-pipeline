@@ -1,0 +1,19 @@
+{
+  "repo_id": "103464837",
+  "module": "nifi-asymmetrik-standard-bundle/nifi-asymmetrik-standard-processors",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "FILE_NOT_FOUND",
+  "error_message": "Generated AI test has no public class declaration: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\103464837_5_GeneratedTest.java",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T195801Z_103464837_nifi-asymmetrik-standard-bundle\\nifi-asymmetrik-standard-processors_AI_ONLY_focal_maven"
+}

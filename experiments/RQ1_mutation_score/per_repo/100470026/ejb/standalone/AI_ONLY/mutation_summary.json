@@ -1,0 +1,19 @@
+{
+  "repo_id": "100470026",
+  "module": "ejb/standalone",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=javaeetutorial.standalone.ejb.StandaloneBeanAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------------< org.glassfish.javaeetutorial:standalone >--------------- [INFO] Building standalone 8.1-SNAPSHOT [INFO] from pom.xml [INFO] ----------------",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181205Z_100470026_ejb\\standalone_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181205Z_100470026_ejb\\standalone_AI_ONLY_focal_maven"
+}

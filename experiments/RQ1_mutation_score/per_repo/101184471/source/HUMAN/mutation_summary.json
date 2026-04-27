@@ -1,0 +1,19 @@
+{
+  "repo_id": "101184471",
+  "module": "source",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "OTHER",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=com.thangbui.consoledrawing.command.CommandFactoryTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -----------------< com.credit-suisse:console-drawing >------------------ [INFO] Building console-drawing 1.0 [INFO] from pom.xml [INFO] ----------------",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T183925Z_101184471_source_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T183925Z_101184471_source_HUMAN_focal_maven"
+}

@@ -1,0 +1,81 @@
+{
+  "repo_id": "102874374",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 102874374/console: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\102874374_20_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\command\\FederateAiTest.java",
+    "Disabled 17 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.eclipse.rdf4j.console.command.FederateAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193106Z_102874374_console_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=MAVEN_FORCE_UPDATE",
+    "Retrying with HTTP_SETTINGS_FIX; settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\.mvn\\settings.xml; mvn_force_update=True",
+    "Attempt 2: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193106Z_102874374_console_AI_ONLY_focal_maven\\settings_used_attempt2.xml fixed_by=HTTP_SETTINGS_FIX",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=DEP_RESOLUTION",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\command\\AbstractCommandTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\command\\ConvertTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\command\\DropTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\command\\ExportTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\command\\FederateTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\command\\SetParametersTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\command\\SparqlTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\command\\VerifyTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\ConsoleIOTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\package-info.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\setting\\AbstractSettingTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\setting\\ConsoleWidthTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\setting\\LogLevelTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\setting\\PrefixesTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\setting\\QueryPrefixTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\setting\\ShowPrefixTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\console\\src\\test\\java\\org\\eclipse\\rdf4j\\console\\UtilTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-U",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ],
+    [
+      "mvn.cmd",
+      "-U",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102874374\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T19:31:06.115623+00:00"
+}

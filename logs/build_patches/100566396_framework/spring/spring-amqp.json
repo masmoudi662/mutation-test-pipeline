@@ -1,0 +1,17 @@
+{
+  "repo_id": "100566396",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100566396",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100566396\\framework\\spring\\spring-amqp",
+  "settings_path": null,
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Pipeline bootstrap failure: Generated AI test has no public class declaration: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100566396_4_GeneratedTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [],
+  "commands": [],
+  "checksums": {},
+  "generated_at_utc": "2026-04-12T18:15:42.065894+00:00"
+}

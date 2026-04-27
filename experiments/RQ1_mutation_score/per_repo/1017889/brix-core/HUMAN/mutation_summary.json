@@ -1,0 +1,19 @@
+{
+  "repo_id": "1017889",
+  "module": "brix-core",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\1017889\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... Downloading from central-https: https://repo1.maven.org/maven2/org/apache/felix/maven-bundle-plugin/5.1.2/maven-bundle-plugin-5.1.2.pom Progress (1): 788 B Progress (1): 1.6 kB Progres",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\1017889\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T185241Z_1017889_brix-core_HUMAN_focal_maven\\settings_used_attempt2.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T185241Z_1017889_brix-core_HUMAN_focal_maven"
+}

@@ -1,0 +1,18 @@
+{
+  "repo_id": "103377081",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103377081",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103377081\\02-RockPaperScissorLizardSpock\\java\\group1",
+  "settings_path": null,
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 103377081/02-RockPaperScissorLizardSpock/java/group1: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\103377081_25_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103377081\\02-RockPaperScissorLizardSpock\\java\\group1\\src\\test\\java\\com\\capgemini\\coedevon\\codingdojo\\rockpaperscissorslizardspock\\RockPaperAiTest.java",
+    "Pipeline bootstrap failure: Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103377081\\02-RockPaperScissorLizardSpock\\java\\group1\\src\\test\\java\\com\\capgemini\\coedevon\\codingdojo\\rockpaperscissorslizardspock\\RockPaperTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [],
+  "commands": [],
+  "checksums": {},
+  "generated_at_utc": "2026-04-12T19:51:42.998681+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "repo_id": "103109633",
+  "module": "jaeger-spark-dependencies-common",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---< io.jaegertracing.dependencies:jaeger-spark-dependencies-common >--- [INFO] Building jaeger-spark-dependencies-common 0.0.1-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ j",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194350Z_103109633_jaeger-spark-dependencies-common_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194350Z_103109633_jaeger-spark-dependencies-common_AI_ONLY_focal_maven"
+}

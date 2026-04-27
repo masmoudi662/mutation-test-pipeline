@@ -1,0 +1,19 @@
+{
+  "repo_id": "100295611",
+  "module": "wamp2spring-core",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "TEST_FAILURE",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=ch.rasc.wamp2spring.message.EventMessageAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] Inspecting build with total of 1 modules [INFO] Installing Central Publishing features [INFO] [INFO] ----------------------< ch.rasc:wamp2spring-core >----------------",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T180240Z_100295611_wamp2spring-core_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T180240Z_100295611_wamp2spring-core_AI_ONLY_focal_maven"
+}

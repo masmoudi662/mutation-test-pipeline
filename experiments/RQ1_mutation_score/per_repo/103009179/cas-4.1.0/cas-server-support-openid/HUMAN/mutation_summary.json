@@ -1,0 +1,19 @@
+{
+  "repo_id": "103009179",
+  "module": "cas-4.1.0/cas-server-support-openid",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "OTHER",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\103009179\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... Downloading from central-https: https://repo1.maven.org/maven2/org/jasig/parent/jasig-parent/40/jasig-parent-40.pom Progress (1): 1.2 kB Progress (1): 2.6 kB Progress (1): 7.4 kB Pro",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193822Z_103009179_cas-4.1.0\\cas-server-support-openid_HUMAN_focal_maven\\settings_used_attempt2.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193822Z_103009179_cas-4.1.0\\cas-server-support-openid_HUMAN_focal_maven"
+}

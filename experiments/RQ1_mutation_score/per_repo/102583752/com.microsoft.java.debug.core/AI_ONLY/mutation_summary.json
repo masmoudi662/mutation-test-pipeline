@@ -1,0 +1,19 @@
+{
+  "repo_id": "102583752",
+  "module": "com.microsoft.java.debug.core",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "OTHER",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] Error injecting: org.eclipse.tycho.core.maven.TychoReactorReader java.lang.TypeNotPresentException: Type org.eclipse.tycho.core.maven.TychoReactorReader not present at org.eclipse.sisu.space.URLClassSpac",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T191829Z_102583752_com.microsoft.java.debug.core_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T191829Z_102583752_com.microsoft.java.debug.core_AI_ONLY_focal_maven"
+}

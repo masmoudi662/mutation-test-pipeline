@@ -1,0 +1,19 @@
+{
+  "repo_id": "100086904",
+  "module": "supply-location-service",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ---------------< com.ross.cs504:supply-location-service >--------------- [INFO] Building supply-location-service 1.0.0.BUILD-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T180040Z_100086904_supply-location-service_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T180040Z_100086904_supply-location-service_AI_ONLY_focal_maven"
+}

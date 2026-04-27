@@ -1,0 +1,19 @@
+{
+  "repo_id": "103760642",
+  "module": "core",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=com.intendia.qualifier.NamedExtensionAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< com.intendia.qualifier:qualifier >------------------ [INFO] Building Qualifier :: Core HEAD-SNAPSHOT [INFO] from pom.xml [INFO] ---------------",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T201349Z_103760642_core_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T201349Z_103760642_core_AI_ONLY_focal_maven"
+}

@@ -1,0 +1,94 @@
+{
+  "repo_id": "10264172",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 10264172/vol1/java-examples: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\10264172_22_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\fns\\link\\InverseSquaredLinkFunctionAiTest.java",
+    "Disabled 41 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.heatonresearch.aifh.general.fns.link.InverseSquaredLinkFunctionAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T192225Z_10264172_vol1\\java-examples_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\discrete\\DiscreteAnnealSubclass.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\discrete\\TestDiscreteAnneal.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\distance\\TestChebyshevDistance.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\distance\\TestEuclideanDistance.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\distance\\TestManhattanDistance.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\error\\ErrorTestingUtil.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\error\\TestErrorCalculationESS.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\error\\TestErrorCalculationMSE.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\error\\TestErrorCalculationRMS.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\data\\TestBasicData.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\fns\\link\\TestIdentityLinkFunction.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\fns\\link\\TestInverseLinkFunction.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\fns\\link\\TestInverseSquaredLinkFunction.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\fns\\link\\TestLogitLinkFunction.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\fns\\link\\TestLogLinkFunction.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\fns\\TestGaussianFunction.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\fns\\TestInverseMultiquadricFunction.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\fns\\TestMexicanHatFunction.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\fns\\TestMultiquadricFunction.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\general\\TestVectorUtil.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\kmeans\\TestCluster.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\kmeans\\TestKMeans.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\learning\\score\\SimpleAlgo.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\learning\\score\\TestScoreClassificationData.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\learning\\score\\TestScoreRegressionData.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\learning\\TestLearnAnneal.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\learning\\TestRBFNetwork.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\learning\\TestTraining.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\learning\\TrialAlgo.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\learning\\TrialScore.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\normalize\\TestDataSet.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\normalize\\TestEquilateral.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\randomize\\TestBasicGenerateRandom.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\randomize\\TestLinearCongruentialRandom.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\randomize\\TestMersenneTwisterGenerateRandom.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\randomize\\TestMultiplyWithCarryGenerateRandom.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\randomize\\TestSecureGenerateRandom.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\regression\\TestMultipleLinearRegression.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\regression\\TestTrainLeastSquares.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\regression\\TestTrainReweightLeastSquares.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10264172\\vol1\\java-examples\\src\\test\\java\\com\\heatonresearch\\aifh\\TestAIFH.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T19:22:25.865013+00:00"
+}

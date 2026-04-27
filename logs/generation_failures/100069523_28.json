@@ -1,0 +1,8 @@
+{
+  "json_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\classes2test-main\\dataset\\100069523\\100069523_28.json",
+  "basename": "100069523_28",
+  "error_type": "FileNotFoundError",
+  "error_message": "Unable to resolve focal path module/com.sandpolis.core.foundation/src/main/java/com/sandpolis/core/foundation/util/JarUtil.java inside D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100069523",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\pipeline\\generate_tests.py\", line 287, in main\n    focal_abs_path = resolve_focal_path(repo_dir, focal_rel_path)\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\pipeline\\generate_tests.py\", line 206, in resolve_focal_path\n    raise FileNotFoundError(f\"Unable to resolve focal path {focal_rel_path} inside {repo_dir}\")\nFileNotFoundError: Unable to resolve focal path module/com.sandpolis.core.foundation/src/main/java/com/sandpolis/core/foundation/util/JarUtil.java inside D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100069523\n",
+  "timestamp_utc": "2026-04-12T18:00:32.937462+00:00"
+}

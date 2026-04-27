@@ -1,0 +1,111 @@
+{
+  "repo_id": "100464616",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 100464616/game-engine: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100464616_55_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\test\\java\\com\\jzy\\game\\engine\\math\\MathUtilAiTest.java",
+    "Disabled 10 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.jzy.game.engine.math.MathUtilAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181052Z_100464616_game-engine_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Run artifacts written to D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181052Z_100464616_game-engine_AI_ONLY_focal_maven",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\test\\java\\com\\jzy\\game\\engine\\mail\\MailManagerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\test\\java\\com\\jzy\\game\\engine\\math\\IntersectorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\test\\java\\com\\jzy\\game\\engine\\math\\MathUtilTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\test\\java\\com\\jzy\\game\\engine\\math\\PlaneTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\test\\java\\com\\jzy\\game\\engine\\math\\Vector3Test.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\test\\java\\com\\jzy\\game\\engine\\mina\\DecoderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\test\\java\\com\\jzy\\game\\engine\\struct\\BitsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\test\\java\\com\\jzy\\game\\engine\\util\\CipherUtilTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\test\\java\\com\\jzy\\game\\engine\\util\\StringUtilTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\test\\java\\com\\jzy\\game\\engine\\util\\SysUtilTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-Dtest=com.jzy.game.engine.math.MathUtilAiTest",
+      "test"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DincludeScope=test",
+      "-Dmdep.addOutputDirectory=true",
+      "-Dmdep.addTestOutputDirectory=true",
+      "-Dmdep.outputFile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181052Z_100464616_game-engine_AI_ONLY_focal_maven\\maven_test_classpath.txt",
+      "dependency:build-classpath"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-f",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181052Z_100464616_game-engine_AI_ONLY_focal_maven\\pit_cli_87kh2j9t\\pom.xml",
+      "-Dmdep.outputFile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181052Z_100464616_game-engine_AI_ONLY_focal_maven\\pit_cli_87kh2j9t\\pit_cli_cp.txt",
+      "dependency:build-classpath"
+    ],
+    [
+      "java",
+      "-cp",
+      "C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest-command-line\\1.6.9\\pitest-command-line-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest-entry\\1.6.9\\pitest-entry-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest\\1.6.9\\pitest-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\cglib\\cglib-nodep\\2.2.2\\cglib-nodep-2.2.2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\alibaba\\fastjson\\1.2.83\\fastjson-1.2.83.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\esotericsoftware\\kryo\\5.5.0\\kryo-5.5.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\esotericsoftware\\minlog\\1.3.1\\minlog-1.3.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\esotericsoftware\\reflectasm\\1.11.9\\reflectasm-1.11.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-annotations\\2.15.2\\jackson-annotations-2.15.2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-core\\2.15.2\\jackson-core-2.15.2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.15.2\\jackson-databind-2.15.2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-yaml\\2.15.2\\jackson-dataformat-yaml-2.15.2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\google\\code\\gson\\gson\\2.2.4\\gson-2.2.4.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\google\\protobuf\\protobuf-java\\3.25.5\\protobuf-java-3.25.5.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\squareup\\retrofit\\converter-simplexml\\1.6.1\\converter-simplexml-1.6.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\squareup\\retrofit\\retrofit\\1.6.1\\retrofit-1.6.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\thoughtworks\\proxytoys\\proxytoys\\1.0\\proxytoys-1.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-codec\\commons-codec\\1.11\\commons-codec-1.11.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-logging\\commons-logging\\1.2\\commons-logging-1.2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-buffer\\4.1.93.Final\\netty-buffer-4.1.93.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-codec-dns\\4.1.93.Final\\netty-codec-dns-4.1.93.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-codec\\4.1.93.Final\\netty-codec-4.1.93.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-common\\4.1.93.Final\\netty-common-4.1.93.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-handler\\4.1.93.Final\\netty-handler-4.1.93.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-resolver-dns\\4.1.93.Final\\netty-resolver-dns-4.1.93.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-resolver\\4.1.93.Final\\netty-resolver-4.1.93.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-transport-native-unix-common\\4.1.93.Final\\netty-transport-native-unix-common-4.1.93.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-transport\\4.1.93.Final\\netty-transport-4.1.93.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\projectreactor\\reactor-core\\3.5.3\\reactor-core-3.5.3.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\reactivex\\rxjava3\\rxjava\\3.1.6\\rxjava-3.1.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\javax\\activation\\activation\\1.1\\activation-1.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\javax\\cache\\cache-api\\1.1.1\\cache-api-1.1.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\javax\\mail\\mail\\1.4.7\\mail-1.4.7.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\junit\\junit\\4.13.1\\junit-4.13.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\log4j\\log4j\\1.2.17\\log4j-1.2.17.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\net\\bytebuddy\\byte-buddy\\1.14.0\\byte-buddy-1.14.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\activemq\\activemq-client\\5.16.8\\activemq-client-5.16.8.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\commons\\commons-pool2\\2.4.2\\commons-pool2-2.4.2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\geronimo\\specs\\geronimo-j2ee-management_1.1_spec\\1.0.1\\geronimo-j2ee-management_1.1_spec-1.0.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\geronimo\\specs\\geronimo-jms_1.1_spec\\1.1.1\\geronimo-jms_1.1_spec-1.1.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\httpcomponents\\httpclient\\4.5.13\\httpclient-4.5.13.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\httpcomponents\\httpcore\\4.4.13\\httpcore-4.4.13.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\mina\\mina-core\\2.1.10\\mina-core-2.1.10.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\mina\\mina-http\\2.0.16\\mina-http-2.0.16.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\fusesource\\hawtbuf\\hawtbuf\\1.11\\hawtbuf-1.11.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\jboss\\marshalling\\jboss-marshalling-river\\2.0.11.Final\\jboss-marshalling-river-2.0.11.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\jboss\\marshalling\\jboss-marshalling\\2.0.11.Final\\jboss-marshalling-2.0.11.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\jodd\\jodd-bean\\5.1.6\\jodd-bean-5.1.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\jodd\\jodd-core\\5.1.6\\jodd-core-5.1.6.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\mongodb\\mongo-java-driver\\3.2.2\\mongo-java-driver-3.2.2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\mongodb\\morphia\\morphia\\1.2.1\\morphia-1.2.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\objenesis\\objenesis\\3.3\\objenesis-3.3.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\reactivestreams\\reactive-streams\\1.0.4\\reactive-streams-1.0.4.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\redisson\\redisson\\3.22.0\\redisson-3.22.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\simpleframework\\simple-xml\\2.7.1\\simple-xml-2.7.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.7.18\\slf4j-api-1.7.18.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\slf4j\\slf4j-log4j12\\1.7.18\\slf4j-log4j12-1.7.18.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\yaml\\snakeyaml\\2.0\\snakeyaml-2.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\redis\\clients\\jedis\\2.9.0\\jedis-2.9.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\stax\\stax-api\\1.0.1\\stax-api-1.0.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\stax\\stax\\1.2.0\\stax-1.2.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\xpp3\\xpp3\\1.1.3.3\\xpp3-1.1.3.3.jar;D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\target\\classes;D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\target\\test-classes",
+      "org.pitest.mutationtest.commandline.MutationCoverageReport",
+      "--reportDir",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181052Z_100464616_game-engine_AI_ONLY_focal_maven\\pit-reports",
+      "--targetClasses",
+      "com.jzy.game.engine.math.MathUtil*",
+      "--targetTests",
+      "com.jzy.game.engine.math.MathUtilAiTest",
+      "--sourceDirs",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\src\\main\\java",
+      "--mutableCodePaths",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100464616\\game-engine\\target\\classes",
+      "--classPathFile",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181052Z_100464616_game-engine_AI_ONLY_focal_maven\\pit_classpath.txt",
+      "--includeLaunchClasspath",
+      "false",
+      "--outputFormats",
+      "XML,HTML"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T18:10:52.207238+00:00"
+}

@@ -36,10 +36,6 @@ model = GenerativeModel(MODEL_NAME)
 
 
 def run_git(repo_dir: Path, args: list[str]) -> str:
-    """
-    Run git in repo_dir and return stdout (stripped).
-    Raises CalledProcessError if git fails.
-    """
     out = subprocess.check_output(
         ["git", *args],
         cwd=str(repo_dir),
@@ -49,15 +45,10 @@ def run_git(repo_dir: Path, args: list[str]) -> str:
 
 
 def checkout_detached(repo_dir: Path, commit: str) -> None:
-    """Checkout repo to a specific commit (detached HEAD)."""
     run_git(repo_dir, ["checkout", "--quiet", commit])
 
 
 def try_find_commit_with_path(repo_dir: Path, rel_path: str) -> str | None:
-    """
-    Return a commit SHA that contains rel_path at some point in history, else None.
-    We use: git rev-list --all -- <path>  (commits that touched that path)
-    """
     try:
         out = run_git(repo_dir, ["rev-list", "--all", "--", rel_path])
         if not out:
@@ -68,10 +59,6 @@ def try_find_commit_with_path(repo_dir: Path, rel_path: str) -> str | None:
 
 
 def with_alt_extensions(p: str) -> list[str]:
-    """
-    If p ends with .java, also try .kt/.kts.
-    If p ends with .kt/.kts, also try .java.
-    """
     alts = [p]
     if p.endswith(".java"):
         alts.append(p[:-5] + ".kt")
@@ -154,16 +141,11 @@ Focal method:
 
 
 def ensure_repo_cloned(repo_url: str, repo_id: str, checkout_ref: str | None = None) -> Path:
-    """
-    Clone repo into target-repos/<repo_id>/ if not already present.
-    Returns the path to the cloned repo folder.
-    """
     repo_dir = TARGET_REPOS_DIR / repo_id
     if not (repo_dir.exists() and any(repo_dir.iterdir())):
         print("CLONING REPO INTO:", repo_dir)
         subprocess.run(["git", "clone", repo_url, str(repo_dir)], check=True)
 
-    # If dataset provides a ref/commit/revision, honor it.
     if checkout_ref:
         subprocess.run(["git", "-C", str(repo_dir), "checkout", checkout_ref], check=True)
 
@@ -171,31 +153,18 @@ def ensure_repo_cloned(repo_url: str, repo_id: str, checkout_ref: str | None = N
 
 
 def resolve_focal_path(repo_dir: Path, focal_rel_path: str) -> Path:
-    """
-    Resolve focal_rel_path inside repo_dir.
-
-    Strategy:
-      1) direct path
-      2) alt extension (.java <-> .kt/.kts)
-      3) suffix match inside repo
-      4) filename fallback search
-      5) if still missing: try checkout a commit in history that contains the path, then retry 1-4
-    """
     repo_dir = Path(repo_dir)
 
     def _attempt_resolve(rel_path: str) -> Path | None:
-        # 1) direct
         direct = repo_dir / rel_path
         if direct.exists():
             return direct
 
-        # 2) alt extensions
         for alt in with_alt_extensions(rel_path):
             altp = repo_dir / alt
             if altp.exists():
                 return altp
 
-        # 3) suffix match (against full relative path)
         normalized = rel_path.replace("\\", "/")
         filename = Path(normalized).name
 
@@ -210,7 +179,6 @@ def resolve_focal_path(repo_dir: Path, focal_rel_path: str) -> Path:
         if suffix_hits:
             return sorted(suffix_hits, key=lambda p: p.as_posix())[0]
 
-        # 4) filename fallback
         all_hits = sorted(
             [p for p in repo_dir.rglob(filename) if p.is_file()],
             key=lambda p: p.as_posix(),
@@ -220,12 +188,10 @@ def resolve_focal_path(repo_dir: Path, focal_rel_path: str) -> Path:
 
         return None
 
-    # First attempt on current checkout
     found = _attempt_resolve(focal_rel_path)
     if found is not None:
         return found
 
-    # 5) Try history: find a commit where the path exists (or alt extension exists), checkout, retry
     for candidate_path in with_alt_extensions(focal_rel_path):
         commit = try_find_commit_with_path(repo_dir, candidate_path)
         if commit:
@@ -248,7 +214,6 @@ def call_vertex_with_retry(prompt: str, attempts: int = 3) -> str:
             response = model.generate_content(prompt)
             generated_code = (response.text or "").strip()
 
-            # strip fenced code if model returns it
             if generated_code.startswith("```"):
                 parts = generated_code.split("```")
                 if len(parts) >= 2:
@@ -281,9 +246,19 @@ def write_failure_report(json_path: Path, error: Exception) -> Path:
 
 
 def main():
-    print("TARGETS_DIR =", TARGETS_DIR)
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--json-path", default=None, help="Path to a single JSON file to process")
+    args = parser.parse_args()
 
-    json_files = sorted(TARGETS_DIR.glob("*.json"))
+    if args.json_path:
+        # Single JSON mode (called from run_full_sample_v2.py)
+        json_files = [Path(args.json_path)]
+    else:
+        # Batch mode (processes all JSONs in dataset)
+        json_files = sorted(TARGETS_DIR.rglob("*.json"))
+
+    print("TARGETS_DIR =", TARGETS_DIR)
     print("JSON FILES FOUND =", len(json_files))
 
     if not json_files:
@@ -297,7 +272,6 @@ def main():
         print("\nUSING JSON =", json_path.name)
         try:
             target = load_target(json_path)
-
             repo_id = str(target["repository"].get("repo_id", json_path.stem))
             repo_url = target["repository"]["url"]
             checkout_ref = (
@@ -305,29 +279,18 @@ def main():
                 or target.get("repository", {}).get("revision")
                 or target.get("repository", {}).get("ref")
             )
-
             print("REPO_ID =", repo_id)
             print("REPO_URL =", repo_url)
-            if checkout_ref:
-                print("CHECKOUT_REF =", checkout_ref)
 
             repo_dir = ensure_repo_cloned(repo_url, repo_id, checkout_ref=checkout_ref)
-
             focal_rel_path = target["focal_class"]["file"]
-            print("FOCAL_REL_PATH =", focal_rel_path)
-
             focal_abs_path = resolve_focal_path(repo_dir, focal_rel_path)
-            print("FOCAL_ABS_PATH =", focal_abs_path)
-
             focal_source = focal_abs_path.read_text(encoding="utf-8", errors="replace")
-
             prompt = prompt_for_target(target, focal_source)
-
             generated_code = call_vertex_with_retry(prompt, attempts=3)
 
             out_path = OUT_DIR / f"{json_path.stem}_GeneratedTest.java"
             out_path.write_text(generated_code, encoding="utf-8")
-
             print("WROTE:", out_path.resolve())
             succeeded += 1
 
@@ -335,12 +298,10 @@ def main():
             failed += 1
             failed_basenames.append(json_path.stem)
             print(f"ERROR processing {json_path.name}: {exc}")
-            failure_report = write_failure_report(json_path, exc)
-            print("WROTE FAILURE REPORT:", failure_report)
+            write_failure_report(json_path, exc)
             continue
 
     print("\n=== GENERATION SUMMARY ===")
-    print("TOTAL JSON FILES =", len(json_files))
     print("SUCCEEDED =", succeeded)
     print("FAILED =", failed)
     if failed_basenames:

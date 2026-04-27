@@ -1,0 +1,19 @@
+{
+  "repo_id": "102026692",
+  "module": "spring-cloud-etcd-discovery",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... Downloading from central: https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-netflix-dependencies/1.3.1.RELEASE/spring-cloud-netflix-dependencies-1.3.1.RELEASE.pom Progress (1): 1.1 kB Progress ",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T185827Z_102026692_spring-cloud-etcd-discovery_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T185827Z_102026692_spring-cloud-etcd-discovery_HUMAN_focal_maven"
+}

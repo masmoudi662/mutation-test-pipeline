@@ -1,0 +1,19 @@
+{
+  "repo_id": "104583079",
+  "module": "core",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.bitcoinj.core.TransactionAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] Inspecting build with total of 1 modules... [INFO] Installing Nexus Staging features: [INFO] ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-pl",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T203413Z_104583079_core_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T203413Z_104583079_core_AI_ONLY_focal_maven"
+}

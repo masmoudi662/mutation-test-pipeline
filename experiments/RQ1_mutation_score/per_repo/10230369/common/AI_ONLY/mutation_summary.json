@@ -1,0 +1,19 @@
+{
+  "repo_id": "10230369",
+  "module": "common",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=com.google.auto.common.AnnotationValuesAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] Inspecting build with total of 1 modules [INFO] Installing Central Publishing features [INFO] [INFO] --------------------< com.google.auto:auto-common >----------------",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T191239Z_10230369_common_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T191239Z_10230369_common_AI_ONLY_focal_maven"
+}

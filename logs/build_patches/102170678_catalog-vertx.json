@@ -1,0 +1,104 @@
+{
+  "repo_id": "102170678",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102170678",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102170678\\catalog-vertx",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 102170678/catalog-vertx: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\102170678_0_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102170678\\catalog-vertx\\src\\test\\java\\com\\redhat\\coolstore\\catalog\\api\\ApiVerticleAiTest.java",
+    "Disabled 3 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.redhat.coolstore.catalog.api.ApiVerticleAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190902Z_102170678_catalog-vertx_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Run artifacts written to D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190902Z_102170678_catalog-vertx_AI_ONLY_focal_maven",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102170678\\catalog-vertx\\src\\test\\java\\com\\redhat\\coolstore\\catalog\\api\\ApiVerticleTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102170678\\catalog-vertx\\src\\test\\java\\com\\redhat\\coolstore\\catalog\\verticle\\service\\CatalogServiceTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102170678\\catalog-vertx\\src\\test\\java\\com\\redhat\\coolstore\\catalog\\verticle\\service\\MongoTestBase.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-Dtest=com.redhat.coolstore.catalog.api.ApiVerticleAiTest",
+      "test"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DincludeScope=test",
+      "-Dmdep.addOutputDirectory=true",
+      "-Dmdep.addTestOutputDirectory=true",
+      "-Dmdep.outputFile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190902Z_102170678_catalog-vertx_AI_ONLY_focal_maven\\maven_test_classpath.txt",
+      "dependency:build-classpath"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-f",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190902Z_102170678_catalog-vertx_AI_ONLY_focal_maven\\pit_cli_d5arl6mb\\pom.xml",
+      "-Dmdep.outputFile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190902Z_102170678_catalog-vertx_AI_ONLY_focal_maven\\pit_cli_d5arl6mb\\pit_cli_cp.txt",
+      "dependency:build-classpath"
+    ],
+    [
+      "java",
+      "-cp",
+      "C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest-command-line\\1.6.9\\pitest-command-line-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest-entry\\1.6.9\\pitest-entry-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\pitest\\pitest\\1.6.9\\pitest-1.6.9.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-annotations\\2.7.0\\jackson-annotations-2.7.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-core\\2.7.4\\jackson-core-2.7.4.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\fasterxml\\jackson\\core\\jackson-databind\\2.7.4\\jackson-databind-2.7.4.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\fasterxml\\jackson\\dataformat\\jackson-dataformat-yaml\\2.7.7\\jackson-dataformat-yaml-2.7.7.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\fasterxml\\jackson\\module\\jackson-module-jaxb-annotations\\2.7.4\\jackson-module-jaxb-annotations-2.7.4.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\github\\mifmif\\generex\\1.0.1\\generex-1.0.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\squareup\\okhttp3\\logging-interceptor\\3.4.1\\logging-interceptor-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\squareup\\okhttp3\\okhttp-ws\\3.4.1\\okhttp-ws-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\squareup\\okhttp3\\okhttp\\3.4.1\\okhttp-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\com\\squareup\\okio\\okio\\1.9.0\\okio-1.9.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\commons-io\\commons-io\\2.4\\commons-io-2.4.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\de\\flapdoodle\\embed\\de.flapdoodle.embed.mongo\\1.50.3\\de.flapdoodle.embed.mongo-1.50.3.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\de\\flapdoodle\\embed\\de.flapdoodle.embed.process\\1.50.2\\de.flapdoodle.embed.process-1.50.2.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\dk\\brics\\automaton\\automaton\\1.11-8\\automaton-1.11-8.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\fabric8\\kubernetes-client\\1.4.34\\kubernetes-client-1.4.34.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\fabric8\\kubernetes-model\\1.0.65\\kubernetes-model-1.0.65.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\fabric8\\zjsonpatch\\0.3.0\\zjsonpatch-0.3.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-buffer\\4.1.8.Final\\netty-buffer-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-codec-dns\\4.1.8.Final\\netty-codec-dns-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-codec-http2\\4.1.8.Final\\netty-codec-http2-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-codec-http\\4.1.8.Final\\netty-codec-http-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-codec-socks\\4.1.8.Final\\netty-codec-socks-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-codec\\4.1.8.Final\\netty-codec-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-common\\4.1.8.Final\\netty-common-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-handler-proxy\\4.1.8.Final\\netty-handler-proxy-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-handler\\4.1.8.Final\\netty-handler-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-resolver-dns\\4.1.8.Final\\netty-resolver-dns-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-resolver\\4.1.8.Final\\netty-resolver-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\netty\\netty-transport\\4.1.8.Final\\netty-transport-4.1.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-auth-common\\3.4.1\\vertx-auth-common-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-codegen\\3.4.1\\vertx-codegen-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-config-kubernetes-configmap\\3.4.1\\vertx-config-kubernetes-configmap-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-config-yaml\\3.4.1\\vertx-config-yaml-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-config\\3.4.1\\vertx-config-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-core\\3.4.1\\vertx-core-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-health-check\\3.4.1\\vertx-health-check-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-lang-js\\3.4.1\\vertx-lang-js-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-mongo-client\\3.4.1\\vertx-mongo-client-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-mongo-embedded-db\\3.4.1\\vertx-mongo-embedded-db-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-service-proxy\\3.4.1\\vertx-service-proxy-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-unit\\3.4.1\\vertx-unit-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\io\\vertx\\vertx-web\\3.4.1\\vertx-web-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\javax\\validation\\validation-api\\1.1.0.Final\\validation-api-1.1.0.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\junit\\junit\\4.12\\junit-4.12.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\net\\bytebuddy\\byte-buddy-agent\\1.6.11\\byte-buddy-agent-1.6.11.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\net\\bytebuddy\\byte-buddy\\1.6.11\\byte-buddy-1.6.11.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\net\\java\\dev\\jna\\jna-platform\\4.0.0\\jna-platform-4.0.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\net\\java\\dev\\jna\\jna\\4.0.0\\jna-4.0.0.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\commons\\commons-compress\\1.10\\commons-compress-1.10.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\apache\\commons\\commons-lang3\\3.1\\commons-lang3-3.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\mockito\\mockito-core\\2.7.22\\mockito-core-2.7.22.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\mongodb\\bson\\3.4.1\\bson-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\mongodb\\mongodb-driver-async\\3.4.1\\mongodb-driver-async-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\mongodb\\mongodb-driver-core\\3.4.1\\mongodb-driver-core-3.4.1.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\mvel\\mvel2\\2.2.8.Final\\mvel2-2.2.8.Final.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\objenesis\\objenesis\\2.5\\objenesis-2.5.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\slf4j\\jul-to-slf4j\\1.7.13\\jul-to-slf4j-1.7.13.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\slf4j\\slf4j-api\\1.7.21\\slf4j-api-1.7.21.jar;C:\\Users\\Aymen Masmoudi\\.m2\\repository\\org\\yaml\\snakeyaml\\1.15\\snakeyaml-1.15.jar;D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102170678\\catalog-vertx\\target\\classes;D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102170678\\catalog-vertx\\target\\test-classes",
+      "org.pitest.mutationtest.commandline.MutationCoverageReport",
+      "--reportDir",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190902Z_102170678_catalog-vertx_AI_ONLY_focal_maven\\pit-reports",
+      "--targetClasses",
+      "com.redhat.coolstore.catalog.api.ApiVerticle*",
+      "--targetTests",
+      "com.redhat.coolstore.catalog.api.ApiVerticleAiTest",
+      "--sourceDirs",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102170678\\catalog-vertx\\src\\main\\java",
+      "--mutableCodePaths",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102170678\\catalog-vertx\\target\\classes",
+      "--classPathFile",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190902Z_102170678_catalog-vertx_AI_ONLY_focal_maven\\pit_classpath.txt",
+      "--includeLaunchClasspath",
+      "false",
+      "--outputFormats",
+      "XML,HTML"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T19:09:02.971828+00:00"
+}

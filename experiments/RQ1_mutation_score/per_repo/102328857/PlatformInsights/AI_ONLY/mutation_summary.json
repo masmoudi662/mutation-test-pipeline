@@ -1,0 +1,19 @@
+{
+  "repo_id": "102328857",
+  "module": "PlatformInsights",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "MODULE_MISSING",
+  "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102328857\\PlatformInsights",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T191304Z_102328857_PlatformInsights_AI_ONLY_focal_maven"
+}

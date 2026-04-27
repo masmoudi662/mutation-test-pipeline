@@ -1,0 +1,19 @@
+{
+  "repo_id": "104217624",
+  "module": "rpki-validator",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=net.ripe.rpki.validator3.domain.cleanup.RpkiObjectCleanupServiceTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------------------< net.ripe.rpki:rpki-validator >-------------------- [INFO] Building rpki-validator-3 3.2-SNAPSHOT [INFO] from pom.xml",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T202439Z_104217624_rpki-validator_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T202439Z_104217624_rpki-validator_HUMAN_focal_maven"
+}

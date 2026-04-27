@@ -1,0 +1,19 @@
+{
+  "repo_id": "102608940",
+  "module": "portfolio-service",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\102608940\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: INFO: io.vertx.codegen.CodeGenProcessor - Loaded service_proxy_handler code generator INFO: io.vertx.codegen.CodeGenProcessor - Loaded service_proxy code generator INFO: io.vertx.codegen.CodeGenProcessor - Loaded s",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102608940\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T192028Z_102608940_portfolio-service_HUMAN_focal_maven\\settings_used_attempt2.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T192028Z_102608940_portfolio-service_HUMAN_focal_maven"
+}

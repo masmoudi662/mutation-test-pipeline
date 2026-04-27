@@ -1,0 +1,19 @@
+{
+  "repo_id": "104094274",
+  "module": "carml-rdf-mapper",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "FILE_NOT_FOUND",
+  "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104094274\\carml-rdf-mapper\\src\\test\\java\\com\\taxonic\\carml\\rdf_mapper\\impl\\CarmlMapperTest.java",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T202027Z_104094274_carml-rdf-mapper_HUMAN_focal_maven"
+}

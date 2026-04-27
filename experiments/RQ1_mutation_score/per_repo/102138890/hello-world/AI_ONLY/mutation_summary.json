@@ -1,0 +1,26 @@
+{
+  "repo_id": "102138890",
+  "module": "hello-world",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "PIT_ERROR",
+  "error_message": "Command '['java', '-cp', 'C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest-command-line\\\\1.6.9\\\\pitest-command-line-1.6.9.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest-entry\\\\1.6.9\\\\pitest-entry-1.6.9.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest\\\\1.6.9\\\\pitest-1.6.9.jar;D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\102138890\\",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": "HelloWorldBuilder*",
+    "target_tests": "HelloWorldBuilderAiTest",
+    "source_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102138890\\hello-world\\src\\main\\java",
+    "mutable_code_paths": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102138890\\hello-world\\target\\classes",
+    "class_path_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190639Z_102138890_hello-world_AI_ONLY_focal_maven\\pit_classpath.txt"
+  },
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190639Z_102138890_hello-world_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T190639Z_102138890_hello-world_AI_ONLY_focal_maven"
+}

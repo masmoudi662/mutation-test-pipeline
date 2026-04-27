@@ -7,9 +7,10 @@
   "backup_path": null,
   "changes": [
     "Using build tool: maven",
+    "Injected AI test for 103035/red5_base: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\103035_22_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\server\\service\\ConversionUtilsAiTest.java",
     "Disabled 47 non-selected test files",
     "Applied focal test scope with selected tests: ['org.red5.server.service.ConversionUtilsAiTest']",
-    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002240Z_103035_red5_base_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=MAVEN_FORCE_UPDATE",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194137Z_103035_red5_base_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=MAVEN_FORCE_UPDATE",
     "Pipeline attempt failed (no further retry): phase=compile error_type=DEP_RESOLUTION",
     "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\io\\mock\\Input.java",
     "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103035\\red5_base\\src\\test\\java\\org\\red5\\io\\mock\\Mock.java",
@@ -96,5 +97,5 @@
       "size_bytes": 199398
     }
   },
-  "generated_at_utc": "2026-02-26T00:22:40.731432+00:00"
+  "generated_at_utc": "2026-04-12T19:41:37.610795+00:00"
 }

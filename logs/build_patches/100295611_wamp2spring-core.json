@@ -1,0 +1,93 @@
+{
+  "repo_id": "100295611",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 100295611/wamp2spring-core: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100295611_32_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\EventMessageAiTest.java",
+    "Disabled 33 non-selected test files",
+    "Applied focal test scope with selected tests: ['ch.rasc.wamp2spring.message.EventMessageAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T180240Z_100295611_wamp2spring-core_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=test error_type=TEST_FAILURE",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\config\\DestinationMatchTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\config\\FeaturesTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\config\\PrincipalMethodArgumentResolverTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\config\\WampMessageMethodArgumentResolverTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\config\\WampSessionIdMethodArgumentResolverTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\AbortMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\BaseMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\CallMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\CommonTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\ErrorMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\EventMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\GoodbyeMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\HelloMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\InvocationMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\ParserUtilTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\PublishedMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\PublishMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\RegisteredMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\RegisterMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\ResultMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\SubscribedMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\SubscribeMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\UnregisteredMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\UnregisterMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\UnsubscribedMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\UnsubscribeMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\WelcomeMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\message\\YieldMessageTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\testsupport\\TestPrincipal.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\util\\CollectionHelperTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\util\\IdGeneratorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\util\\InvocableHandlerMethodTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100295611\\wamp2spring-core\\src\\test\\java\\ch\\rasc\\wamp2spring\\WampPublisherTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-Dtest=ch.rasc.wamp2spring.message.EventMessageAiTest",
+      "test"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T18:02:40.977838+00:00"
+}

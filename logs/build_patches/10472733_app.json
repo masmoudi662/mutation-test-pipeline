@@ -1,0 +1,87 @@
+{
+  "repo_id": "10472733",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 10472733/app: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\10472733_137_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\view\\progressdialog\\MuzimaProgressDialogAiTest.java",
+    "Disabled 34 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.muzima.view.progressdialog.MuzimaProgressDialogAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T204006Z_10472733_app_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\adapters\\forms\\CompleteFormsAdapterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\builder\\FormBuilder.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\builder\\FormTemplateBuilder.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\builder\\PatientBuilder.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\builder\\TagBuilder.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\controller\\CohortControllerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\controller\\ConceptControllerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\controller\\FormControllerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\controller\\LocationControllerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\controller\\ObservationControllerGetEncountersTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\controller\\ObservationControllerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\controller\\PatientControllerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\model\\AvailableFormTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\model\\builders\\AvailableFormBuilderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\model\\builders\\CompleteFormBuilderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\model\\builders\\DownloadedFormBuilderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\model\\observation\\ConceptsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\model\\observation\\EncountersTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\model\\observation\\EncounterWithObservationsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\service\\ConceptParserTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\service\\HTMLConceptParserTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\service\\HTMLFormObservationCreatorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\service\\MuzimaSyncServiceTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\service\\ObservationParserUtilityTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\testSupport\\CustomTestRunner.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\utils\\PatientComparatorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\utils\\StringUtilsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\view\\forms\\FormDataStoreTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\view\\forms\\HTMLFormDataStoreTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\view\\forms\\HTMLPatientJSONMapperTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\view\\forms\\JSONPatientMapperTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\view\\forms\\PatientJSONMapperTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\view\\FormsActivityTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10472733\\app\\src\\test\\java\\com\\muzima\\view\\progressdialog\\MuzimaProgressDialogTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T20:40:06.734849+00:00"
+}

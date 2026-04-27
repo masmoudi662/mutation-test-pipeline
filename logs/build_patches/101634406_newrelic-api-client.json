@@ -1,0 +1,67 @@
+{
+  "repo_id": "101634406",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 101634406/newrelic-api-client: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\101634406_0_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\apiclient\\internal\\DefaultAlertsPoliciesApiAiTest.java",
+    "Disabled 14 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.ocadotechnology.newrelic.apiclient.internal.DefaultAlertsPoliciesApiAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T184937Z_101634406_newrelic-api-client_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\apiclient\\internal\\DefaultAlertsPoliciesApiTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\apiclient\\internal\\DefaultApplicationsApiTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\apiclient\\internal\\DefaultDashboardsApiTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\apiclient\\internal\\DefaultServersApiTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\apiclient\\internal\\DefaultSyntheticsMonitorsApiTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\apiclient\\model\\channels\\IncludeJsonAttachmentDeserializerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\apiclient\\NewRelicApiIntegrationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\graphql\\apiclient\\internal\\GraphqlAlertsChannelsApiTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\graphql\\apiclient\\internal\\GraphqlAlertsNrqlConditionsApiTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\graphql\\apiclient\\internal\\GraphqlAlertsPoliciesApiTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\graphql\\apiclient\\internal\\testutil\\QueryExecutorMock.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\graphql\\apiclient\\internal\\testutil\\TestResources.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\graphql\\apiclient\\internal\\transport\\JavaLikeEnumTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101634406\\newrelic-api-client\\src\\test\\java\\com\\ocadotechnology\\newrelic\\graphql\\apiclient\\internal\\transport\\ResultTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T18:49:37.208824+00:00"
+}

@@ -2,16 +2,66 @@
   "repo_id": "100021742",
   "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100021742",
   "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100021742\\spring-cloud-stream-binder-artemis",
-  "settings_path": null,
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
   "pom_path": null,
   "backup_path": null,
   "changes": [
     "Using build tool: maven",
-    "Pipeline bootstrap failure: Generated AI test not found: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100021742_19_GeneratedTest.java"
+    "Injected AI test for 100021742/spring-cloud-stream-binder-artemis: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100021742_19_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100021742\\spring-cloud-stream-binder-artemis\\src\\test\\java\\me\\snowdrop\\stream\\binder\\artemis\\provisioning\\ArtemisBrokerManagerAiTest.java",
+    "Disabled 7 non-selected test files",
+    "Applied focal test scope with selected tests: ['me.snowdrop.stream.binder.artemis.provisioning.ArtemisBrokerManagerAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T175951Z_100021742_spring-cloud-stream-binder-artemis_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=test error_type=COMPILATION",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100021742\\spring-cloud-stream-binder-artemis\\src\\test\\java\\me\\snowdrop\\stream\\binder\\artemis\\ArtemisMessageChannelBinderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100021742\\spring-cloud-stream-binder-artemis\\src\\test\\java\\me\\snowdrop\\stream\\binder\\artemis\\common\\NamingUtilsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100021742\\spring-cloud-stream-binder-artemis\\src\\test\\java\\me\\snowdrop\\stream\\binder\\artemis\\listener\\ListenerContainerFactoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100021742\\spring-cloud-stream-binder-artemis\\src\\test\\java\\me\\snowdrop\\stream\\binder\\artemis\\provisioning\\ArtemisBrokerManagerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100021742\\spring-cloud-stream-binder-artemis\\src\\test\\java\\me\\snowdrop\\stream\\binder\\artemis\\provisioning\\ArtemisConsumerDestinationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100021742\\spring-cloud-stream-binder-artemis\\src\\test\\java\\me\\snowdrop\\stream\\binder\\artemis\\provisioning\\ArtemisProducerDestinationTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100021742\\spring-cloud-stream-binder-artemis\\src\\test\\java\\me\\snowdrop\\stream\\binder\\artemis\\provisioning\\ArtemisProvisioningProviderTest.java"
   ],
   "removed_dependencies": [],
-  "installed_jars": [],
-  "commands": [],
-  "checksums": {},
-  "generated_at_utc": "2026-04-11T21:15:11.440099+00:00"
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-Dtest=me.snowdrop.stream.binder.artemis.provisioning.ArtemisBrokerManagerAiTest",
+      "test"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T17:59:51.789395+00:00"
 }

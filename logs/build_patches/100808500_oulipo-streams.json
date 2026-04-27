@@ -1,0 +1,79 @@
+{
+  "repo_id": "100808500",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 100808500/oulipo-streams: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100808500_41_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\opcodes\\PutInvariantMediaOpAiTest.java",
+    "Disabled 26 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.oulipo.streams.opcodes.PutInvariantMediaOpAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T182715Z_100808500_oulipo-streams_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\document\\DocumentFileCompilerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\document\\DocumentFileDecompilerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\document\\DocumentFileTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\impl\\DefaultOulipoMachineTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\impl\\DefaultStreamsLoaderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\impl\\FileInvariantStreamTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\impl\\InvariantSpanCollectorTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\impl\\MockRemoteFileManager.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\impl\\NodeFactory.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\impl\\NodePartitionTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\impl\\NodeTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\impl\\PartitionerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\impl\\RopeUtilsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\impl\\RopeVariantStreamTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\opcodes\\ApplyOverlayOpTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\opcodes\\CopyVariantOpTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\opcodes\\DeleteVariantOpTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\opcodes\\MoveVariantOpTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\opcodes\\PutInvariantMediaOpTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\opcodes\\PutInvariantSpanOpTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\opcodes\\PutOverlayMediaOpTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\opcodes\\PutOverlayOpTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\opcodes\\SwapVariantOpTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\opcodes\\ToggleOverlayOpTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\types\\InvariantSpanTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100808500\\oulipo-streams\\src\\test\\java\\org\\oulipo\\streams\\VariantSpanTest.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T18:27:15.791653+00:00"
+}

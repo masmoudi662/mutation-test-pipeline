@@ -1,0 +1,19 @@
+{
+  "repo_id": "10329619",
+  "module": "oauth-2.0/common",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=org.apache.oltu.oauth2.common.validators.AbstractValidatorTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------< org.apache.oltu.oauth2:org.apache.oltu.oauth2.common >-------- [INFO] Building Apache Oltu - OAuth 2.0 - Common 1.0.3-SNAPSHOT [INFO] ",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T195025Z_10329619_oauth-2.0\\common_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T195025Z_10329619_oauth-2.0\\common_HUMAN_focal_maven"
+}

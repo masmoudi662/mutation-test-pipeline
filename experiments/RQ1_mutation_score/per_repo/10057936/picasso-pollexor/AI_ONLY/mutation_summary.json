@@ -1,0 +1,19 @@
+{
+  "repo_id": "10057936",
+  "module": "picasso-pollexor",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "FILE_NOT_FOUND",
+  "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10057936\\picasso-pollexor\\src\\test\\java\\com\\squareup\\picasso3\\pollexor\\PollexorRequestTransformerTest.java",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181604Z_10057936_picasso-pollexor_AI_ONLY_focal_maven"
+}

@@ -2,32 +2,18 @@
   "repo_id": "103035",
   "module": "red5_base",
   "condition": "AI_ONLY",
-  "commit_hash": "2c3304f7ba4ae3dad5089cbab328757805073e61",
-  "focal_class": "org.red5.server.service.ConversionUtils",
-  "ok": false,
   "status": "FAIL",
   "error_type": "DEP_RESOLUTION",
   "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -------------------------< org.red5:red5-base >------------------------- [INFO] Building red5-base 0.8rc2-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ jar ]------------",
   "metrics": {
-    "mutation_score_pct": "0.000000",
-    "mutants_total": "0",
-    "killed": "0",
-    "survived": "0"
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
   },
-  "pit_config": {
-    "pit_version": "1.6.9",
-    "target_classes": ""
-  },
-  "logs": {
-    "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002240Z_103035_red5_base_AI_ONLY_focal_maven",
-    "run_status_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002240Z_103035_red5_base_AI_ONLY_focal_maven\\run_status.json",
-    "pit_log_file": "",
-    "command_logs": [
-      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\artifacts\\runs\\20260226T002240Z_103035_red5_base_AI_ONLY_focal_maven\\00_compile.log"
-    ]
-  },
-  "applied_fixes": [
-    "MAVEN_FORCE_UPDATE"
-  ],
-  "timestamp": "2026-02-26T00:22:47.474083+00:00"
+  "pit_config": {},
+  "fixed_by": "MAVEN_FORCE_UPDATE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194137Z_103035_red5_base_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T194137Z_103035_red5_base_AI_ONLY_focal_maven"
 }

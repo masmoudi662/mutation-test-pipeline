@@ -1,0 +1,19 @@
+{
+  "repo_id": "103009179",
+  "module": "cas-4.1.0/cas-server-support-openid",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "OTHER",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\103009179\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [WARNING] [WARNING] Some problems were encountered while building the effective model for org.jasig.cas:cas-server-support-openid:jar:4.1.0 [WARNING] Reporting configuration should b",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103009179\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193942Z_103009179_cas-4.1.0\\cas-server-support-openid_AI_ONLY_focal_maven\\settings_used_attempt2.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193942Z_103009179_cas-4.1.0\\cas-server-support-openid_AI_ONLY_focal_maven"
+}

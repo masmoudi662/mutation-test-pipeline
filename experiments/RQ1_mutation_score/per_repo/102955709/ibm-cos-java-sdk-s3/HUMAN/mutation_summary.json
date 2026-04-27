@@ -1,0 +1,19 @@
+{
+  "repo_id": "102955709",
+  "module": "ibm-cos-java-sdk-s3",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "TEST_FAILURE",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=com.ibm.cloud.objectstorage.services.aspera.transfer.AsperaFaspManagerWrapperTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< com.ibm.cos:ibm-cos-java-sdk-s3 >------------------- [INFO] Building IBM COS Java SDK for Amazon S3 2.15.",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193354Z_102955709_ibm-cos-java-sdk-s3_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193354Z_102955709_ibm-cos-java-sdk-s3_HUMAN_focal_maven"
+}

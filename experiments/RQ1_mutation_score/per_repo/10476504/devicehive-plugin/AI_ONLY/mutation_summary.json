@@ -1,0 +1,19 @@
+{
+  "repo_id": "10476504",
+  "module": "devicehive-plugin",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "DEP_RESOLUTION",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-DskipTests', 'compile']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] ------------------< com.devicehive:devicehive-plugin >------------------ [INFO] Building DeviceHive Plugin Logic 4.1.0 [INFO] from pom.xml [INFO] --------------------------------[ jar ]--------",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "MAVEN_FORCE_UPDATE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T204208Z_10476504_devicehive-plugin_AI_ONLY_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T204208Z_10476504_devicehive-plugin_AI_ONLY_focal_maven"
+}

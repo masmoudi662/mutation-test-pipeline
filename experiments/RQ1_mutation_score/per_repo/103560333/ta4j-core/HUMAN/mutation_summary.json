@@ -1,0 +1,19 @@
+{
+  "repo_id": "103560333",
+  "module": "ta4j-core",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "FILE_NOT_FOUND",
+  "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103560333\\ta4j-core\\src\\test\\java\\org\\ta4j\\core\\analysis\\criteria\\AverageProfitCriterionTest.java",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T195917Z_103560333_ta4j-core_HUMAN_focal_maven"
+}

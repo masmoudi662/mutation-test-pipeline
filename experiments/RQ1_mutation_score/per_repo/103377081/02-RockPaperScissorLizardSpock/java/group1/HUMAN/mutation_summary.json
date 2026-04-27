@@ -1,0 +1,19 @@
+{
+  "repo_id": "103377081",
+  "module": "02-RockPaperScissorLizardSpock/java/group1",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "FILE_NOT_FOUND",
+  "error_message": "Mapped human test class file does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103377081\\02-RockPaperScissorLizardSpock\\java\\group1\\src\\test\\java\\com\\capgemini\\coedevon\\codingdojo\\rockpaperscissorslizardspock\\RockPaperTest.java",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T195142Z_103377081_02-RockPaperScissorLizardSpock\\java\\group1_HUMAN_focal_maven"
+}

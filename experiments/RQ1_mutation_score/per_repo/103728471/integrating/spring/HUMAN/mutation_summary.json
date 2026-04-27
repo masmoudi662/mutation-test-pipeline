@@ -1,0 +1,26 @@
+{
+  "repo_id": "103728471",
+  "module": "integrating/spring",
+  "condition": "HUMAN",
+  "status": "OK",
+  "error_type": "",
+  "error_message": "",
+  "metrics": {
+    "mutation_score_pct": "75.000000",
+    "mutants_total": "4",
+    "killed": "3",
+    "survived": "1"
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": "org.agoncal.fascicle.jpa.integrating.spring.AddressEndpoint*",
+    "target_tests": "org.agoncal.fascicle.jpa.integrating.spring.AddressEndpointTest",
+    "source_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103728471\\integrating\\spring\\src\\main\\java",
+    "mutable_code_paths": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103728471\\integrating\\spring\\target\\classes",
+    "class_path_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T201154Z_103728471_integrating\\spring_HUMAN_focal_maven\\pit_classpath.txt"
+  },
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T201154Z_103728471_integrating\\spring_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T201154Z_103728471_integrating\\spring_HUMAN_focal_maven"
+}

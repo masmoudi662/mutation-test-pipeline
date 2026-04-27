@@ -1,0 +1,19 @@
+{
+  "repo_id": "103560333",
+  "module": "ta4j-core",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "FILE_NOT_FOUND",
+  "error_message": "Generated AI test not found: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\103560333_104_GeneratedTest.java",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T195918Z_103560333_ta4j-core_AI_ONLY_focal_maven"
+}

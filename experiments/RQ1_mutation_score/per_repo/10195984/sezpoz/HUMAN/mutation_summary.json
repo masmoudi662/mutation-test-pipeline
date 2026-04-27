@@ -1,0 +1,19 @@
+{
+  "repo_id": "10195984",
+  "module": "sezpoz",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "COMPILATION",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=net.java.sezpoz.IndexTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] -----------------------< net.java.sezpoz:sezpoz >----------------------- [INFO] Building SezPoz Library 1.14-SNAPSHOT [INFO] from pom.xml [INFO] --------------------------------[ ja",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T185543Z_10195984_sezpoz_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T185543Z_10195984_sezpoz_HUMAN_focal_maven"
+}

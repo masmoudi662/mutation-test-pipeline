@@ -1,0 +1,26 @@
+{
+  "repo_id": "101231823",
+  "module": "iextrading4j-hist-api",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "PIT_ERROR",
+  "error_message": "Command '['java', '-cp', 'C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest-command-line\\\\1.6.9\\\\pitest-command-line-1.6.9.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest-entry\\\\1.6.9\\\\pitest-entry-1.6.9.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\org\\\\pitest\\\\pitest\\\\1.6.9\\\\pitest-1.6.9.jar;C:\\\\Users\\\\Aymen Masmoudi\\\\.m2\\\\repository\\\\com\\\\fasterxml\\\\jackson\\\\",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {
+    "pit_version": "1.6.9",
+    "target_classes": "pl.zankowski.iextrading4j.hist.api.field.IEXPrice*",
+    "target_tests": "pl.zankowski.iextrading4j.hist.api.field.IEXPriceTest",
+    "source_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101231823\\iextrading4j-hist-api\\src\\main\\java",
+    "mutable_code_paths": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\101231823\\iextrading4j-hist-api\\target\\classes",
+    "class_path_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T184018Z_101231823_iextrading4j-hist-api_HUMAN_focal_maven\\pit_classpath.txt"
+  },
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T184018Z_101231823_iextrading4j-hist-api_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T184018Z_101231823_iextrading4j-hist-api_HUMAN_focal_maven"
+}

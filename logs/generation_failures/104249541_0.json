@@ -1,0 +1,8 @@
+{
+  "json_file": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\classes2test\\classes2test-main\\dataset\\104249541\\104249541_0.json",
+  "basename": "104249541_0",
+  "error_type": "FileNotFoundError",
+  "error_message": "Unable to resolve focal path app/src/main/java/com/kozhevin/rootchecks/data/TotalResult.java inside D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104249541",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\pipeline\\generate_tests.py\", line 287, in main\n    focal_abs_path = resolve_focal_path(repo_dir, focal_rel_path)\n  File \"D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\pipeline\\generate_tests.py\", line 206, in resolve_focal_path\n    raise FileNotFoundError(f\"Unable to resolve focal path {focal_rel_path} inside {repo_dir}\")\nFileNotFoundError: Unable to resolve focal path app/src/main/java/com/kozhevin/rootchecks/data/TotalResult.java inside D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\104249541\n",
+  "timestamp_utc": "2026-04-12T20:26:44.089068+00:00"
+}

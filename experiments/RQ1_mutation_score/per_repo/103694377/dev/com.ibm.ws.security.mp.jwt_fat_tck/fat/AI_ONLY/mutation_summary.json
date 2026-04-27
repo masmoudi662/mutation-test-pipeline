@@ -1,0 +1,19 @@
+{
+  "repo_id": "103694377",
+  "module": "dev/com.ibm.ws.security.mp.jwt_fat_tck/fat",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "MODULE_MISSING",
+  "error_message": "Module directory does not exist: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\103694377\\dev\\com.ibm.ws.security.mp.jwt_fat_tck\\fat",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "",
+  "settings_copy": "",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T200825Z_103694377_dev\\com.ibm.ws.security.mp.jwt_fat_tck\\fat_AI_ONLY_focal_maven"
+}

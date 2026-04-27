@@ -1,0 +1,95 @@
+{
+  "repo_id": "10113030",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 10113030/library: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\10113030_11_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlContainerParserAiTest.java",
+    "Disabled 42 non-selected test files",
+    "Applied focal test scope with selected tests: ['com.google.maps.android.data.kml.KmlContainerParserAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T183725Z_10113030_library_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=NONE",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\clustering\\algo\\CentroidNonHierarchicalDistanceBasedAlgorithmTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\clustering\\algo\\ContinuousZoomEuclideanCentroidAlgorithmTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\clustering\\QuadItemTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\clustering\\StaticClusterTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\FeatureTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\BiMultiMapTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonFeatureTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonLayerTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonLineStringStyleTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonLineStringTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonMultiLineStringTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonMultiPointTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonMultiPolygonTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonParserTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonPointStyleTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonPointTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonPolygonStyleTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonPolygonTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonRendererTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\geojson\\GeoJsonTestUtil.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlContainerParserTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlFeatureParserTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlLineStringTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlMultiGeometryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlMultiTrackTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlParserTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlPointTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlPolygonTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlRendererTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlStyleTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlTestUtil.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlTrackTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\kml\\KmlUtilTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\LineStringTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\MultiGeometryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\PointTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\data\\RendererTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\heatmaps\\UtilTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\MathUtilTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\PolyUtilTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\SphericalUtilTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\10113030\\library\\src\\test\\java\\com\\google\\maps\\android\\TestUtil.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T18:37:25.060630+00:00"
+}

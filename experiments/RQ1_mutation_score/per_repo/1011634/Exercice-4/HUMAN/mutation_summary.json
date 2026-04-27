@@ -1,0 +1,19 @@
+{
+  "repo_id": "1011634",
+  "module": "Exercice-4",
+  "condition": "HUMAN",
+  "status": "FAIL",
+  "error_type": "TEST_FAILURE",
+  "error_message": "Command '['mvn.cmd', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\.mvn\\\\settings.xml', '-Dtest=ch.genevajug.crappy.sampleservice.impl.SampleServiceImplTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------------------< LegacyMocking:LegacyMocking >--------------------- [INFO] Building LegacyMocking 1.0-SNAPSHOT [INFO] from pom.xml [INFO] ---",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "NONE",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T183747Z_1011634_Exercice-4_HUMAN_focal_maven\\settings_used_attempt1.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T183747Z_1011634_Exercice-4_HUMAN_focal_maven"
+}

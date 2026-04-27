@@ -1,0 +1,97 @@
+{
+  "repo_id": "100522769",
+  "repo_root": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769",
+  "module_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\.mvn\\settings.xml",
+  "pom_path": null,
+  "backup_path": null,
+  "changes": [
+    "Using build tool: maven",
+    "Injected AI test for 100522769/gremlin-objects: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\generated_tests\\100522769_7_GeneratedTest.java -> D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\reflect\\ClassesAiTest.java",
+    "Disabled 43 non-selected test files",
+    "Applied focal test scope with selected tests: ['org.apache.tinkerpop.gremlin.object.reflect.ClassesAiTest']",
+    "Attempt 1: settings=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T181430Z_100522769_gremlin-objects_AI_ONLY_focal_maven\\settings_used_attempt1.xml fixed_by=HTTP_SETTINGS_FIX",
+    "Pipeline attempt failed (no further retry): phase=compile error_type=OTHER",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\edges\\Created.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\edges\\Develops.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\edges\\Knows.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\edges\\Traverses.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\edges\\Uses.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\graphs\\Modern.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\graphs\\TheCrew.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\ObjectGraphTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\provider\\GraphFactoryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\reflect\\ClassesTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\reflect\\FieldsTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\reflect\\KeysTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\reflect\\LabelTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\reflect\\ParserTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\reflect\\PrimitivesTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\reflect\\PropertiesTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\reflect\\ReflectTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\structure\\EdgeGraphTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\structure\\EdgeTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\structure\\ElementGraphTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\structure\\ElementTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\structure\\GraphTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\structure\\SubGraphTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\structure\\VertexGraphTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\structure\\VertexTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\AddVTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\CountTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\HasIdTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\HasKeysTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\HasLabelTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\HasTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\IdTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\KeysTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\LabelTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\OrderTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\OutTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\RangeTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\library\\ValuesTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\ObjectQueryTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\traversal\\TraversalTest.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\vertices\\Location.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\vertices\\Person.java",
+    "Restored test file: D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\gremlin-objects\\src\\test\\java\\org\\apache\\tinkerpop\\gremlin\\object\\vertices\\Software.java"
+  ],
+  "removed_dependencies": [],
+  "installed_jars": [
+    {
+      "path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398,
+      "coordinates": "jacksum:jacksum:1.7.0"
+    }
+  ],
+  "commands": [
+    [
+      "mvn.cmd",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\.mvn\\settings.xml",
+      "install:install-file",
+      "-Dfile=D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar",
+      "-DgroupId=jacksum",
+      "-DartifactId=jacksum",
+      "-Dversion=1.7.0",
+      "-Dpackaging=jar",
+      "-DgeneratePom=true"
+    ],
+    [
+      "mvn.cmd",
+      "-U",
+      "-s",
+      "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\100522769\\.mvn\\settings.xml",
+      "-DskipTests",
+      "compile"
+    ]
+  ],
+  "checksums": {
+    "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\experiments\\third_party_jars\\jacksum-1.7.0.jar": {
+      "sha256": "bc63ba8e13d525879e9d5742a26b8ea61d271e3692688484456094e56b0aa1e6",
+      "size_bytes": 199398
+    }
+  },
+  "generated_at_utc": "2026-04-12T18:14:30.774166+00:00"
+}

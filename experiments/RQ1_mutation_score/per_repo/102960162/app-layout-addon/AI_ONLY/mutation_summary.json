@@ -1,0 +1,19 @@
+{
+  "repo_id": "102960162",
+  "module": "app-layout-addon",
+  "condition": "AI_ONLY",
+  "status": "FAIL",
+  "error_type": "HTTP_BLOCKER",
+  "error_message": "Command '['mvn.cmd', '-U', '-s', 'D:\\\\Khedma\\\\Mr wiem\\\\mutation-test-pipeline\\\\target-repos\\\\102960162\\\\.mvn\\\\settings.xml', '-Dtest=com.github.appreciated.app.layout.navigation.RouteSimilarityAiTest', 'test']' returned non-zero exit status 1.: [INFO] Scanning for projects... [INFO] [INFO] --------------< com.github.appreciated:app-layout-addon >--------------- [INFO] Building App Layout Add-on 4.",
+  "metrics": {
+    "mutation_score_pct": "",
+    "mutants_total": "",
+    "killed": "",
+    "survived": ""
+  },
+  "pit_config": {},
+  "fixed_by": "HTTP_SETTINGS_FIX",
+  "settings_path": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\target-repos\\102960162\\.mvn\\settings.xml",
+  "settings_copy": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193615Z_102960162_app-layout-addon_AI_ONLY_focal_maven\\settings_used_attempt2.xml",
+  "run_dir": "D:\\Khedma\\Mr wiem\\mutation-test-pipeline\\logs\\runs\\20260412T193615Z_102960162_app-layout-addon_AI_ONLY_focal_maven"
+}
